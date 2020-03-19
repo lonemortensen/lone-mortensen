@@ -1,0 +1,308 @@
+/***** BASE STYLES *****/
+
+body {
+  background: #ffffff;
+  color: #313131;
+  font-family: 'Merriweather';
+}
+
+header {
+  height: 800px;
+}
+
+#about {
+  height: 800px;
+}
+
+#projects {
+  height: 800px;
+}
+
+#connect {
+  height: 500px;
+}
+
+h3 {
+  color: #313131;
+  font-family: 'Oswald';
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+h4 {
+  color:#313131;
+  font-family: 'Oswald';
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+/***** GRID STYLES *****/
+
+.full-width {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.content-width {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.half-width {
+  float: left;
+  width: 600px;
+}
+
+/***** REPEAT STYLES *****/
+
+#about figure, #projects figure, #connect figure { 
+  margin: 20px 0px 20px 0px;
+  overflow: auto;
+}
+
+#about figure hr, #projects figure hr, #connect figure hr { 
+  float: left;
+  width: 680px;
+  height: 1px;
+  background: #000000;
+  border: none;
+}
+
+.circle { 
+  float: left;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  margin: 0px 10px 0px 10px;
+  background: #47892c;
+}
+
+#about h3, #projects h3, #connect h3 { 
+  clear: both;
+  width: 600px;
+  margin: 30px 300px 50px 300px;
+  text-align: center;
+}
+
+.center-container {
+  position: relative;
+  height: 650px;
+}
+
+.center-vertical {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+}
+
+/***** HEADER *****/
+
+h1 {
+  margin-top: 50px;
+  color: #313131;
+  font-family: 'Oswald';
+  font-size: 25px;
+}
+
+nav {
+  margin-top: 50px;
+}
+
+nav ul {
+  padding: 0px;
+  text-align: right;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+nav ul li a {
+  color: #313131;
+  font-family: 'Oswald';
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/***** WELCOME *****/
+
+header article {
+  clear: both;
+  padding-top: 70px;
+  overflow: auto;
+}
+
+h2 {
+  float: left;
+  width: 190px;
+  margin: 130px 15px 10px 0px;
+  font-family: 'Abril Fatface';
+  font-size: 140px;
+}
+
+h2 span {
+  color: #e60000;
+}
+
+.welcome-copy {
+  float: left;
+  width: 800px;
+  margin: 165px 110px 10px 20px;
+}
+
+.welcome-copy p {
+  margin-top: 48px;
+  font-size: 24px;
+  line-height: 40px;
+}
+
+/***** ABOUT *****/
+
+.icon-position {
+  height: 200px;
+  margin: 0px 500px 0px 500px;
+  text-align: center;
+}
+
+#about i {
+  color: #313131;
+  font-size: 100px;
+}
+
+#about p {
+  margin: 0px 300px 20px 300px;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+}
+
+/***** PROJECTS *****/
+
+.projectposition-left {
+  float: left;
+  width: 350px;
+  margin: 0px 85px 0px 165px;
+}
+
+.projectposition-right {
+  float: left;
+  width: 350px;
+  margin: 0px 165px 0px 85px;
+}
+
+#projects img {
+  border: 1px solid #e6e6e6;
+}
+
+#projects h4, #projects p {
+  width: 350px;
+}
+
+.project-line {
+  width: 350px;
+  height: 1px;
+  margin: 0px;
+  background: #313131;
+  border: none;
+}
+
+#projects p {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+/***** CONNECT *****/
+
+#connect aside {
+  height: 50px;
+  margin-top: 120px;
+  background: #000000;
+}
+
+#connect ul {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  padding: 0px;
+  text-align: center;
+  list-style: none;
+}
+
+#connect ul li {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#connect i {
+  color: #ffffff;;
+  font-size: 28px;
+}
+
+.visually-hidden {
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+/***** FOOTER *****/
+
+footer {
+  text-align: center;
+}
+
+footer hr {
+  width: 1400px;
+  height: 1px;
+  margin: 0px 0px 15px 0px;
+  background: #000000;
+  border: none;
+}
+
+.footer-copy {
+  width: 1400px;
+  padding-bottom: 10px;
+  text-align: center;
+  overflow: auto;
+}
+
+.footer-position {
+  width: 400px;
+  margin: 0px 500px 0px 500px;
+  padding: 0px 0px 0px 25px;
+  overflow: auto;
+}
+
+footer p {
+  float: left;
+  width: 150px;
+  margin-right: 10px;
+  margin-left: 10px;
+  color: #313131; 
+  font-family: 'Oswald';
+  font-size: 15px;
+}
+
+.circle-footer {
+  float: left;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  margin: 20px 10px 0px 10px;
+  background: #313131;
+}
+
+/***** END OF STYLE SHEET *****/
+
+
