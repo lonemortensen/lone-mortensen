@@ -1,0 +1,1177 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ====================================================================
+  Project:  Portfolio Website 
+  Description:  For documention of personal web development projects. 
+  ===================================================================== */
+
+/* -------------------- Global Styles -------------------- */
+
+/*
+Google fonts used on this website: 
+Headings: 'Lexend Tera', sans-serif
+Headings, bold 700: 'Lexend Tera', sans-serif
+Paragraph text: 'Lekton', sans-serif
+Paragraph text, bold 700: 'Lekton', sans-serif
+*/
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lekton', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: #ffffff;
+  color: #313131;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: 'Lexend Tera', sans-serif;
+  font-size: 2.25rem; 
+  font-weight: 700;
+}
+
+h2 {
+  font-family: 'Lexend Tera', sans-serif;
+  font-size: 1.25rem; 
+  font-weight: 400;
+}
+
+h3 {
+  font-family: 'Lexend Tera', sans-serif;
+  font-size: 1.5rem; 
+  text-align: center;
+}
+
+h4 {
+  font-family: 'Lexend Tera', sans-serif;
+  font-size: 1.2rem; 
+  font-weight: 400;
+  text-align: center;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+
+/* Layout - Structural Styles */
+
+header,
+#introduction,
+#projects,
+#separator,
+#skills,
+#about,
+#contact,
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 80%;
+}
+
+h1, 
+h2, 
+h3, 
+h4 {
+  margin: 0;
+  width: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+
+/* Layout - Special Styles */
+
+.project-line {
+  width: 100%;
+  height: 1px;
+  margin: 20px 0px 20px 0px;
+  background: #313131;
+  border: none;
+}
+
+.separator-width {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0px 20px 0px;
+}
+
+.separator-line {
+  width: 90%;
+  height: 1px;
+  background: #000000;
+  border: none;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  margin: 0px 10px 0px 10px;
+  padding: 0px 5px 0px 5px; 
+  background: #E9B14C;
+}
+
+/* -------------------- Base Header-Footer Styles -------------------- */
+
+/* HEADER */
+
+header {
+  padding: 30px 0px 60px 0px; 
+  background-color: #CAC691;
+}
+
+.header-name {
+  width: 100%;
+  font-family: 'Lexend Tera', sans-serif;
+  font-size: 0.60rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #152A3E;
+}
+
+.header-divider {
+  width: 100%;
+  height: 1px;
+  margin: 10px 0 20px 0;
+  background: #152A3E;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.nav-link {
+  margin-bottom: 20px;
+}
+
+.nav-link a {
+  font-family: 'Lexend Tera', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #152A3E;
+  /*Padding and background-color properties prevent text from moving when hovering:*/
+  padding: 10px 10px;
+  background-color: transparent;
+}
+
+.nav-link a:hover {
+  padding: 10px 10px;
+  background-color: #E7E5CB;
+  border-radius: 30px;
+  color: #152A3E;
+}
+
+
+/* FOOTER */
+
+footer {
+  padding: 0px 0px 60px 0px;
+  background-color: #152A3E;
+}
+
+.scroll-top-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0.65rem;
+  right: 0.65rem; 
+  z-index: 100;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background: #E7E5CB;
+  border: none;
+  transform: scale(0.9);
+  transition: 0.3s ease-in-out transform;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.scroll-top-button:hover {
+  transform: scale(1);
+}
+
+.hide {
+  display: none;
+  pointer-events: none;
+}
+
+.scroll-top-button i {
+  color: #152A3E;
+  font-size: 1rem;
+}
+
+footer .content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+footer p {
+  color: #EEEFDA;
+}
+
+.circle-footer {
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  margin: 10px 10px 10px 10px;
+  background: #E9B14C;
+}
+
+/* -------------------- Mobile Styles - Homepage -------------------- */
+
+/* INTRODUCTION */
+
+#introduction {
+  padding: 0px 0px 60px 0px;
+  background-color: #CAC691;
+}
+
+.introduction-title {
+  width: 100%;
+  color: #152A3E;
+}
+
+.introduction-text {
+  width: 100%;
+  margin-top: 30px;
+  color: #152A3E;
+}
+
+
+/* PROJECTS */
+
+#projects {
+  padding: 60px 0px 0px 0px;
+}
+
+.projects-title {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.project-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.project-item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.project-item figure {
+  margin: 20px 0px 20px 0px;
+  border: 1px solid #e6e6e6;
+  box-shadow: rgb(0 0 0 / 25%) 0px 4px 14px;
+}
+
+.project-image {
+  width: 100%;
+}
+
+.project-header {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.project-header h4 {
+  margin: 0px 0px 20px 0px; 
+}
+
+.project-description {
+  width: 100%;
+  margin: 20px 0px 0px 0px; 
+}
+
+.project-skills {
+  margin: 20px 0px 0px 0px; 
+}
+
+.project-skills span {
+  font-weight: 700;
+}
+
+.project-links {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 100%;
+  margin: 30px 0px 60px 0px; 
+}
+
+.project-links a {
+  text-transform: uppercase;
+  background-color: #152A3E;
+  color: #EEEFDA;
+  padding: 0.75rem 3.75rem;
+  border-radius: 1.875rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.project-links a:hover {
+  background-color: #B4C7D9;
+  color: #152A3E;
+  padding: 0.75rem 3.75rem;
+  border-radius: 1.875rem;
+}
+
+
+/* SKILLS */
+
+#skills {
+  padding: 20px 0px 0px 0px; 
+}
+
+.skills-title {
+  width: 100%;
+  margin: 0px 0px 40px 0px; 
+}
+
+.skills-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.skills-header {
+  width: 100%;
+}
+
+.skills { 
+  width: 100%;
+}
+
+.skills p {
+  margin: 20px 0px 0px 0px; 
+  padding: 10px 0px 10px 0px;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #EEEFDA;
+}
+
+.techstack-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+  margin: 40px 0px 60px 0px; 
+}
+
+.techstack-header {
+  width: 100%;
+}
+
+.tools {
+  width: 100%;
+}
+
+.tools p {
+  margin: 20px 0px 0px 0px; 
+  padding: 10px 0px 10px 0px; 
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #EEEFDA;
+}
+
+
+/* ABOUT */
+
+#about {
+  padding: 80px 0px 80px 0px;
+  background-color: #CAC691;
+}
+
+#about figure {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 10px 0px 90px 0px;
+}
+
+#about i {
+  font-size: 8rem;
+  color: #152A3E;
+}
+
+.about-info {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.about-title {
+  width: 100%;
+  margin: 0px 0px 40px 0px;
+  text-align: left;
+  color: #152A3E;
+}
+
+.about-info h4 {
+  margin: 0px 0px 40px 0px;
+  text-align: left;
+  color: #152A3E;
+}
+
+.about-description {
+  width: 100%;
+}
+
+.about-description p {
+  margin: 0px 0px 20px 0px;
+  color: #152A3E;
+}
+
+
+/* CONNECT */
+
+#contact {
+  padding: 80px 0px 0px 0px;
+  background-color: #152A3E;
+}
+
+.connect-title {
+  width: 100%;
+  margin: 0px 0px 60px 0px;
+  color: #EEEFDA;
+}
+
+.connect-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.connect-wrapper h4 {
+  margin: 0px 0px 30px 0px;
+  color: #EEEFDA;
+}
+
+.connect-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+  margin: 0px 0px 60px 0px;
+}
+
+.connect-icons {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.connect-icons li {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.connect-icons a {
+  transform: scale(0.9);
+}
+
+.connect-icons a:hover {
+  transform: scale(1);
+  transition: 0.3s ease-in-out transform;
+}
+
+.connect-icons i {
+  color: #EEEFDA;
+  font-size: 1.5rem;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 768px) {
+
+  /* -------------------- Tablet Styles - Homepage -------------------- */
+
+  /* Global and Structural Styles - Tablet */
+
+  .content-wrapper {
+    max-width: 640px;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+  }
+
+  
+  /* HEADER - Tablet */
+  
+  header {
+    padding: 60px 0px 80px 0px; 
+  }
+  
+  .header-name {
+    width: 100%;
+    font-size: 0.70rem;
+  }
+
+  .nav-link a {
+    font-size: 0.85rem;
+  }
+
+
+  /* FOOTER - Tablet */
+
+  footer {
+    padding: 0px 0px 80px 0px;
+  }
+
+  .scroll-top-button {
+    bottom: 1.5rem;
+    right: 1.5rem; 
+  }
+
+
+  /* INTRODUCTION - Tablet */
+
+  #introduction {
+    padding: 0px 0px 80px 0px;
+  }
+
+  .introduction-title {
+    font-size: 2.5rem;
+  }
+
+  .introduction-text {
+    margin-top: 60px;
+    font-size: 1.5rem;  
+  }
+
+
+  /* PROJECTS - Tablet */
+
+  #projects {
+    padding: 80px 0px 0px 0px;
+  }
+
+  .projects-title {
+    margin: 0px 0px 70px 0px;
+  }
+
+  .project-wrapper {
+    justify-content: space-around;
+  }
+
+  .project-item {
+    width: 45%;
+    margin-bottom: 80px;
+  }
+
+  .project-header {
+    width: 100%;
+  }
+
+  .project-skills {
+    width: 85%;
+  }
+  
+  .project-links {
+    margin: 30px 0px 30px 0px; 
+  }
+
+
+  /* SKILLS - Tablet */
+
+  #skills {
+    padding: 80px 0px 80px 0px; 
+  }
+
+  .skills { 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 100%;
+  }
+
+  .skills-title {
+    margin: 0px 0px 60px 0px;
+  }
+  
+  .skills p {
+    width: 45%;
+    margin: 30px 0px 0px 0px; 
+    padding: 15px 0px 15px 0px; 
+  }
+
+  .tools {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 100%;
+  }
+
+  .tools p {
+    width: 45%;
+    margin: 30px 0px 0px 0px; 
+    padding: 15px 0px 15px 0px; 
+  }
+  
+
+  /* ABOUT - Tablet */
+
+  #about figure {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0px 100px 0px;
+  }
+  
+  #about i {
+    font-size: 9rem;
+  }
+
+  .about-title {
+    margin: 0px 0px 60px 0px;
+  }
+
+  .about-info h4 {
+    margin: 0px 0px 60px 0px;
+  }
+
+
+  /* CONNECT - Tablet */
+
+  .connect-title {
+    margin: 0px 0px 60px 0px;
+  }
+
+  .connect-wrapper h4 {
+    margin: 0px 0px 35px 0px;
+  }
+
+  .connect-icons i {
+    font-size: 2rem;
+  }
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+/* -------------------- Desktop Styles - Homepage -------------------- */
+
+  /* Global and Structural Styles - Desktop */
+
+  .content-wrapper {
+    max-width: 1200px;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  h4 {
+    font-size: 1.75rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+
+ /* HEADER - Desktop */
+
+  header {
+    width: 100%;
+    padding: 80px 0px 80px 0px; 
+  }
+
+  header .content-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .header-name {
+    width: 50%;
+    padding: 20px 0px 20px 0px;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  .header-divider {
+    display: none;
+  }
+
+  nav {
+    justify-content: flex-end;
+    width: 50%;
+    margin: 20px 0px 20px 0px;
+  }
+
+  .nav-wrapper {
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-link {
+    margin-bottom: 0px; 
+    padding: 20px 0px 20px 0px;
+  }
+
+  .nav-link a {
+    font-size: 0.9rem;
+  }
+
+
+  /* FOOTER - Desktop */
+ 
+  footer {
+    padding: 0px 0px 100px 0px;
+  }
+
+  .scroll-top-button {
+    bottom: 2rem;
+    right: 2rem; 
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+  }
+
+  footer p {
+    font-size: 1rem;
+  }
+
+
+  /* INTRODUCTION - Desktop */
+
+  #introduction {
+    padding: 0px 0px 100px 0px;
+  }
+
+  .introduction-title {
+    font-size: 4rem;
+  }
+
+  .introduction-text {
+    margin-top: 60px;
+    font-size: 2.25rem;
+  }
+ 
+
+  /* PROJECTS - Desktop */
+
+  #projects {
+    padding: 100px 0px 0px 0px;
+  }
+
+  .project-item {
+    width: 30%;
+  }
+
+  .project-header {
+    width: 100%;
+  }
+
+  .project-skills {
+    width: 100%;
+  }
+
+  .project-links a {
+    font-size: 1.2rem;
+  }
+  
+
+  /* SKILLS - Desktop */
+
+  #skills {
+    padding: 100px 0px 100px 0px; 
+  }
+
+  #skills .content-wrapper {
+    max-width: 900px;
+  }
+  
+  .skills p {
+    width: 30%;
+    font-size: 1.2rem;
+  }
+
+  .tools p {
+    width: 30%;
+    font-size: 1.2rem;
+  }
+
+
+  /* ABOUT - Desktop */
+
+  #about {
+    padding: 100px 0px 120px 0px;
+  }
+
+  .about-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #about figure {
+    width: 35%;
+    margin: 80px 0px 80px 0px;
+  }
+
+  #about i {
+    font-size: 12rem;
+  }
+
+  .about-info {
+    width: 55%;
+  }
+
+  .about-title {
+    margin: 0px 0px 40px 0px;
+  }
+
+  .about-info h4 {
+    margin: 0px 0px 40px 0px;
+  }
+
+
+  /* CONNECT - Desktop */
+
+  #contact {
+    padding: 120px 0px 0px 0px;
+  }
+
+  .connect-title {
+    margin: 0px 0px 80px 0px;
+  }
+
+  .connect-info {
+    margin: 0px 0px 80px 0px;
+  }
+
+  .connect-icons {
+    width: 20%;
+  }
+
+  .connect-icons i {
+    font-size: 2.5rem;
+  }
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
