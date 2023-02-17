@@ -434,27 +434,35 @@ footer p {
 
 .project-links {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-flow: row wrap;
   width: 100%;
   margin: 30px 0px 60px 0px; 
 }
 
 .project-links a {
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
+  width: 30%;
+  text-align: center;
   background-color: #152A3E;
   color: #EEEFDA;
-  padding: 0.75rem 3.75rem;
+  padding: 0.25rem 0.5rem;
+  margin-top: 0.5rem;
   border-radius: 1.875rem;
-  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 0 0 #e7e5cb inset;
+  transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
+  /*transition: all 0.3s ease-in-out;*/
 }
 
 .project-links a:hover {
-  background-color: #B4C7D9;
-  color: #152A3E;
+  /*background-color: #B4C7D9;
+  color: #152A3E;*/
   /*padding: 0.75rem 3.75rem;*/
-  padding: 0.25rem 3.75rem;
+  /*padding: 0.25rem 3.75rem;*/
   border-radius: 1.875rem;
+  color: #152A3E;
+  box-shadow: 700px 0 0 0 #e7e5cb inset;
+  
 }
 
 
