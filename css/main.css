@@ -441,28 +441,22 @@ footer p {
 }
 
 .project-links a {
-  /*text-transform: uppercase;*/
   width: 30%;
-  text-align: center;
-  background-color: #152A3E;
-  color: #EEEFDA;
   padding: 0.25rem 0.5rem;
-  margin-top: 0.5rem;
-  border-radius: 1.875rem;
-  box-shadow: 0 0 0 0 #e7e5cb inset;
-  transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
-  /*transition: all 0.3s ease-in-out;*/
+  text-align: center;
+  color: #EEEFDA;
+  background-color: #152A3E;
+  border-color: #ffffff;
+  box-shadow: 0 0 0 0 #ffffff inset;
+  transition: color .4s ease-in-out, box-shadow .4s ease-in-out;
 }
 
 .project-links a:hover {
-  /*background-color: #B4C7D9;
-  color: #152A3E;*/
-  /*padding: 0.75rem 3.75rem;*/
-  /*padding: 0.25rem 3.75rem;*/
-  border-radius: 1.875rem;
+  font-weight: 700;
   color: #152A3E;
-  box-shadow: 700px 0 0 0 #e7e5cb inset;
-  
+  background-color: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 200px 0 0 0 #ffffff inset;
 }
 
 
@@ -822,6 +816,11 @@ footer p {
     margin: 30px 0px 30px 0px; 
   }
 
+  .project-links a {
+    width: 45%;
+    margin-top: 0.4rem;
+  }
+
 
   /* SKILLS - Tablet */
 
@@ -1021,6 +1020,8 @@ footer p {
   }
 
   .project-links a {
+    width: 60%;
+    margin-top: 0.5rem;
     font-size: 1.2rem;
   }
   
