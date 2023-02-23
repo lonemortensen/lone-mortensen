@@ -235,25 +235,62 @@ p {
 /* HEADER */
 
 header {
-  padding: 30px 0px 60px 0px; 
-  background-color: #CAC691;
+  /*padding: 30px 0px 60px 0px;*/ 
+  padding: 50px 0px 20px 0px; 
+  /*background-color: #CAC691;*/
+  background-color: #ffffff;
 }
 
-.header-name {
-  width: 100%;
-  font-family: 'Lexend Tera', sans-serif;
-  font-size: 0.60rem;
-  letter-spacing: 0.2rem;
+.header-name-wrapper {
+  display: flex;
+  /*justify-content: center;*/
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 50%;
+}
+
+.header-firstname {
+  /*width: 100%;*/
+  /*font-family: 'Lexend Tera', sans-serif;*/
+  /*font-size: 0.60rem;*/
+  font-size: 0.8rem;
+  /*letter-spacing: 0.2rem;*/
+  letter-spacing: 0.3rem;
   text-transform: uppercase;
   text-align: center;
-  color: #152A3E;
+  /*color: #152A3E;*/
+  color: #313131;
+}
+
+.circle-header {
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  /*margin: 10px 13px 10px 10px;*/
+  margin: 10px 15px 13px 10px;
+  background: #E9B14C;
+}
+
+.header-lastname {
+  /*width: 100%;*/
+  /*font-family: 'Lexend Tera', sans-serif;*/
+  /*font-size: 0.60rem;*/
+  font-size: 0.8rem;
+  /*letter-spacing: 0.2rem;*/
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  text-align: center;
+  /*color: #152A3E;*/
+  color: #313131;
 }
 
 .header-divider {
   width: 100%;
   height: 1px;
   margin: 10px 0 20px 0;
-  background: #152A3E;
+  /*background: #152A3E;*/
+  background-color: #ffffff;
 }
 
 nav {
@@ -356,7 +393,8 @@ footer p {
 /* INTRODUCTION */
 
 #introduction {
-  padding: 0px 0px 60px 0px;
+  /*padding: 0px 0px 60px 0px;*/
+  padding: 60px 0px 60px 0px;
   background-color: #CAC691;
 }
 
@@ -744,7 +782,8 @@ footer p {
   /* HEADER - Tablet */
   
   header {
-    padding: 60px 0px 80px 0px; 
+    /*padding: 60px 0px 80px 0px;*/
+    padding: 60px 0px 30px 0px; 
   }
   
   .header-name {
@@ -772,7 +811,8 @@ footer p {
   /* INTRODUCTION - Tablet */
 
   #introduction {
-    padding: 0px 0px 80px 0px;
+    /*padding: 0px 0px 80px 0px;*/
+    padding: 80px 0px 80px 0px;
   }
 
   .introduction-title {
@@ -926,7 +966,8 @@ footer p {
 
   header {
     width: 100%;
-    padding: 80px 0px 80px 0px; 
+    /*padding: 80px 0px 80px 0px;*/
+    padding: 80px 0px 30px 0px;
   }
 
   header .content-wrapper {
@@ -988,7 +1029,8 @@ footer p {
   /* INTRODUCTION - Desktop */
 
   #introduction {
-    padding: 0px 0px 100px 0px;
+    /*padding: 0px 0px 100px 0px;*/
+    padding: 100px 0px 100px 0px;
   }
 
   .introduction-title {
