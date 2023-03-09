@@ -14,6 +14,36 @@ a) it is visible only when the user scrolls on the page, and
 b) it scrolls to the top of the page when the user clicks the button.
 ==================================================================== */
 
+/* -------- MOBILE NAVIGATION -------- */ 
+
+// Mobile navigation icon: 
+const mobileNavIcon = document.querySelector(".mobile-bar-wrapper");
+// Mobile navigation menu: 
+const mobileNavMenu = document.querySelector(".mobile-nav");
+// Mobile navigation menu links:
+const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+
+// Toggles the mobile nav menu and the close menu button:
+
+const openMobileNav = () => {
+  mobileNavIcon.classList.toggle("open");
+  mobileNavMenu.classList.toggle("hide-mobile-nav-menu");
+}
+
+// Detects when user clicks on the mobile nav icon:
+mobileNavIcon.addEventListener("click", openMobileNav);
+
+// Closes the mobile nav menu when user clicks on the menu links:
+
+const closeMobileNav = (n) => {
+  mobileNavIcon.classList.remove("open");
+  mobileNavMenu.classList.add("hide-mobile-nav-menu");
+}
+
+// Detects when user clicks on the nav menu links:
+mobileNavLinks.forEach(n => n.addEventListener("click", closeMobileNav));
+ 
+
 /* -------- UPDATE COPYRIGHT YEAR -------- */ 
 
 // Automatically updates copyright year in the website footer:
@@ -39,9 +69,9 @@ const handleScroll = () => {
     const totalScrollLength = rootElement.scrollHeight - rootElement.clientHeight;
     //Shows button based on number of pixels user has scrolled vertically:
     if ((rootElement.scrollTop / totalScrollLength) > 0.30 ) {
-        scrollToTopButton.classList.remove("hide");
+        scrollToTopButton.classList.remove("hide-scroll-top-button");
     } else {
-        scrollToTopButton.classList.add("hide");
+        scrollToTopButton.classList.add("hide-scroll-top-button");
     }
 }; 
 

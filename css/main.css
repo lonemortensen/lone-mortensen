@@ -246,8 +246,9 @@ header {
   /*justify-content: center;*/
   justify-content: flex-start;
   align-items: center;
-  flex-flow: row wrap;
-  width: 50%;
+  /*flex-flow: row wrap;*/
+  flex-flow: nowrap;
+  width: 60%;
 }
 
 .header-firstname {
@@ -285,6 +286,7 @@ header {
   color: #313131;
 }
 
+/*DELETE IF NOT USED:*/
 .header-divider {
   width: 100%;
   height: 1px;
@@ -293,40 +295,88 @@ header {
   background-color: #ffffff;
 }
 
+/* Mobile navigation */
+
 nav {
+  display: none;
+}
+
+#mobile-nav-icon {
+  margin: auto 0;
+  /*display: block;*/
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
+  text-align: center;
+  width: 40%;
+  cursor: pointer; 
+}
+
+.mobile-bars {
+  width: 25px; /*Convert to rem??*/
+  height: 3px;
+  margin: 6px 0;
+  background-color: black;
+  transition: 0.6s;  
+}
+
+/* JS classlist toggle styling for open menu and X icon: */
+
+.open .mobile-bar-1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .mobile-bar-2 {
+  opacity: 0;
+}
+
+.open .mobile-bar-3 {
+  transform: rotate(45deg) translate(-6px, -8px)
+}
+
+.mobile-nav-wrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.mobile-nav {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  height: calc(100vh - 100px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  flex-flow: row wrap;
-  width: 100%;
+  justify-content: flex-start;
+  background-color: #53565B;
+  opacity: 0.95;
 }
 
-.nav-wrapper {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
+.hide-mobile-nav-menu {
+  display: none;
+  pointer-events: none;
 }
 
-.nav-link {
-  margin-bottom: 20px;
+.mobile-nav-link {
+  margin: 30px;
+  border-bottom: 1px solid #ff4399;
+    
 }
 
-.nav-link a {
+.mobile-nav-link a {
   font-family: 'Lexend Tera', sans-serif;
   font-size: 0.75rem;
   text-transform: uppercase;
-  color: #152A3E;
-  /*Padding and background-color properties prevent text from moving when hovering:*/
-  padding: 10px 10px;
-  background-color: transparent;
+  color: #ffffff;
 }
 
-.nav-link a:hover {
-  padding: 10px 10px;
-  background-color: #E7E5CB;
-  border-radius: 30px;
-  color: #152A3E;
+.mobile-nav-link a:hover {
+  /* DECIDE ON STYLING FOR HOVER */
 }
+
+/* MOVE TO TABLET AND DESKTOP NAVIGATION: */
+
 
 
 /* FOOTER */
@@ -359,7 +409,7 @@ footer {
   transform: scale(1);
 }
 
-.hide {
+.hide-scroll-top-button {
   display: none;
   pointer-events: none;
 }
@@ -409,6 +459,9 @@ footer p {
   color: #152A3E;
 }
 
+.introduction-text span {
+  color: #F42C38;
+}
 
 /* PROJECTS */
 
@@ -786,14 +839,98 @@ footer p {
     padding: 60px 0px 30px 0px; 
   }
   
-  .header-name {
-    width: 100%;
+  .header-name-wrapper {
+    justify-content: center;
+    flex-flow: nowrap;
+    width: 30%;
+    padding-top: 5px;
+  }
+  
+  .header-firstname {
+    width: 25%;
     font-size: 0.70rem;
+    text-align: end;
+  }
+
+  .header-lastname {
+    width: 60%;
+    font-size: 0.70rem;
+    text-align: start;
+  }
+
+  #mobile-nav-icon, .mobile-nav-wrapper {
+    display: none;
+  }
+
+  nav {
+    /*display: block;*/
+    display: flex;
+    /*justify-content: space-around;*/
+    justify-content: flex-end;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 70%;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    /*justify-content: space-around;*/
+    justify-content: space-between;
+    /*width: 100%;*/
+    width: 85%;
   }
 
   .nav-link a {
-    font-size: 0.85rem;
+    font-size: 0.65rem;
+    font-family: 'Lexend Tera', sans-serif;
+    text-transform: uppercase;
+    color: #152A3E;
+      
   }
+
+  /* ORIGINAL NAV CODE: */
+
+  /*
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 50%;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .nav-link {
+    margin-bottom: 20px;
+  }
+
+  .nav-link a {
+    font-family: 'Lexend Tera', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #152A3E;
+    /*Padding and background-color properties prevent text from moving when hovering:*/
+    /*padding: 10px 10px;
+    background-color: transparent;
+  }*/
+
+  /*
+  .nav-link a:hover {
+    padding: 10px 10px;
+    background-color: #E7E5CB;
+    border-radius: 30px;
+    color: #152A3E;
+  }
+  */
+
+
+
+
 
 
   /* FOOTER - Tablet */
@@ -975,12 +1112,62 @@ footer p {
     justify-content: flex-end;
   }
 
+  /*
   .header-name {
     width: 50%;
     padding: 20px 0px 20px 0px;
     font-size: 0.9rem;
     text-align: left;
   }
+  */
+
+  .header-name-wrapper {
+    display: flex;
+    /*justify-content: center;*/
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 30%;
+  }
+  
+  .header-firstname {
+    width: 15%;
+    /*font-family: 'Lexend Tera', sans-serif;*/
+    /*font-size: 0.60rem;*/
+    font-size: 0.9rem;
+    /*letter-spacing: 0.2rem;*/
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    text-align: center;
+    /*color: #152A3E;*/
+    color: #313131;
+  }
+  
+  .circle-header {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    /*margin: 10px 13px 10px 10px;*/
+    margin: 10px 9px 13px 12px;
+    background: #E9B14C;
+  }
+  
+  .header-lastname {
+    width: 40%;
+    /*font-family: 'Lexend Tera', sans-serif;*/
+    /*font-size: 0.60rem;*/
+    font-size: 0.9rem;
+    /*letter-spacing: 0.2rem;*/
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    text-align: center;
+    /*color: #152A3E;*/
+    color: #313131;
+  }
+
+
+
+
 
   .header-divider {
     display: none;
@@ -988,13 +1175,13 @@ footer p {
 
   nav {
     justify-content: flex-end;
-    width: 50%;
+    width: 70%;
     margin: 20px 0px 20px 0px;
   }
 
   .nav-wrapper {
-    margin: 0;
-    padding: 0;
+    /*margin: 0;*/
+    /*padding: 0;*/
   }
 
   .nav-link {
@@ -1003,7 +1190,7 @@ footer p {
   }
 
   .nav-link a {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
   }
 
 

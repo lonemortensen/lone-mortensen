@@ -45,7 +45,7 @@ Description:  For documention of personal web development projects.
         <p class="header-lastname">Mortensen</p>        
       </div>
 
-      <div class="header-divider"></div>
+      <!--<div class="header-divider"></div>-->
       <nav>
         <ul class="nav-wrapper">
           <li class="nav-link"><a href="#projects">Projects</a></li>
@@ -54,6 +54,24 @@ Description:  For documention of personal web development projects.
           <li class="nav-link"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
+      <!--mobile navigation-->
+      <div id="mobile-nav-icon">
+        <div class="mobile-bar-wrapper">
+          <div class="mobile-bars mobile-bar-1"></div>
+          <div class="mobile-bars mobile-bar-2"></div>
+          <div class="mobile-bars mobile-bar-3"></div>
+        </div>
+      </div>
+      
+      <div class="mobile-nav-wrapper">
+         <ul class="mobile-nav hide-mobile-nav-menu">
+           <li class="mobile-nav-link"><a href="#projects">Projects</a></li>
+           <li class="mobile-nav-link"><a href="#skills">Skills</a></li>
+           <li class="mobile-nav-link"><a href="#about">About</a></li>
+           <li class="mobile-nav-link"><a href="#contact">Contact</a></li>
+         </ul> 
+      </div>  
     </div>
   </header>
 
@@ -62,7 +80,7 @@ Description:  For documention of personal web development projects.
     <section id="introduction">
       <div class="content-wrapper">
         <h1 class="introduction-title">Hello!</h1>
-        <h2 class="introduction-text">&mdash;I&apos;m Lone, a front-end developer based in Oregon.</h2>
+        <h2 class="introduction-text">&mdash;I&apos;m Lone, a <span>front-end developer</span> based in Oregon.</h2>
       </div>
     </section>
 
@@ -245,7 +263,7 @@ Description:  For documention of personal web development projects.
     <!--FOOTER-->
     <footer>
       <!--scroll-top-->
-      <button class="scroll-top-button hide">
+      <button class="scroll-top-button hide-scroll-top-button">
         <i class="fa-solid fa-chevron-up"></i> 
       </button>
       <!--copyright-->
