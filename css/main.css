@@ -254,11 +254,12 @@ header {
 .header-firstname {
   /*width: 100%;*/
   /*font-family: 'Lexend Tera', sans-serif;*/
+  font-family: 'Lekton', sans-serif;
   /*font-size: 0.60rem;*/
   font-size: 0.8rem;
   /*letter-spacing: 0.2rem;*/
   letter-spacing: 0.3rem;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   text-align: center;
   /*color: #152A3E;*/
   color: #313131;
@@ -269,18 +270,19 @@ header {
   height: 8px;
   border-radius: 8px;
   /*margin: 10px 13px 10px 10px;*/
-  margin: 10px 15px 13px 10px;
+  margin: 12px 15px 13px 10px;
   background: #E9B14C;
 }
 
 .header-lastname {
   /*width: 100%;*/
   /*font-family: 'Lexend Tera', sans-serif;*/
+  font-family: 'Lekton', sans-serif;
   /*font-size: 0.60rem;*/
   font-size: 0.8rem;
   /*letter-spacing: 0.2rem;*/
   letter-spacing: 0.3rem;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   text-align: center;
   /*color: #152A3E;*/
   color: #313131;
@@ -445,7 +447,7 @@ footer p {
 #introduction {
   /*padding: 0px 0px 60px 0px;*/
   padding: 60px 0px 60px 0px;
-  background-color: #CAC691;
+  /*background-color: #CAC691;*/
 }
 
 .introduction-title {
@@ -462,6 +464,38 @@ footer p {
 .introduction-text span {
   color: #F42C38;
 }
+
+/* Reveal of introduction text - NEEDS FIXING!!! CONSIDER JS INSTEAD...: */
+
+/*
+#introduction content-wrapper {
+  display: flex;
+  justify-content: flex-start;
+} 
+
+.introduction-reveal-1 {
+  width: 0;
+  overflow: hidden;
+  animation: reveal 10s normal;
+  white-space: nowrap;
+  animation-iteration-count: 1;
+}
+
+.introduction-reveal-2 {
+  width: 0;
+  overflow: hidden;
+  animation: reveal 20s normal;
+  animation-delay: 2s;
+  white-space: nowrap;
+  animation-iteration-count: 1;
+}
+
+@keyframes reveal {
+  from {width: 0}
+  to {width: 100%}
+}
+*/
+
 
 /* PROJECTS */
 
@@ -852,6 +886,10 @@ footer p {
     text-align: end;
   }
 
+  .circle-header {
+    margin: 10px 15px 13px 10px;
+  }
+
   .header-lastname {
     width: 60%;
     font-size: 0.70rem;
@@ -880,13 +918,37 @@ footer p {
     width: 85%;
   }
 
+  /*
   .nav-link a {
     font-size: 0.65rem;
     font-family: 'Lexend Tera', sans-serif;
     text-transform: uppercase;
     color: #152A3E;
-      
   }
+  */
+  .nav-link a {
+    font-size: 0.65rem;
+    font-family: 'Lexend Tera', sans-serif;
+    text-transform: uppercase;
+    color: #152A3E;
+    padding-bottom: 5px; 
+    background-image: linear-gradient(#F42C38, #F42C38);
+    background-size: 100% 0.1em;
+    background-position-y: 100%;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease-in-out;
+  }
+    
+  a:hover {
+    background-size: 0% 0.1em;
+  }
+
+
+
+
+
+
 
   /* ORIGINAL NAV CODE: */
 
@@ -1137,7 +1199,7 @@ footer p {
     font-size: 0.9rem;
     /*letter-spacing: 0.2rem;*/
     letter-spacing: 0.3rem;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     text-align: center;
     /*color: #152A3E;*/
     color: #313131;
@@ -1159,7 +1221,7 @@ footer p {
     font-size: 0.9rem;
     /*letter-spacing: 0.2rem;*/
     letter-spacing: 0.3rem;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     text-align: center;
     /*color: #152A3E;*/
     color: #313131;
