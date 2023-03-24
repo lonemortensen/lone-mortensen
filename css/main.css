@@ -377,10 +377,6 @@ nav {
   /* DECIDE ON STYLING FOR HOVER */
 }
 
-/* MOVE TO TABLET AND DESKTOP NAVIGATION: */
-
-
-
 /* FOOTER */
 
 footer {
@@ -453,49 +449,74 @@ footer p {
 .introduction-title {
   width: 100%;
   color: #152A3E;
+  font-family: 'Lekton', sans-serif;
 }
 
 .introduction-text {
   width: 100%;
   margin-top: 30px;
   color: #152A3E;
+  /*ANIMATION CODE:*/
+  display: none; /* NOTE: this affects document flow: removes element from flow and moves other content up! Fix!! */
 }
 
-.introduction-text span {
-  color: #F42C38;
-}
+/*ANIMATION CODE:*/
 
-/* Reveal of introduction text - NEEDS FIXING!!! CONSIDER JS INSTEAD...: */
+/* Animated reveal of introduction title and text: */
 
-/*
-#introduction content-wrapper {
-  display: flex;
-  justify-content: flex-start;
+.show-introduction-title {
+  display: block;
+  width: 100%;
+  color: #152A3E;
 } 
 
-.introduction-reveal-1 {
-  width: 0;
-  overflow: hidden;
-  animation: reveal 10s normal;
-  white-space: nowrap;
+.show-introduction-text {
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+  color: #152A3E;
+  animation: introTextFadeIn ease 2s;
   animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
-.introduction-reveal-2 {
-  width: 0;
-  overflow: hidden;
-  animation: reveal 20s normal;
-  animation-delay: 2s;
-  white-space: nowrap;
+@keyframes introTextFadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.text-style {
+  padding-bottom: 5px;
+  background-image: linear-gradient(#FFFFFF, #FFFFFF);
+  background-size: 100% 0.7em;
+  background-position-y: 100%;
+  background-position-x: 50%;
+  background-repeat: no-repeat;
+}
+
+.change-text-style {
+  animation: introTextStyle ease-in-out 1s;
   animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
-@keyframes reveal {
-  from {width: 0}
-  to {width: 100%}
+@keyframes introTextStyle {
+  0% {
+    background-image: linear-gradient(#FFFFFF, #FFFFFF);
+    background-size: 0% 0.0em;     
+  }
+  /*50% {
+    background-size: 50% 0.4em;
+    /*background-position-y: 100%;
+    background-position-x: 50%;
+  }*/
+  100% {
+    background-image: linear-gradient(#F49729, #F49729);
+    background-size: 100% 0.7em;
+    /*background-position-y: 100%;
+    background-position-x: 50%;*/
+  }
 }
-*/
-
 
 /* PROJECTS */
 
@@ -1010,7 +1031,6 @@ footer p {
   /* INTRODUCTION - Tablet */
 
   #introduction {
-    /*padding: 0px 0px 80px 0px;*/
     padding: 80px 0px 80px 0px;
   }
 
@@ -1284,6 +1304,7 @@ footer p {
 
   .introduction-title {
     font-size: 4rem;
+    font-size: 7rem;
   }
 
   .introduction-text {
