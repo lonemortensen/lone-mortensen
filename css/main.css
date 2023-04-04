@@ -288,15 +288,6 @@ header {
   color: #313131;
 }
 
-/*DELETE IF NOT USED:*/
-.header-divider {
-  width: 100%;
-  height: 1px;
-  margin: 10px 0 20px 0;
-  /*background: #152A3E;*/
-  background-color: #ffffff;
-}
-
 /* Mobile navigation */
 
 nav {
@@ -457,7 +448,8 @@ footer p {
   margin-top: 30px;
   color: #152A3E;
   /*ANIMATION CODE:*/
-  display: none; /* NOTE: this affects document flow: removes element from flow and moves other content up! Fix!! */
+  /*display: none;  NOTE: this affects document flow: removes element from flow and moves other content up! Fix!! */
+  opacity: 0;
 }
 
 /*ANIMATION CODE:*/
@@ -517,6 +509,64 @@ footer p {
     background-position-x: 50%;*/
   }
 }
+
+/* Animated scroll-down pointer: */
+
+.scroll-down-pointer {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  width: 100%;
+  margin-left: 470px;
+  /*border: 1px solid red;*/
+}
+
+.scroll-down-text {
+  width: 100%;
+  writing-mode: vertical-lr;
+  /*text-orientation: upright;*/
+  text-transform: uppercase;
+  font-family: 'Lexend Tera', sans-serif;
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  text-align: left;
+  margin: 50px 5px 0px 5px;
+  padding-left: 8px;
+  /*border: 1px solid green;*/
+}
+
+.cirle-pointer-wrapper {
+  width: 100%;
+  margin: 0px 5px 5px 2px;
+  /*border: 1px solid blue;*/
+}
+
+.circle-pointer {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  margin: 10px 15px 13px 10px;
+  background: #E9B14C;
+  animation: drop-dot 2s ease;
+  animation-iteration-count: infinite;
+  animation-delay: 6s;
+  transform-origin: top;
+}
+
+/*
+scaleY: increases/decreases element height.
+*/
+
+@keyframes drop-dot {
+  0% {transform: scale(1, 1) translateY(0);}
+  10% {transform: scale(1, 1) translateY(0);}
+  30% {transform: scale(1.5, 1) translateY(15px);}
+  50% {transform: scale(1, 1) translateY(0);}
+  80% {transform: scale(1, 1) translateY(0);}
+  100% {transform: scale(1, 1) translateY(0);}
+}
+
 
 /* PROJECTS */
 
@@ -1041,6 +1091,17 @@ footer p {
   .introduction-text {
     margin-top: 60px;
     font-size: 1.5rem;  
+  }
+
+  /* Animated scroll-down pointer: */
+
+  .scroll-down-pointer {
+    margin-left: 650px;
+    /*border: 1px solid red;*/
+  }
+
+  .scroll-down-text {
+    font-size: 0.55rem;
   }
 
 
