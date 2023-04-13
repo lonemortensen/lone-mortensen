@@ -514,15 +514,20 @@ footer p {
 
 .scroll-down-pointer {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  align-content: flex-start;
-  width: 100%;
-  margin-left: 470px;
+  align-content: flex-end;
+  /*justify-content: flex-end;*/
+  /*width: 100%;*/
+  width: 80%;
+  padding-top: 80px;
+  /*margin-left: 470px;*/
   /*border: 1px solid red;*/
 }
 
 .scroll-down-text {
-  width: 100%;
+  /*width: 100%;*/
+  /*padding-left: 30rem;*/
   writing-mode: vertical-lr;
   /*text-orientation: upright;*/
   text-transform: uppercase;
@@ -530,15 +535,15 @@ footer p {
   font-size: 0.5rem;
   font-weight: 700;
   letter-spacing: 0.3rem;
-  text-align: left;
-  margin: 50px 5px 0px 5px;
-  padding-left: 8px;
+  /*text-align: left;*/
+  margin: 50px 5px 0px 13px;
   /*border: 1px solid green;*/
 }
 
 .cirle-pointer-wrapper {
-  width: 100%;
+  /*width: 100%;*/
   margin: 0px 5px 5px 2px;
+  /*padding-left: 29.5rem;*/
   /*border: 1px solid blue;*/
 }
 
@@ -561,7 +566,7 @@ scaleY: increases/decreases element height.
 @keyframes drop-dot {
   0% {transform: scale(1, 1) translateY(0);}
   10% {transform: scale(1, 1) translateY(0);}
-  30% {transform: scale(1.5, 1) translateY(15px);}
+  30% {transform: scale(1.5, 1) translateY(25px);}
   50% {transform: scale(1, 1) translateY(0);}
   80% {transform: scale(1, 1) translateY(0);}
   100% {transform: scale(1, 1) translateY(0);}
@@ -1096,14 +1101,19 @@ scaleY: increases/decreases element height.
   /* Animated scroll-down pointer: */
 
   .scroll-down-pointer {
-    margin-left: 650px;
+    /*margin-left: 650px;*/
+    max-width: 640px;
     /*border: 1px solid red;*/
   }
 
   .scroll-down-text {
-    font-size: 0.55rem;
+    /*padding-left: 39rem;*/
+    font-size: 0.45rem;
   }
 
+  .cirle-pointer-wrapper {
+    /*padding-left: 38.5rem;*/
+  }
 
   /* PROJECTS - Tablet */
 
@@ -1371,6 +1381,22 @@ scaleY: increases/decreases element height.
   .introduction-text {
     margin-top: 60px;
     font-size: 2.25rem;
+  }
+
+  .scroll-down-pointer {
+    /*margin-left: 650px;*/
+    /*border: 1px solid red;*/
+    max-width: 1200px;
+  }
+
+  .scroll-down-text {
+    /*padding-left: 59rem;*/
+    margin: 50px 5px 0px 12px;
+    font-size: 0.55rem;
+  }
+
+  .cirle-pointer-wrapper {
+    /*padding-left: 58.6rem;*/
   }
  
 
