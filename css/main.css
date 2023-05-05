@@ -171,7 +171,7 @@ header,
 footer {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /*align-items: center;*/ /*Is this necessary?*/
   flex-flow: row wrap;
 }
 
@@ -334,16 +334,17 @@ nav {
 
 .mobile-nav {
   position: absolute;
+  z-index: 1;
   left: 0;
   top: 100px;
   height: calc(100vh - 100px);
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start;
+  /*justify-content: flex-start;*/
+  padding-top: 30px;
   background-color: #53565B;
-  opacity: 0.95;
 }
 
 .hide-mobile-nav-menu {
@@ -352,9 +353,7 @@ nav {
 }
 
 .mobile-nav-link {
-  margin: 30px;
-  border-bottom: 1px solid #ff4399;
-    
+  margin: 30px 60px;
 }
 
 .mobile-nav-link a {
@@ -362,10 +361,17 @@ nav {
   font-size: 0.75rem;
   text-transform: uppercase;
   color: #ffffff;
+  padding-bottom: 5px; 
+  background-image: linear-gradient(#e0218a, #e0218a);
+  background-size: 0% 0.1em;
+  background-position-y: 100%;
+  background-position-x: 50%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease-in-out;
 }
 
 .mobile-nav-link a:hover {
-  /* DECIDE ON STYLING FOR HOVER */
+  background-size: 100% 0.1em;
 }
 
 /* FOOTER */
@@ -432,9 +438,18 @@ footer p {
 /* INTRODUCTION */
 
 #introduction {
+  align-content: flex-start;
+  /*height: 100vh;*/
   /*padding: 0px 0px 60px 0px;*/
   padding: 60px 0px 60px 0px;
   /*background-color: #CAC691;*/
+}
+
+#introduction .content-wrapper {
+  align-content: center;
+  /*align-content: flex-start;*/
+  /*height: 38vh;*/
+  height: 45vh;
 }
 
 .introduction-title {
@@ -1008,8 +1023,8 @@ scaleY: increases/decreases element height.
     text-transform: uppercase;
     color: #152A3E;
     padding-bottom: 5px; 
-    background-image: linear-gradient(#F42C38, #F42C38);
-    background-size: 100% 0.1em;
+    background-image: linear-gradient(#e0218a, #e0218a);
+    background-size: 0% 0.1em;
     background-position-y: 100%;
     background-position-x: 50%;
     background-repeat: no-repeat;
@@ -1017,7 +1032,7 @@ scaleY: increases/decreases element height.
   }
     
   a:hover {
-    background-size: 0% 0.1em;
+    background-size: 100% 0.1em;
   }
 
 
@@ -1372,6 +1387,14 @@ scaleY: increases/decreases element height.
     /*padding: 0px 0px 100px 0px;*/
     padding: 100px 0px 100px 0px;
   }
+
+
+  #introduction .content-wrapper {
+  /*align-content: center;*/
+  align-content: flex-start;
+  height: 36vh;
+}
+
 
   .introduction-title {
     font-size: 4rem;
