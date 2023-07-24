@@ -1,5 +1,5 @@
 <!-- ====================================================================
-Project:  Portfolio Website 
+Project:  Portfolio Website Version 3
 Description:  For documention of personal web development projects. 
 ========================================================================= -->
 
@@ -39,8 +39,12 @@ Description:  For documention of personal web development projects.
   <!--HEADER-->
   <header>
     <div class="content-wrapper">
-      <p class="header-name">Lone Mortensen</p>
-      <div class="header-divider"></div>
+      <div class="header-name-wrapper">
+        <p class="header-firstname">Lone</p>
+        <div class="circle-header"></div>
+        <p class="header-lastname">Mortensen</p>        
+      </div>
+
       <nav>
         <ul class="nav-wrapper">
           <li class="nav-link"><a href="#projects">Projects</a></li>
@@ -49,6 +53,24 @@ Description:  For documention of personal web development projects.
           <li class="nav-link"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
+      <!--mobile navigation-->
+      <div id="mobile-nav-icon">
+        <div class="mobile-bar-wrapper">
+          <div class="mobile-bars mobile-bar-1"></div>
+          <div class="mobile-bars mobile-bar-2"></div>
+          <div class="mobile-bars mobile-bar-3"></div>
+        </div>
+      </div>
+      
+      <div class="mobile-nav-wrapper">
+         <ul class="mobile-nav hide-mobile-nav-menu">
+           <li class="mobile-nav-link"><a href="#projects">Projects</a></li>
+           <li class="mobile-nav-link"><a href="#skills">Skills</a></li>
+           <li class="mobile-nav-link"><a href="#about">About</a></li>
+           <li class="mobile-nav-link"><a href="#contact">Contact</a></li>
+         </ul> 
+      </div>  
     </div>
   </header>
 
@@ -56,8 +78,16 @@ Description:  For documention of personal web development projects.
     <!--INTRODUCTION-->  
     <section id="introduction">
       <div class="content-wrapper">
-        <h1 class="introduction-title">Hello!</h1>
-        <h2 class="introduction-text">&mdash;I&apos;m Lone, an aspiring web developer based in Oregon.</h2>
+        <h1 class="introduction-title reveal-introduction-title">Welcome</h1>
+        <h2 class="introduction-text reveal-introduction-text">... I&apos;m Lone, a <span class="text-style">front-end developer</span> based in Oregon.</h2>
+      </div>
+
+      <!--scroll-down -->
+      <div class="scroll-down-pointer">
+        <p class="scroll-down-text">Scroll</p>
+       <div class="cirle-pointer-wrapper">
+          <div class="circle-pointer"></div> 
+       </div>
       </div>
     </section>
 
@@ -80,7 +110,8 @@ Description:  For documention of personal web development projects.
               <p><span>Tools:</span> Photoshop, Chrome DevTools, GitHub Pages</p>
             </div>
             <div class="project-links">
-              <a href="https://lonemortensen.github.io/206-unplugged-retreat/" target="_blank">View</a>
+              <a href="https://lonemortensen.github.io/206-unplugged-retreat/" target="_blank">Live Site</a>
+              <a href="https://github.com/lonemortensen/206-unplugged-retreat" target="_blank">GitHub Repo</a>
             </div>
           </article>
 
@@ -98,7 +129,8 @@ Description:  For documention of personal web development projects.
               <p><span>Tools:</span> CodeSandbox</p>
             </div>
             <div class="project-links">
-              <a href="https://github.com/lonemortensen/super-sticky-notes" target="_blank">View</a>
+              <a href="https://bn2qgl.csb.app/" target="_blank">Live Site</a>
+              <a href="https://github.com/lonemortensen/super-sticky-notes" target="_blank">GitHub Repo</a>
             </div>
           </article>
 
@@ -116,7 +148,8 @@ Description:  For documention of personal web development projects.
               <p><span>Tools:</span> GitHub Pages</p>
             </div>
             <div class="project-links">
-              <a href="https://lonemortensen.github.io/guess-the-word/" target="_blank">View</a>
+              <a href="https://lonemortensen.github.io/guess-the-word/" target="_blank">Live Site</a>
+              <a href="https://github.com/lonemortensen/guess-the-word" target="_blank">GitHub Repo</a>
             </div>
           </article>
 
@@ -134,7 +167,8 @@ Description:  For documention of personal web development projects.
               <p><span>Tools:</span> CodeSandbox</p>
             </div>
             <div class="project-links">
-              <a href="https://github.com/lonemortensen/name-tag-generator" target="_blank">View</a>
+              <a href="https://1f6ixl.csb.app/" target="_blank">Live Site</a>
+              <a href="https://github.com/lonemortensen/name-tag-generator" target="_blank">GitHub Repo</a>
             </div>
           </article>
 
@@ -152,7 +186,8 @@ Description:  For documention of personal web development projects.
               <p><span>Tools:</span> REST API, JSON, GitHub Pages</p>
             </div>
             <div class="project-links">
-              <a href="https://lonemortensen.github.io/github-repo-gallery/" target="_blank">View</a>
+              <a href="https://lonemortensen.github.io/github-repo-gallery/" target="_blank">Live Site</a>
+              <a href="https://github.com/lonemortensen/github-repo-gallery" target="_blank">GitHub Repo</a>
             </div>
           </article>
         </div>
@@ -203,7 +238,7 @@ Description:  For documention of personal web development projects.
         </figure>
         <div class="about-info">
           <h3 class="about-title">Hi!</h3>
-          <h4>I'm Lone Mortensen, an aspiring frontend developer.</h4>
+          <h4>I'm Lone Mortensen, a front-end developer.</h4>
           <div class="about-description">
             <p>I have a background in language and communications and worked within the field for several years.</p> 
             <p>When I discovered web development and coding, I quickly became fascinated. I enrolled in an online coding course by Skillcrush and created this website to document my projects and as a playground for testing out new skills as I continue to learn.</p>
@@ -235,7 +270,7 @@ Description:  For documention of personal web development projects.
     <!--FOOTER-->
     <footer>
       <!--scroll-top-->
-      <button class="scroll-top-button hide">
+      <button class="scroll-top-button hide-scroll-top-button">
         <i class="fa-solid fa-chevron-up"></i> 
       </button>
       <!--copyright-->
