@@ -594,10 +594,42 @@ scaleY: increases/decreases element height.
   padding: 60px 0px 0px 0px;
 }
 
-.projects-title {
+/*CHANGES TO SECTION HEADERS - MOVE TO GLOBAL STYLES:*/
+
+.projects-title-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
+
+.projects-title {
+  /*width: 100%; NOTE: Width 100 is already a property on global h3*/ 
+  /*margin-bottom: 20px;*/
+  font-size: 2rem; 
+}
+
+.circle-section-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 10px 0px 10px 0px;
+}
+
+.circle-section {
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #E9B14C;
+} 
+
+.projects-subtitle {
+  width: 100%;
+  text-align: center;
+}
+
+/*END - changes to section headers*/
 
 .project-wrapper {
   display: flex;
