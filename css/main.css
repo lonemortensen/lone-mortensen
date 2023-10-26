@@ -732,10 +732,13 @@ scaleY: increases/decreases element height.
 }
 
 /*
-.color-block-wrapper:hover .image-overlay {
-  background-image: url("../img/unplugged-retreat-image-1200.png");
-  opacity: 1;
-}
+NOTE: Figure out how hover works on touchscreen devices!
+https://medium.com/@mezoistvan/finally-a-css-only-solution-to-hover-on-touchscreens-c498af39c31c
+https://css-tricks.com/solving-sticky-hover-states-with-media-hover-hover/
+
+https://www.youtube.com/watch?v=uuluAyw9AI0
+
+Apply also to all LINKS (nav, projects, connect icons) hover styling!
 */
 .overlay-project-one:hover .image-overlay {
   background-image: url("../img/unplugged-retreat-image-1200.png");
@@ -789,7 +792,8 @@ scaleY: increases/decreases element height.
 
 .project-link-wrapper {
   display: flex;
-  justify-content: space-evenly;
+  /*justify-content: space-evenly;*/
+  justify-content: center;
   flex-flow: row wrap;
   width: 100%;
   margin: 30px 0px 40px 0px; 
@@ -799,13 +803,16 @@ scaleY: increases/decreases element height.
   display: flex;
   justify-content: flex-start;
   flex-flow: row wrap;
-  width: 30%;
+  /*width: 30%;*/
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .project-link a {
   color: #152A3E;
   background-image: linear-gradient(#e0218a, #e0218a);
-  background-size: 0% 0.1em;
+  /*background-size: 0% 0.1em;*/
+  background-size: 0% 0.05em;
   background-position-y: 100%;
   background-position-x: 50%;
   background-repeat: no-repeat;
@@ -813,7 +820,8 @@ scaleY: increases/decreases element height.
 }
   
 .project-link a:hover {
-  background-size: 100% 0.1em;
+  /*background-size: 100% 0.1em;*/
+  background-size: 100% 0.05em;
 }
 
 .project-link-icon {
@@ -821,21 +829,21 @@ scaleY: increases/decreases element height.
   margin-left: 5px;
 }
 
-/* !!! NOTE: Re-create icon with CSS to increase sharpness + Consider to flip
-icon on hover. */
-
-.project-link-icon i {
-  transform: scale(0.9);
-}
-
-.project-link:hover .project-link-icon i {
-  transform: scale(1);
-  transition: 0.2s ease-in-out transform;
-}
-
 .project-link-icon i {
   color: #313131;
   font-size: 1.25rem;
+  /*transform: scale(0.9);*/
+}
+
+.project-link:hover .project-link-icon i {
+  /*transform: scale(1);*/
+  animation: flip-arrow 0.6s ease-in-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes flip-arrow {
+  0% {transform: rotateX(180deg);}
+  100% {transform: rotateX(0deg);} 
 }
 
 
@@ -1320,8 +1328,12 @@ icon on hover. */
     padding: 80px 0px 0px 0px;
   }
 
+  .projects-title-wrapper {
+    margin-bottom: 60px;
+  }
+
   .projects-title {
-    margin: 0px 0px 70px 0px;
+    /*margin: 0px 0px 70px 0px;*/
   }
 
   .project-wrapper {
@@ -1329,27 +1341,48 @@ icon on hover. */
   }
 
   .project-item {
-    width: 45%;
+    /*width: 45%;*/
+    width: 40%;
     margin-bottom: 80px;
   }
 
+  .project-title {
+    top: 55%;
+    left: 0%;
+    text-align: left;
+  }
+  /*
   .project-header {
     width: 100%;
   }
+  */
 
   .project-skills {
     width: 85%;
   }
   
+  /*
   .project-links {
     margin: 30px 0px 30px 0px; 
   }
-
+  */
+  /*
   .project-links a {
     width: 45%;
     margin-top: 0.4rem;
   }
+  */
 
+  /* NOTE: May not need project-link-wrapper + project-link styling as same as mobile */
+
+  .project-link-wrapper {
+    justify-content: center;
+  }
+
+  .project-link {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 
   /* SKILLS - Tablet */
 
@@ -1613,24 +1646,57 @@ icon on hover. */
     padding: 100px 0px 0px 0px;
   }
 
-  .project-item {
-    width: 30%;
+  .projects-title-wrapper {
+    margin-bottom: 70px;
   }
 
+  .project-wrapper {
+    justify-content: space-between;
+  }
+
+  .projects-title {
+    font-size: 2.5rem;
+  }
+
+  .circle-section-wrapper {
+    margin: 15px 0px 15px 0px;
+  }
+
+  .project-item {
+    /*width: 30%;*/
+    width: 28%;
+    padding: 3px 15px;
+  }
+
+  /* DELETE
   .project-header {
     width: 100%;
+  }
+  */
+
+  .project-title {
+    top: 50%;
+  }
+
+  .project-item h4 {
+    font-size: 1.5rem;
   }
 
   .project-skills {
     width: 100%;
   }
 
+  .project-link a {
+    font-size: 1.2rem;
+  }
+
+  /* DELETE:
   .project-links a {
     width: 60%;
     margin-top: 0.5rem;
     font-size: 1.2rem;
   }
-  
+  */
 
   /* SKILLS - Desktop */
 
