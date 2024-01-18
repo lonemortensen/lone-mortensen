@@ -687,6 +687,42 @@ scaleY: increases/decreases element height.
   padding: 80px 0px 80px 0px;
 }
 */
+
+.skills-title-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.skills-title {
+  /*width: 100%; NOTE: Width 100 is already a property on global h3*/ 
+  /*margin-bottom: 20px;*/
+  font-size: 2rem; 
+}
+
+.circle-section-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 10px 0px 10px 0px;
+}
+
+.circle-section {
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #E9B14C;
+} 
+
+.skills-subtitle {
+  width: 100%;
+  text-align: center;
+}
+
+
+/*
 .title {
   display: flex;
   justify-content: center;
@@ -719,6 +755,7 @@ scaleY: increases/decreases element height.
 .subtitle {
   text-align: center;
 }
+*/
 
 .tab-panel-wrapper {
   display: flex;
@@ -779,6 +816,10 @@ scaleY: increases/decreases element height.
   left: -9999px;
 }
 /* END JavaScript */
+
+
+
+/* OLD SKILLS CSS: */
 
 /*
 .skills-title {

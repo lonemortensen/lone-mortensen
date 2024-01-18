@@ -13,6 +13,26 @@ This document contains JavaScript code that:
 - Automatically updates the copyright year.
 ==================================================================== */
 
+import {handlePageLoad, handleTabSelection} from "js/panel.js";
+
+/* -------- SKILLS PANEL -------- */
+
+/* All tabs: */
+const tabsList = document.getElementsByClassName("tab-link"); 
+/* All panels: */
+const panelsList = document.getElementsByClassName("panels"); 
+
+
+
+const addTabEventListener = (tabsList) => {
+  for (let i = 0; i < tabsList.length; i++) {
+    let tab = tabsList[i];
+    tab.addEventListener("click", handleTabSelection);
+  };
+};
+
+window.addEventListener("load", handlePageLoad, addTabEventListener);
+
 /* -------- MOBILE NAVIGATION -------- */ 
 
 // Mobile navigation icon: 
