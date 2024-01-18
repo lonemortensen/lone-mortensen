@@ -122,6 +122,7 @@ ul {
 }
 
 a {
+  font-family: 'Lekton', sans-serif;
   text-decoration: none;
 }
 
@@ -681,7 +682,105 @@ scaleY: increases/decreases element height.
 #skills {
   padding: 20px 0px 0px 0px; 
 }
+/*
+#skills {
+  padding: 80px 0px 80px 0px;
+}
+*/
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+  margin: 30px 0px;
+}
 
+.main-title {
+  text-align: center;
+}
+
+.title-line-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0px;
+}
+
+.title-line {
+  width: 25%;
+  height: 1px;
+  margin: 0;
+  background: #313131;
+  border: none;
+}
+
+.subtitle {
+  text-align: center;
+}
+
+.tab-panel-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+  margin: 30px 0px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.tabs-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.tab {
+  padding: 20px 0px;
+}
+
+.tab a {
+  padding: 22px 11px;
+  font-size: 0.9rem;
+  color: #152A3E;
+}
+
+.panels-list {
+  width: 100%;
+}
+
+.panels {
+  background: #e3e2df;
+  padding: 30px 11px;
+}
+
+.panels h3 {
+  margin-bottom: 10px;
+}
+
+/* START JavaScript: Tab highlight styling: */
+.highlight-tab {
+  font-weight: 700;
+  background: #e3e2df;
+}
+/* END JavaScript */
+
+/* START JavaScript: Hide/show panel styling: */
+.hide-panels {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+/* END JavaScript */
+
+/*
 .skills-title {
   width: 100%;
   margin: 0px 0px 40px 0px; 
@@ -737,7 +836,7 @@ scaleY: increases/decreases element height.
   text-align: center;
   background-color: #EEEFDA;
 }
-
+*/
 
 /* ABOUT */
 
