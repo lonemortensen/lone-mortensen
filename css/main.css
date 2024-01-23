@@ -680,13 +680,8 @@ scaleY: increases/decreases element height.
 /* SKILLS */
 
 #skills {
-  padding: 20px 0px 0px 0px; 
+  padding: 20px 0px 20px 0px; 
 }
-/*
-#skills {
-  padding: 80px 0px 80px 0px;
-}
-*/
 
 .skills-title-wrapper {
   display: flex;
@@ -697,8 +692,6 @@ scaleY: increases/decreases element height.
 }
 
 .skills-title {
-  /*width: 100%; NOTE: Width 100 is already a property on global h3*/ 
-  /*margin-bottom: 20px;*/
   font-size: 2rem; 
 }
 
@@ -720,42 +713,6 @@ scaleY: increases/decreases element height.
   width: 100%;
   text-align: center;
 }
-
-
-/*
-.title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  width: 100%;
-  margin: 30px 0px;
-}
-
-.main-title {
-  text-align: center;
-}
-
-.title-line-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 20px 0px;
-}
-
-.title-line {
-  width: 25%;
-  height: 1px;
-  margin: 0;
-  background: #313131;
-  border: none;
-}
-
-.subtitle {
-  text-align: center;
-}
-*/
 
 .tab-panel-wrapper {
   display: flex;
@@ -789,6 +746,7 @@ scaleY: increases/decreases element height.
   padding: 20px 0px;
 }
 
+/* Simple link styling: 
 .tab a {
   padding: 27px 11px;
   font-family: 'Lexend Tera', sans-serif;
@@ -796,28 +754,50 @@ scaleY: increases/decreases element height.
   color: #152A3E;
 }
 
+.tab a:hover {
+  padding: 27px 11px;
+  font-weight: 700;
+}
+*/
+
+.tab a {
+  padding: 27px 11px;
+  font-family: 'Lexend Tera', sans-serif;
+  font-size: 0.7rem;
+  color: #152A3E;
+
+  background-image: linear-gradient(#f49729, #f49729);
+  /*background-size: 0% 0.1em;*/
+  background-size: 0% 0.25em;
+  background-position-y: 100%;
+  background-position-x: 50%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease-in-out;
+}  
+
+.tab a:hover {
+  /*background-size: 100% 0.1em;*/
+  background-size: 100% 0.25em;
+}
+
 .panels-list {
   width: 100%;
-  border-top: 2px solid #f49729;
+  border-top: 1px solid #f49729;
 }
 
 .panels {
   padding: 30px 11px;
-  /*background: #e3e2df;*/
-  
 }
 
 .panels h3 {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   text-align: left;
 }
 
 /* START JavaScript: Tab highlight styling: */
 .highlight-tab {
   font-weight: 700;
-  /*background: #e3e2df;*/
   background: #f49729;
-  
 }
 /* END JavaScript */
 
@@ -828,68 +808,6 @@ scaleY: increases/decreases element height.
   left: -9999px;
 }
 /* END JavaScript */
-
-
-
-/* OLD SKILLS CSS: */
-
-/*
-.skills-title {
-  width: 100%;
-  margin: 0px 0px 40px 0px; 
-}
-
-.skills-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  width: 100%;
-}
-
-.skills-header {
-  width: 100%;
-}
-
-.skills { 
-  width: 100%;
-}
-
-.skills p {
-  margin: 20px 0px 0px 0px; 
-  padding: 10px 0px 10px 0px;
-  font-size: 1.125rem;
-  text-transform: uppercase;
-  text-align: center;
-  background-color: #EEEFDA;
-}
-
-.techstack-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  width: 100%;
-  margin: 40px 0px 60px 0px; 
-}
-
-.techstack-header {
-  width: 100%;
-}
-
-.tools {
-  width: 100%;
-}
-
-.tools p {
-  margin: 20px 0px 0px 0px; 
-  padding: 10px 0px 10px 0px; 
-  font-size: 1.125rem;
-  text-transform: uppercase;
-  text-align: center;
-  background-color: #EEEFDA;
-}
-*/
 
 /* ABOUT */
 
@@ -1325,38 +1243,43 @@ scaleY: increases/decreases element height.
     padding: 80px 0px 80px 0px; 
   }
 
-  .skills { 
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-flow: row wrap;
-    width: 100%;
+  .skills-title-wrapper {
+    margin-bottom: 50px;
   }
 
   .skills-title {
-    margin: 0px 0px 60px 0px;
+    font-size: 2.5rem;
   }
   
-  .skills p {
-    width: 45%;
-    margin: 30px 0px 0px 0px; 
-    padding: 15px 0px 15px 0px; 
+  .circle-section-wrapper {
+    margin: 20px 0px 20px 0px;
   }
 
-  .tools {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-flow: row wrap;
-    width: 100%;
+  .circle-section {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+  } 
+
+  .skills-subtitle {
+    font-size: 1.2rem;
   }
 
-  .tools p {
-    width: 45%;
-    margin: 30px 0px 0px 0px; 
-    padding: 15px 0px 15px 0px; 
+  .tab-panel-wrapper {
+    margin: 50px 0px;
+  }
+
+  .tab a {
+    font-size: 0.75rem;
+  }
+
+  .panels {
+    padding: 40px 11px;
   }
   
+  .panels h3 {
+    margin-bottom: 40px;
+  }
 
   /* ABOUT - Tablet */
 
@@ -1610,14 +1533,42 @@ scaleY: increases/decreases element height.
     max-width: 900px;
   }
   
-  .skills p {
-    width: 30%;
-    font-size: 1.2rem;
+  .skills-title-wrapper {
+    margin-bottom: 70px;
   }
 
-  .tools p {
-    width: 30%;
-    font-size: 1.2rem;
+  .skills-title {
+    font-size: 3.5rem;
+  }
+
+  .circle-section-wrapper {
+    margin: 30px 0px 30px 0px;
+  }
+
+  .circle-section {
+    width: 14px;
+    height: 14px;
+    border-radius: 14px;
+  } 
+
+  .skills-subtitle {
+    font-size: 1.6rem;
+  }
+
+  .tab-panel-wrapper {
+    margin: 70px 0px;
+  }
+
+  .tab a {
+    font-size: 0.85rem;
+  }
+
+  .panels {
+    padding: 60px 11px;
+  }
+
+  .panels h3 {
+    margin-bottom: 50px;
   }
 
 
