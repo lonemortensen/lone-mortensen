@@ -771,12 +771,18 @@ scaleY: increases/decreases element height.
   justify-content: center;
   align-items: center;
   width: 100%;
+  /* Horizontal scroll: */
+  overflow-x: auto; /* auto means it only scrolls if needed */
+  overflow-y: hidden;
+  white-space: nowrap;
+  touch-action: pan-x;  
 }
 
 .tabs-list {
   display: flex;
   justify-content: space-between;
   width: 100%;
+
 }
 
 .tab {
@@ -784,28 +790,34 @@ scaleY: increases/decreases element height.
 }
 
 .tab a {
-  padding: 22px 11px;
-  font-size: 0.9rem;
+  padding: 27px 11px;
+  font-family: 'Lexend Tera', sans-serif;
+  font-size: 0.7rem;
   color: #152A3E;
 }
 
 .panels-list {
   width: 100%;
+  border-top: 2px solid #f49729;
 }
 
 .panels {
-  background: #e3e2df;
   padding: 30px 11px;
+  /*background: #e3e2df;*/
+  
 }
 
 .panels h3 {
   margin-bottom: 10px;
+  text-align: left;
 }
 
 /* START JavaScript: Tab highlight styling: */
 .highlight-tab {
   font-weight: 700;
-  background: #e3e2df;
+  /*background: #e3e2df;*/
+  background: #f49729;
+  
 }
 /* END JavaScript */
 

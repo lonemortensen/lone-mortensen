@@ -9,10 +9,12 @@ Module: Panel.
 /* Data model: Object stores tabs (keys) and their associated panels (values): */ 
 let tabSets = {};
 
-/* All tabs: */
-const tabsList = document.getElementsByClassName("tab-link"); 
-/* All panels: */
+
+/* All tabs:*/
+export const tabsList = document.getElementsByClassName("tab-link"); 
+/* All panels:*/ 
 const panelsList = document.getElementsByClassName("panels"); 
+
 
 /**
  * Loops through the tabs list and stores each tab as a property key and each 
@@ -62,12 +64,6 @@ const removeTabHighlight = (tabs) => {
  * @param defaultPanel the panel that is stored as the value of the default (first) tab in the tabSets object.
 */
 const displayDefaultTabSet = (defaultTab, defaultPanel) => { 
-    /*
-    for (let i = 0; i < tabsList.length; i++) {
-        let tab = tabsList[i];
-        tab.addEventListener("click", handleTabSelection);
-    };
-    */
     // Compares the default tab's id to the tab id's in the tabsList variable. If there's a match,
     // highlight styling is added to the tab: 
     for (let i = 0; i < tabsList.length; i++) {
@@ -79,7 +75,7 @@ const displayDefaultTabSet = (defaultTab, defaultPanel) => {
     };
 
     // Finds and displays the panel that matches the default panel link: 
-    for (i = 0; i < panelsList.length; i++) {
+    for (let i = 0; i < panelsList.length; i++) {
         let panel = panelsList[i];
         let panelName = panel.id; 
         if (panelName.toLowerCase() == defaultPanel.toLowerCase()) {
@@ -96,7 +92,7 @@ const displayDefaultTabSet = (defaultTab, defaultPanel) => {
 */
 const displaySelectedTabSet = (selectedTab, selectedPanel) => {
     // Finds matching tab in tabsList and adds highlight: 
-    for (i = 0; i < tabsList.length; i++) {
+    for (let i = 0; i < tabsList.length; i++) {
         let tab = tabsList[i];
         let tabName = tab.id;
         if (tabName.toLowerCase() == selectedTab.toLowerCase()) {
@@ -105,7 +101,7 @@ const displaySelectedTabSet = (selectedTab, selectedPanel) => {
     };
 
     // Finds matching panel in panelsList and displays panel: 
-    for (i = 0; i < panelsList.length; i++) {
+    for (let i = 0; i < panelsList.length; i++) {
         let panel = panelsList[i];
         let panelName = panel.id;
         if (panelName.toLowerCase() == selectedPanel.toLowerCase()) {
@@ -133,11 +129,8 @@ export const handlePageLoad = () => {
     // Gets the panel linked to the default tab:
     let defaultPanel = tabSets[defaultTabName];
     
-    addTabEventListener();
     displayDefaultTabSet(defaultTabName, defaultPanel);
 };
-
-window.addEventListener("load", handlePageLoad);
 
 
 /**
@@ -153,6 +146,7 @@ export const handleTabSelection = (e) => {
     e.preventDefault();
     getTabData();
     let selectedTabName = e.target.id;
+    console.log(selectedTabName);
     let selectedPanel = tabSets[selectedTabName];
 
     hidePanels(panelsList); 
