@@ -796,7 +796,7 @@ scaleY: increases/decreases element height.
 
 /* START JavaScript: Tab highlight styling: */
 .highlight-tab {
-  font-weight: 700;
+  /*font-weight: 700;*/
   background: #f49729;
 }
 /* END JavaScript */
