@@ -106,7 +106,7 @@ Description:  For documention of personal web development projects.
         -->
         <div class="project-wrapper">
 
-          <article class="project-item">
+          <article id="project-1" class="project-item">
             <div class="project-background">
               <div class="project-header-test">
                 <h4 class="project-header-orange">Unplugged Retreat</h4>
@@ -116,12 +116,12 @@ Description:  For documention of personal web development projects.
                 <p>Built with HTML5, CSS3, Flexbox.</p>
               </div>
               <div class="project-view-button">
-                <button type="button">View</button>
+                <button type="button" class="view-project">View</button>
               </div>
             </div>
           </article>
 
-          <article class="project-item">
+          <article id="project-2" class="project-item">
             <div class="project-background">
               <div class="project-header-test">
                 <h4 class="project-header-green">Super Sticky Notes</h4>
@@ -131,12 +131,12 @@ Description:  For documention of personal web development projects.
                 <p>Built with React JS, JSX.</p>
               </div>
               <div class="project-view-button">
-                <button type="button">View</button>
+                <button type="button" class="view-project">View</button>
               </div>
             </div>
           </article>
 
-          <article class="project-item">
+          <article id="project-3" class="project-item">
             <div class="project-background">
               <div class="project-header-test">
                 <h4 class="project-header-pink">Guess the Word</h4>
@@ -146,12 +146,12 @@ Description:  For documention of personal web development projects.
                 <p>Built with HTML5, CSS3, JavaScript.</p>
               </div>
               <div class="project-view-button">
-                <button type="button">View</button>
+                <button type="button" class="view-project">View</button>
               </div>
             </div>
           </article>
 
-          <article class="project-item">
+          <article id="project-4" class="project-item">
             <div class="project-background">
               <div class="project-header-test">
                 <h4 class="project-header-orange">Name Tag Generator</h4>
@@ -161,12 +161,12 @@ Description:  For documention of personal web development projects.
                 <p>Built with React JS, JSX.</p>
               </div>
               <div class="project-view-button">
-                <button type="button">View</button>
+                <button type="button" class="view-project">View</button>
               </div>
             </div>
           </article>
 
-          <article class="project-item">
+          <article id="project-5" class="project-item">
             <div class="project-background">
               <div class="project-header-test">
                 <h4 class="project-header-green">GitHub Repo Gallery</h4>
@@ -176,7 +176,22 @@ Description:  For documention of personal web development projects.
                 <p>Built with JavaScript, REST API, JSON.</p>
               </div>
               <div class="project-view-button">
-                <button type="button">View</button>
+                <button type="button" class="view-project">View</button>
+              </div>
+            </div>
+          </article>
+
+          <article id="project-6" class="project-item">
+            <div class="project-background">
+              <div class="project-header-test">
+                <h4 class="project-header-pink">Supervillain Trading Cards</h4>
+              </div>
+              <p class="project-description-test">With this app, users interact with a database to add and delete female supervillain trading cards.</p>
+              <div class="project-skills-test">
+                <p>Built with Python, Flask, SQL database, JavaScript, REST API.</p>
+              </div>
+              <div class="project-view-button">
+                <button type="button" class="view-project">View</button>
               </div>
             </div>
           </article>
@@ -390,6 +405,30 @@ Description:  For documention of personal web development projects.
     <!--CONNECT-->
     <section id="contact">
       <div class="content-wrapper">
+        <div class="section-title-wrapper">
+          <h3 class="section-title connect-font-color">Connect</h3>
+          <div class="circle-section-wrapper">
+            <div class="circle-section"></div>
+          </div>
+          <p class="section-subtitle connect-font-color">on the Internet</p>
+        </div>
+        <div class="connect-info">
+          <ul class="connect-icons">
+            <li>
+              <a href="https://github.com/lonemortensen" target="_blank"><i class="fa-brands fa-github"></i></a> 
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a> 
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!--CONNECT-->
+    <!--
+    <section id="contact">
+      <div class="content-wrapper">
         <h3 class="connect-title">Connect</h3>
         <article class="connect-wrapper">
           <h4>On the Internet</h4>
@@ -406,6 +445,7 @@ Description:  For documention of personal web development projects.
         </article>
       </div>
     </section>
+    -->
 
     <!--FOOTER-->
     <footer>
@@ -418,6 +458,10 @@ Description:  For documention of personal web development projects.
         <p class="copyright-year">Copyright 2022</p>
         <div class="circle-footer"></div>
         <p>Lone Mortensen</p>
+      </div>
+      <!--built with-->
+      <div class="content-wrapper footer-built-with">
+        <p>Hand-coded with HTML, CSS, vanilla JavaScript.</p>
       </div>
     </footer>
   </main>

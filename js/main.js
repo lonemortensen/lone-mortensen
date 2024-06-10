@@ -13,28 +13,39 @@ This document contains JavaScript code that:
 - Automatically updates the copyright year.
 ==================================================================== */
 
-/* -------- SKILLS PANEL -------- */
+/* -------- IMPORTS -------- */
 
+/* Imports for Portfolio Modals: */
+import {addModalEventListener, closeModalWindow} from "./modal.js"; 
+
+/* Imports for Skills Panel: */
 import {tabsList, handlePageLoad, handleTabSelection} from "./panel.js";
 
-/**
- * Detects when page loads:
-*/
-window.addEventListener("load", handlePageLoad);
+
+/* -------- SKILLS PANEL -------- */
 
 
-/**
- * Detects when user clicks on a tab:
-*/
-const addTabEventListener = () => {
-  for (let i = 0; i < tabsList.length; i++) {
-    let tab = tabsList[i];
-    console.log(tab); //logs all <a>, i.e. tabs - this means main.js connects to panel.js
-    tab.addEventListener("click", handleTabSelection);
-  };
-};
+// import {tabsList, handlePageLoad, handleTabSelection} from "./panel.js";
 
-addTabEventListener();
+// /**
+//  * Detects when page loads:
+// */
+// window.addEventListener("load", handlePageLoad);
+
+
+// /**
+//  * Detects when user clicks on a tab:
+// */
+// const addTabEventListener = () => {
+//   for (let i = 0; i < tabsList.length; i++) {
+//     let tab = tabsList[i];
+//     console.log(tab); //logs all <a>, i.e. tabs - this means main.js connects to panel.js
+//     tab.addEventListener("click", handleTabSelection);
+//   };
+// };
+
+// addTabEventListener();
+
 
 
 /* -------- MOBILE NAVIGATION -------- */ 
@@ -110,6 +121,71 @@ const INTRO = (function () {
     // Detects when introduction text animation is completed:
     introductionText.addEventListener("animationend", changeTextStyle) 
 })();
+
+
+/* ===== PORTFOLIO MODALS ===== */
+
+// /**
+//  * Imports. 
+// */
+
+// // Imports event handlers:
+// import {addModalEventListener, closeModalWindow} from "./modal.js"; 
+
+
+/** 
+ * Detects when page loads.
+ * Adds event listener to the Window.
+ * Calls event handler to check if a Modal window is currently open. If so, the Modal Window will be closed. 
+*/
+window.addEventListener("load", closeModalWindow); // Works. Modal + background disappears on page re-load.
+
+
+/* NOTE: The 'modal' IIFE runs every time the script loads. If there are mutiple Modal components on the web page, 
+event listeners are added to all of the components. When Modal components are added (or removed) from the 
+web page, the modal IIFE needs updating.
+*/ 
+const modal = (function() {
+
+    /** 
+     * Gets and stores Modal html elements.
+     * Selects elements for all Modal components on the web page.
+     * Calls event handler to add an event listener to each Modal html element.
+     * @arg modalElements - Contains Modal html elements. 
+    */
+    const modalElements = document.querySelectorAll('.view-project'); // Works. Selects both project and gallery elements.
+    //console.log(modalElements);
+    addModalEventListener(modalElements); 
+
+})();
+
+
+
+/* -------- SKILLS PANEL -------- */
+
+
+// import {tabsList, handlePageLoad, handleTabSelection} from "./panel.js";
+
+/**
+ * Detects when page loads:
+*/
+window.addEventListener("load", handlePageLoad);
+
+
+/**
+ * Detects when user clicks on a tab:
+*/
+const addTabEventListener = () => {
+  for (let i = 0; i < tabsList.length; i++) {
+    let tab = tabsList[i];
+    console.log(tab); //logs all <a>, i.e. tabs - this means main.js connects to panel.js
+    tab.addEventListener("click", handleTabSelection);
+  };
+};
+
+addTabEventListener();
+
+
 
 
 /* -------- SCROLL BUTTON -------- */

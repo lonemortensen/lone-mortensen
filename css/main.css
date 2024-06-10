@@ -414,8 +414,9 @@ nav {
 /* FOOTER */
 
 footer {
-  padding: 0px 0px 60px 0px;
-  background-color: #152A3E;
+  padding: 40px 0px 60px 0px;
+  /*background-color: #152A3E;*/
+  background-color:  #e0218a;
 }
 
 .scroll-top-button {
@@ -459,7 +460,8 @@ footer .content-wrapper {
 }
 
 footer p {
-  color: #EEEFDA;
+  /*color: #EEEFDA;*/
+  color: #ffffff;
 }
 
 .circle-footer {
@@ -468,6 +470,11 @@ footer p {
   border-radius: 8px;
   margin: 10px 10px 10px 10px;
   background: #E9B14C;
+}
+
+.footer-built-with {
+  margin-top: 10px;
+  font-size: 0.6rem;
 }
 
 /* -------------------- Mobile Styles - Homepage -------------------- */
@@ -663,6 +670,23 @@ scaleY: increases/decreases element height.
   box-shadow: rgb(0 0 0 / 25%) 0px 4px 14px;
 }
 
+.project-background:hover {
+  transform: rotateZ(-3deg);
+  animation: project-tilt;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+}
+
+@keyframes project-tilt {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(-3deg);
+  }
+}
+
 .project-header-test {
   display: flex;
   justify-content: center;
@@ -671,6 +695,7 @@ scaleY: increases/decreases element height.
 }
 
 .project-header-test h4 {
+  height: 50px;
   margin: 0px 0px 20px 0px; 
   text-align: left;
   font-size: 1.6rem;
@@ -710,12 +735,177 @@ scaleY: increases/decreases element height.
   margin: 30px 0px 10px 0px;
 }
 
+/* PROJECTS - MODALS */
+/* Styling applied in JavaScript: */
+
+.backdrop-blur {
+  position: fixed; /*Keeps backdrop in place*/
+  z-index: 1; /*Situates backdrop on top*/
+  left: 0;
+  right: 0;
+  width: 100%; /*Change to viewport width: 100vw? See website mobile nav code*/
+  height: 100%; /*Change to viewport height: 100vh? See website mobile nav code*/
+  overflow: auto; /*Enables scroll*/
+  background-color: rgba(83, 86, 91, 0.9); /*rgba sets opacity without inheritance*/
+}
+
+.modal-window {
+  /* understand how to do this using flexbox. 
+  Q: do I need a modal-container in html to wrap and position the modalWindow?*/
+  position: fixed; /*Positions modal relative to viewport.*/
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* UNDERSTAND what this property does! */ 
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  z-index: 2;
+  width: 400px;
+}
+
+.modal-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(241, 148, 148, 1); /*rgba sets opacity without inheritance*/
+}
+
+.modal-image {
+  margin: 10px;
+  width: 30%;
+  border: 1px solid red;
+}
+
+.modal-content {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column wrap;
+  width: 50%;
+  margin: 10px;
+  border: 1px solid green;
+}
+
+.modal-title {
+  padding-left: 5px; 
+  font-size: 1.5rem;
+}
+
+.modal-description {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+  padding-left: 5px; 
+  padding-right: 2px;
+  padding-top: 5px;
+}
+
+.modal-description-text {
+  /* DELETE from both css and js if not needed. */
+}
+
+.modal-links {
+  margin: 5px;
+}
+
+.modalLink-1 {
+  /* DELETE from both css and js if not needed. */
+}
+
+.modalLink-2 { 
+  /* DELETE from both css and js if not needed. */
+}
+
+.modalNavigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+  margin: 0;
+}
+
+.arrowButtons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 50%;
+  margin: 0;
+}
+
+.arrowPrevious {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 20%;
+}
+
+.arrowNext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 20%;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  margin: 0px 10px 0px 10px;
+  /*padding: 0px 5px 0px 5px;*/ 
+  background: #E9B14C;
+}
+
+/*
+Create arrows with css:
+https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20created%20using,direction%20and%20amount%20of%20rotation.
+*/
+
+.arrow {
+  /*border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;*/
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  background-color: transparent;
+
+}    
+
+.previousModal {
+  /*border-left: 3px solid black;*/
+  transform: rotate(135deg);
+}
+
+
+.nextModal {
+  /*border-right: 3px solid black;*/
+  transform: rotate(-45deg);
+}
+
+.closeButton {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-flow: row wrap;
+  width: 30%;
+  margin: 0;
+}
+
+
+
+
+
+
+
 
 /* End Test*/
 
-
-
-
+/* OLD PROJECT STYLING - DELETE IF NOT USED: 
 .project-item figure {
   margin: 20px 0px 20px 0px;
   border: 1px solid #e6e6e6;
@@ -776,7 +966,7 @@ scaleY: increases/decreases element height.
   border-color: #ffffff;
   box-shadow: 200px 0 0 0 #ffffff inset;
 }
-
+*/
 
 /* SKILLS */
 
@@ -983,6 +1173,11 @@ scaleY: increases/decreases element height.
 
 .connect-wrapper h4 {
   margin: 0px 0px 30px 0px;
+  color: #EEEFDA;
+}
+
+/*NEW - font color*/
+.connect-font-color {
   color: #EEEFDA;
 }
 
