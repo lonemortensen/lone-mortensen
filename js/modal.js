@@ -140,7 +140,7 @@ const getModalData = (type, selectedModalId) => {
 export const addModalEventListener = (modalElements) => {
 	for (const element of modalElements) {
 		element.addEventListener("click", prepareModalWindow);
-	}
+	}	
 };
 
 // TEST CODE for addModalEventListener():
@@ -185,7 +185,7 @@ const createModalWindow = (selectedModalData) => {
 	bodyElement.insertBefore(modalWindow, mainElement);
 	// Gets and stores the id of the currently open modal:
 	const currentModalId = document.getElementById(selectedModalData['id']).id;
-	//console.log(currentModalId); // Logs the value of the id attribute. 
+	console.log(currentModalId); // Logs the value of the id attribute. 
 
 	/* Modal wrapper:*/
 	const modalWrapper = document.createElement("div");
@@ -196,6 +196,7 @@ const createModalWindow = (selectedModalData) => {
 	const modalImage = document.createElement("figure");
 	modalImage.classList.add("modal-image");
 	const image = modalImage.appendChild(document.createElement("img"));
+	image.src = selectedModalData['image'];
 	modalWrapper.appendChild(modalImage);
 
 	/* Modal content:*/
@@ -225,7 +226,7 @@ const createModalWindow = (selectedModalData) => {
 	/* - link 1:*/
 	const link_1 = modalLinks.appendChild(document.createElement("div"));
 	const linkUrl_1 = link_1.appendChild(document.createElement("a"));
-	linkUrl_1.innerText = "Live Site";
+	linkUrl_1.innerText = "View Live Site";
 	linkUrl_1.setAttribute("href", selectedModalData["firstLink"]);
 	linkUrl_1.setAttribute("target", "_blank");
 	linkUrl_1.classList.add("modalLink-1");
@@ -233,7 +234,7 @@ const createModalWindow = (selectedModalData) => {
 	/* - link 2:*/
 	const link_2 = modalLinks.appendChild(document.createElement("div"));
 	const linkUrl_2 = link_2.appendChild(document.createElement("a"));
-	linkUrl_2.innerText = "GitHub Repo";
+	linkUrl_2.innerText = "View GitHub Repo";
 	linkUrl_2.setAttribute("href", selectedModalData["secondLink"]);
 	linkUrl_2.setAttribute("target", "_blank");
 	linkUrl_2.classList.add("modalLink-2");
@@ -258,10 +259,8 @@ const createModalWindow = (selectedModalData) => {
 	const previousModal = arrowPrevious.appendChild(document.createElement("button"));
 	previousModal.setAttribute("type", "button");
 	previousModal.setAttribute("data-navigation", "previous");
-	//previousModal.addEventListener("click", prepareModalWindow); //TEMP
 	previousModal.classList.add("arrow", "previousModal");
 	// Adds event listener to 'previous' button and passes the id of the currently open Modal:
-	// https://plainenglish.io/blog/passing-arguments-to-event-listeners-in-javascript-1a81bc397ecb
 	previousModal.addEventListener("click", (event) => {
 		prepareModalWindow(event, currentModalId);
 	}); 
@@ -269,7 +268,6 @@ const createModalWindow = (selectedModalData) => {
 	const nextModal = arrowNext.appendChild(document.createElement("button"));
 	nextModal.setAttribute("type", "button");
 	nextModal.setAttribute("data-navigation", "next");
-	//nextModal.addEventListener("click", prepareModalWindow); //TEMP
 	nextModal.classList.add("arrow", "nextModal");
 	// Adds event listener to 'next' button and passes the id of the currently open Modal:
 	nextModal.addEventListener("click", (event) => {
@@ -281,7 +279,8 @@ const createModalWindow = (selectedModalData) => {
 	closeButton.classList.add("closeButton");
 	const closeModal = closeButton.appendChild(document.createElement("button"));
 	closeModal.setAttribute("type", "button");
-	closeModal.innerText = "Close Modal";
+	closeModal.innerText = "Close";
+	closeModal.classList.add("project-button-style");
 	closeModal.addEventListener("click", closeModalWindow); 
 
 	modalWrapper.appendChild(modalNavigation);
@@ -320,11 +319,14 @@ export const closeModalWindow = () => {
  */
 
 const prepareModalWindow = (event, modalId) => {
+	console.log(event);
+	console.log(modalId); 
+	
 	// Gets and stores the type of Modal selected ('new', 'previous', or 'next'):
 	let modalType = event.currentTarget.dataset.navigation;
 	//console.log(modalType);
 
-	// Gets the id of the selected Modal:
+	// Gets the id of the selected Modal (new Modal only):
 	let selectedModalId = event.currentTarget.id;
 	console.log(selectedModalId);// Works. Logs id value for 'new' modal, but NOTHING for prev/nxt modal. 
 	
@@ -355,5 +357,6 @@ const prepareModalWindow = (event, modalId) => {
 
 	// Calls View and passes the data for the selected Modal: 
 	createModalWindow(selectedModalData);
+
 };
 

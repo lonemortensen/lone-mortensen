@@ -430,7 +430,8 @@ footer {
   width: 30px;
   height: 30px;
   border-radius: 30px;
-  background: #E7E5CB;
+  /*background: #E7E5CB;*/
+  background: #5a4331;
   border: none;
   transform: scale(0.9);
   transition: 0.3s ease-in-out transform;
@@ -448,7 +449,8 @@ footer {
 }
 
 .scroll-top-button i {
-  color: #152A3E;
+  /*color: #152A3E;*/
+  color: #e3e2df; 
   font-size: 1rem;
 }
 
@@ -635,7 +637,7 @@ scaleY: increases/decreases element height.
 /* PROJECTS */
 
 #projects {
-  padding: 60px 0px 0px 0px;
+  padding: 60px 0px 60px 0px;
   background-color: #e3e2df;  
 }
 
@@ -652,6 +654,7 @@ scaleY: increases/decreases element height.
   align-items: flex-start; 
   flex-flow: row wrap;
   width: 100%;
+  margin: 0px 0px 40px 0px;
 }
 
 .project-item {
@@ -659,11 +662,11 @@ scaleY: increases/decreases element height.
   justify-content: center;
   flex-direction: column;
   width: 100%;
+  margin: 20px 0px 20px 0px;
 }
 
 /* New Layout Test: */
 .project-background {
-  margin: 20px 0px 20px 0px;
   padding: 40px 40px;
   background-color: #5a4331;
   border: 1px solid #e6e6e6;
@@ -735,8 +738,30 @@ scaleY: increases/decreases element height.
   margin: 30px 0px 10px 0px;
 }
 
-/* PROJECTS - MODALS */
-/* Styling applied in JavaScript: */
+/* Project button styling is also applied to the 
+Modal Window 'close' button in Javascript:*/
+.project-button-style {
+  padding: 6px 8px 6px 8px;
+  font-family: 'Lekton', sans-serif;
+  font-size: 1rem;
+  background-color: #e3e2df;
+  /*border: 0.5px solid #53565b;*/
+  border: none;
+  border-radius: 3px;
+  transform: scale(0.9);
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.project-button-style:hover {
+  transform: scale(1);
+  transition: 0.3s ease-in-out transform;
+  background-color: #cccbc8;
+}
+
+
+/* PROJECTS - MODAL WINDOWS */
+/* - styling applied in JavaScript: */
 
 .backdrop-blur {
   position: fixed; /*Keeps backdrop in place*/
@@ -760,7 +785,8 @@ scaleY: increases/decreases element height.
   justify-content: center;
   flex-flow: row wrap;
   z-index: 2;
-  width: 400px;
+  /*width: 400px;*/
+  width: 75%;
 }
 
 .modal-wrapper {
@@ -769,22 +795,29 @@ scaleY: increases/decreases element height.
   flex-flow: row wrap;
   width: 100%;
   padding: 20px;
-  background-color: rgba(241, 148, 148, 1); /*rgba sets opacity without inheritance*/
+  /*background-color: rgba(241, 148, 148, 1);*/ /*rgba sets opacity without inheritance*/
+  background-color: rgba(227, 226, 223, 1);
+  /*background-color: rgba(141, 135, 82, 1);*/
+  background-color: rgba(255, 255, 255, 1);
+  /*border: 1px solid #e6e6e6;*/
+  box-shadow: rgb(0 0 0 / 25%) 0px 4px 14px;
+  border-radius: 15px;
 }
 
 .modal-image {
   margin: 10px;
-  width: 30%;
-  border: 1px solid red;
+  width: 100%;
+  /*border: 1px solid red;*/
+  box-shadow: rgb(0 0 0 / 25%) 0px 4px 14px;
 }
 
 .modal-content {
   display: flex;
   justify-content: flex-start;
   flex-flow: column wrap;
-  width: 50%;
+  width: 100%;
   margin: 10px;
-  border: 1px solid green;
+  /*border: 1px solid green;*/
 }
 
 .modal-title {
@@ -796,6 +829,7 @@ scaleY: increases/decreases element height.
   display: flex;
   justify-content: flex-start;
   flex-flow: row wrap;
+  margin: 15px 0px 10px 0px;
   padding-left: 5px; 
   padding-right: 2px;
   padding-top: 5px;
@@ -806,7 +840,8 @@ scaleY: increases/decreases element height.
 }
 
 .modal-links {
-  margin: 5px;
+  /*margin: 5px;*/
+  margin: 10px 5px 5px 5px;
 }
 
 .modalLink-1 {
@@ -817,18 +852,42 @@ scaleY: increases/decreases element height.
   /* DELETE from both css and js if not needed. */
 }
 
+.modalLink-1, .modalLink-2 {
+  font-size: 0.9rem;
+  color: #152A3E;
+  padding-bottom: 3px; 
+  /*background-image: linear-gradient(#e0218a, #e0218a);*/
+  background-image: linear-gradient(#f42c38, #f42c38);
+  background-size: 0% 0.1em;
+  background-position-y: 100%;
+  background-position-x: 50%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease-in-out;
+}
+    
+/*.modalLink-1 a:hover, .modalLink-2 a:hover {
+    background-size: 100% 0.1em;
+}*/
+
+.modalLink-1:hover, .modalLink-2:hover {
+  background-size: 100% 0.1em;
+}
+
 .modalNavigation {
   display: flex;
-  justify-content: center;
+  /*justify-content: center;*/
+  justify-content: flex-end;
   align-items: center;
   flex-flow: row wrap;
   width: 100%;
-  margin: 0;
+  /*margin: 0;*/
+  margin: 10px 0px 10px 0px;
 }
 
 .arrowButtons {
   display: flex;
-  justify-content: flex-start;
+  /*justify-content: flex-start;*/
+  justify-content: flex-end;
   align-items: center;
   flex-flow: row wrap;
   width: 50%;
@@ -852,12 +911,14 @@ scaleY: increases/decreases element height.
 }
 
 .circle {
-  width: 20px;
-  height: 20px;
-  border-radius: 20px;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
   margin: 0px 10px 0px 10px;
   /*padding: 0px 5px 0px 5px;*/ 
-  background: #E9B14C;
+  /*background: #E9B14C;*/
+  background: #5a4331;
+  /*background: #8d8752;*/
 }
 
 /*
@@ -866,25 +927,32 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
 */
 
 .arrow {
-  /*border-top: 3px solid transparent;
-  border-bottom: 3px solid transparent;*/
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  /*border: solid black;*/
+  border: solid #e3e2df; 
+  border-width: 0 2px 2px 0;
+  /*display: inline-block;*/
+  padding: 4px; 
   background-color: transparent;
-
 }    
 
 .previousModal {
   /*border-left: 3px solid black;*/
   transform: rotate(135deg);
+  cursor: pointer;
+  pointer-events: auto;
+  /*padding-right: 5px;*/
+  /*padding-bottom: 5px;*/
+  margin-left: 3px;
 }
-
 
 .nextModal {
   /*border-right: 3px solid black;*/
   transform: rotate(-45deg);
+  cursor: pointer;
+  pointer-events: auto;
+  margin-right: 3px;
 }
 
 .closeButton {
@@ -896,14 +964,9 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
   margin: 0;
 }
 
-
-
-
-
-
-
-
 /* End Test*/
+
+
 
 /* OLD PROJECT STYLING - DELETE IF NOT USED: 
 .project-item figure {
@@ -971,7 +1034,7 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
 /* SKILLS */
 
 #skills {
-  padding: 20px 0px 20px 0px; 
+  padding: 60px 0px 60px 0px; 
 }
 
 /* DELETE: 
@@ -1058,7 +1121,6 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
   font-family: 'Lexend Tera', sans-serif;
   font-size: 0.7rem;
   color: #152A3E;
-
   background-image: linear-gradient(#f49729, #f49729);
   /*background-size: 0% 0.1em;*/
   background-size: 0% 0.25em;
@@ -1105,7 +1167,7 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
 /* ABOUT */
 
 #about {
-  padding: 80px 0px 80px 0px;
+  padding: 60px 0px 60px 0px;
   background-color: #CAC691;
 }
 
@@ -1154,8 +1216,8 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
 /* CONNECT */
 
 #contact {
-  padding: 80px 0px 0px 0px;
-  background-color: #152A3E;
+  padding: 60px 0px 60px 0px;
+  /*background-color: #152A3E;*/
 }
 
 .connect-title {
@@ -1178,7 +1240,7 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
 
 /*NEW - font color*/
 .connect-font-color {
-  color: #EEEFDA;
+  /*color: #EEEFDA;*/
 }
 
 .connect-info {
@@ -1214,7 +1276,8 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
 }
 
 .connect-icons i {
-  color: #EEEFDA;
+  /*color: #EEEFDA;*/
+  color: #313131;
   font-size: 1.5rem;
 }
 
@@ -1538,8 +1601,8 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
   }
 
   .project-item {
-    width: 45%;
-    margin-bottom: 80px;
+    /*width: 45%;*/
+    /*margin-bottom: 20px;*/
   }
 
   .project-header {

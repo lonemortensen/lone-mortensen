@@ -89,11 +89,11 @@ const INTRO = (function () {
     //Reveals introduction title with typing effect when page has loaded:
     const revealIntroTitle = () => {
       introductionText.classList.remove("show-introduction-text");
-      introductionTitle.innerText = "";
-      const titleText = "Welcome"; 
+      introductionTitle.textContent = "";
+      const titleText = "Hello there!"; 
       let i = 0;
       const typingEffect = setInterval (() => {
-        introductionTitle.innerText += titleText.charAt(i); 
+        introductionTitle.textContent += titleText.charAt(i); 
         i++;
         if (i === titleText.length) {
           clearInterval(typingEffect);
@@ -101,7 +101,7 @@ const INTRO = (function () {
         }
       }, 85);
     };
-  
+
     //Reveals introduction text after title has finished typing: 
     const revealIntroText = () => {
       const showText = () => {
@@ -154,7 +154,7 @@ const modal = (function() {
      * @arg modalElements - Contains Modal html elements. 
     */
     const modalElements = document.querySelectorAll('.view-project'); // Works. Selects both project and gallery elements.
-    //console.log(modalElements);
+    console.log(modalElements);
     addModalEventListener(modalElements); 
 
 })();

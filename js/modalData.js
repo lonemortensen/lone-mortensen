@@ -38,7 +38,7 @@ const portfolioProjects = [
         id: "project-4", 
         image: "img/name-tag-generator-image-1200.png",
         title: "Name Tag Generator",
-        description: "An interactive app built with React JS. The app lets users create name tags based on their input. Name tags are saved to the browser's local storage between sessions.",
+        description: "An interactive app built with React JS. Users can create name tags based on their input. Name tags are saved to the browser's local storage between sessions.",
         firstLink: "https://1f6ixl.csb.app/",
         secondLink: "https://github.com/lonemortensen/name-tag-generator" 
     },
@@ -46,7 +46,7 @@ const portfolioProjects = [
         id: "project-5", 
         image: "img/github-repo-gallery-image-1200.png",
         title: "GitHub Repo Gallery",
-        description: "This project uses GitHub&apos;s API to pull data from a GitHub portfolio to create a gallery of repos.",
+        description: "This project uses GitHub's API to pull data from a GitHub portfolio to create a gallery of repos.",
         firstLink: "https://lonemortensen.github.io/github-repo-gallery/",
         secondLink: "https://github.com/lonemortensen/github-repo-gallery" 
     },
@@ -54,7 +54,7 @@ const portfolioProjects = [
         id: "project-6", 
         image: "img/supervillain-trading-card-screenShot.png",
         title: "Supervillain Trading Cards",
-        description: "This project uses GitHub&apos;s API to pull data from a GitHub portfolio to create a gallery of repos.",
+        description: "This project uses GitHub's API to pull data from a GitHub portfolio to create a gallery of repos.",
         firstLink: "https://replit.com/@lonemortensen/skillcrush-py-cl02-ls10-villain-cards-restAPI-flask-final#main.py",
         secondLink: "https://github.com/lonemortensen/villain-trading-cards-api" 
     }  
