@@ -414,8 +414,7 @@ nav {
 /* FOOTER */
 
 footer {
-  padding: 40px 0px 60px 0px;
-  /*background-color: #152A3E;*/
+  padding: 60px 0px 60px 0px;
   background-color:  #e0218a;
 }
 
@@ -461,8 +460,15 @@ footer .content-wrapper {
   flex-flow: row wrap;
 }
 
+.footer-copyright, .footer-built-with {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
 footer p {
-  /*color: #EEEFDA;*/
   color: #ffffff;
 }
 
@@ -698,8 +704,8 @@ scaleY: increases/decreases element height.
 }
 
 .project-header-test h4 {
-  height: 50px;
-  margin: 0px 0px 20px 0px; 
+  height: 80px; /*height keeps box size consistent*/
+  margin: 10px 0px 0px 0px; 
   text-align: left;
   font-size: 1.6rem;
   font-weight: 700;
@@ -719,7 +725,7 @@ scaleY: increases/decreases element height.
 
 .project-description-test {
   width: 100%;
-  height: 100px;
+  height: 100px; /*height keeps box size consistent*/
   /*padding: 10px;*/
   margin: 20px 0px 0px 0px;
   color: #e3e2df; 
@@ -960,7 +966,7 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
   justify-content: center;
   align-content: center;
   flex-flow: row wrap;
-  width: 30%;
+  width: 20%;
   margin: 0;
 }
 
@@ -1249,7 +1255,7 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
   align-items: center;
   flex-flow: row wrap;
   width: 100%;
-  margin: 0px 0px 60px 0px;
+  /*margin: 0px 0px 60px 0px;*/
 }
 
 .connect-icons {
@@ -1492,60 +1498,10 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
   }
 
 
-
-
-
-
-
-  /* ORIGINAL NAV CODE: */
-
-  /*
-  nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-flow: row wrap;
-    width: 50%;
-  }
-
-  .nav-wrapper {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-  }
-
-  .nav-link {
-    margin-bottom: 20px;
-  }
-
-  .nav-link a {
-    font-family: 'Lexend Tera', sans-serif;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    color: #152A3E;
-    /*Padding and background-color properties prevent text from moving when hovering:*/
-    /*padding: 10px 10px;
-    background-color: transparent;
-  }*/
-
-  /*
-  .nav-link a:hover {
-    padding: 10px 10px;
-    background-color: #E7E5CB;
-    border-radius: 30px;
-    color: #152A3E;
-  }
-  */
-
-
-
-
-
-
   /* FOOTER - Tablet */
 
   footer {
-    padding: 0px 0px 80px 0px;
+    padding: 80px 0px 80px 0px;
   }
 
   .scroll-top-button {
@@ -1589,15 +1545,18 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
   /* PROJECTS - Tablet */
 
   #projects {
-    padding: 80px 0px 0px 0px;
+    padding: 80px 0px 80px 0px;
   }
 
+  /*
   .projects-title {
     margin: 0px 0px 70px 0px;
   }
+  */
 
   .project-wrapper {
     justify-content: space-around;
+    margin: 0px 0px 50px 0px;
   }
 
   .project-item {
@@ -1605,6 +1564,60 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
     /*margin-bottom: 20px;*/
   }
 
+  .project-header-test h4 {
+    height: 85px; /*height keeps box size consistent*/
+    font-size: 1.8rem;
+  }
+
+  .project-description-test {
+    font-size: 1.2rem;
+  }
+
+  .project-skills-test p {
+    font-size: 0.95rem;
+  }
+
+  .project-button-style {
+    font-size: 1.2rem;
+  }
+
+  /* PROJECTS - MODAL WINDOWS - Tablet */
+  /* - styling applied in JavaScript: */
+
+  .modal-wrapper {
+    padding: 30px;
+  }
+
+  .modal-image {
+    margin: 15px;
+  }
+
+  .modal-content {
+    margin: 15px;
+  }
+
+  .modalNavigation {
+    margin: 15px 0px 15px 0px;
+  }
+
+  .closeButton {
+    width: 20%;
+  }
+
+  .modal-title {
+    font-size: 1.8rem;
+  }
+
+  .modal-description-text {
+    font-size: 1.2rem;
+  }
+
+  .modalLink-1, .modalLink-2 {
+    font-size: 1.2rem;
+  }
+
+
+  /* OLD PROJECTS styling - DELETE if not used:
   .project-header {
     width: 100%;
   }
@@ -1621,7 +1634,7 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
     width: 45%;
     margin-top: 0.4rem;
   }
-
+  */
 
   /* SKILLS - Tablet */
 
@@ -1647,6 +1660,10 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
 
   /* ABOUT - Tablet */
 
+  #about {
+    padding: 80px 0px 80px 0px;
+  }
+
   #about figure {
     display: flex;
     justify-content: center;
@@ -1669,6 +1686,11 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
 
   /* CONNECT - Tablet */
 
+  #contact {
+    padding: 80px 0px 80px 0px;
+  }
+
+  /* OLD CONNECT styling - DELETE if not used:
   .connect-title {
     margin: 0px 0px 60px 0px;
   }
@@ -1676,6 +1698,7 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
   .connect-wrapper h4 {
     margin: 0px 0px 35px 0px;
   }
+  */
 
   .connect-icons i {
     font-size: 2rem;
@@ -1798,10 +1821,6 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
     color: #313131;
   }
 
-
-
-
-
   .header-divider {
     display: none;
   }
@@ -1830,7 +1849,7 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
   /* FOOTER - Desktop */
  
   footer {
-    padding: 0px 0px 100px 0px;
+    padding: 100px 0px 100px 0px;
   }
 
   .scroll-top-button {
@@ -1849,17 +1868,14 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
   /* INTRODUCTION - Desktop */
 
   #introduction {
-    /*padding: 0px 0px 100px 0px;*/
     padding: 100px 0px 100px 0px;
   }
-
 
   #introduction .content-wrapper {
   /*align-content: center;*/
   align-content: flex-start;
   height: 36vh;
-}
-
+  }
 
   .introduction-title {
     font-size: 4rem;
@@ -1891,14 +1907,19 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
   /* PROJECTS - Desktop */
 
   #projects {
-    padding: 100px 0px 0px 0px;
+    padding: 100px 0px 100px 0px;
   }
 
   .project-item {
-    /*width: 30%;*/
     width: 48%;
+    margin: 0px 0px 24px 0px;
   }
 
+  .project-skills-test p {
+    height: 50px;
+  }
+
+  /* OLD PROJECTS styling - DELETE if not used:
   .project-header {
     width: 100%;
   }
@@ -1912,7 +1933,7 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
     margin-top: 0.5rem;
     font-size: 1.2rem;
   }
-  
+  */
 
   /* SKILLS - Desktop */
 
@@ -1944,7 +1965,7 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
   /* ABOUT - Desktop */
 
   #about {
-    padding: 100px 0px 120px 0px;
+    padding: 100px 0px 100px 0px;
   }
 
   .about-content-wrapper {
@@ -1977,15 +1998,17 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
   /* CONNECT - Desktop */
 
   #contact {
-    padding: 120px 0px 0px 0px;
+    padding: 100px 0px 100px 0px;
   }
 
+  /* OLD CONNECT styling - DELETE if not used:
   .connect-title {
     margin: 0px 0px 80px 0px;
   }
+  */
 
   .connect-info {
-    margin: 0px 0px 80px 0px;
+    /*margin: 0px 0px 80px 0px;*/
   }
 
   .connect-icons {
