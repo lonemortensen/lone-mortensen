@@ -668,7 +668,7 @@ scaleY: increases/decreases element height.
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  margin: 20px 0px 20px 0px;
+  margin: 0px 0px 20px 0px;
 }
 
 /* New Layout Test: */
@@ -1734,7 +1734,7 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
 
 
   .section-title-wrapper {
-    margin-bottom: 70px;
+    margin-bottom: 90px;
   }
 
   .section-title {
@@ -1911,12 +1911,31 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
   }
 
   .project-item {
-    width: 48%;
+    /*width: 48%;*/
+    width: 32%;
     margin: 0px 0px 24px 0px;
   }
 
+  .project-header-test h4 {
+    height: 100px;
+    font-size: 1.4rem;
+  }
+
+  .project-description-test {
+    height: 180px;
+    margin: 10px 0px 0px 0px;
+  }
+
+  .project-skills-test {
+    margin: 20px 0px 20px 0px;
+  }
+
   .project-skills-test p {
-    height: 50px;
+    height: 60px;
+  }
+
+  .project-view-button {
+    margin: 20px 0px 10px 0px;
   }
 
   /* OLD PROJECTS styling - DELETE if not used:
