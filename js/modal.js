@@ -251,15 +251,20 @@ const createModalWindow = (selectedModalData) => {
 	arrowButtons.classList.add("arrowButtons");
 
 	/* - previous and next arrow:*/
+	/*NOTE: May not need classes arrowPrevious and arrowNext...*/
 	const arrowPrevious = arrowButtons.appendChild(document.createElement("li"));
 	arrowPrevious.classList.add("arrowPrevious", "circle");
 	const arrowNext = arrowButtons.appendChild(document.createElement("li"));
 	arrowNext.classList.add("arrowNext", "circle");
 	
+	/* NOTE: May not need class arrow...*/
 	const previousModal = arrowPrevious.appendChild(document.createElement("button"));
 	previousModal.setAttribute("type", "button");
 	previousModal.setAttribute("data-navigation", "previous");
 	previousModal.classList.add("arrow", "previousModal");
+	// Font Awesome 'previous' arrow icon:
+	const arrowIconPrevious = previousModal.appendChild(document.createElement("i"));
+	arrowIconPrevious.classList.add("fa-solid", "fa-chevron-left");
 	// Adds event listener to 'previous' button and passes the id of the currently open Modal:
 	previousModal.addEventListener("click", (event) => {
 		prepareModalWindow(event, currentModalId);
@@ -269,10 +274,14 @@ const createModalWindow = (selectedModalData) => {
 	nextModal.setAttribute("type", "button");
 	nextModal.setAttribute("data-navigation", "next");
 	nextModal.classList.add("arrow", "nextModal");
+	// Font Awesome 'next' arrow icon:
+	const arrowIconNext = nextModal.appendChild(document.createElement("i"));
+	arrowIconNext.classList.add("fa-solid", "fa-chevron-right");
 	// Adds event listener to 'next' button and passes the id of the currently open Modal:
 	nextModal.addEventListener("click", (event) => {
 		prepareModalWindow(event, currentModalId);
-	}); 
+	});
+
 	
 	/* - close button:*/
 	const closeButton = modalNavigation.appendChild(document.createElement("div"));

@@ -449,8 +449,8 @@ footer {
 
 .scroll-top-button i {
   /*color: #152A3E;*/
-  color: #e3e2df; 
   font-size: 1rem;
+  color: #e3e2df; 
 }
 
 footer .content-wrapper {
@@ -482,6 +482,9 @@ footer p {
 
 .footer-built-with {
   margin-top: 10px;
+}
+
+.footer-built-with p {
   font-size: 0.6rem;
 }
 
@@ -859,12 +862,13 @@ Modal Window 'close' button in Javascript:*/
 }
 
 .modalLink-1, .modalLink-2 {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #152A3E;
   padding-bottom: 3px; 
   /*background-image: linear-gradient(#e0218a, #e0218a);*/
   background-image: linear-gradient(#f42c38, #f42c38);
-  background-size: 0% 0.1em;
+  /*background-size: 0% 0.1em;*/
+  background-size: 0% 0.07em;
   background-position-y: 100%;
   background-position-x: 50%;
   background-repeat: no-repeat;
@@ -876,7 +880,8 @@ Modal Window 'close' button in Javascript:*/
 }*/
 
 .modalLink-1:hover, .modalLink-2:hover {
-  background-size: 100% 0.1em;
+  /*background-size: 100% 0.1em;*/
+  background-size: 100% 0.07em;
 }
 
 .modalNavigation {
@@ -919,7 +924,7 @@ Modal Window 'close' button in Javascript:*/
 .circle {
   width: 25px;
   height: 25px;
-  border-radius: 25px;
+  border-radius: 25px; 
   margin: 0px 10px 0px 10px;
   /*padding: 0px 5px 0px 5px;*/ 
   /*background: #E9B14C;*/
@@ -927,39 +932,63 @@ Modal Window 'close' button in Javascript:*/
   /*background: #8d8752;*/
 }
 
-/*
-Create arrows with css:
-https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20created%20using,direction%20and%20amount%20of%20rotation.
-*/
 
 .arrow {
-  border-top: 3px solid transparent;
-  border-bottom: 3px solid transparent;
+  /* border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent; */
   /*border: solid black;*/
-  border: solid #e3e2df; 
-  border-width: 0 2px 2px 0;
+  /*border: solid #e3e2df;*/ 
+  /*border-width: 0 2px 2px 0;*/
   /*display: inline-block;*/
-  padding: 4px; 
-  background-color: transparent;
+  /*padding: 4px;*/ 
+  /*background-color: transparent;*/
 }    
 
 .previousModal {
   /*border-left: 3px solid black;*/
-  transform: rotate(135deg);
+  /*transform: rotate(135deg);*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px; 
+  border: none;
   cursor: pointer;
   pointer-events: auto;
   /*padding-right: 5px;*/
   /*padding-bottom: 5px;*/
-  margin-left: 3px;
+  /*margin-left: 3px;*/
+  background-color: transparent;
 }
 
 .nextModal {
   /*border-right: 3px solid black;*/
-  transform: rotate(-45deg);
+  /*transform: rotate(-45deg);*/
+  /*cursor: pointer;*/
+  /*pointer-events: auto;*/
+  /*margin-right: 3px;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  border: none;
   cursor: pointer;
   pointer-events: auto;
-  margin-right: 3px;
+  /*padding-right: 5px;*/
+  /*padding-bottom: 5px;*/
+  /*margin-left: 3px;*/
+  background-color: transparent;
 }
+
+.previousModal i, .nextModal i {
+  /*font-size: 1rem;*/
+  font-size: 0.9rem;
+  color: #e3e2df;
+}
+
 
 .closeButton {
   display: flex;
@@ -1596,14 +1625,6 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
     margin: 15px;
   }
 
-  .modalNavigation {
-    margin: 15px 0px 15px 0px;
-  }
-
-  .closeButton {
-    width: 20%;
-  }
-
   .modal-title {
     font-size: 1.8rem;
   }
@@ -1616,6 +1637,36 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
     font-size: 1.2rem;
   }
 
+  .modalNavigation {
+    margin: 15px 0px 15px 0px;
+  }
+
+  .circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+  }
+
+  .previousModal {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+  }
+
+  .nextModal{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+  }
+
+  .previousModal i, .nextModal i {
+    font-size: 1rem;
+  }
+  
+
+  .closeButton {
+    width: 20%;
+  }
 
   /* OLD PROJECTS styling - DELETE if not used:
   .project-header {
@@ -1860,10 +1911,9 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
     border-radius: 40px;
   }
 
-  footer p {
-    font-size: 1rem;
+  .footer-built-with p {
+    font-size: 0.8rem;
   }
-
 
   /* INTRODUCTION - Desktop */
 
@@ -1912,7 +1962,7 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
 
   .project-item {
     /*width: 48%;*/
-    width: 32%;
+    width: 31%;
     margin: 0px 0px 24px 0px;
   }
 
@@ -1937,6 +1987,56 @@ https://www.tutorialspoint.com/css/css_arrows.htm#:~:text=Arrows%20can%20be%20cr
   .project-view-button {
     margin: 20px 0px 10px 0px;
   }
+
+
+  /* PROJECTS - MODAL WINDOWS - Desktop */
+  /* - styling applied in JavaScript: */
+
+  .modal-window {
+    width: 45%;
+  }
+
+  /*
+  .modal-wrapper {
+    padding: 30px;
+  }
+  */
+
+  /*
+  .modal-image {
+    margin: 15px;
+  }
+  */
+
+  .modal-content {
+    margin: 20px;
+  }
+  
+  .modal-title {
+    /*font-size: 1.8rem;*/
+    font-size: 2rem;
+  }
+
+  /*
+  .modal-description-text {
+    font-size: 1.2rem;
+  }
+  */
+
+  /*
+  .modalLink-1, .modalLink-2 {
+    font-size: 1.2rem;
+  }
+  */
+
+  .modalNavigation {
+    margin: 15px 0px 15px 0px;
+  }
+
+  .closeButton {
+    width: 20%;
+  }
+
 
   /* OLD PROJECTS styling - DELETE if not used:
   .project-header {
