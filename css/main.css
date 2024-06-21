@@ -379,9 +379,10 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  /*justify-content: flex-start;*/
-  padding-top: 30px;
-  background-color: #53565B;
+  justify-content: center;
+  /*padding-top: 30px;*/
+  /*background-color: #53565B;*/
+  background-color: #8d8752; 
 }
 
 .hide-mobile-nav-menu {
@@ -390,26 +391,35 @@ nav {
 }
 
 .mobile-nav-link {
-  margin: 30px 60px;
+  width: 70%;
+  /*margin: 15px 50px;*/
+  margin: 15px 0px 15px 90px;
+  padding-bottom: 30px;
+  text-align: left;
+  border-bottom: 0.1px solid #f49729;
 }
 
 .mobile-nav-link a {
   font-family: 'Lexend Tera', sans-serif;
+  /*font-family: 'Lekton', sans-serif;*/
   font-size: 0.75rem;
+  /*font-size: 0.85rem;*/
   text-transform: uppercase;
-  color: #ffffff;
+  /*color: #ffffff;*/
+  color: #e3e2df;
+  margin-bottom: 20px;
   padding-bottom: 5px; 
-  background-image: linear-gradient(#e0218a, #e0218a);
+  /* background-image: linear-gradient(#e0218a, #e0218a);
   background-size: 0% 0.1em;
   background-position-y: 100%;
   background-position-x: 50%;
   background-repeat: no-repeat;
-  transition: background-size 0.3s ease-in-out;
+  transition: background-size 0.3s ease-in-out; */
 }
 
-.mobile-nav-link a:hover {
+/* .mobile-nav-link a:hover {
   background-size: 100% 0.1em;
-}
+} */
 
 /* FOOTER */
 
@@ -757,9 +767,11 @@ Modal Window 'close' button in Javascript:*/
   /*border: 0.5px solid #53565b;*/
   border: none;
   border-radius: 3px;
+  box-shadow: rgb(0 0 0 / 25%) 0px 4px 14px;
   transform: scale(0.9);
   cursor: pointer;
   pointer-events: auto;
+  
 }
 
 .project-button-style:hover {
@@ -902,7 +914,8 @@ Modal Window 'close' button in Javascript:*/
   align-items: center;
   flex-flow: row wrap;
   width: 50%;
-  margin: 0;
+  /*margin: 0;*/
+  margin: 0px 10px 0px 0px;
 }
 
 .arrowPrevious {
@@ -1514,7 +1527,8 @@ Modal Window 'close' button in Javascript:*/
     text-transform: uppercase;
     color: #152A3E;
     padding-bottom: 5px; 
-    background-image: linear-gradient(#e0218a, #e0218a);
+    /*background-image: linear-gradient(#e0218a, #e0218a);*/
+    background-image: linear-gradient(#f42c38, #f42c38);
     background-size: 0% 0.1em;
     background-position-y: 100%;
     background-position-x: 50%;
@@ -1639,6 +1653,10 @@ Modal Window 'close' button in Javascript:*/
 
   .modalNavigation {
     margin: 15px 0px 15px 0px;
+  }
+
+  .arrowButtons {
+    margin: 0px 10px 0px 0px;
   }
 
   .circle {
@@ -2031,6 +2049,10 @@ Modal Window 'close' button in Javascript:*/
 
   .modalNavigation {
     margin: 15px 0px 15px 0px;
+  }
+
+  .arrowButtons {
+    margin: 0px 5px 0px 0px;
   }
 
   .closeButton {

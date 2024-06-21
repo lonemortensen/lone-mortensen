@@ -281,7 +281,6 @@ const createModalWindow = (selectedModalData) => {
 	nextModal.addEventListener("click", (event) => {
 		prepareModalWindow(event, currentModalId);
 	});
-
 	
 	/* - close button:*/
 	const closeButton = modalNavigation.appendChild(document.createElement("div"));
