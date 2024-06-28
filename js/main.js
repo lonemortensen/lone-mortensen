@@ -13,6 +13,7 @@ This document contains JavaScript code that:
 - Automatically updates the copyright year.
 ==================================================================== */
 
+
 /* -------- SKILLS PANEL -------- */
 
 import {tabsList, handlePageLoad, handleTabSelection} from "./panel.js";
@@ -110,6 +111,31 @@ const INTRO = (function () {
     // Detects when introduction text animation is completed:
     introductionText.addEventListener("animationend", changeTextStyle) 
 })();
+
+
+/* -------- ABOUT SLIDERS -------- */
+
+/**
+ * Make sure elements are visible if JS is not enabled by browser: https://webdesign.tutsplus.com/animate-on-scroll-with-javascript--cms-36671t
+ * https://webdesign.tutsplus.com/animate-on-scroll-with-javascript--cms-36671t
+ * Detecting When an Element Is in View: getBoundingClientRect() method: https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect 
+ * Use clientWidth/clientHeight (instead of innerHeight): https://id.javascript.info/size-and-scroll-window
+ * Check for visibility: https://usefulangle.com/post/113/javascript-detecting-element-visible-during-scroll
+ * Use a throttle function to reduce the number of times the scroll event function is fired to increase performance: https://webdesign.tutsplus.com/animate-on-scroll-with-javascript--cms-36671t 
+ */
+
+/*
+- select and store elements.
+- select and store any elements needed to calculate element position on page, cf. scroll btn code.
+- apply css styling to move elements out of view.
+- detect when elements come into view.
+- apply css styling to move elements into view. 
+
+
+
+*/
+
+
 
 
 /* -------- SCROLL BUTTON -------- */
