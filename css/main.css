@@ -889,9 +889,75 @@ scaleY: increases/decreases element height.
   color: #152A3E;
 }
 
+.hide-about-content {
+  opacity: 0;
+}
+
+.show-about-content {
+  opacity: 1;
+}
+
+/*ABOUT section animations:*/
+
+/*
+Timing: Figure out timing of each elements animation, i.e. first slider-1, then slider-2, then circle, and whether this should be done in CSS or JS?
+Note: The first element (slider-1) will set it off in JS. How will the remaining elements come in?
+Opacity: Applied in keyframes or with a separate class applied in JS - in case JS doesn't run?  
+*/
+
+.about-slide-left {
+  animation: 2000ms slide-in-left ease-in-out;
+  animation-iteration-count: 1;
+}
+
+.about-slide-right {
+  animation: 2000ms slide-in-right ease-in-out;
+  animation-iteration-count: 1;
+}
+
+/*How to make circle move in from top???*/
+.about-drop-top {
+  animation: 2000ms drop-from-top ease;
+  animation-iteration-count: 3;
+  animation-delay: 4s;
+  transform-origin: top;
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes drop-from-top {
+  0% {transform: scale(1, 1) translateY(0);}
+  10% {transform: scale(1, 1) translateY(0);}
+  30% {transform: scale(1.5, 1) translateY(25px);}
+  50% {transform: scale(1, 1) translateY(0);}
+  80% {transform: scale(1, 1) translateY(0);}
+  100% {transform: scale(1, 1) translateY(0);}
+}
+
+
 /*END - NEW ABOUT test design*/
 
-
+/*DELETE if not used:*/
 #about figure {
   display: flex;
   justify-content: center;
@@ -904,18 +970,11 @@ scaleY: increases/decreases element height.
   color: #152A3E;
 }
 
-
-
-
-
 .about-info h4 {
   margin: 0px 0px 40px 0px;
   text-align: left;
   color: #152A3E;
 }
-
-
-
 
 /* CONNECT */
 
