@@ -121,7 +121,13 @@ const INTRO = (function () {
  * Detecting When an Element Is in View: getBoundingClientRect() method: https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect 
  * Use clientWidth/clientHeight (instead of innerHeight): https://id.javascript.info/size-and-scroll-window
  * Check for visibility: https://usefulangle.com/post/113/javascript-detecting-element-visible-during-scroll
- * Use a throttle function to reduce the number of times the scroll event function is fired to increase performance: https://webdesign.tutsplus.com/animate-on-scroll-with-javascript--cms-36671t 
+ * Use a throttle function (or debouncing??) to reduce the number of times the scroll event function is fired to increase performance: https://webdesign.tutsplus.com/animate-on-scroll-with-javascript--cms-36671t 
+ * The scrollTop property sets or returns the number of pixels an element's content is scrolled vertically.
+ * The getBoundingClientRect() method returns the size of an element and its position relative to the viewport (i.e. the part of the page you can SEE on the screen).
+ * - returns a DOMRect object with eight properties: left, top, right, bottom, x, y, width, height.
+ * Consider the Intersection Observer API over scroll event: it does not fire all the time when user scrolls until the given callback 
+ * function condition is met and executed, and it avoids the math involved with measuring viewport height, etc. 
+ * With Intersection Observer, the callback function will only trigger with the specified element reaches a specified threshold and intersects with the viewport or another specified element. 
  */
 
 /*
