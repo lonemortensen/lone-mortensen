@@ -116,32 +116,87 @@ const INTRO = (function () {
 /* -------- ABOUT SLIDERS -------- */
 
 /**
+ * !!!! START HERE: 
  * Make sure elements are visible if JS is not enabled by browser: https://webdesign.tutsplus.com/animate-on-scroll-with-javascript--cms-36671t
  * https://webdesign.tutsplus.com/animate-on-scroll-with-javascript--cms-36671t
- * Detecting When an Element Is in View: getBoundingClientRect() method: https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect 
- * Use clientWidth/clientHeight (instead of innerHeight): https://id.javascript.info/size-and-scroll-window
- * Check for visibility: https://usefulangle.com/post/113/javascript-detecting-element-visible-during-scroll
- * Use a throttle function (or debouncing??) to reduce the number of times the scroll event function is fired to increase performance: https://webdesign.tutsplus.com/animate-on-scroll-with-javascript--cms-36671t 
- * The scrollTop property sets or returns the number of pixels an element's content is scrolled vertically.
- * The getBoundingClientRect() method returns the size of an element and its position relative to the viewport (i.e. the part of the page you can SEE on the screen).
- * - returns a DOMRect object with eight properties: left, top, right, bottom, x, y, width, height.
- * Consider the Intersection Observer API over scroll event: it does not fire all the time when user scrolls until the given callback 
- * function condition is met and executed, and it avoids the math involved with measuring viewport height, etc. 
- * With Intersection Observer, the callback function will only trigger with the specified element reaches a specified threshold and intersects with the viewport or another specified element. 
+ * - STOP the observer when work has been done with disconnect() method.
  */
 
-/*
-- select and store elements.
-- select and store any elements needed to calculate element position on page, cf. scroll btn code.
-- apply css styling to move elements out of view.
-- detect when elements come into view.
-- apply css styling to move elements into view. 
+const ABOUT = (function () {
+  // Target element first About slider:
+  const aboutSliderOne = document.querySelector(".about-slider-1");
+  // Target alement second About slider:
+  const aboutSliderTwo = document.querySelector(".about-slider-2");
+  // Target element About circle:
+  const aboutCircle = document.querySelector(".about-circle");
 
+  /**
+   * Creates intersection observers and sets options for sliders.
+   * Initiates circle animation. 
+   */
+  const aboutObserverOne = () => {
+    // Options object contains settings for the observer:
+    const options = {
+      root: null, // Root element set to viewport
+      rootMargin: "0px",
+      threshold: 1
+    };
+    // Creates new observer, passing callback function and options.
+    const observer = new IntersectionObserver(startAboutAnimation, options);
+    // Passes target element to observer:
+    observer.observe(aboutSliderOne);
+  };
 
+  const aboutObserverTwo = () => {
+    // Options object contains settings for the observer:*/
+    const options = {
+      root: null, // Root element set to viewport
+      rootMargin: "0px",
+      threshold: 0.3
+    };
+    // Creates new observer, passing callback and options.
+    const observer = new IntersectionObserver(startAboutAnimation, options);
+    // Passes target element to observer:
+    observer.observe(aboutSliderTwo);
+  };
 
-*/
+  /**
+   * Callback handles animation on intersection.
+   * @param {*} entries 
+   * @param {*} observer 
+   */
+  const startAboutAnimation = (entries, observer) => {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if (entry.isIntersecting) {
+        if (entry.target.id === "slider-1") {
+          console.log("we're intersecting slide 1"); // Works
+          entry.target.classList.remove("hide-about-content"); // Works 
+          entry.target.classList.add("about-slide-left"); // Works - "slider 1" slides in. 
+        } else if (entry.target.id === "slider-2") {
+            console.log("we're intersecting slide 2"); // Works
+            entry.target.classList.remove("hide-about-content"); // Works 
+            entry.target.classList.add("about-slide-right"); // Works - "slider 2" slides in. 
+            revealAboutCircle();
+        }
+      }
+    });
+  };
 
+  /**
+   * Reveals circle after second slider is in place. 
+   */
+  const revealAboutCircle = () => {
+    const showCircle = () => {
+      aboutCircle.classList.remove("hide-about-content");
+      aboutCircle.classList.add("about-drop-top");
+    };
+    setTimeout(showCircle, 2500);
+  };
 
+  aboutObserverOne();
+  aboutObserverTwo();
+})();
 
 
 /* -------- SCROLL BUTTON -------- */
