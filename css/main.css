@@ -200,13 +200,13 @@ p {
 /* Layout - Special Styles */
 /* NOTE: Clean out the Special Styles that are no longer used! */
 
-.project-line {
+/* .project-line {
   width: 100%;
   height: 1px;
   margin: 20px 0px 20px 0px;
   background: #313131;
   border: none;
-}
+} */
 
 /* Section header styles */
 
@@ -660,13 +660,6 @@ scaleY: increases/decreases element height.
   background-color: #e3e2df;  
 }
 
-/*
-.projects-title {
-  width: 100%;
-  margin-bottom: 20px;
-}
-*/
-
 .project-wrapper {
   display: flex;
   justify-content: center;
@@ -684,7 +677,6 @@ scaleY: increases/decreases element height.
   margin: 0px 0px 20px 0px;
 }
 
-/* New Layout Test: */
 .project-background {
   padding: 40px 40px;
   background-color: #5a4331;
@@ -709,14 +701,14 @@ scaleY: increases/decreases element height.
   }
 }
 
-.project-header-test {
+.project-header {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
   width: 100%;
 }
 
-.project-header-test h4 {
+.project-header h4 {
   height: 80px; /*height keeps box size consistent*/
   margin: 10px 0px 0px 0px; 
   text-align: left;
@@ -736,7 +728,7 @@ scaleY: increases/decreases element height.
   color: #e0218a;    
 }
 
-.project-description-test {
+.project-description {
   width: 100%;
   height: 100px; /*height keeps box size consistent*/
   /*padding: 10px;*/
@@ -744,7 +736,7 @@ scaleY: increases/decreases element height.
   color: #e3e2df; 
 }
 
-.project-skills-test p {
+.project-skills p {
   /*padding-top: 10px;*/
   font-size: 0.75rem;
   color: #e3e2df; 
@@ -1012,111 +1004,11 @@ Modal Window 'close' button in Javascript:*/
   margin: 0;
 }
 
-/* End Test*/
-
-
-
-/* OLD PROJECT STYLING - DELETE IF NOT USED: 
-.project-item figure {
-  margin: 20px 0px 20px 0px;
-  border: 1px solid #e6e6e6;
-  box-shadow: rgb(0 0 0 / 25%) 0px 4px 14px;
-}
-
-.project-image {
-  width: 100%;
-}
-
-.project-header {
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-  width: 100%;
-}
-
-.project-header h4 {
-  margin: 0px 0px 20px 0px; 
-}
-
-.project-description {
-  width: 100%;
-  margin: 20px 0px 0px 0px; 
-}
-
-.project-skills {
-  margin: 20px 0px 0px 0px; 
-}
-
-.project-skills span {
-  font-weight: 700;
-}
-
-.project-links {
-  display: flex;
-  justify-content: space-evenly;
-  flex-flow: row wrap;
-  width: 100%;
-  margin: 30px 0px 60px 0px; 
-}
-
-.project-links a {
-  width: 30%;
-  padding: 0.25rem 0.5rem;
-  text-align: center;
-  color: #EEEFDA;
-  background-color: #152A3E;
-  border-color: #ffffff;
-  box-shadow: 0 0 0 0 #ffffff inset;
-  transition: color .4s ease-in-out, box-shadow .4s ease-in-out;
-}
-
-.project-links a:hover {
-  font-weight: 700;
-  color: #152A3E;
-  background-color: #ffffff;
-  border-color: #ffffff;
-  box-shadow: 200px 0 0 0 #ffffff inset;
-}
-*/
-
 /* SKILLS */
 
 #skills {
   padding: 60px 0px 60px 0px; 
 }
-
-/* DELETE: 
-.skills-title-wrapper {
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-  width: 100%;
-  margin-bottom: 40px;
-}
-
-.skills-title {
-  font-size: 2rem; 
-}
-
-.circle-section-wrapper {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin: 10px 0px 10px 0px;
-}
-
-.circle-section {
-  width: 8px;
-  height: 8px;
-  border-radius: 8px;
-  background: #E9B14C;
-} 
-
-.skills-subtitle {
-  width: 100%;
-  text-align: center;
-}
-*/
 
 .tab-panel-wrapper {
   display: flex;
@@ -1218,6 +1110,8 @@ Modal Window 'close' button in Javascript:*/
   padding: 80px 0px 80px 0px;
   /*background-color: #CAC691;*/
 }
+
+/* !!!! START HERE - CLEAN UP ABOUT CODE: */
 
 /*NEW ABOUT test design:*/
 
@@ -1355,7 +1249,6 @@ Modal Window 'close' button in Javascript:*/
   80% {transform: scale(1, 1) translateY(0);}
   100% {transform: scale(1, 1) translateY(0);}
 }
-
 
 /*END - NEW ABOUT test design*/
 
@@ -1724,16 +1617,16 @@ Modal Window 'close' button in Javascript:*/
     /*margin-bottom: 20px;*/
   }
 
-  .project-header-test h4 {
+  .project-header h4 {
     height: 85px; /*height keeps box size consistent*/
     font-size: 1.8rem;
   }
 
-  .project-description-test {
+  .project-description {
     font-size: 1.2rem;
   }
 
-  .project-skills-test p {
+  .project-skills p {
     font-size: 0.95rem;
   }
 
@@ -2101,21 +1994,21 @@ Modal Window 'close' button in Javascript:*/
     margin: 0px 0px 24px 0px;
   }
 
-  .project-header-test h4 {
+  .project-header h4 {
     height: 100px;
     font-size: 1.4rem;
   }
 
-  .project-description-test {
+  .project-description {
     height: 180px;
     margin: 10px 0px 0px 0px;
   }
 
-  .project-skills-test {
+  .project-skills {
     margin: 20px 0px 20px 0px;
   }
 
-  .project-skills-test p {
+  .project-skills p {
     height: 60px;
   }
 

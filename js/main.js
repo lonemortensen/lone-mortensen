@@ -17,37 +17,8 @@ This document contains JavaScript code that:
 
 /* Imports for Portfolio Modals: */
 import {addModalEventListener, closeModalWindow} from "./modal.js"; 
-
-/* -------- SKILLS PANEL -------- */
-
 /* Imports for Skills Panel: */
 import {tabsList, handlePageLoad, handleTabSelection} from "./panel.js";
-
-
-/* -------- SKILLS PANEL -------- */
-
-
-// import {tabsList, handlePageLoad, handleTabSelection} from "./panel.js";
-
-// /**
-//  * Detects when page loads:
-// */
-// window.addEventListener("load", handlePageLoad);
-
-
-// /**
-//  * Detects when user clicks on a tab:
-// */
-// const addTabEventListener = () => {
-//   for (let i = 0; i < tabsList.length; i++) {
-//     let tab = tabsList[i];
-//     console.log(tab); //logs all <a>, i.e. tabs - this means main.js connects to panel.js
-//     tab.addEventListener("click", handleTabSelection);
-//   };
-// };
-
-// addTabEventListener();
-
 
 
 /* -------- MOBILE NAVIGATION -------- */ 
