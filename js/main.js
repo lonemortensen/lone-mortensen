@@ -119,7 +119,6 @@ const INTRO = (function () {
  * !!!! START HERE: 
  * Make sure elements are visible if JS is not enabled by browser: https://webdesign.tutsplus.com/animate-on-scroll-with-javascript--cms-36671t
  * https://webdesign.tutsplus.com/animate-on-scroll-with-javascript--cms-36671t
- * - STOP the observer when work has been done with disconnect() method.
  */
 
 const ABOUT = (function () {
@@ -132,38 +131,38 @@ const ABOUT = (function () {
 
   /**
    * Creates intersection observers and sets options for sliders.
-   * Initiates circle animation. 
    */
-  const aboutObserverOne = () => {
+  const observerSliderOne = () => {
     // Options object contains settings for the observer:
     const options = {
       root: null, // Root element set to viewport
       rootMargin: "0px",
       threshold: 1
     };
-    // Creates new observer, passing callback function and options.
+    //Creates new observer, passing callback function and observer options.
     const observer = new IntersectionObserver(startAboutAnimation, options);
     // Passes target element to observer:
     observer.observe(aboutSliderOne);
   };
 
-  const aboutObserverTwo = () => {
+  const observerSliderTwo = () => {
     // Options object contains settings for the observer:*/
     const options = {
       root: null, // Root element set to viewport
       rootMargin: "0px",
       threshold: 0.3
     };
-    // Creates new observer, passing callback and options.
+    // Creates new observer, passing callback and observer options.
     const observer = new IntersectionObserver(startAboutAnimation, options);
     // Passes target element to observer:
     observer.observe(aboutSliderTwo);
   };
 
   /**
-   * Callback handles animation on intersection.
-   * @param {*} entries 
-   * @param {*} observer 
+   * Callback handles animation on intersection for both sliders.
+   * Initiates circle animation. 
+   * @param entries Array of IntersectionObserverEntry objects to determine visibility and intersection status of targets.
+   * @param observer The IntersectionObserver instance allows for interaction with the observer.
    */
   const startAboutAnimation = (entries, observer) => {
     entries.forEach((entry) => {
@@ -171,12 +170,14 @@ const ABOUT = (function () {
       if (entry.isIntersecting) {
         if (entry.target.id === "slider-1") {
           console.log("we're intersecting slide 1"); // Works
+          observer.disconnect();
           entry.target.classList.remove("hide-about-content"); // Works 
           entry.target.classList.add("about-slide-left"); // Works - "slider 1" slides in. 
         } else if (entry.target.id === "slider-2") {
             console.log("we're intersecting slide 2"); // Works
+            observer.disconnect();
             entry.target.classList.remove("hide-about-content"); // Works 
-            entry.target.classList.add("about-slide-right"); // Works - "slider 2" slides in. 
+            entry.target.classList.add("about-slide-right"); // Works - "slider 2" slides in.
             revealAboutCircle();
         }
       }
@@ -194,8 +195,8 @@ const ABOUT = (function () {
     setTimeout(showCircle, 2500);
   };
 
-  aboutObserverOne();
-  aboutObserverTwo();
+  observerSliderOne();
+  observerSliderTwo();
 })();
 
 
