@@ -200,13 +200,14 @@ p {
 /* Layout - Special Styles */
 /* NOTE: Clean out the Special Styles that are no longer used! */
 
-/* .project-line {
+.project-line {
   width: 100%;
   height: 1px;
   margin: 20px 0px 20px 0px;
   background: #313131;
+  background: #ffffff;
   border: none;
-} */
+}
 
 /* Section header styles */
 
@@ -680,7 +681,7 @@ scaleY: increases/decreases element height.
 .project-background {
   padding: 40px 40px;
   background-color: #5a4331;
-  border: 1px solid #e6e6e6;
+  border: 3px solid #e6e6e6;
   box-shadow: rgb(0 0 0 / 25%) 0px 4px 14px;
 }
 
@@ -753,13 +754,16 @@ scaleY: increases/decreases element height.
 Modal Window 'close' button in Javascript:*/
 .project-button-style {
   padding: 6px 8px 6px 8px;
-  font-family: 'Lekton', sans-serif;
-  font-size: 1rem;
+  /* font-family: 'Lekton', sans-serif; */
+  font-family: 'Lexend Tera', sans-serif;
+  /* font-size: 1rem; */
+  font-size: 0.7rem;
+  text-transform: uppercase;
   background-color: #e3e2df;
   /*border: 0.5px solid #53565b;*/
   border: none;
-  border-radius: 3px;
-  box-shadow: rgb(0 0 0 / 25%) 0px 4px 14px;
+  /* border-radius: 3px; */
+  /* box-shadow: rgb(0 0 0 / 25%) 0px 4px 14px; */
   transform: scale(0.9);
   cursor: pointer;
   pointer-events: auto;
@@ -866,11 +870,14 @@ Modal Window 'close' button in Javascript:*/
 }
 
 .modalLink-1, .modalLink-2 {
-  font-size: 1rem;
+  font-family: 'Lexend Tera', sans-serif;
+  /* font-size: 1rem; */
+  font-size: 0.7rem;
   color: #152A3E;
+  text-transform: uppercase;
   padding-bottom: 3px; 
-  /*background-image: linear-gradient(#e0218a, #e0218a);*/
-  background-image: linear-gradient(#f42c38, #f42c38);
+  background-image: linear-gradient(#e0218a, #e0218a);
+  /* background-image: linear-gradient(#f42c38, #f42c38); */
   /*background-size: 0% 0.1em;*/
   background-size: 0% 0.07em;
   background-position-y: 100%;
@@ -933,7 +940,8 @@ Modal Window 'close' button in Javascript:*/
   margin: 0px 10px 0px 10px;
   /*padding: 0px 5px 0px 5px;*/ 
   /*background: #E9B14C;*/
-  background: #5a4331;
+  /* background: #5a4331; */
+  background-color: #e3e2df;
   /*background: #8d8752;*/
 }
 
@@ -990,10 +998,10 @@ Modal Window 'close' button in Javascript:*/
 
 .previousModal i, .nextModal i {
   /*font-size: 1rem;*/
-  font-size: 0.9rem;
-  color: #e3e2df;
+  /* font-size: 0.9rem; */
+  font-size: 0.7rem;
+  /* color: #e3e2df; */
 }
-
 
 .closeButton {
   display: flex;
@@ -1108,12 +1116,8 @@ Modal Window 'close' button in Javascript:*/
 
 #about {
   padding: 80px 0px 80px 0px;
-  /*background-color: #CAC691;*/
+  background-color: #e3e2df;
 }
-
-/* !!!! START HERE - CLEAN UP ABOUT CODE: */
-
-/*NEW ABOUT test design:*/
 
 .about-wrapper {
   display: flex;
@@ -1124,6 +1128,11 @@ Modal Window 'close' button in Javascript:*/
 }
 
 .about-circle {
+  /*TEST - hi!:*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 100px;
   height: 100px;
   border-radius: 100px;
@@ -1136,6 +1145,11 @@ Modal Window 'close' button in Javascript:*/
   left: 38%;
   top: 19%;
   /* opacity: 0; */
+}
+
+.about-circle p {
+  /* font-size: 1.5rem; */
+  font-size: 2rem;
 }
 
 .about-slider-1 {
@@ -1153,11 +1167,11 @@ Modal Window 'close' button in Javascript:*/
   justify-content: center;
   width: 100%;
   height: 600px;
-  background-color: #e3e2df;
+  /* background-color: #e3e2df; */
+  background-color: #ffffff;
   /* border: solid 1px black;
   box-shadow: rgb(0 0 0 / 25%) 0px 4px 14px; */
 }
-
 
 .about-info {
   /* display: flex;
@@ -1168,19 +1182,19 @@ Modal Window 'close' button in Javascript:*/
   margin: 80px 30px 80px 30px;
   padding: 40px;
   background-color: #ffffff;
-  /* box-shadow: rgb(0 0 0 / 25%) 0px 4px 14px; */
+  box-shadow: rgb(0 0 0 / 25%) 0px 4px 14px;
 }
 
 .about-description {
   width: 100%;
 }
 
-.about-title {
+/* .about-title {
   width: 100%;
   margin: 0px 0px 40px 0px;
   text-align: left;
   color: #152A3E;
-}
+} */
 
 .about-description p {
   margin: 0px 0px 20px 0px;
@@ -1207,7 +1221,6 @@ Modal Window 'close' button in Javascript:*/
   animation-iteration-count: 1;
 }
 
-/*How to make circle move in from top???*/
 .about-drop-top {
   animation: 500ms fade-in ease, 2000ms drop-from-top ease;
   animation-iteration-count: 1;
@@ -1250,26 +1263,6 @@ Modal Window 'close' button in Javascript:*/
   100% {transform: scale(1, 1) translateY(0);}
 }
 
-/*END - NEW ABOUT test design*/
-
-/*DELETE if not used:*/
-#about figure {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin: 10px 0px 90px 0px;
-}
-
-#about i {
-  font-size: 8rem;
-  color: #152A3E;
-}
-
-.about-info h4 {
-  margin: 0px 0px 40px 0px;
-  text-align: left;
-  color: #152A3E;
-}
 
 /* CONNECT */
 
@@ -1601,12 +1594,6 @@ Modal Window 'close' button in Javascript:*/
     padding: 80px 0px 80px 0px;
   }
 
-  /*
-  .projects-title {
-    margin: 0px 0px 70px 0px;
-  }
-  */
-
   .project-wrapper {
     justify-content: space-around;
     margin: 0px 0px 50px 0px;
@@ -1631,7 +1618,8 @@ Modal Window 'close' button in Javascript:*/
   }
 
   .project-button-style {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
+    font-size: 0.9rem;
   }
 
   /* PROJECTS - MODAL WINDOWS - Tablet */
@@ -1658,7 +1646,8 @@ Modal Window 'close' button in Javascript:*/
   }
 
   .modalLink-1, .modalLink-2 {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
+    font-size: 0.9rem;
   }
 
   .modalNavigation {
@@ -1691,30 +1680,11 @@ Modal Window 'close' button in Javascript:*/
     font-size: 1rem;
   }
   
-
   .closeButton {
     width: 20%;
   }
 
-  /* OLD PROJECTS styling - DELETE if not used:
-  .project-header {
-    width: 100%;
-  }
-
-  .project-skills {
-    width: 85%;
-  }
   
-  .project-links {
-    margin: 30px 0px 30px 0px; 
-  }
-
-  .project-links a {
-    width: 45%;
-    margin-top: 0.4rem;
-  }
-  */
-
   /* SKILLS - Tablet */
 
   #skills {
@@ -1742,26 +1712,14 @@ Modal Window 'close' button in Javascript:*/
   #about {
     padding: 80px 0px 80px 0px;
   }
-
-  #about figure {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 20px 0px 100px 0px;
-  }
-  
-  #about i {
-    font-size: 9rem;
+ 
+  .about-circle {
+    left: 41%;
   }
 
   .about-title {
     margin: 0px 0px 60px 0px;
   }
-
-  .about-info h4 {
-    margin: 0px 0px 60px 0px;
-  }
-
 
   /* CONNECT - Tablet */
 
@@ -2016,6 +1974,9 @@ Modal Window 'close' button in Javascript:*/
     margin: 20px 0px 10px 0px;
   }
 
+  .project-button-style {
+    font-size: 0.8rem;
+  } 
 
   /* PROJECTS - MODAL WINDOWS - Desktop */
   /* - styling applied in JavaScript: */
@@ -2051,11 +2012,11 @@ Modal Window 'close' button in Javascript:*/
   }
   */
 
-  /*
+  
   .modalLink-1, .modalLink-2 {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
   }
-  */
+  
 
   .modalNavigation {
     margin: 15px 0px 15px 0px;
@@ -2069,22 +2030,6 @@ Modal Window 'close' button in Javascript:*/
     width: 20%;
   }
 
-
-  /* OLD PROJECTS styling - DELETE if not used:
-  .project-header {
-    width: 100%;
-  }
-
-  .project-skills {
-    width: 100%;
-  }
-
-  .project-links a {
-    width: 60%;
-    margin-top: 0.5rem;
-    font-size: 1.2rem;
-  }
-  */
 
   /* SKILLS - Desktop */
 
@@ -2119,18 +2064,8 @@ Modal Window 'close' button in Javascript:*/
     padding: 100px 0px 100px 0px;
   }
 
-  .about-content-wrapper {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  #about figure {
-    width: 35%;
-    margin: 80px 0px 80px 0px;
-  }
-
-  #about i {
-    font-size: 12rem;
+  .about-circle {
+    left: 45%;
   }
 
   .about-info {
@@ -2140,11 +2075,6 @@ Modal Window 'close' button in Javascript:*/
   .about-title {
     margin: 0px 0px 40px 0px;
   }
-
-  .about-info h4 {
-    margin: 0px 0px 40px 0px;
-  }
-
 
   /* CONNECT - Desktop */
 
