@@ -88,18 +88,18 @@ textarea {
    ========================================================================== */
 
 /* ====================================================================
-  Project:  Portfolio Website 
+  Project:  Portfolio Website Version 3.0
   Description:  For documention of personal web development projects. 
   ===================================================================== */
 
 /* -------------------- Global Styles -------------------- */
 
 /*
-Google fonts used on this website: 
-Headings: 'Lexend Tera', sans-serif
-Headings, bold 700: 'Lexend Tera', sans-serif
-Paragraph text: 'Lekton', sans-serif
-Paragraph text, bold 700: 'Lekton', sans-serif
+ * Google fonts used on this website: 
+ * Headings: 'Lexend Tera', sans-serif
+ * Headings, bold 700: 'Lexend Tera', sans-serif
+ * Paragraph text: 'Lekton', sans-serif
+ * Paragraph text, bold 700: 'Lekton', sans-serif
 */
 
 html {
@@ -159,13 +159,13 @@ img {
   width: 100%;
 }
 
-
-/* Layout - Structural Styles */
+/* 
+ * Global Layout - Structural Styles 
+*/
 
 header,
 #introduction,
 #projects,
-#separator,
 #skills,
 #about,
 #contact,
@@ -196,21 +196,11 @@ p {
   margin: 0;
 }
 
+/* 
+ * Global Layout - Special Styles
+*/
 
-/* Layout - Special Styles */
-/* NOTE: Clean out the Special Styles that are no longer used! */
-
-.project-line {
-  width: 100%;
-  height: 1px;
-  margin: 20px 0px 20px 0px;
-  background: #313131;
-  background: #ffffff;
-  border: none;
-}
-
-/* Section header styles */
-
+/* Section header styles: */
 .section-title-wrapper {
   display: flex;
   justify-content: center;
@@ -241,32 +231,6 @@ p {
   width: 100%;
   text-align: center;
 }
-
-/*
-.separator-width {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 20px 0px 20px 0px;
-}
-
-.separator-line {
-  width: 90%;
-  height: 1px;
-  background: #000000;
-  border: none;
-}
-
-.circle {
-  width: 20px;
-  height: 20px;
-  border-radius: 20px;
-  margin: 0px 10px 0px 10px;
-  padding: 0px 5px 0px 5px; 
-  background: #E9B14C;
-}
-*/
 
 /* -------------------- Base Header-Footer Styles -------------------- */
 
@@ -326,7 +290,9 @@ header {
   color: #313131;
 }
 
-/* Mobile navigation */
+/* 
+ * Mobile navigation 
+*/
 
 nav {
   display: none;
@@ -350,8 +316,7 @@ nav {
   transition: 0.6s;  
 }
 
-/* JS classlist toggle styling for open menu and X icon: */
-
+/* JavaScript toggle open-close for mobile navigation bars and X icons: */
 .open .mobile-bar-1 {
   transform: rotate(-45deg) translate(-6px, 6px);
 }
@@ -361,7 +326,7 @@ nav {
 }
 
 .open .mobile-bar-3 {
-  transform: rotate(45deg) translate(-6px, -8px)
+  transform: rotate(45deg) translate(-6px, -8px);
 }
 
 .mobile-nav-wrapper {
@@ -386,10 +351,11 @@ nav {
   background-color: #8d8752; 
 }
 
+/* JavaScript toggle open-close for mobile navigation bars and X icons: */
 .hide-mobile-nav-menu {
   display: none;
   pointer-events: none;
-}
+} 
 
 .mobile-nav-link {
   width: 70%;
@@ -423,6 +389,8 @@ nav {
 } */
 
 /* FOOTER */
+
+/* NOTE - ADD COMMENTS ON STYLING APPLIED IN JS.....*/
 
 footer {
   padding: 60px 0px 60px 0px;
@@ -533,9 +501,11 @@ footer p {
   opacity: 0;
 }
 
-/*ANIMATION CODE:*/
+/* 
+ * Animation - Introduction 
+*/
 
-/* Animated reveal of introduction title and text: */
+/* Animated reveal of introduction title and text applied in JavaScript: */
 
 .show-introduction-title {
   display: block;
@@ -685,6 +655,12 @@ scaleY: increases/decreases element height.
   box-shadow: rgb(0 0 0 / 25%) 0px 4px 14px;
 }
 
+/* 
+ * Animation - Projects 
+*/
+
+/* Animated project tilt: */
+
 .project-background:hover {
   transform: rotateZ(-3deg);
   animation: project-tilt;
@@ -729,6 +705,15 @@ scaleY: increases/decreases element height.
   color: #e0218a;    
 }
 
+.project-line {
+  width: 100%;
+  height: 1px;
+  margin: 20px 0px 20px 0px;
+  background: #313131;
+  background: #ffffff;
+  border: none;
+}
+
 .project-description {
   width: 100%;
   height: 100px; /*height keeps box size consistent*/
@@ -750,8 +735,7 @@ scaleY: increases/decreases element height.
   margin: 30px 0px 10px 0px;
 }
 
-/* Project button styling is also applied to the 
-Modal Window 'close' button in Javascript:*/
+/* Note: Project button styling also applied to Modal 'close' button in JavaScript */
 .project-button-style {
   padding: 6px 8px 6px 8px;
   /* font-family: 'Lekton', sans-serif; */
@@ -767,7 +751,6 @@ Modal Window 'close' button in Javascript:*/
   transform: scale(0.9);
   cursor: pointer;
   pointer-events: auto;
-  
 }
 
 .project-button-style:hover {
@@ -776,9 +759,11 @@ Modal Window 'close' button in Javascript:*/
   background-color: #cccbc8;
 }
 
+/*!!!! START HERE - CLEAN UP AND COMMENT MODAL SECTION: */
 
 /* PROJECTS - MODAL WINDOWS */
-/* - styling applied in JavaScript: */
+
+/* Modal styling applied in JavaScript: */
 
 .backdrop-blur {
   position: fixed; /*Keeps backdrop in place*/
@@ -1011,6 +996,8 @@ Modal Window 'close' button in Javascript:*/
   width: 20%;
   margin: 0;
 }
+
+
 
 /* SKILLS */
 

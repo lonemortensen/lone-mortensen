@@ -1,6 +1,6 @@
 /* ====================================================================
-Project:  Portfolio Website  
-Description:  For documention of personal web development projects 
+Project:  Portfolio Website Version 3.0
+Description:  For documention of personal web development projects.
 
 ===== *** =====
 
