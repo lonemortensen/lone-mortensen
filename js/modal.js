@@ -257,11 +257,10 @@ const createModalWindow = (selectedModalData) => {
 	const arrowNext = arrowButtons.appendChild(document.createElement("li"));
 	arrowNext.classList.add("arrowNext", "circle");
 	
-	/* NOTE: May not need class arrow...*/
 	const previousModal = arrowPrevious.appendChild(document.createElement("button"));
 	previousModal.setAttribute("type", "button");
 	previousModal.setAttribute("data-navigation", "previous");
-	previousModal.classList.add("arrow", "previousModal");
+	previousModal.classList.add("previousModal");
 	// Font Awesome 'previous' arrow icon:
 	const arrowIconPrevious = previousModal.appendChild(document.createElement("i"));
 	arrowIconPrevious.classList.add("fa-solid", "fa-chevron-left");
@@ -273,7 +272,7 @@ const createModalWindow = (selectedModalData) => {
 	const nextModal = arrowNext.appendChild(document.createElement("button"));
 	nextModal.setAttribute("type", "button");
 	nextModal.setAttribute("data-navigation", "next");
-	nextModal.classList.add("arrow", "nextModal");
+	nextModal.classList.add("nextModal");
 	// Font Awesome 'next' arrow icon:
 	const arrowIconNext = nextModal.appendChild(document.createElement("i"));
 	arrowIconNext.classList.add("fa-solid", "fa-chevron-right");

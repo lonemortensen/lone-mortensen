@@ -316,7 +316,7 @@ nav {
   transition: 0.6s;  
 }
 
-/* JavaScript toggle open-close for mobile navigation bars and X icons: */
+/* JavaScript toggle open-close for mobile navigation bars and X icon: */
 .open .mobile-bar-1 {
   transform: rotate(-45deg) translate(-6px, 6px);
 }
@@ -390,8 +390,6 @@ nav {
 
 /* FOOTER */
 
-/* NOTE - ADD COMMENTS ON STYLING APPLIED IN JS.....*/
-
 footer {
   padding: 60px 0px 60px 0px;
   background-color:  #e0218a;
@@ -421,6 +419,7 @@ footer {
   transform: scale(1);
 }
 
+/* JavaScript hide-show scroll button: */
 .hide-scroll-top-button {
   display: none;
   pointer-events: none;
@@ -505,14 +504,14 @@ footer p {
  * Animation - Introduction 
 */
 
-/* Animated reveal of introduction title and text applied in JavaScript: */
-
-.show-introduction-title {
+/*NOTE show-introduction-title not found in JS nor HTML... DELETE? */
+/* .show-introduction-title {
   display: block;
   width: 100%;
   color: #152A3E;
-} 
+}  */
 
+/* JavaScript application of animated reveal of introduction title and text: */
 .show-introduction-text {
   display: block;
   width: 100%;
@@ -562,7 +561,6 @@ footer p {
 }
 
 /* Animated scroll-down pointer: */
-
 .scroll-down-pointer {
   display: flex;
   flex-wrap: wrap;
@@ -610,10 +608,7 @@ footer p {
   transform-origin: top;
 }
 
-/*
-scaleY: increases/decreases element height.
-*/
-
+/* Note: scale(x,y) changes element width(x) and height(y). translateY(n) moves element along y-axis.*/
 @keyframes drop-dot {
   0% {transform: scale(1, 1) translateY(0);}
   10% {transform: scale(1, 1) translateY(0);}
@@ -659,8 +654,7 @@ scaleY: increases/decreases element height.
  * Animation - Projects 
 */
 
-/* Animated project tilt: */
-
+/* Animated project background tilt: */
 .project-background:hover {
   transform: rotateZ(-3deg);
   animation: project-tilt;
@@ -686,7 +680,7 @@ scaleY: increases/decreases element height.
 }
 
 .project-header h4 {
-  height: 80px; /*height keeps box size consistent*/
+  height: 80px; /* Height keeps box size consistent. */
   margin: 10px 0px 0px 0px; 
   text-align: left;
   font-size: 1.6rem;
@@ -716,7 +710,7 @@ scaleY: increases/decreases element height.
 
 .project-description {
   width: 100%;
-  height: 100px; /*height keeps box size consistent*/
+  height: 100px; /* Height keeps box size consistent.*/
   /*padding: 10px;*/
   margin: 20px 0px 0px 0px;
   color: #e3e2df; 
@@ -735,7 +729,7 @@ scaleY: increases/decreases element height.
   margin: 30px 0px 10px 0px;
 }
 
-/* Note: Project button styling also applied to Modal 'close' button in JavaScript */
+/* Note: Project button styling also applied to Modal 'close' button in JavaScript. */
 .project-button-style {
   padding: 6px 8px 6px 8px;
   /* font-family: 'Lekton', sans-serif; */
@@ -759,35 +753,31 @@ scaleY: increases/decreases element height.
   background-color: #cccbc8;
 }
 
-/*!!!! START HERE - CLEAN UP AND COMMENT MODAL SECTION: */
+/* 
+ * Modal Windows - Projects 
+*/
 
-/* PROJECTS - MODAL WINDOWS */
-
-/* Modal styling applied in JavaScript: */
-
+/* JavaScript application of modal styling: */
 .backdrop-blur {
-  position: fixed; /*Keeps backdrop in place*/
-  z-index: 1; /*Situates backdrop on top*/
+  position: fixed; /* Keeps backdrop in place. */
+  z-index: 1; /* Situates backdrop on top. */
   left: 0;
   right: 0;
   width: 100%; /*Change to viewport width: 100vw? See website mobile nav code*/
   height: 100%; /*Change to viewport height: 100vh? See website mobile nav code*/
-  overflow: auto; /*Enables scroll*/
-  background-color: rgba(83, 86, 91, 0.9); /*rgba sets opacity without inheritance*/
+  overflow: auto; /* Enables scroll. */
+  background-color: rgba(83, 86, 91, 0.9); /* rgba() sets opacity without inheritance. */
 }
 
 .modal-window {
-  /* understand how to do this using flexbox. 
-  Q: do I need a modal-container in html to wrap and position the modalWindow?*/
-  position: fixed; /*Positions modal relative to viewport.*/
+  position: fixed; /* Positions modal relative to viewport. */
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%); /* UNDERSTAND what this property does! */ 
+  transform: translate(-50%, -50%); /* Positions modal along x- and y-axis. */ 
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
   z-index: 2;
-  /*width: 400px;*/
   width: 75%;
 }
 
@@ -797,11 +787,8 @@ scaleY: increases/decreases element height.
   flex-flow: row wrap;
   width: 100%;
   padding: 20px;
-  /*background-color: rgba(241, 148, 148, 1);*/ /*rgba sets opacity without inheritance*/
-  background-color: rgba(227, 226, 223, 1);
-  /*background-color: rgba(141, 135, 82, 1);*/
+  background-color: rgba(227, 226, 223, 1); /* rgba() sets opacity without inheritance. */
   background-color: rgba(255, 255, 255, 1);
-  /*border: 1px solid #e6e6e6;*/
   box-shadow: rgb(0 0 0 / 25%) 0px 4px 14px;
   border-radius: 15px;
 }
@@ -809,7 +796,6 @@ scaleY: increases/decreases element height.
 .modal-image {
   margin: 10px;
   width: 100%;
-  /*border: 1px solid red;*/
   box-shadow: rgb(0 0 0 / 25%) 0px 4px 14px;
 }
 
@@ -819,7 +805,6 @@ scaleY: increases/decreases element height.
   flex-flow: column wrap;
   width: 100%;
   margin: 10px;
-  /*border: 1px solid green;*/
 }
 
 .modal-title {
@@ -838,20 +823,12 @@ scaleY: increases/decreases element height.
 }
 
 .modal-description-text {
-  /* DELETE from both css and js if not needed. */
+  /* DELETE from mobile css. */
 }
 
 .modal-links {
   /*margin: 5px;*/
   margin: 10px 5px 5px 5px;
-}
-
-.modalLink-1 {
-  /* DELETE from both css and js if not needed. */
-}
-
-.modalLink-2 { 
-  /* DELETE from both css and js if not needed. */
 }
 
 .modalLink-1, .modalLink-2 {
@@ -871,10 +848,6 @@ scaleY: increases/decreases element height.
   transition: background-size 0.3s ease-in-out;
 }
     
-/*.modalLink-1 a:hover, .modalLink-2 a:hover {
-    background-size: 100% 0.1em;
-}*/
-
 .modalLink-1:hover, .modalLink-2:hover {
   /*background-size: 100% 0.1em;*/
   background-size: 100% 0.07em;
@@ -902,6 +875,7 @@ scaleY: increases/decreases element height.
   margin: 0px 10px 0px 0px;
 }
 
+/* NOTE: Do we need arrowPrevious and arrowNext????*/
 .arrowPrevious {
   display: flex;
   justify-content: center;
@@ -929,18 +903,6 @@ scaleY: increases/decreases element height.
   background-color: #e3e2df;
   /*background: #8d8752;*/
 }
-
-
-.arrow {
-  /* border-top: 3px solid transparent;
-  border-bottom: 3px solid transparent; */
-  /*border: solid black;*/
-  /*border: solid #e3e2df;*/ 
-  /*border-width: 0 2px 2px 0;*/
-  /*display: inline-block;*/
-  /*padding: 4px;*/ 
-  /*background-color: transparent;*/
-}    
 
 .previousModal {
   /*border-left: 3px solid black;*/
@@ -998,7 +960,6 @@ scaleY: increases/decreases element height.
 }
 
 
-
 /* SKILLS */
 
 #skills {
@@ -1020,7 +981,7 @@ scaleY: increases/decreases element height.
   align-items: center;
   width: 100%;
   /* Horizontal scroll: */
-  overflow-x: auto; /* auto means it only scrolls if needed */
+  overflow-x: auto; /* 'auto' means only scrolls if needed */
   overflow-y: hidden;
   white-space: nowrap;
   touch-action: pan-x;  
@@ -1030,26 +991,11 @@ scaleY: increases/decreases element height.
   display: flex;
   justify-content: space-between;
   width: 100%;
-
 }
 
 .tab {
   padding: 20px 0px;
 }
-
-/* Simple link styling: 
-.tab a {
-  padding: 27px 11px;
-  font-family: 'Lexend Tera', sans-serif;
-  font-size: 0.7rem;
-  color: #152A3E;
-}
-
-.tab a:hover {
-  padding: 27px 11px;
-  font-weight: 700;
-}
-*/
 
 .tab a {
   padding: 27px 11px;
@@ -1084,20 +1030,19 @@ scaleY: increases/decreases element height.
   text-align: left;
 }
 
-/* START JavaScript: Tab highlight styling: */
+/* JavaScript application of tab highlight styling: */
 .highlight-tab {
   /*font-weight: 700;*/
   background: #f49729;
 }
-/* END JavaScript */
 
-/* START JavaScript: Hide/show panel styling: */
+/* JavaScript application of hide-show panel styling: */
 .hide-panels {
   position: absolute;
   top: -9999px;
   left: -9999px;
 }
-/* END JavaScript */
+
 
 /* ABOUT */
 
@@ -1176,6 +1121,7 @@ scaleY: increases/decreases element height.
   width: 100%;
 }
 
+/* DELETE if keeping 'hi!' inside circle::cue*/
 /* .about-title {
   width: 100%;
   margin: 0px 0px 40px 0px;
@@ -1188,15 +1134,19 @@ scaleY: increases/decreases element height.
   color: #152A3E;
 }
 
+/* 
+ * Animation - About 
+*/
+
+/* JavaScript application of About slider and circle styling: */
 .hide-about-content {
   opacity: 0;
 }
 
-.show-about-content {
+/*DELETE show-about-content if not needed: */
+/* .show-about-content {
   opacity: 1;
-}
-
-/*ABOUT section animations:*/
+} */
 
 .about-slide-left {
   animation: 2000ms slide-in-left ease-in-out;
@@ -1208,10 +1158,11 @@ scaleY: increases/decreases element height.
   animation-iteration-count: 1;
 }
 
+/*NOTE: consider changing name unless dot actually drops from TOP*/
 .about-drop-top {
   animation: 500ms fade-in ease, 2000ms drop-from-top ease;
   animation-iteration-count: 1;
-  transform-origin: top;
+  /* transform-origin: top; */
 }
 
 @keyframes slide-in-left {
@@ -1241,6 +1192,8 @@ scaleY: increases/decreases element height.
   100% {opacity: 1;}
 }
 
+/*NOTE: Consider changing keyframe name to 'drop-dot' as in Intro unless I succeed in dropping drop from TOP...*/
+/* Note: scale(x,y) changes dot width(x) and height(y). translateY(n) moves dot along y-axis.*/
 @keyframes drop-from-top {
   0% {transform: scale(1, 1) translateY(0);}
   10% {transform: scale(1, 1) translateY(0);}
@@ -1256,29 +1209,6 @@ scaleY: increases/decreases element height.
 #contact {
   padding: 60px 0px 60px 0px;
   /*background-color: #152A3E;*/
-}
-
-.connect-title {
-  width: 100%;
-  margin: 0px 0px 60px 0px;
-  color: #EEEFDA;
-}
-
-.connect-wrapper {
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-  width: 100%;
-}
-
-.connect-wrapper h4 {
-  margin: 0px 0px 30px 0px;
-  color: #EEEFDA;
-}
-
-/*NEW - font color*/
-.connect-font-color {
-  /*color: #EEEFDA;*/
 }
 
 .connect-info {
@@ -1411,7 +1341,9 @@ scaleY: increases/decreases element height.
 
   /* -------------------- Tablet Styles - Homepage -------------------- */
 
-  /* Global and Structural Styles - Tablet */
+  /* 
+   * Global Styles - Tablet
+  */
 
   .content-wrapper {
     max-width: 640px;
@@ -1425,10 +1357,15 @@ scaleY: increases/decreases element height.
     font-size: 1.3rem;
   }
 
-  /* Layout - Special Styles - Tablet */
+  /* 
+   * Global Layout - Structural Styles - Tablet
+  */
 
-  /* Section header styles */
+  /* 
+   * Global Layout - Special Styles - Tablet
+  */
 
+  /* Section header styles: */
   .section-title-wrapper {
     margin-bottom: 50px;
   }
@@ -1451,6 +1388,7 @@ scaleY: increases/decreases element height.
     font-size: 1.2rem;
   }
   
+ 
   /* HEADER - Tablet */
   
   header {
@@ -1481,6 +1419,10 @@ scaleY: increases/decreases element height.
     text-align: start;
   }
 
+  /* 
+   * Tablet and desktop navigation 
+  */
+
   #mobile-nav-icon, .mobile-nav-wrapper {
     display: none;
   }
@@ -1502,15 +1444,7 @@ scaleY: increases/decreases element height.
     /*width: 100%;*/
     width: 85%;
   }
-
-  /*
-  .nav-link a {
-    font-size: 0.65rem;
-    font-family: 'Lexend Tera', sans-serif;
-    text-transform: uppercase;
-    color: #152A3E;
-  }
-  */
+  
   .nav-link a {
     font-size: 0.65rem;
     font-family: 'Lexend Tera', sans-serif;
@@ -1559,7 +1493,6 @@ scaleY: increases/decreases element height.
   }
 
   /* Animated scroll-down pointer: */
-
   .scroll-down-pointer {
     /*margin-left: 650px;*/
     max-width: 640px;
@@ -1574,6 +1507,7 @@ scaleY: increases/decreases element height.
   .cirle-pointer-wrapper {
     /*padding-left: 38.5rem;*/
   }
+
 
   /* PROJECTS - Tablet */
 
@@ -1592,7 +1526,7 @@ scaleY: increases/decreases element height.
   }
 
   .project-header h4 {
-    height: 85px; /*height keeps box size consistent*/
+    height: 85px; /* Height keeps box size consistent. */
     font-size: 1.8rem;
   }
 
@@ -1604,14 +1538,17 @@ scaleY: increases/decreases element height.
     font-size: 0.95rem;
   }
 
+  /* Note: Project button styling also applied to Modal 'close' button in JavaScript. */
   .project-button-style {
     /* font-size: 1.2rem; */
     font-size: 0.9rem;
   }
 
-  /* PROJECTS - MODAL WINDOWS - Tablet */
-  /* - styling applied in JavaScript: */
+  /* 
+   * Modal Windows - Projects - Tablet
+  */
 
+  /* JavaScript application of modal styling: */
   .modal-wrapper {
     padding: 30px;
   }
@@ -1694,6 +1631,7 @@ scaleY: increases/decreases element height.
     margin-bottom: 40px;
   }
 
+
   /* ABOUT - Tablet */
 
   #about {
@@ -1704,25 +1642,17 @@ scaleY: increases/decreases element height.
     left: 41%;
   }
 
-  .about-title {
+  /* DELETE if keeping 'hi!' inside circle*/
+  /* .about-title {
     margin: 0px 0px 60px 0px;
-  }
+  } */
+
 
   /* CONNECT - Tablet */
 
   #contact {
     padding: 80px 0px 80px 0px;
   }
-
-  /* OLD CONNECT styling - DELETE if not used:
-  .connect-title {
-    margin: 0px 0px 60px 0px;
-  }
-
-  .connect-wrapper h4 {
-    margin: 0px 0px 35px 0px;
-  }
-  */
 
   .connect-icons i {
     font-size: 2rem;
@@ -1735,6 +1665,9 @@ scaleY: increases/decreases element height.
 /* -------------------- Desktop Styles - Homepage -------------------- */
 
   /* Global and Structural Styles - Desktop */
+
+  /* !!!!!!START HERE - clean up desktop css */
+
 
   .content-wrapper {
     max-width: 1200px;
@@ -2068,12 +2001,6 @@ scaleY: increases/decreases element height.
   #contact {
     padding: 100px 0px 100px 0px;
   }
-
-  /* OLD CONNECT styling - DELETE if not used:
-  .connect-title {
-    margin: 0px 0px 80px 0px;
-  }
-  */
 
   .connect-info {
     /*margin: 0px 0px 80px 0px;*/
