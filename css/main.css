@@ -318,6 +318,7 @@ nav {
 
 /* JavaScript toggle open-close for mobile navigation bars and X icon: */
 .open .mobile-bar-1 {
+  /* transform: rotate(-45deg) translate(-6px, 6px); */
   transform: rotate(-45deg) translate(-6px, 6px);
 }
 
@@ -326,7 +327,8 @@ nav {
 }
 
 .open .mobile-bar-3 {
-  transform: rotate(45deg) translate(-6px, -8px);
+  /* transform: rotate(45deg) translate(-6px, -8px); */
+  transform: rotate(45deg) translate(-6px, -7px);
 }
 
 .mobile-nav-wrapper {
@@ -374,8 +376,10 @@ nav {
   text-transform: uppercase;
   /*color: #ffffff;*/
   color: #e3e2df;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   padding-bottom: 5px; 
+  display: inline-block; /* inline-block applies a size to <a> to enable scaling on hover. */
+  transform: scale(0.9);
   /* background-image: linear-gradient(#e0218a, #e0218a);
   background-size: 0% 0.1em;
   background-position-y: 100%;
@@ -384,9 +388,12 @@ nav {
   transition: background-size 0.3s ease-in-out; */
 }
 
-/* .mobile-nav-link a:hover {
-  background-size: 100% 0.1em;
-} */
+.mobile-nav-link a:hover {
+  /* background-size: 100% 0.1em; */
+  transform: scale(0.98);
+  transition: 0.3s ease-in-out transform;
+}
+
 
 /* FOOTER */
 
@@ -1193,7 +1200,7 @@ footer p {
 }
 
 /*NOTE: Consider changing keyframe name to 'drop-dot' as in Intro unless I succeed in dropping drop from TOP...*/
-/* Note: scale(x,y) changes dot width(x) and height(y). translateY(n) moves dot along y-axis.*/
+/* scale(x,y) changes dot width(x) and height(y). translateY(n) moves dot along y-axis: */
 @keyframes drop-from-top {
   0% {transform: scale(1, 1) translateY(0);}
   10% {transform: scale(1, 1) translateY(0);}
@@ -1361,10 +1368,11 @@ footer p {
    * Global Layout - Structural Styles - Tablet
   */
 
+
   /* 
    * Global Layout - Special Styles - Tablet
   */
-
+  
   /* Section header styles: */
   .section-title-wrapper {
     margin-bottom: 50px;
@@ -1451,8 +1459,7 @@ footer p {
     text-transform: uppercase;
     color: #152A3E;
     padding-bottom: 5px; 
-    /*background-image: linear-gradient(#e0218a, #e0218a);*/
-    background-image: linear-gradient(#f42c38, #f42c38);
+    background-image: linear-gradient(#e0218a, #e0218a);
     background-size: 0% 0.1em;
     background-position-y: 100%;
     background-position-x: 50%;
@@ -1496,7 +1503,6 @@ footer p {
   .scroll-down-pointer {
     /*margin-left: 650px;*/
     max-width: 640px;
-    /*border: 1px solid red;*/
   }
 
   .scroll-down-text {
@@ -1664,10 +1670,11 @@ footer p {
 
 /* -------------------- Desktop Styles - Homepage -------------------- */
 
-  /* Global and Structural Styles - Desktop */
-
   /* !!!!!!START HERE - clean up desktop css */
 
+  /* 
+   * Global Styles - Desktop
+  */
 
   .content-wrapper {
     max-width: 1200px;
@@ -1685,11 +1692,16 @@ footer p {
     font-size: 1.2rem;
   }
 
-  /* Layout - Special Styles - Desktop */
+  /* 
+   * Global Layout - Structural Styles - Desktop
+  */
 
-  /* Section header styles */
 
+  /* 
+   * Global Layout - Special Styles - Desktop
+  */
 
+  /* Section header style: */
   .section-title-wrapper {
     margin-bottom: 90px;
   }
@@ -1712,6 +1724,7 @@ footer p {
     font-size: 1.6rem;
   }
 
+
   /* HEADER - Desktop */
 
   header {
@@ -1724,15 +1737,6 @@ footer p {
     display: flex;
     justify-content: flex-end;
   }
-
-  /*
-  .header-name {
-    width: 50%;
-    padding: 20px 0px 20px 0px;
-    font-size: 0.9rem;
-    text-align: left;
-  }
-  */
 
   .header-name-wrapper {
     display: flex;
@@ -1778,9 +1782,9 @@ footer p {
     color: #313131;
   }
 
-  .header-divider {
-    display: none;
-  }
+   /* 
+    * Tablet and desktop navigation 
+   */
 
   nav {
     justify-content: flex-end;
@@ -1821,6 +1825,7 @@ footer p {
     font-size: 0.8rem;
   }
 
+
   /* INTRODUCTION - Desktop */
 
   #introduction {
@@ -1843,6 +1848,7 @@ footer p {
     font-size: 2.25rem;
   }
 
+  /* Animated scroll-down pointer: */
   .scroll-down-pointer {
     /*margin-left: 650px;*/
     /*border: 1px solid red;*/
@@ -1873,12 +1879,12 @@ footer p {
   }
 
   .project-header h4 {
-    height: 100px;
+    height: 100px; /* Height keeps box size consistent. */
     font-size: 1.4rem;
   }
 
   .project-description {
-    height: 180px;
+    height: 180px; /* Height keeps box size consistent. */
     margin: 10px 0px 0px 0px;
   }
 
@@ -1894,13 +1900,16 @@ footer p {
     margin: 20px 0px 10px 0px;
   }
 
+  /* Note: Project button styling also applied to Modal 'close' button in JavaScript. */
   .project-button-style {
     font-size: 0.8rem;
   } 
 
-  /* PROJECTS - MODAL WINDOWS - Desktop */
-  /* - styling applied in JavaScript: */
+  /* 
+   * Modal Windows - Projects - Desktop
+  */
 
+  /* JavaScript application of modal styling: */
   .modal-window {
     width: 45%;
   }
@@ -1932,7 +1941,6 @@ footer p {
   }
   */
 
-  
   .modalLink-1, .modalLink-2 {
     font-size: 0.8rem;
   }
@@ -1946,6 +1954,7 @@ footer p {
     margin: 0px 5px 0px 0px;
   }
 
+  /*NOTE: closeButton has same value as Tablet. If no change, then DELETE:*/
   .closeButton {
     width: 20%;
   }
@@ -1992,9 +2001,11 @@ footer p {
     width: 55%;
   }
 
-  .about-title {
+  /* DELETE if keeping 'hi!' inside circle*/
+  /* .about-title {
     margin: 0px 0px 40px 0px;
-  }
+  } */
+
 
   /* CONNECT - Desktop */
 

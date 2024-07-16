@@ -60,10 +60,25 @@ const INTRO = (function () {
     const textStyle = document.querySelector(".text-style");
     
     //Reveals introduction title with typing effect when page has loaded:
+    // const revealIntroTitle = () => {
+    //   introductionText.classList.remove("show-introduction-text");
+    //   introductionTitle.textContent = "";
+    //   const titleText = "Hello there!"; 
+    //   let i = 0;
+    //   const typingEffect = setInterval (() => {
+    //     introductionTitle.textContent += titleText.charAt(i); 
+    //     i++;
+    //     if (i === titleText.length) {
+    //       clearInterval(typingEffect);
+    //       revealIntroText();
+    //     }
+    //   }, 85);
+    // };
+
     const revealIntroTitle = () => {
       introductionText.classList.remove("show-introduction-text");
+      let titleText = introductionTitle.textContent;
       introductionTitle.textContent = "";
-      const titleText = "Hello there!"; 
       let i = 0;
       const typingEffect = setInterval (() => {
         introductionTitle.textContent += titleText.charAt(i); 
@@ -72,7 +87,7 @@ const INTRO = (function () {
           clearInterval(typingEffect);
           revealIntroText();
         }
-      }, 85);
+      }, 100);
     };
 
     //Reveals introduction text after title has finished typing: 
