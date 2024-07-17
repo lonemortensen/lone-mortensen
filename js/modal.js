@@ -226,18 +226,24 @@ const createModalWindow = (selectedModalData) => {
 	/* - link 1:*/
 	const link_1 = modalLinks.appendChild(document.createElement("div"));
 	const linkUrl_1 = link_1.appendChild(document.createElement("a"));
-	linkUrl_1.innerText = "View Live Site";
+	linkUrl_1.innerText = "View live site";
 	linkUrl_1.setAttribute("href", selectedModalData["firstLink"]);
 	linkUrl_1.setAttribute("target", "_blank");
 	linkUrl_1.classList.add("modalLink-1");
+	// Font Awesome external link icon:
+	const externalLinkIcon_1 = linkUrl_1.appendChild(document.createElement("i"));
+	externalLinkIcon_1.classList.add("fa-solid", "fa-arrow-right");
 
 	/* - link 2:*/
 	const link_2 = modalLinks.appendChild(document.createElement("div"));
 	const linkUrl_2 = link_2.appendChild(document.createElement("a"));
-	linkUrl_2.innerText = "View GitHub Repo";
+	linkUrl_2.innerText = "View GitHub repo";
 	linkUrl_2.setAttribute("href", selectedModalData["secondLink"]);
 	linkUrl_2.setAttribute("target", "_blank");
 	linkUrl_2.classList.add("modalLink-2");
+	// Font Awesome external link icon:
+	const externalLinkIcon_2 = linkUrl_2.appendChild(document.createElement("i"));
+	externalLinkIcon_2.classList.add("fa-solid", "fa-arrow-right");
 	
 	modalContent.appendChild(modalLinks);
 
