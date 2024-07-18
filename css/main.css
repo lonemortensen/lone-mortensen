@@ -359,13 +359,54 @@ nav {
   pointer-events: none;
 } 
 
-.mobile-nav-link {
+/* DELETE old nav link styling if not needed and REPLACE with TEST code: */
+/* .mobile-nav-link {
   width: 70%;
-  /*margin: 15px 50px;*/
   margin: 15px 0px 15px 90px;
   padding-bottom: 30px;
   text-align: left;
+  border-bottom: 0.1px solid #e3e2df;
+  transition: border-bottom 0.3s ease-in-out;
+}
+
+.mobile-nav-link a {
+  font-family: 'Lexend Tera', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #e3e2df;
+  /* margin-bottom: 20px; */
+  /* padding-bottom: 5px; 
+  background-image: linear-gradient(#e0218a, #e0218a);
+  background-size: 0% 0.1em;
+  background-position-y: 100%;
+  background-position-x: 50%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease-in-out; 
+} */
+
+/* .mobile-nav-link a:hover {
+  background-size: 100% 0.1em;
+ 
+  transform: scale(0.98);
+  transition: 0.3s ease-in-out transform;
+} */
+
+/* .mobile-nav-link:hover {
   border-bottom: 0.1px solid #f49729;
+} */
+
+/*TEST*/
+
+.mobile-nav-link {
+  width: 70%;
+  /*margin: 15px 50px;*/
+  /* margin: 15px 0px 15px 90px; */
+  margin: 0px 0px 60px 90px;
+  /* padding-bottom: 30px; */
+  text-align: left;
+  /* border-bottom: 0.1px solid #e3e2df;
+  transition: border-bottom 0.3s ease-in-out; */
+
 }
 
 .mobile-nav-link a {
@@ -377,21 +418,21 @@ nav {
   /*color: #ffffff;*/
   color: #e3e2df;
   /* margin-bottom: 20px; */
-  padding-bottom: 5px; 
-  display: inline-block; /* inline-block applies a size to <a> to enable scaling on hover. */
-  transform: scale(0.9);
-  /* background-image: linear-gradient(#e0218a, #e0218a);
-  background-size: 0% 0.1em;
+  padding-bottom: 30px; 
+  /* background-image: linear-gradient(#e0218a, #e0218a); */
+  background-image: linear-gradient(#f49729, #f49729);
+  /* background-size: 0% 0.1em; */
+  background-size: 100% 0.1em;
   background-position-y: 100%;
   background-position-x: 50%;
   background-repeat: no-repeat;
-  transition: background-size 0.3s ease-in-out; */
+  transition: background-size 0.3s ease-in-out;
+  display: block;
+  width: 100%;
 }
 
 .mobile-nav-link a:hover {
-  /* background-size: 100% 0.1em; */
-  transform: scale(0.98);
-  transition: 0.3s ease-in-out transform;
+  background-size: 0% 0.1em;
 }
 
 
@@ -835,24 +876,15 @@ footer p {
 }
 
 .modal-links {
-  /* margin: 10px 5px 5px 5px; */
-  margin: 20px 5px 5px 5px;
+  margin: 20px 5px 0px 5px;
 }
 
 .modalLink-1, .modalLink-2 {
+  display: block;
+  margin-bottom: 5px; 
   font-family: 'Lexend Tera', sans-serif;
-  /* font-size: 1rem; */
   font-size: 0.7rem;
   color: #152A3E;
-  /* text-transform: uppercase; */
-  padding-bottom: 3px; 
-  /* background-image: linear-gradient(#e0218a, #e0218a); */
-  /*background-size: 0% 0.1em;*/
-  /* background-size: 0% 0.07em;
-  background-position-y: 100%;
-  background-position-x: 50%;
-  background-repeat: no-repeat;
-  transition: background-size 0.3s ease-in-out; */
   transition: color 0.3s ease-in-out;
 }
 
@@ -862,9 +894,6 @@ footer p {
 }
     
 .modalLink-1:hover, .modalLink-2:hover {
-  /*background-size: 100% 0.1em;*/
-  /* background-size: 100% 0.07em; */
-  /* color: #727f8b;  */
   color: #cccbc8;
 }
 
@@ -887,7 +916,7 @@ footer p {
   flex-flow: row wrap;
   width: 50%;
   /*margin: 0;*/
-  margin: 0px 10px 0px 0px;
+  margin: 0px 15px 0px 0px;
 }
 
 /* NOTE: Do we need arrowPrevious and arrowNext????*/
@@ -911,7 +940,8 @@ footer p {
   width: 25px;
   height: 25px;
   border-radius: 25px; 
-  margin: 0px 10px 0px 10px;
+  /* margin: 0px 10px 0px 10px; */
+  margin: 0px 10px 0px 5px;
   /*padding: 0px 5px 0px 5px;*/ 
   /*background: #E9B14C;*/
   /* background: #5a4331; */
@@ -1554,7 +1584,7 @@ footer p {
 
   /* Note: Project button styling also applied to Modal 'close' button in JavaScript. */
   .project-button-style {
-    /* font-size: 1.2rem; */
+    padding: 9px 8px 9px 8px;
     font-size: 0.9rem;
   }
 
@@ -1583,9 +1613,16 @@ footer p {
     font-size: 1.2rem;
   }
 
+  .modal-links {
+    margin: 30px 5px 0px 5px;
+  }
+
   .modalLink-1, .modalLink-2 {
-    /* font-size: 1.2rem; */
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  .modalLink-1 i, .modalLink-2 i {
+    font-size: 0.8rem;
   }
 
   .modalNavigation {
@@ -1593,13 +1630,14 @@ footer p {
   }
 
   .arrowButtons {
-    margin: 0px 10px 0px 0px;
+    margin: 0px 5px 0px 0px;
   }
 
   .circle {
     width: 30px;
     height: 30px;
     border-radius: 30px;
+    margin: 0px 10px 0px 10px;
   }
 
   .previousModal {
@@ -1949,10 +1987,18 @@ footer p {
   }
   */
 
+  .modal-links {
+    margin: 30px 5px 0px 5px;
+  }
+
   .modalLink-1, .modalLink-2 {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   
+  .modalLink-1 i, .modalLink-2 i {
+    margin: 0px 0px 0px 15px;
+    font-size: 0.9rem;
+  }
 
   .modalNavigation {
     margin: 15px 0px 15px 0px;
