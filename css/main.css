@@ -401,7 +401,8 @@ nav {
   width: 70%;
   /*margin: 15px 50px;*/
   /* margin: 15px 0px 15px 90px; */
-  margin: 0px 0px 60px 90px;
+  /* margin: 0px 0px 60px 90px; */
+  margin: 15px 0px 60px 90px;
   /* padding-bottom: 30px; */
   text-align: left;
   /* border-bottom: 0.1px solid #e3e2df;
@@ -418,7 +419,8 @@ nav {
   /*color: #ffffff;*/
   color: #e3e2df;
   /* margin-bottom: 20px; */
-  padding-bottom: 30px; 
+  /* padding-bottom: 30px; */
+  padding-bottom: 15px;   
   /* background-image: linear-gradient(#e0218a, #e0218a); */
   background-image: linear-gradient(#f49729, #f49729);
   /* background-size: 0% 0.1em; */
@@ -880,7 +882,7 @@ footer p {
 }
 
 .modalLink-1, .modalLink-2 {
-  display: block;
+  display: inline-block; /* Allows for both margin styling and elements next to links. */
   margin-bottom: 5px; 
   font-family: 'Lexend Tera', sans-serif;
   font-size: 0.7rem;
@@ -1030,6 +1032,8 @@ footer p {
   overflow-y: hidden;
   white-space: nowrap;
   touch-action: pan-x;  
+  scrollbar-width: auto;
+  scrollbar-color: /*#5a4331*/ #e0218a #f49729;
 }
 
 .tabs-list {
@@ -1653,7 +1657,7 @@ footer p {
   }
 
   .previousModal i, .nextModal i {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   
   .closeButton {
