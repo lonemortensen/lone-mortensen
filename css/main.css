@@ -1033,7 +1033,7 @@ footer p {
   white-space: nowrap;
   touch-action: pan-x;  
   scrollbar-width: auto;
-  scrollbar-color: /*#5a4331*/ #e0218a #f49729;
+  scrollbar-color: /*#5a4331*/ /*#8d8752*/ /*#e3e2df*/ #ffffff #f49729 /*#e0218a*/;
 }
 
 .tabs-list {
@@ -1125,6 +1125,7 @@ footer p {
   position: absolute; /* Element removed from document flow. Other elements will behave as if it's not there. */
   left: 38%;
   top: 19%;
+  z-index: 1;
   /* opacity: 0; */
 }
 
@@ -1199,11 +1200,13 @@ footer p {
 
 .about-slide-left {
   animation: 2000ms slide-in-left ease-in-out;
+  /* animation: 1500ms slide-from-bottom ease-in-out; */
   animation-iteration-count: 1;
 }
 
 .about-slide-right {
   animation: 2000ms slide-in-right ease-in-out;
+  /* animation: 1500ms slide-from-bottom ease-in-out; */
   animation-iteration-count: 1;
 }
 
@@ -1232,6 +1235,18 @@ footer p {
   }
   100% {
     transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+/*DELETE slide-from-bottom if not used: */
+@keyframes slide-from-bottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
     opacity: 1;
   }
 }

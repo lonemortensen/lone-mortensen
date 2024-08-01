@@ -183,11 +183,11 @@ addTabEventListener();
  */
 
 const ABOUT = (function () {
-  // Target element first About slider:
+  // Target element: first About slider:
   const aboutSliderOne = document.querySelector(".about-slider-1");
-  // Target alement second About slider:
+  // Target element: second About slider:
   const aboutSliderTwo = document.querySelector(".about-slider-2");
-  // Target element About circle:
+  // Target element: About circle:
   const aboutCircle = document.querySelector(".about-circle");
 
   /**
@@ -241,6 +241,7 @@ const ABOUT = (function () {
             entry.target.classList.add("about-slide-right"); // Works - "slider 2" slides in.
             revealAboutCircle();
         }
+        // revealAboutCircle();
       }
     });
   };
