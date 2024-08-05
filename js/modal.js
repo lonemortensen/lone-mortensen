@@ -134,12 +134,12 @@ const getModalData = (type, selectedModalId) => {
 /**
  * Adds event listeners to Modal html elements.
  * Calls event handler to prepare a Modal. 
- * @param modalELements - Contains Modal html elements. 
+ * @param modalElements - Contains Modal html elements. 
 */
 
 export const addModalEventListener = (modalElements) => {
 	for (const element of modalElements) {
-		element.addEventListener("click", prepareModalWindow);
+		element.addEventListener("click", prepareModalWindow); // Do NOT remove event listener as this will prevent opening of the same project unless page reloads! 
 	}	
 };
 
@@ -176,7 +176,7 @@ const createModalWindow = (selectedModalData) => {
 	modalBackdrop = document.createElement("div");
 	modalBackdrop.classList.add("backdrop-blur");
 	bodyElement.insertBefore(modalBackdrop, mainElement); // Works! 
-	modalBackdrop.addEventListener("click", closeModalWindow); 
+	modalBackdrop.addEventListener("click", closeModalWindow, {once: true}); 
 
 	/* Modal window:*/
 	modalWindow = document.createElement("div");
@@ -272,7 +272,7 @@ const createModalWindow = (selectedModalData) => {
 	arrowIconPrevious.classList.add("fa-solid", "fa-chevron-left");
 	// Adds event listener to 'previous' button and passes the id of the currently open Modal:
 	previousModal.addEventListener("click", (event) => {
-		prepareModalWindow(event, currentModalId);
+		prepareModalWindow(event, currentModalId, {once: true});
 	}); 
 	
 	const nextModal = arrowNext.appendChild(document.createElement("button"));
@@ -284,7 +284,7 @@ const createModalWindow = (selectedModalData) => {
 	arrowIconNext.classList.add("fa-solid", "fa-chevron-right");
 	// Adds event listener to 'next' button and passes the id of the currently open Modal:
 	nextModal.addEventListener("click", (event) => {
-		prepareModalWindow(event, currentModalId);
+		prepareModalWindow(event, currentModalId, {once: true});
 	});
 	
 	/* - close button:*/
@@ -294,9 +294,22 @@ const createModalWindow = (selectedModalData) => {
 	closeModal.setAttribute("type", "button");
 	closeModal.innerText = "Close";
 	closeModal.classList.add("project-button-style");
-	closeModal.addEventListener("click", closeModalWindow); 
+	closeModal.addEventListener("click", closeModalWindow, {once: true}); 
 
 	modalWrapper.appendChild(modalNavigation);
+
+	/* Modal navigation keyboard:*/
+	const checkNavigationKey = (event) => {
+		//console.log(event); // Works. Logs KeyBoardEvent object for Arrows and Esc. See "key" property for code.
+		// Checks what key the user pressed and either closes open Modal Window or prepares new Window passing the id of the currently open Modal: 
+		if (event.key == "ArrowLeft" || event.key == "ArrowRight") {
+			prepareModalWindow(event, currentModalId);
+		} else if (event.key == "Escape") {
+			closeModalWindow(); // Works. Closes modal window. 
+		}
+	};
+	// Adds event listener to 'body' element:
+	bodyElement.addEventListener("keyup", checkNavigationKey, {once: true}); 
 };
 
 
@@ -316,7 +329,6 @@ export const closeModalWindow = () => {
 	}
 };
 
-
 /**
  * Prepares data for a Modal window based on user selection.
  * For user selection of 'new' Modal: Gets the Modal id via html attribute from the event object.
@@ -324,7 +336,7 @@ export const closeModalWindow = () => {
  * For user selection of 'previous' or 'next' Modal: Gets the currently open Modal's id passed by the event listener.  
  * Calls Model to get data for the selected Modal, passing Modal type and id. 
  * Calls View to create a Modal, passing the data for selected Modal.  
- * @param event - The event object to get the type and id for the selected Modal.  
+ * @param event - The event object to get the type and id for the selected Modal and the value of the arrow key pressed on the keyboard.   
  * @param modalId - The id attribute value for the currently open Modal.  
  * @arg type — The Modal type to get data for ('new', 'previous', or 'next').
  * @arg selectedModalId — The Modal id attribute value. Used for finding data for 'new', 'previous', or 'next' Modal.
@@ -343,17 +355,21 @@ const prepareModalWindow = (event, modalId) => {
 	let selectedModalId = event.currentTarget.id;
 	console.log(selectedModalId);// Works. Logs id value for 'new' modal, but NOTHING for prev/nxt modal. 
 	
+	// Gets and stores the value of the arrow keyboard key pressed by user ('ArrowLeft' or 'ArrowRight'):
+	let arrowKey = event.key;
+	console.log(arrowKey); // Works. Logs key value for both arrow keys.
+
 	// Assigns the id of the currently open Modal to a variable when user clicks 'previous' or 'next' buttons:
 	let openModalId = modalId; 
 	console.log(openModalId); // Works! 
 
 	// Checks and reassigns the value of the 'type' variable based on user selection: 
 	let type = 'new';
-	if (modalType) {
-		if (modalType === 'previous') {
+	if (modalType || arrowKey) {
+		if (modalType === 'previous' || arrowKey === 'ArrowLeft') {
 			type = 'previous';
 		}
-		else if (modalType === 'next') {
+		else if (modalType === 'next' || arrowKey === 'ArrowRight') {
 			type = 'next';
 		}
 	}

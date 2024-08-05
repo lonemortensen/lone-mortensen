@@ -1032,6 +1032,7 @@ footer p {
   overflow-y: hidden;
   white-space: nowrap;
   touch-action: pan-x;  
+  /* Note: scrollbar styling not compatible with Safari. Browser applies default styling: */
   scrollbar-width: auto;
   scrollbar-color: /*#5a4331*/ /*#8d8752*/ /*#e3e2df*/ #ffffff #f49729 /*#e0218a*/;
 }
