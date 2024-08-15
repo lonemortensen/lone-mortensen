@@ -1203,11 +1203,9 @@ footer p {
 }
 
 .about-circle {
-  /*TEST - hi!:*/
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 100px;
   height: 100px;
   border-radius: 100px;
@@ -1218,9 +1216,9 @@ footer p {
   box-shadow: rgb(0 0 0 / 25%) 0px 4px 14px;
   position: absolute; /* Element removed from document flow. Other elements will behave as if it's not there. */
   left: 38%;
-  top: 19%;
+  /* top: 19%; */
+  top: 15%;
   z-index: 1;
-  /* opacity: 0; */
 }
 
 .about-circle p {
@@ -1242,7 +1240,7 @@ footer p {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 600px;
+  /* height: 600px; MAY NOT NEED Height if I adjust circle top property*/ 
   /* background-color: #e3e2df; */
   background-color: #ffffff;
   /* border: solid 1px black;
@@ -1252,7 +1250,8 @@ footer p {
 .about-info {
   /* display: flex;
   justify-content: flex-start;
-  flex-flow: row wrap; */
+  flex-flow: row wrap;
+  align-content: center; */
   width: 100%;
   /*margin: 80px 15px 0px 15px;*/
   margin: 80px 30px 80px 30px;
@@ -1262,6 +1261,10 @@ footer p {
 }
 
 .about-description {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+  align-content: center;
   width: 100%;
 }
 
@@ -1274,7 +1277,8 @@ footer p {
 } */
 
 .about-description p {
-  margin: 0px 0px 20px 0px;
+  /* margin: 0px 0px 20px 0px; */
+  margin: 10px 0px 10px 0px;
   color: #152A3E;
 }
 
@@ -1840,6 +1844,7 @@ footer p {
  
   .about-circle {
     left: 41%;
+    top: 19%;
   }
 
   /* DELETE if keeping 'hi!' inside circle*/
