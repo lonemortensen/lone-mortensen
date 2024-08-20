@@ -260,43 +260,6 @@ header {
   width: 60%;
 }
 
-.header-firstname {
-  /*width: 100%;*/
-  /*font-family: 'Lexend Tera', sans-serif;*/
-  font-family: 'Lekton', sans-serif;
-  /*font-size: 0.60rem;*/
-  font-size: 0.8rem;
-  /*letter-spacing: 0.2rem;*/
-  letter-spacing: 0.3rem;
-  /*text-transform: uppercase;*/
-  text-align: center;
-  /*color: #152A3E;*/
-  color: #313131;
-}
-
-.circle-header {
-  width: 8px;
-  height: 8px;
-  border-radius: 8px;
-  /*margin: 10px 13px 10px 10px;*/
-  margin: 12px 15px 13px 10px;
-  background: #E9B14C;
-}
-
-.header-lastname {
-  /*width: 100%;*/
-  /*font-family: 'Lexend Tera', sans-serif;*/
-  font-family: 'Lekton', sans-serif;
-  /*font-size: 0.60rem;*/
-  font-size: 0.8rem;
-  /*letter-spacing: 0.2rem;*/
-  letter-spacing: 0.3rem;
-  /*text-transform: uppercase;*/
-  text-align: center;
-  /*color: #152A3E;*/
-  color: #313131;
-}
-
 /* TEST logo:
 Note: also adjust properties top and and height properties in .mobile-nav to adjust position 
 of mobile nav overlay design!
@@ -1583,22 +1546,6 @@ footer p {
     padding-top: 5px;
   }
   
-  .header-firstname {
-    width: 25%;
-    font-size: 0.70rem;
-    text-align: end;
-  }
-
-  .circle-header {
-    margin: 10px 15px 13px 10px;
-  }
-
-  .header-lastname {
-    width: 60%;
-    font-size: 0.70rem;
-    text-align: start;
-  }
-
   .header-initials {
     width: 25%;
   }
@@ -1967,41 +1914,6 @@ footer p {
     width: 30%;
   }
   
-  .header-firstname {
-    width: 15%;
-    /*font-family: 'Lexend Tera', sans-serif;*/
-    /*font-size: 0.60rem;*/
-    font-size: 0.9rem;
-    /*letter-spacing: 0.2rem;*/
-    letter-spacing: 0.3rem;
-    /*text-transform: uppercase;*/
-    text-align: center;
-    /*color: #152A3E;*/
-    color: #313131;
-  }
-  
-  .circle-header {
-    width: 8px;
-    height: 8px;
-    border-radius: 8px;
-    /*margin: 10px 13px 10px 10px;*/
-    margin: 10px 9px 13px 12px;
-    background: #E9B14C;
-  }
-  
-  .header-lastname {
-    width: 40%;
-    /*font-family: 'Lexend Tera', sans-serif;*/
-    /*font-size: 0.60rem;*/
-    font-size: 0.9rem;
-    /*letter-spacing: 0.2rem;*/
-    letter-spacing: 0.3rem;
-    /*text-transform: uppercase;*/
-    text-align: center;
-    /*color: #152A3E;*/
-    color: #313131;
-  }
-
    /* 
     * Tablet and desktop navigation 
    */
