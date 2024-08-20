@@ -303,16 +303,12 @@ of mobile nav overlay design!
 */
 
 .header-initials {
-  width: 40%;
+  width: 30%;
   height: auto;
 }
 
 .header-initials img {
-  /* width: 100px;
-  height: 200px;
-  object-fit: cover; */
   max-inline-size: 100%;
-  /* block-size: auto; */
 }
 
 /* 
@@ -1580,7 +1576,8 @@ footer p {
   }
   
   .header-name-wrapper {
-    justify-content: center;
+    /* justify-content: center; */
+    justify-content: flex-start;
     flex-flow: nowrap;
     width: 30%;
     padding-top: 5px;
@@ -1600,6 +1597,10 @@ footer p {
     width: 60%;
     font-size: 0.70rem;
     text-align: start;
+  }
+
+  .header-initials {
+    width: 25%;
   }
 
   /* 
