@@ -1543,7 +1543,7 @@ footer p {
     justify-content: flex-start;
     flex-flow: nowrap;
     width: 30%;
-    padding-top: 5px;
+    /* padding-top: 5px; */
   }
   
   .header-initials {
