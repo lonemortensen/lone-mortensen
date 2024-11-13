@@ -15,9 +15,9 @@ This document contains JavaScript code that:
 
 /* -------- IMPORTS -------- */
 
-/* Imports for Portfolio Modals: */
+// Imports for Portfolio Modal Windows:
 import {addModalEventListener, closeModalWindow} from "./modal.js"; 
-/* Imports for Skills Panel: */
+// Imports for Skills Panel:
 import {tabsList, handlePageLoad, handleTabSelection} from "./panel.js";
 
 
@@ -30,51 +30,49 @@ const mobileNavMenu = document.querySelector(".mobile-nav");
 // Mobile navigation menu links:
 const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
 
-// Toggles the mobile nav menu and the close menu button:
+/**
+ * Toggles the mobile nav menu and the close menu button:
+*/
 const openMobileNav = () => {
   mobileNavIcon.classList.toggle("open");
   mobileNavMenu.classList.toggle("hide-mobile-nav-menu");
 }
 
-// Detects when user clicks on the mobile nav icon:
+/**
+ * Detects when user clicks on the mobile nav icon:
+*/
 mobileNavIcon.addEventListener("click", openMobileNav);
 
-// Closes the mobile nav menu when user clicks on the menu links:
+/**
+ * Closes the mobile nav menu when user clicks on the menu links:
+*/
 const closeMobileNav = (n) => {
   mobileNavIcon.classList.remove("open");
   mobileNavMenu.classList.add("hide-mobile-nav-menu");
 }
 
-// Detects when user clicks on the nav menu links:
+/**
+ * Detects when user clicks on the mobile nav menu links:
+*/
 mobileNavLinks.forEach(n => n.addEventListener("click", closeMobileNav));
  
 
 /* -------- INTRODUCTION ANIMATION -------- */
 
+/**
+ * Reveals introduction title with animation.
+ * Reveals introduction text.
+ * Adds styling to introduction text.
+*/
 const INTRO = (function () {
-    //Introduction title:
+    // Introduction title:
     const introductionTitle = document.querySelector(".reveal-introduction-title");
-    //Introduction sub-title:
+    // Introduction text:
     const introductionText = document.querySelector(".reveal-introduction-text");
-    //Span that changes text styling in introduction sub-title:
+    // Span that changes text styling in introduction text:
     const textStyle = document.querySelector(".text-style");
     
     //Reveals introduction title with typing effect when page has loaded:
-    // const revealIntroTitle = () => {
-    //   introductionText.classList.remove("show-introduction-text");
-    //   introductionTitle.textContent = "";
-    //   const titleText = "Hello there!"; 
-    //   let i = 0;
-    //   const typingEffect = setInterval (() => {
-    //     introductionTitle.textContent += titleText.charAt(i); 
-    //     i++;
-    //     if (i === titleText.length) {
-    //       clearInterval(typingEffect);
-    //       revealIntroText();
-    //     }
-    //   }, 85);
-    // };
-
     const revealIntroTitle = () => {
       introductionText.classList.remove("show-introduction-text");
       let titleText = introductionTitle.textContent;
@@ -113,55 +111,34 @@ const INTRO = (function () {
 
 /* ===== PORTFOLIO MODALS ===== */
 
-// /**
-//  * Imports. 
-// */
-
-// // Imports event handlers:
-// import {addModalEventListener, closeModalWindow} from "./modal.js"; 
-
-
 /** 
  * Detects when page loads.
  * Adds event listener to the Window.
- * Calls event handler to check if a Modal window is currently open. If so, the Modal Window will be closed. 
+ * Calls event handler to close any open modal windows.
 */
-window.addEventListener("load", closeModalWindow); // Works. Modal + background disappears on page re-load.
+window.addEventListener("load", closeModalWindow); 
 
-
-/* NOTE: The 'modal' IIFE runs every time the script loads. If there are mutiple Modal components on the web page, 
-event listeners are added to all of the components. When Modal components are added (or removed) from the 
-web page, the modal IIFE needs updating.
-*/ 
-const modal = (function() {
-
-    /** 
-     * Gets and stores Modal html elements.
-     * Selects elements for all Modal components on the web page.
-     * Calls event handler to add an event listener to each Modal html element.
-     * @arg modalElements - Contains Modal html elements. 
-    */
-    const modalElements = document.querySelectorAll('.view-project'); // Works. Selects both project and gallery elements.
-    console.log(modalElements);
-    addModalEventListener(modalElements); 
-
+/** 
+  * Selects and stores html elements for the modal window component.
+  * Calls function to add event listener to each modal html element.
+  * @arg modalElements - Modal html elements. 
+*/
+const MODAL = (function() {
+  const modalElements = document.querySelectorAll('.view-project'); 
+  addModalEventListener(modalElements); 
 })();
 
 
-
 /* -------- SKILLS PANEL -------- */
-
-
-// import {tabsList, handlePageLoad, handleTabSelection} from "./panel.js";
 
 /**
  * Detects when page loads:
 */
 window.addEventListener("load", handlePageLoad);
 
-
 /**
- * Detects when user clicks on a tab:
+ * Detects when user clicks on a tab.
+ * Calls event handler to add event listeners to each tab html element.
 */
 const addTabEventListener = () => {
   for (let i = 0; i < tabsList.length; i++) {
