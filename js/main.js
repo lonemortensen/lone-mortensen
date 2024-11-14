@@ -22,6 +22,7 @@ The main.js module:
 import {revealIntroTitle} from "./intro.js";
 
 // Imports for Mobile Navigation:
+import {activateMobileNavigation} from "./mobileNavigation.js";
 
 // Imports for Portfolio Modal Windows:
 import {addModalEventListener, closeModalWindow} from "./modal.js"; 
@@ -34,39 +35,11 @@ import {animateAboutSection} from "./about.js";
 
 /* -------- MOBILE NAVIGATION -------- */ 
 
-// Mobile navigation icon: 
-const mobileNavIcon = document.querySelector(".mobile-bar-wrapper");
-// Mobile navigation menu: 
-const mobileNavMenu = document.querySelector(".mobile-nav");
-// Mobile navigation menu links:
-const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
-
 /**
- * Toggles the mobile nav menu and the close menu button:
+ * Calls function in mobileNavigation.js that activates mobile navigation menu and functionality. 
 */
-const openMobileNav = () => {
-  mobileNavIcon.classList.toggle("open");
-  mobileNavMenu.classList.toggle("hide-mobile-nav-menu");
-}
+activateMobileNavigation();
 
-/**
- * Detects when user clicks on the mobile nav icon:
-*/
-mobileNavIcon.addEventListener("click", openMobileNav);
-
-/**
- * Closes the mobile nav menu when user clicks on the menu links:
-*/
-const closeMobileNav = (n) => {
-  mobileNavIcon.classList.remove("open");
-  mobileNavMenu.classList.add("hide-mobile-nav-menu");
-}
-
-/**
- * Detects when user clicks on the mobile nav menu links:
-*/
-mobileNavLinks.forEach(n => n.addEventListener("click", closeMobileNav));
- 
 
 /* -------- INTRODUCTION ANIMATION -------- */
 
@@ -85,6 +58,7 @@ window.addEventListener("load", revealIntroTitle);
  * Calls event handler in modal.js to close any open modal windows.
 */
 window.addEventListener("load", closeModalWindow); 
+
 
 /** 
   * Selects and stores html elements for the modal window component.
@@ -105,6 +79,7 @@ const MODAL = (function() {
 */
 window.addEventListener("load", handlePageLoad);
 
+
 /**
  * Detects when user clicks on a tab.
  * Calls function to add event listeners to each tab html element.
@@ -116,7 +91,6 @@ const addTabEventListener = () => {
     tab.addEventListener("click", handleTabSelection);
   };
 };
-
 addTabEventListener();
 
 
@@ -127,11 +101,9 @@ addTabEventListener();
 // https://webdesign.tutsplus.com/animate-on-scroll-with-javascript--cms-36671t
 
 /**
- * Calls function that animates the About section. 
+ * Calls function in about.js that animates the About section. 
 */
-const ABOUT = (function () {
-  animateAboutSection();
-})();
+animateAboutSection();
 
 
 /* -------- SCROLL BUTTON -------- */
