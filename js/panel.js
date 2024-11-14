@@ -11,7 +11,7 @@ let tabSets = {};
 
 
 /* All tabs:*/
-export const tabsList = document.getElementsByClassName("tab-link"); 
+const tabsList = document.getElementsByClassName("tab-link"); 
 /* All panels:*/ 
 const panelsList = document.getElementsByClassName("panels"); 
 
@@ -156,7 +156,7 @@ export const handlePageLoad = () => {
  * tab-panel set for highlight and display. 
  * @param e the event object is used to access the id attribute value of the selected tab.  
 */
-export const handleTabSelection = (e) => {
+const handleTabSelection = (e) => {
     e.preventDefault();
     getTabData();
     let selectedTabName = e.target.id;
