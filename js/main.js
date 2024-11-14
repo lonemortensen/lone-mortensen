@@ -28,7 +28,7 @@ import {activateMobileNavigation} from "./mobileNavigation.js";
 import {addModalEventListener, closeModalWindow} from "./modal.js"; 
 
 // Imports for Skills Panel:
-import {tabsList, handlePageLoad, handleTabSelection} from "./panel.js";
+import {handlePageLoad} from "./panel.js";
 
 // Imports for About Sliders:
 import {animateAboutSection} from "./about.js";
@@ -80,21 +80,7 @@ const MODAL = (function() {
 window.addEventListener("load", handlePageLoad);
 
 
-/**
- * Detects when user clicks on a tab.
- * Calls function to add event listeners to each tab html element.
-*/
-const addTabEventListener = () => {
-  for (let i = 0; i < tabsList.length; i++) {
-    let tab = tabsList[i];
-    console.log(tab); //logs all <a>, i.e. tabs - this means main.js connects to panel.js
-    tab.addEventListener("click", handleTabSelection);
-  };
-};
-addTabEventListener();
-
-
-/* -------- ABOUT SLIDERS -------- */
+/* -------- ABOUT SLIDERS ANIMATION -------- */
 
 //!!!! START HERE: 
 // Make sure elements are visible if JS is not enabled by browser: https://webdesign.tutsplus.com/animate-on-scroll-with-javascript--cms-36671t
