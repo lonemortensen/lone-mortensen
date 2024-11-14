@@ -6,7 +6,7 @@ Module: about.js
 
 /**
  * Initiates animation of sliders and 'yellow dot' in About section.
- * Selects target html elements for animation.
+ * Selects target html elements for observation/animation.
  * Uses the Intersection Observer API to watch for intersection changes for 'slider' html target elements. 
  * Runs callback function to initiate animations when targets intersect with the Viewport (root).   
 */
@@ -18,9 +18,7 @@ export const animateAboutSection = () => {
     // Target element: About circle:
     const aboutCircle = document.querySelector(".about-circle");
 
-    /**
-     * Creates intersection observers and sets options for sliders.
-     */
+    // Creates intersection observers and sets options for sliders:
     const observerSliderOne = () => {
         // Options object contains settings for the observer:
         const options = {
@@ -34,8 +32,9 @@ export const animateAboutSection = () => {
         observer.observe(aboutSliderOne);
     };
 
+    // Creates intersection observers and sets options for sliders:
     const observerSliderTwo = () => {
-        // Options object contains settings for the observer:*/
+        // Options object contains settings for the observer:
         const options = {
             root: null, // Root element set to viewport
             rootMargin: "0px",
@@ -47,12 +46,10 @@ export const animateAboutSection = () => {
         observer.observe(aboutSliderTwo);
     };
 
-    /**
-     * Callback handles animation on intersection for both sliders.
-     * Initiates circle animation. 
-     * @param entries Array of IntersectionObserverEntry objects to determine visibility and intersection status of targets.
-     * @param observer The IntersectionObserver instance allows for interaction with the observer.
-     */
+    // Callback handles animation on intersection for both sliders.
+    // Initiates circle animation. 
+    // @param entries Array of IntersectionObserverEntry objects to determine visibility and intersection status of targets.
+    // @param observer The IntersectionObserver instance allows for interaction with the observer.
     const startAboutAnimation = (entries, observer) => {
         entries.forEach((entry) => {
             console.log(entry);
@@ -73,9 +70,7 @@ export const animateAboutSection = () => {
         });
     };
 
-    /**
-     * Reveals circle after second slider is in place. 
-     */
+    // Reveals circle after second slider is in place. 
     const revealAboutCircle = () => {
         const showCircle = () => {
             aboutCircle.classList.remove("hide-about-content");
