@@ -59,7 +59,7 @@ const removeTabHighlight = (tabs) => {
 
 /** 
  * Applies styling to highlight and display only the default (first) tab and panel on page load.
- * Calls function to adds a click event listener to each tab. 
+ * Calls function to add a click event listener to each tab. 
  * @param defaultTab the first (default) tab in the tabSets object.
  * @param defaultPanel the panel that is stored as the value of the default (first) tab in the tabSets object.
 */
@@ -85,9 +85,10 @@ const displayDefaultTabSet = (defaultTab, defaultPanel) => {
     addTabEventListener();
 }; 
 
+
 /**
- * Adds event listeners to each tab html element.
- * Detects when user clicks on a tab.
+ * Adds click event listeners to each tab html element.
+ * Detects when user selects a tab.
  * Calls event handler in Controller to handle selection.
 */
 const addTabEventListener = () => {
