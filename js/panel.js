@@ -1,7 +1,7 @@
 /* ====================================================================
 Project:  Portfolio Website Version 3
 Description:  For documention of personal web development projects. 
-Module: Panel.
+Module: panel.js
 ========================================================================= */
 
 /* ===== MODEL ===== */
