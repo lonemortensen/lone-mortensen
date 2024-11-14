@@ -6,7 +6,7 @@ Module: panel.js
 
 /* ===== MODEL ===== */
 
-/* Data model: Object stores tabs (keys) and their associated panels (values): */ 
+/* Object stores tabs (keys) and their associated panels (values): */ 
 let tabSets = {};
 
 
@@ -114,7 +114,6 @@ const displaySelectedTabSet = (selectedTab, selectedPanel) => {
 /* ===== CONTROLLER ===== */
 
 /**
- * Adds event listener to window. 
  * Listens for page load and calls View to apply styling to hide all panels. 
  * Calls Model to access tabSets object in order to get the default tab-panel set.
  * Calls View and passes the default tab and panel to highlight and display.

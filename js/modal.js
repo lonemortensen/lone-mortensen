@@ -29,16 +29,6 @@ let modalWindow; // Variable is uninitialized to control when to create the html
  * @return — The object contains the data for the selected Modal window.
 */
 
-/* NOTE: The accessData function could not be imported into and accessed from the modal.js 
-when the function was placed in the main.js module. It is unclear what caused the error, 
-but it may be somehow related to the issue of 'circular dependency' and the import chain 
-when importing modules in JS. 
-When placing the accessData function directly in the modal.js module and accessing the data 
-from inside the modal.js module, the function works. To avoid the import chain problem 
-(and to keep the modal.js module free of data), the accessData function is instead placed in 
-the modalData.js module and imported into the modal.js module from where it is called.   
-*/
-
 const getModalData = (type, selectedModalId) => {
 	// Calls function to access data and assigns returned data to new variable:
 	let modalData = accessData(); // To hold onto the returned result, assign the function to a variable.

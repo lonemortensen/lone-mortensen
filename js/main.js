@@ -18,10 +18,17 @@ The main.js module:
 
 /* -------- IMPORTS -------- */
 
+// Imports for Introduction Title and Text:
+import {revealIntroTitle} from "./intro.js";
+
+// Imports for Mobile Navigation:
+
 // Imports for Portfolio Modal Windows:
 import {addModalEventListener, closeModalWindow} from "./modal.js"; 
+
 // Imports for Skills Panel:
 import {tabsList, handlePageLoad, handleTabSelection} from "./panel.js";
+
 // Imports for About Sliders:
 import {animateAboutSection} from "./about.js";
 
@@ -64,67 +71,24 @@ mobileNavLinks.forEach(n => n.addEventListener("click", closeMobileNav));
 /* -------- INTRODUCTION ANIMATION -------- */
 
 /**
- * Reveals introduction title with animation.
- * Reveals introduction text.
- * Adds styling to introduction text.
+ * Detects when page loads.
+ * Calls event handler in intro.js to reveal the introduction title. 
 */
-const INTRO = (function () {
-    // Introduction title:
-    const introductionTitle = document.querySelector(".reveal-introduction-title");
-    // Introduction text:
-    const introductionText = document.querySelector(".reveal-introduction-text");
-    // Span that changes text styling in introduction text:
-    const textStyle = document.querySelector(".text-style");
-    
-    //Reveals introduction title with typing effect when page has loaded:
-    const revealIntroTitle = () => {
-      introductionText.classList.remove("show-introduction-text");
-      let titleText = introductionTitle.textContent;
-      introductionTitle.textContent = "";
-      let i = 0;
-      const typingEffect = setInterval (() => {
-        introductionTitle.textContent += titleText.charAt(i); 
-        i++;
-        if (i === titleText.length) {
-          clearInterval(typingEffect);
-          revealIntroText();
-        }
-      }, 100);
-    };
-
-    //Reveals introduction text after title has finished typing: 
-    const revealIntroText = () => {
-      const showText = () => {
-        introductionText.classList.add("show-introduction-text");
-      };
-      setTimeout(showText, 1000);
-    };
-  
-    //Changes styling for text span in introduction text:  
-    const changeTextStyle = () => {
-      textStyle.classList.add("change-text-style");
-    };
-  
-    // Detects when web page has loaded:
-    window.addEventListener("load", revealIntroTitle);
-  
-    // Detects when introduction text animation is completed:
-    introductionText.addEventListener("animationend", changeTextStyle) 
-})();
+window.addEventListener("load", revealIntroTitle);
 
 
-/* ===== PORTFOLIO MODALS ===== */
+/* -------- PORTFOLIO MODALS -------- */
 
 /** 
  * Detects when page loads.
  * Adds event listener to the Window.
- * Calls event handler to close any open modal windows.
+ * Calls event handler in modal.js to close any open modal windows.
 */
 window.addEventListener("load", closeModalWindow); 
 
 /** 
   * Selects and stores html elements for the modal window component.
-  * Calls function to add event listener to each modal html element.
+  * Calls function in modal.js to add event listener to each modal html element.
   * @arg modalElements - Modal html elements. 
 */
 const MODAL = (function() {
@@ -136,13 +100,14 @@ const MODAL = (function() {
 /* -------- SKILLS PANEL -------- */
 
 /**
- * Detects when page loads:
+ * Detects when page loads.
+ * Calls event handler in panel.js to highlight and display the default tab and panel.
 */
 window.addEventListener("load", handlePageLoad);
 
 /**
  * Detects when user clicks on a tab.
- * Calls event handler to add event listeners to each tab html element.
+ * Calls function to add event listeners to each tab html element.
 */
 const addTabEventListener = () => {
   for (let i = 0; i < tabsList.length; i++) {
