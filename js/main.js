@@ -33,6 +33,11 @@ import {handlePageLoad} from "./panel.js";
 // Imports for About Sliders:
 import {animateAboutSection} from "./about.js";
 
+// Imports for Scroll to Top functionality:
+import {handleScroll} from "./scrollTop.js";
+
+
+
 
 /* -------- MOBILE NAVIGATION -------- */ 
 
@@ -94,37 +99,12 @@ animateAboutSection();
 
 /* -------- SCROLL BUTTON -------- */
 
-//Scroll-to-top button:
-const scrollToTopButton = document.querySelector(".scroll-top-button");
-//Root element of the document (for offset values):
-const rootElement = document.documentElement;
-
-//Shows or hides the scroll-to-top button:
-const handleScroll = () => {
-    //Calculates max pixels that can be scrolled vertically:
-    const totalScrollLength = rootElement.scrollHeight - rootElement.clientHeight;
-    //Shows button based on number of pixels user has scrolled vertically:
-    if ((rootElement.scrollTop / totalScrollLength) > 0.30 ) {
-        scrollToTopButton.classList.remove("hide-scroll-top-button");
-    } else {
-        scrollToTopButton.classList.add("hide-scroll-top-button");
-    }
-}; 
-
-//Scrolls to the top of the page:
-const scrollToTop = () => {
-    //Specifies the position to scroll to:
-    rootElement.scrollTo({
-        top: 0, 
-        behavior: "smooth"  
-    })
-};
-
-//Detects when user scrolls on page:
+/**
+ * Detects when user scrolls on page.
+ * Calls event handler in scrollTop.js to show or hide scroll-to-top button. 
+*/
 document.addEventListener("scroll", handleScroll);
 
-//Detects when user clicks the scroll-to-top button:
-scrollToTopButton.addEventListener("click", scrollToTop);
 
 /* -------- UPDATE COPYRIGHT YEAR -------- */ 
 
