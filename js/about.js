@@ -6,7 +6,7 @@ Module: about.js
 
 /**
  * Initiates animation of sliders and 'yellow dot' in About section.
- * Selects target html elements for observation/animation.
+ * Selects target html elements for observation and animation.
  * Uses the Intersection Observer API to watch for intersection changes for 'slider' html target elements. 
  * Runs callback function to initiate animations when targets intersect with the Viewport (root).   
 */

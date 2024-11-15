@@ -33,10 +33,11 @@ import {handlePageLoad} from "./panel.js";
 // Imports for About Sliders:
 import {animateAboutSection} from "./about.js";
 
+
 /* -------- MOBILE NAVIGATION -------- */ 
 
 /**
- * Calls function in mobileNavigation.js that activates mobile navigation menu and functionality. 
+ * Calls function in mobileNavigation.js to activate mobile navigation menu and functionality. 
 */
 activateMobileNavigation();
 
@@ -54,7 +55,6 @@ window.addEventListener("load", revealIntroTitle);
 
 /** 
  * Detects when page loads.
- * Adds event listener to the Window.
  * Calls event handler in modal.js to close any open modal windows.
 */
 window.addEventListener("load", closeModalWindow); 
@@ -87,7 +87,7 @@ window.addEventListener("load", handlePageLoad);
 // https://webdesign.tutsplus.com/animate-on-scroll-with-javascript--cms-36671t
 
 /**
- * Calls function in about.js that animates the About section. 
+ * Calls function in about.js to animate the About section. 
 */
 animateAboutSection();
 
