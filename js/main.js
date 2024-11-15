@@ -36,7 +36,8 @@ import {animateAboutSection} from "./about.js";
 // Imports for Scroll to Top functionality:
 import {handleScroll} from "./scrollTop.js";
 
-
+// Imports for Copyright Year Update:
+import {updateCopyrightYear} from "./year.js";
 
 
 /* -------- MOBILE NAVIGATION -------- */ 
@@ -108,10 +109,7 @@ document.addEventListener("scroll", handleScroll);
 
 /* -------- UPDATE COPYRIGHT YEAR -------- */ 
 
-// Automatically updates copyright year in the website footer:
-
-const copyrightYear = document.querySelector(".copyright-year");
-
-let date = new Date();
-let year = date.getFullYear();
-copyrightYear.innerHTML = `<p>Copyright ${year}</p>`;
+/**
+ * Calls function in year.js to automatically update copyright year in the website footer.
+*/
+updateCopyrightYear();
