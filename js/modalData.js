@@ -2,13 +2,17 @@
 Project:  Portfolio Website Version 3
 Description:  For documention of personal web development projects. 
 Module: modalData.js
+
+===== *** =====
+
+The modalData.js module:
+- stores data for each modal window.   
+- exports function that accesses data for use in modal.js.
 ========================================================================= */
 
 /**
- * Array stores objects containing data for each of the Modals. 
- * The data is for use in the Modal windows.
+ * An array stores objects containing data for each of the modal windows. 
 */
-
 const portfolioProjects = [ 
     { 
         id: "project-1", 
@@ -59,54 +63,14 @@ const portfolioProjects = [
         secondLink: "https://github.com/lonemortensen/villain-trading-cards-api" 
     }  
 ];
-/*
-const galleryItems = [ 
-    { 
-        id: "gallery-1", 
-	    image: "img/modal-window-project-1-1200.png",
-	    title: "Gallery #1",
-	    description: "Gallery #1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        firstLink: "https://lonemortensen.github.io/portfolio-filter/",
-	    secondLink: "https://lonemortensen.github.io/portfolio-filter/" 
-    },
-    { 
-        id: "gallery-2", 
-	    image: "img/modal-window-project-1-1200.png",
-	    title: "Gallery #2",
-	    description: "Gallery #2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        firstLink: "https://lonemortensen.github.io/portfolio-filter/",
-	    secondLink: "https://lonemortensen.github.io/portfolio-filter/" 
-    },
-    { 
-        id: "gallery-3", 
-	    image: "img/modal-window-project-1-1200.png",
-	    title: "Gallery #3",
-	    description: "Gallery #3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        firstLink: "https://lonemortensen.github.io/portfolio-filter/",
-	    secondLink: "https://lonemortensen.github.io/portfolio-filter/" 
-    }
-];
-*/
 
-/* NOTE: The accessData function could not be imported into and accessed from the modal.js 
-when the function was placed in the main.js module. It is unclear what caused the error, 
-but it may be somehow related to the issue of 'circular dependency' and the import chain 
-when importing modules in JS. 
-When placing the accessData function directly in the modal.js module and accessing the data 
-from inside the modal.js module, the function works. To avoid the import chain problem 
-(and to keep the modal.js module free of data), the accessData function is instead placed in 
-the modalData.js module and imported into the modal.js module from where it is called.   
-*/
 
 /**
- * Accesses and exports the data for the Modals. 
- * Combines multiple Modal data arrays into one data array.
- * @return — The data for the Modals.
+ * Exports the data for the modal windows. 
+ * @return — Data for the modal windows.
 */
 export const accessData = () => {
-	// Combines multiple arrays into one:
-    //let data = [].concat(portfolioProjects, galleryItems);
-    let data = [].concat(portfolioProjects);  
-    //console.log(data); // Works. Logs all objects in one array.
+    let data = portfolioProjects;
+    console.log(data); // Works. Logs all objects in one array.
     return data;
 };
