@@ -165,9 +165,8 @@ const createModalWindow = (selectedModalData) => {
 	closeModalWindow();
 
 	// Selects body and main element for insertion of modal backdrop and modal window:
-	const htmlElement = document.querySelector("html");
 	const bodyElement = document.querySelector("body");
-	//const mainElement = document.querySelector("main"); 
+	const headerElement = document.querySelector("header"); 
 	
 	// Adds event listener to body element for modal window keyboard navigation:
 	bodyElement.addEventListener("keyup", checkNavigationKey); 
@@ -175,16 +174,14 @@ const createModalWindow = (selectedModalData) => {
 	/* Modal backdrop: */  
 	modalBackdrop = document.createElement("div");
 	modalBackdrop.classList.add("backdrop-blur");
-	//bodyElement.insertBefore(modalBackdrop, mainElement);
-	bodyElement.insertBefore(modalBackdrop, htmlElement); 
+	bodyElement.insertBefore(modalBackdrop, headerElement); 
 	modalBackdrop.addEventListener("click", closeModalWindow, {once: true}); 
 
 	/* Modal window:*/
 	modalWindow = document.createElement("div");
 	modalWindow.setAttribute("id", selectedModalData['id']); 
 	modalWindow.classList.add("modal-window");
-	//bodyElement.insertBefore(modalWindow, mainElement);
-	bodyElement.insertBefore(modalWindow, htmlElement);
+	bodyElement.insertBefore(modalWindow, headerElement);
 	// Gets and stores the html id attribute value of the currently open modal window:
 	const currentModalId = document.getElementById(selectedModalData['id']).id;
 	console.log(currentModalId); // Logs the value of the id attribute. 
