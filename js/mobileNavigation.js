@@ -22,18 +22,23 @@ export const activateMobileNavigation = () => {
 
     // Toggles the mobile nav menu and the close menu button:
     const openMobileNav = () => {
-    mobileNavIcon.classList.toggle("open");
-    mobileNavMenu.classList.toggle("hide-mobile-nav-menu");
-    }
+        mobileNavIcon.classList.toggle("open");
+        mobileNavMenu.classList.toggle("hide-mobile-nav-menu");
+    };
 
     // Detects when user clicks on the mobile nav icon:
     mobileNavIcon.addEventListener("click", openMobileNav);
 
     // Closes the mobile nav menu when user clicks on the menu links:
-    const closeMobileNav = (n) => {
-    mobileNavIcon.classList.remove("open");
-    mobileNavMenu.classList.add("hide-mobile-nav-menu");
-    }
+    // const closeMobileNav = (n) => {
+    //     mobileNavIcon.classList.remove("open");
+    //     mobileNavMenu.classList.add("hide-mobile-nav-menu");
+    // };
+
+    const closeMobileNav = () => {
+        mobileNavIcon.classList.remove("open");
+        mobileNavMenu.classList.add("hide-mobile-nav-menu");
+    };
 
     // Detects when user clicks on the mobile nav menu links:
     mobileNavLinks.forEach(n => n.addEventListener("click", closeMobileNav));

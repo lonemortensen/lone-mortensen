@@ -46,7 +46,7 @@ const getTabData = () => {
 
 /** 
  * Applies styling to hide all panels.
- * @param panels the panelsList variable selecting all the panels.
+ * @param panels - The panelsList variable selecting all the panels.
 */
 const hidePanels = (panels) => {
     for (let i = 0; i < panels.length; i++) {
@@ -58,7 +58,7 @@ const hidePanels = (panels) => {
 
 /**
  * Applies styling to remove highlight from all tabs.
- * @param tabs the tabsList variable selecting all the tabs.
+ * @param tabs - The tabsList variable selecting all the tabs.
 */
 const removeTabHighlight = (tabs) => {
     for (let i = 0; i < tabs.length; i++) {
@@ -71,8 +71,8 @@ const removeTabHighlight = (tabs) => {
 /** 
  * Applies styling to highlight and display only the default (first) tab and panel on page load.
  * Calls function to add a click event listener to each tab. 
- * @param defaultTab the first (default) tab in the tabSets object.
- * @param defaultPanel the panel that is stored as the value of the default (first) tab in the tabSets object.
+ * @param defaultTab - The first (default) tab in the tabSets object.
+ * @param defaultPanel - The panel that is stored as the value of the default (first) tab in the tabSets object.
 */
 const displayDefaultTabSet = (defaultTab, defaultPanel) => { 
     // Compares the default tab's id to the tab id's in the tabsList variable. If there's a match,
@@ -113,8 +113,8 @@ const addTabEventListener = () => {
 
 /** 
  * Applies styling to highlight user's selected tab and display the associated panel. 
- * @param selectedTab the tab name that matches the user's selection.
- * @param selectedPanel the panel that matches the user's selection. 
+ * @param selectedTab - The tab name that matches the user's selection.
+ * @param selectedPanel - The panel that matches the user's selection. 
 */
 const displaySelectedTabSet = (selectedTab, selectedPanel) => {
     // Finds matching tab in tabsList and adds highlight: 
@@ -165,7 +165,7 @@ export const handlePageLoad = () => {
  * Gets the panel that matches the selected tab from the tabSets object.
  * Calls View to remove styling from the default tab and panel, and passes the selected 
  * tab-panel set for highlight and display. 
- * @param e the event object is used to access the id attribute value of the selected tab.  
+ * @param e - The event object is used to access the id attribute value of the selected tab.  
 */
 const handleTabSelection = (e) => {
     e.preventDefault();

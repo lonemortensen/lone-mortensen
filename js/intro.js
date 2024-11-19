@@ -7,8 +7,8 @@ Module: Introduction section.
 
 The intro.js module: 
 - reveals introduction title with animation.
-- reveals introduction text.
-- adds styling to introduction text.
+- reveals introduction text with animation.
+- adds styling to introduction text with animation.
 - exports:
   -- event handler that reveals introduction title to main.js.
 ========================================================================= */

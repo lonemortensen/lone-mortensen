@@ -63,7 +63,7 @@ const getModalData = (type, selectedModalId) => {
 	console.log(modalWindowData);
 
 	// Gets the index of the selected modal based on the modal's id:
-	// - note: Gets the currently open Modal's index when user selects 'previous' or 'next' modal.
+	// - note: Gets the currently open modal's index when user selects 'previous' or 'next' modal.
 	let modalWindowIndex = modalData.findIndex(modal => modal.id == selectedModalId);
 	console.log(modalWindowIndex); // Works. Logs the index of the 'new' OR currently open Modal. 
 	
@@ -109,7 +109,7 @@ const getModalData = (type, selectedModalId) => {
 		addModalWindowData(previousModal); 
 	}
 
-	// Gets data for the 'next' Modal window: 
+	// Gets data for the 'next' modal window: 
 	if (type == 'next') {
 		// Gets data for the 'next' modal window based on index of currently open modal.
 		// @param currentModal - The index of the currently open modal (modalWindowIndex).
@@ -166,7 +166,7 @@ export const addModalEventListener = (modalElements) => {
 const createModalWindow = (selectedModalData) => {
 	closeModalWindow();
 
-	// Selects body and main element for insertion of modal backdrop and modal window:
+	// Selects body and header element for insertion of modal backdrop and modal window:
 	const bodyElement = document.querySelector("body");
 	const headerElement = document.querySelector("header"); 
 	

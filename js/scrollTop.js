@@ -6,7 +6,7 @@ Module: Scroll-to-top button.
 ===== *** =====
 
 The scrollTop.js module:
-- detects user scroll on page and displays scroll-to-top button. 
+- detects user scroll on page and displays or hides scroll-to-top button. 
 - adds event listener to scroll-to-top button. 
 - scrolls to top of web page when user clicks button.
 - exports:

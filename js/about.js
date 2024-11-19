@@ -7,7 +7,7 @@ Module: About section.
 
 The about.js module:
 - animates the appearance of sliders and 'yellow dot' in About section.
-- starts animation on intersection with Viewport.  
+- starts animation on intersection with viewport.  
 - applies animation CSS styling.
 - exports:
     -- function that handles monitoring and animation for use in main.js.
@@ -17,7 +17,7 @@ The about.js module:
  * Initiates animation. 
  * Selects target html elements for observation and animation.
  * Uses the Intersection Observer API to watch for intersection changes for 'slider' html target elements. 
- * Runs callback function to initiate animations when targets intersect with the Viewport (root).   
+ * Runs callback function to initiate animations when targets intersect with the viewport (root).   
 */
 export const animateAboutSection = () => {
     // Target element: first About slider:
@@ -55,10 +55,10 @@ export const animateAboutSection = () => {
         observer.observe(aboutSliderTwo);
     };
 
-    // Callback handles animation on intersection for both sliders.
+    // Callback function handles animation on intersection for both sliders.
     // Initiates circle animation. 
-    // @param entries Array of IntersectionObserverEntry objects to determine visibility and intersection status of targets.
-    // @param observer The IntersectionObserver instance allows for interaction with the observer.
+    // @param entries - Array of IntersectionObserverEntry objects to determine visibility and intersection status of targets.
+    // @param observer - The IntersectionObserver instance allows for interaction with the observer.
     const startAboutAnimation = (entries, observer) => {
         entries.forEach((entry) => {
             console.log(entry);

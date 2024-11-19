@@ -1,15 +1,15 @@
 /* ====================================================================
 Project:  Portfolio Website Version 3.0
 Description:  For documention of personal web development projects.
-Module: JavaScript entry point.
+Module: JavaScript website entry point.
 
 ===== *** =====
 
 The main.js module:
-- is the websites' JavaScript entry point and connects to index.html. 
+- acts as the websites' JavaScript entry point and connects to index.html. 
 - adds event listeners and calls functions when the script first runs.
 - imports:
-  -- relevant functions from modules used in the script.  
+  -- functions and event handlers from other modules used in the script.  
 ==================================================================== */
 
 /* -------- IMPORTS -------- */
@@ -63,9 +63,9 @@ window.addEventListener("load", closeModalWindow);
 
 
 /** 
-  * Selects and stores html elements for the modal window component.
-  * Calls function in modal.js to add event listener to each modal html element.
-  * @arg modalElements - Modal html elements. 
+ * Selects and stores html elements for the modal window component.
+ * Calls function in modal.js to add event listener to each modal html element.
+ * @arg modalElements - Modal html elements. 
 */
 const MODAL = (function() {
   const modalElements = document.querySelectorAll('.view-project'); 
@@ -83,10 +83,6 @@ window.addEventListener("load", handlePageLoad);
 
 
 /* -------- ABOUT SLIDERS ANIMATION -------- */
-
-//!!!! START HERE: 
-// Make sure elements are visible if JS is not enabled by browser: https://webdesign.tutsplus.com/animate-on-scroll-with-javascript--cms-36671t
-// https://webdesign.tutsplus.com/animate-on-scroll-with-javascript--cms-36671t
 
 /**
  * Calls function in about.js to animate the About section. 
