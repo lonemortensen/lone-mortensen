@@ -1,11 +1,20 @@
 /* ====================================================================
 Project:  Portfolio Website Version 3
 Description:  For documention of personal web development projects. 
-Module: about.js
+Module: About section.
+
+===== *** =====
+
+The about.js module:
+- animates the appearance of sliders and 'yellow dot' in About section.
+- starts animation on intersection with Viewport.  
+- applies animation CSS styling.
+- exports:
+    -- function that handles monitoring and animation for use in main.js.
 ========================================================================= */
 
 /**
- * Initiates animation of sliders and 'yellow dot' in About section.
+ * Initiates animation. 
  * Selects target html elements for observation and animation.
  * Uses the Intersection Observer API to watch for intersection changes for 'slider' html target elements. 
  * Runs callback function to initiate animations when targets intersect with the Viewport (root).   

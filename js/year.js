@@ -1,7 +1,14 @@
 /* ====================================================================
 Project:  Portfolio Website Version 3
 Description:  For documention of personal web development projects. 
-Module: year.js
+Module: Automatic update of website copyright year.
+
+===== *** =====
+
+The year.js module:
+- automatically updates and inserts the copyright year in footer.
+- exports:
+    -- function that initiates update to main.js. 
 ========================================================================= */
 
 export const updateCopyrightYear = () => {

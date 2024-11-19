@@ -1,19 +1,21 @@
 /* ====================================================================
 Project:  Portfolio Website Version 3
 Description:  For documention of personal web development projects. 
-Module: modal.js
+Module: Portfolio projects modal windows.  
 
 ===== *** =====
 
 The modal.js module:
-- imports from modalData.js.
 - processes user's selection of modal, incl.:
 	-- detects and identifies modal selection, 
 	-- finds the matching modal data, and 
 	-- renders selected modal's data and it's html and css to web page.
-- exports event handler that closes open modals for use in main.js. 
-- exports function that adds event listeners to each modal html element 
-for use in main.js.
+- imports:
+	-- function that accesses modal window data from modalData.js.
+- exports:
+	-- event handler that closes open modals for use in main.js. 
+	-- function that adds event listeners to each modal html element 
+	for use in main.js.
 ========================================================================= */
 
 /**

@@ -1,13 +1,14 @@
 /* ====================================================================
 Project:  Portfolio Website Version 3
 Description:  For documention of personal web development projects. 
-Module: modalData.js
+Module: Portfolio projects modal windows. 
 
 ===== *** =====
 
 The modalData.js module:
 - stores data for each modal window.   
-- exports function that accesses data for use in modal.js.
+- exports:
+    -- function that accesses modal window data for use in modal.js.
 ========================================================================= */
 
 /**

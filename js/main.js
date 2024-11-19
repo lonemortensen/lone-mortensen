@@ -1,19 +1,15 @@
 /* ====================================================================
 Project:  Portfolio Website Version 3.0
 Description:  For documention of personal web development projects.
-Module: main.js
+Module: JavaScript entry point.
 
 ===== *** =====
 
-! UPDATE:
-
 The main.js module:
-- Opens and closes the hamburger navigation menu in mobile view.
-- Manages the animation of the introduction title and text on page load.
-- Makes the scroll-to-top button interactive so that: 
-    a) it is visible only when the user scrolls on the page, and 
-    b) it scrolls to the top of the page when the user clicks the button.
-- Automatically updates the copyright year.
+- is the websites' JavaScript entry point and connects to index.html. 
+- adds event listeners and calls functions when the script first runs.
+- imports:
+  -- relevant functions from modules used in the script.  
 ==================================================================== */
 
 /* -------- IMPORTS -------- */

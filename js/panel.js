@@ -1,7 +1,18 @@
 /* ====================================================================
 Project:  Portfolio Website Version 3
 Description:  For documention of personal web development projects. 
-Module: panel.js
+Module: Tabbed panel for Skills section.
+
+===== *** =====
+
+The panel.js module:
+- displays and adds styling to default tab-panel set on page load. 
+- processes user's selection of tab, incl.:
+	-- detects and identifies tab selection, 
+	-- finds the matching panel, and 
+	-- renders selected tab-panel set's html and css to web page.
+- exports:
+	-- event handler that displays default tab and panel to main.js.
 ========================================================================= */
 
 /* ===== MODEL ===== */
