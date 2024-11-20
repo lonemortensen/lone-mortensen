@@ -1497,7 +1497,6 @@ footer p {
     width: 20%;
   }
 
-  /* !!! START HERE: */
 
   /* SKILLS - Tablet */
 
@@ -1563,12 +1562,7 @@ footer p {
     top: 19%;
   }
 
-  /* DELETE if keeping 'hi!' inside circle*/
-  /* .about-title {
-    margin: 0px 0px 60px 0px;
-  } */
-
-
+  
   /* CONNECT - Tablet */
 
   #contact {
@@ -1584,8 +1578,6 @@ footer p {
 @media only screen and (min-width: 1200px) {
 
 /* -------------------- Desktop Styles - Homepage -------------------- */
-
-  /* !!!!!!START HERE - clean up desktop css */
 
   /* 
    * Global Styles - Desktop
@@ -1644,7 +1636,6 @@ footer p {
 
   header {
     width: 100%;
-    /*padding: 80px 0px 80px 0px;*/
     padding: 80px 0px 30px 0px;
   }
 
@@ -1655,7 +1646,6 @@ footer p {
 
   .header-name-wrapper {
     display: flex;
-    /*justify-content: center;*/
     justify-content: flex-start;
     align-items: center;
     flex-flow: row wrap;
@@ -1670,11 +1660,6 @@ footer p {
     justify-content: flex-end;
     width: 70%;
     margin: 20px 0px 20px 0px;
-  }
-
-  .nav-wrapper {
-    /*margin: 0;*/
-    /*padding: 0;*/
   }
 
   .nav-link {
@@ -1713,7 +1698,6 @@ footer p {
   }
 
   #introduction .content-wrapper {
-  /*align-content: center;*/
   align-content: flex-start;
   height: 36vh;
   }
@@ -1730,19 +1714,12 @@ footer p {
 
   /* Animated scroll-down pointer: */
   .scroll-down-pointer {
-    /*margin-left: 650px;*/
-    /*border: 1px solid red;*/
     max-width: 1200px;
   }
 
   .scroll-down-text {
-    /*padding-left: 59rem;*/
     margin: 50px 5px 0px 12px;
     font-size: 0.55rem;
-  }
-
-  .cirle-pointer-wrapper {
-    /*padding-left: 58.6rem;*/
   }
  
 
@@ -1753,7 +1730,6 @@ footer p {
   }
 
   .project-item {
-    /*width: 48%;*/
     width: 31%;
     margin: 0px 0px 24px 0px;
   }
@@ -1793,34 +1769,15 @@ footer p {
   .modal-window {
     width: 45%;
   }
-
-  /*
-  .modal-wrapper {
-    padding: 30px;
-  }
-  */
-
-  /*
-  .modal-image {
-    margin: 15px;
-  }
-  */
-
+ 
   .modal-content {
     margin: 20px;
   }
   
   .modal-title {
-    /*font-size: 1.8rem;*/
     font-size: 2rem;
   }
-
-  /*
-  .modal-description-text {
-    font-size: 1.2rem;
-  }
-  */
-
+ 
   .modal-links {
     margin: 30px 5px 0px 5px;
   }
@@ -1842,12 +1799,7 @@ footer p {
     margin: 0px 5px 0px 0px;
   }
 
-  /*NOTE: closeButton has same value as Tablet. If no change, then DELETE:*/
-  .closeButton {
-    width: 20%;
-  }
-
-
+ 
   /* SKILLS - Desktop */
 
   #skills {
@@ -1879,7 +1831,6 @@ footer p {
   }
 
   .skills-description, .skills-technologies, .skills-examples {
-    /* margin: 30px 0px 0px 0px; */
     margin: 25px 0px 0px 0px;
   }
 
@@ -1887,13 +1838,8 @@ footer p {
     margin: 20px 0px 0px 0px;
     font-size: 1.2rem;
   }
-
-  /* .skills-technologies p, .skills-examples p {
-    margin: 15px 0px 0px 0px;
-  } */
-
+ 
   .skills-links {
-    /* margin: 15px 0px 0px 0px; */
     margin: 20px 0px 0px 0px;
   }
 
@@ -1921,20 +1867,11 @@ footer p {
     width: 55%;
   }
 
-  /* DELETE if keeping 'hi!' inside circle*/
-  /* .about-title {
-    margin: 0px 0px 40px 0px;
-  } */
-
 
   /* CONNECT - Desktop */
 
   #contact {
     padding: 100px 0px 100px 0px;
-  }
-
-  .connect-info {
-    /*margin: 0px 0px 80px 0px;*/
   }
 
   .connect-icons {
