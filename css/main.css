@@ -179,7 +179,6 @@ header,
 footer {
   display: flex;
   justify-content: center;
-  /*align-items: center;*/ /*Is this necessary?*/
   flex-flow: row wrap;
 }
 
@@ -244,26 +243,17 @@ p {
 /* HEADER */
 
 header {
-  /*padding: 30px 0px 60px 0px;*/ 
   padding: 50px 0px 20px 0px; 
-  /*background-color: #CAC691;*/
   background-color: #ffffff;
 }
 
 .header-name-wrapper {
   display: flex;
-  /*justify-content: center;*/
   justify-content: flex-start;
   align-items: center;
-  /*flex-flow: row wrap;*/
   flex-flow: nowrap;
   width: 60%;
 }
-
-/* TEST logo:
-Note: also adjust properties top and and height properties in .mobile-nav to adjust position 
-of mobile nav overlay design!
-*/
 
 .header-initials {
   width: 30%;
@@ -284,7 +274,6 @@ nav {
 
 #mobile-nav-icon {
   margin: auto 0;
-  /*display: block;*/
   display: flex;
   justify-content: flex-end;
   text-align: center;
@@ -293,7 +282,7 @@ nav {
 }
 
 .mobile-bars {
-  width: 25px; /*Convert to rem??*/
+  width: 25px; 
   height: 3px;
   margin: 6px 0;
   background-color: black;
@@ -302,7 +291,6 @@ nav {
 
 /* JavaScript toggle open-close for mobile navigation bars and X icon: */
 .open .mobile-bar-1 {
-  /* transform: rotate(-45deg) translate(-6px, 6px); */
   transform: rotate(-45deg) translate(-6px, 6px);
 }
 
@@ -311,7 +299,6 @@ nav {
 }
 
 .open .mobile-bar-3 {
-  /* transform: rotate(45deg) translate(-6px, -8px); */
   transform: rotate(45deg) translate(-6px, -7px);
 }
 
@@ -325,17 +312,13 @@ nav {
   position: absolute;
   z-index: 1;
   left: 0;
-  /* top: 100px; */
   top: 150px;
-  /* height: calc(100vh - 100px); */
   height: calc(100vh - 150px);
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  /*padding-top: 30px;*/
-  /*background-color: #53565B;*/
   background-color: #8d8752; 
 }
 
@@ -345,71 +328,19 @@ nav {
   pointer-events: none;
 } 
 
-/* DELETE old nav link styling if not needed and REPLACE with TEST code: */
-/* .mobile-nav-link {
-  width: 70%;
-  margin: 15px 0px 15px 90px;
-  padding-bottom: 30px;
-  text-align: left;
-  border-bottom: 0.1px solid #e3e2df;
-  transition: border-bottom 0.3s ease-in-out;
-}
-
-.mobile-nav-link a {
-  font-family: 'Lexend Tera', sans-serif;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  color: #e3e2df;
-  /* margin-bottom: 20px; */
-  /* padding-bottom: 5px; 
-  background-image: linear-gradient(#e0218a, #e0218a);
-  background-size: 0% 0.1em;
-  background-position-y: 100%;
-  background-position-x: 50%;
-  background-repeat: no-repeat;
-  transition: background-size 0.3s ease-in-out; 
-} */
-
-/* .mobile-nav-link a:hover {
-  background-size: 100% 0.1em;
- 
-  transform: scale(0.98);
-  transition: 0.3s ease-in-out transform;
-} */
-
-/* .mobile-nav-link:hover {
-  border-bottom: 0.1px solid #f49729;
-} */
-
-/*TEST*/
-
 .mobile-nav-link {
   width: 70%;
-  /*margin: 15px 50px;*/
-  /* margin: 15px 0px 15px 90px; */
-  /* margin: 0px 0px 60px 90px; */
   margin: 15px 0px 60px 90px;
-  /* padding-bottom: 30px; */
   text-align: left;
-  /* border-bottom: 0.1px solid #e3e2df;
-  transition: border-bottom 0.3s ease-in-out; */
-
 }
 
 .mobile-nav-link a {
   font-family: 'Lexend Tera', sans-serif;
-  /*font-family: 'Lekton', sans-serif;*/
   font-size: 0.75rem;
-  /*font-size: 0.85rem;*/
   text-transform: uppercase;
-  /*color: #ffffff;*/
   color: #e3e2df;
-  /* margin-bottom: 20px; */
-  /* padding-bottom: 30px; */
   padding-bottom: 15px;   
-  /* background-image: linear-gradient(#e0218a, #e0218a); */
   background-image: linear-gradient(#f49729, #f49729);
-  /* background-size: 0% 0.1em; */
   background-size: 100% 0.1em;
   background-position-y: 100%;
   background-position-x: 50%;
@@ -442,7 +373,6 @@ footer {
   width: 30px;
   height: 30px;
   border-radius: 30px;
-  /*background: #E7E5CB;*/
   background: #5a4331;
   border: none;
   transform: scale(0.9);
@@ -462,7 +392,6 @@ footer {
 }
 
 .scroll-top-button i {
-  /*color: #152A3E;*/
   font-size: 1rem;
   color: #e3e2df; 
 }
@@ -478,7 +407,6 @@ footer .content-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* flex-flow: row wrap; */
   flex-flow: column;
   width: 100%;
 }
@@ -509,16 +437,11 @@ footer p {
 
 #introduction {
   align-content: flex-start;
-  /*height: 100vh;*/
-  /*padding: 0px 0px 60px 0px;*/
   padding: 60px 0px 60px 0px;
-  /*background-color: #CAC691;*/
 }
 
 #introduction .content-wrapper {
   align-content: center;
-  /*align-content: flex-start;*/
-  /*height: 38vh;*/
   height: 45vh;
 }
 
@@ -532,21 +455,12 @@ footer p {
   width: 100%;
   margin-top: 30px;
   color: #152A3E;
-  /*ANIMATION CODE:*/
-  /*display: none;  NOTE: this affects document flow: removes element from flow and moves other content up! Fix!! */
   opacity: 0;
 }
 
 /* 
  * Animation - Introduction 
 */
-
-/*NOTE show-introduction-title not found in JS nor HTML... DELETE? */
-/* .show-introduction-title {
-  display: block;
-  width: 100%;
-  color: #152A3E;
-}  */
 
 /* JavaScript application of animated reveal of introduction title and text: */
 .show-introduction-text {
@@ -584,16 +498,9 @@ footer p {
     background-image: linear-gradient(#FFFFFF, #FFFFFF);
     background-size: 0% 0.0em;     
   }
-  /*50% {
-    background-size: 50% 0.4em;
-    /*background-position-y: 100%;
-    background-position-x: 50%;
-  }*/
   100% {
     background-image: linear-gradient(#F49729, #F49729);
     background-size: 100% 0.7em;
-    /*background-position-y: 100%;
-    background-position-x: 50%;*/
   }
 }
 
@@ -603,34 +510,22 @@ footer p {
   flex-wrap: wrap;
   flex-direction: column;
   align-content: flex-end;
-  /*justify-content: flex-end;*/
-  /*width: 100%;*/
   width: 80%;
   padding-top: 80px;
-  /*margin-left: 470px;*/
-  /*border: 1px solid red;*/
 }
 
 .scroll-down-text {
-  /*width: 100%;*/
-  /*padding-left: 30rem;*/
   writing-mode: vertical-lr;
-  /*text-orientation: upright;*/
   text-transform: uppercase;
   font-family: 'Lexend Tera', sans-serif;
   font-size: 0.5rem;
   font-weight: 700;
   letter-spacing: 0.3rem;
-  /*text-align: left;*/
   margin: 50px 5px 0px 13px;
-  /*border: 1px solid green;*/
 }
 
 .cirle-pointer-wrapper {
-  /*width: 100%;*/
   margin: 0px 5px 5px 2px;
-  /*padding-left: 29.5rem;*/
-  /*border: 1px solid blue;*/
 }
 
 .circle-pointer {
@@ -748,13 +643,11 @@ footer p {
 .project-description {
   width: 100%;
   height: 100px; /* Height keeps box size consistent.*/
-  /*padding: 10px;*/
   margin: 20px 0px 0px 0px;
   color: #e3e2df; 
 }
 
 .project-skills p {
-  /*padding-top: 10px;*/
   font-size: 0.75rem;
   color: #e3e2df; 
 }
@@ -769,16 +662,11 @@ footer p {
 /* Note: Project button styling also applied to Modal 'close' button in JavaScript. */
 .project-button-style {
   padding: 7px 8px 7px 8px;
-  /* font-family: 'Lekton', sans-serif; */
   font-family: 'Lexend Tera', sans-serif;
-  /* font-size: 1rem; */
   font-size: 0.7rem;
   text-transform: uppercase;
   background-color: #e3e2df;
-  /*border: 0.5px solid #53565b;*/
   border: none;
-  /* border-radius: 3px; */
-  /* box-shadow: rgb(0 0 0 / 25%) 0px 4px 14px; */
   transform: scale(0.9);
   cursor: pointer;
   pointer-events: auto;
@@ -800,8 +688,8 @@ footer p {
   z-index: 1; /* Situates backdrop on top. */
   left: 0;
   right: 0;
-  width: 100%; /*Change to viewport width: 100vw? See website mobile nav code*/
-  height: 100%; /*Change to viewport height: 100vh? See website mobile nav code*/
+  width: 100%; 
+  height: 100%; 
   overflow: auto; /* Enables scroll. */
   background-color: rgba(83, 86, 91, 0.9); /* rgba() sets opacity without inheritance. */
 }
@@ -853,7 +741,6 @@ footer p {
   display: flex;
   justify-content: flex-start;
   flex-flow: row wrap;
-  /* margin: 15px 0px 10px 0px; */
   margin: 15px 0px 0px 0px;
   padding-left: 5px; 
   padding-right: 2px;
@@ -861,7 +748,7 @@ footer p {
 }
 
 .modal-description-text {
-  /* DELETE from mobile css. */
+  font-size: 1rem;
 }
 
 .modal-links {
@@ -888,27 +775,22 @@ footer p {
 
 .modalNavigation {
   display: flex;
-  /*justify-content: center;*/
   justify-content: flex-end;
   align-items: center;
   flex-flow: row wrap;
   width: 100%;
-  /*margin: 0;*/
   margin: 10px 0px 10px 0px;
 }
 
 .arrowButtons {
   display: flex;
-  /*justify-content: flex-start;*/
   justify-content: flex-end;
   align-items: center;
   flex-flow: row wrap;
   width: 50%;
-  /*margin: 0;*/
   margin: 0px 15px 0px 0px;
 }
 
-/* NOTE: Do we need arrowPrevious and arrowNext????*/
 .arrowPrevious {
   display: flex;
   justify-content: center;
@@ -929,18 +811,11 @@ footer p {
   width: 25px;
   height: 25px;
   border-radius: 25px; 
-  /* margin: 0px 10px 0px 10px; */
   margin: 0px 10px 0px 5px;
-  /*padding: 0px 5px 0px 5px;*/ 
-  /*background: #E9B14C;*/
-  /* background: #5a4331; */
   background-color: #e3e2df;
-  /*background: #8d8752;*/
 }
 
-.previousModal {
-  /*border-left: 3px solid black;*/
-  /*transform: rotate(135deg);*/
+.previousModal, .nextModal {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -950,38 +825,11 @@ footer p {
   border: none;
   cursor: pointer;
   pointer-events: auto;
-  /*padding-right: 5px;*/
-  /*padding-bottom: 5px;*/
-  /*margin-left: 3px;*/
-  background-color: transparent;
-}
-
-.nextModal {
-  /*border-right: 3px solid black;*/
-  /*transform: rotate(-45deg);*/
-  /*cursor: pointer;*/
-  /*pointer-events: auto;*/
-  /*margin-right: 3px;*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 25px;
-  height: 25px;
-  border-radius: 25px;
-  border: none;
-  cursor: pointer;
-  pointer-events: auto;
-  /*padding-right: 5px;*/
-  /*padding-bottom: 5px;*/
-  /*margin-left: 3px;*/
   background-color: transparent;
 }
 
 .previousModal i, .nextModal i {
-  /*font-size: 1rem;*/
-  /* font-size: 0.9rem; */
   font-size: 0.7rem;
-  /* color: #e3e2df; */
 }
 
 .closeButton {
@@ -1021,7 +869,7 @@ footer p {
   touch-action: pan-x;  
   /* Note: scrollbar styling not compatible with Safari. Browser applies default styling: */
   scrollbar-width: auto;
-  scrollbar-color: /*#5a4331*/ /*#8d8752*/ /*#e3e2df*/ #ffffff #f49729 /*#e0218a*/;
+  scrollbar-color: #ffffff #f49729;
 }
 
 .tabs-list {
@@ -1040,7 +888,6 @@ footer p {
   font-size: 0.7rem;
   color: #152A3E;
   background-image: linear-gradient(#f49729, #f49729);
-  /*background-size: 0% 0.1em;*/
   background-size: 0% 0.25em;
   background-position-y: 100%;
   background-position-x: 50%;
@@ -1049,7 +896,6 @@ footer p {
 }  
 
 .tab a:hover {
-  /*background-size: 100% 0.1em;*/
   background-size: 100% 0.25em;
 }
 
@@ -1063,14 +909,6 @@ footer p {
   justify-content: center;
   flex-flow: row wrap;
   padding: 30px 11px;
-}
-
-/*NEW: panel contents styling NOTE: Consider if place AFTER js styling???:*/
-
-/*Likely delete panels h3 styling...*/
-.panels h3 {
-  margin-bottom: 30px;
-  text-align: left;
 }
 
 .skills-header {
@@ -1103,11 +941,6 @@ footer p {
   margin: 15px 0px 0px 0px;
 }
 
-/* .skills-technologies {
-  width: 100%;
-  margin: 15px 0px 0px 0px;
-} */
-
 .skills-technologies h5, .skills-examples h5 {
   margin: 10px 0px 0px 0px;
   font-size: 0.8rem;
@@ -1117,11 +950,6 @@ footer p {
 .skills-technologies p, .skills-examples p {
   margin: 10px 0px 0px 0px;
 }
-
-/* .skills-examples {
-  width: 100%;
-  margin: 15px 0px 0px 0px;
-} */
 
 .skills-links {
   display: flex;
@@ -1154,7 +982,6 @@ footer p {
 
 /* JavaScript application of tab highlight styling: */
 .highlight-tab {
-  /*font-weight: 700;*/
   background: #f49729;
 }
 
@@ -1189,19 +1016,15 @@ footer p {
   height: 100px;
   border-radius: 100px;
   margin: 0px 10px 0px 10px;
-  /*padding: 0px 5px 0px 5px;*/ 
   background: #E9B14C;
-  /* background-color: #e0218a;   */
   box-shadow: rgb(0 0 0 / 25%) 0px 4px 14px;
   position: absolute; /* Element removed from document flow. Other elements will behave as if it's not there. */
   left: 38%;
-  /* top: 19%; */
   top: 15%;
   z-index: 1;
 }
 
 .about-circle p {
-  /* font-size: 1.5rem; */
   font-size: 2rem;
 }
 
@@ -1209,30 +1032,17 @@ footer p {
   width: 100%;
   height: 200px;
   background-color: #5a4331;
-  /* background-color: #e3e2df; */
-  /* background-color: #367813;	 */
-  /* border: solid 1px black;
-  box-shadow: rgb(0 0 0 / 25%) 0px 4px 14px; */
 }
 
 .about-slider-2 {
   display: flex;
   justify-content: center;
   width: 100%;
-  /* height: 600px; MAY NOT NEED Height if I adjust circle top property*/ 
-  /* background-color: #e3e2df; */
   background-color: #ffffff;
-  /* border: solid 1px black;
-  box-shadow: rgb(0 0 0 / 25%) 0px 4px 14px; */
 }
 
 .about-info {
-  /* display: flex;
-  justify-content: flex-start;
-  flex-flow: row wrap;
-  align-content: center; */
   width: 100%;
-  /*margin: 80px 15px 0px 15px;*/
   margin: 80px 30px 80px 30px;
   padding: 40px;
   background-color: #ffffff;
@@ -1247,16 +1057,7 @@ footer p {
   width: 100%;
 }
 
-/* DELETE if keeping 'hi!' inside circle::cue*/
-/* .about-title {
-  width: 100%;
-  margin: 0px 0px 40px 0px;
-  text-align: left;
-  color: #152A3E;
-} */
-
 .about-description p {
-  /* margin: 0px 0px 20px 0px; */
   margin: 10px 0px 10px 0px;
   color: #152A3E;
 }
@@ -1270,28 +1071,19 @@ footer p {
   opacity: 0;
 }
 
-/*DELETE show-about-content if not needed: */
-/* .show-about-content {
-  opacity: 1;
-} */
-
 .about-slide-left {
   animation: 2000ms slide-in-left ease-in-out;
-  /* animation: 1500ms slide-from-bottom ease-in-out; */
   animation-iteration-count: 1;
 }
 
 .about-slide-right {
   animation: 2000ms slide-in-right ease-in-out;
-  /* animation: 1500ms slide-from-bottom ease-in-out; */
   animation-iteration-count: 1;
 }
 
-/*NOTE: consider changing name unless dot actually drops from TOP*/
 .about-drop-top {
   animation: 500ms fade-in ease, 2000ms drop-from-top ease;
   animation-iteration-count: 1;
-  /* transform-origin: top; */
 }
 
 @keyframes slide-in-left {
@@ -1316,24 +1108,11 @@ footer p {
   }
 }
 
-/*DELETE slide-from-bottom if not used: */
-@keyframes slide-from-bottom {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
-
 @keyframes fade-in {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
 
-/*NOTE: Consider changing keyframe name to 'drop-dot' as in Intro unless I succeed in dropping drop from TOP...*/
 /* scale(x,y) changes dot width(x) and height(y). translateY(n) moves dot along y-axis: */
 @keyframes drop-from-top {
   0% {transform: scale(1, 1) translateY(0);}
@@ -1349,7 +1128,6 @@ footer p {
 
 #contact {
   padding: 60px 0px 60px 0px;
-  /*background-color: #152A3E;*/
 }
 
 .connect-info {
@@ -1358,7 +1136,6 @@ footer p {
   align-items: center;
   flex-flow: row wrap;
   width: 100%;
-  /*margin: 0px 0px 60px 0px;*/
 }
 
 .connect-icons {
@@ -1385,7 +1162,6 @@ footer p {
 }
 
 .connect-icons i {
-  /*color: #EEEFDA;*/
   color: #313131;
   font-size: 1.5rem;
 }
@@ -1534,16 +1310,13 @@ footer p {
   /* HEADER - Tablet */
   
   header {
-    /*padding: 60px 0px 80px 0px;*/
     padding: 60px 0px 30px 0px; 
   }
   
   .header-name-wrapper {
-    /* justify-content: center; */
     justify-content: flex-start;
     flex-flow: nowrap;
     width: 30%;
-    /* padding-top: 5px; */
   }
   
   .header-initials {
@@ -1559,9 +1332,7 @@ footer p {
   }
 
   nav {
-    /*display: block;*/
     display: flex;
-    /*justify-content: space-around;*/
     justify-content: flex-end;
     align-items: center;
     flex-flow: row wrap;
@@ -1570,9 +1341,7 @@ footer p {
 
   .nav-wrapper {
     display: flex;
-    /*justify-content: space-around;*/
     justify-content: space-between;
-    /*width: 100%;*/
     width: 85%;
   }
   
@@ -1624,20 +1393,14 @@ footer p {
 
   /* Animated scroll-down pointer: */
   .scroll-down-pointer {
-    /*margin-left: 650px;*/
     max-width: 640px;
   }
 
   .scroll-down-text {
-    /*padding-left: 39rem;*/
     font-size: 0.45rem;
   }
 
-  .cirle-pointer-wrapper {
-    /*padding-left: 38.5rem;*/
-  }
-
-
+ 
   /* PROJECTS - Tablet */
 
   #projects {
@@ -1647,11 +1410,6 @@ footer p {
   .project-wrapper {
     justify-content: space-around;
     margin: 0px 0px 50px 0px;
-  }
-
-  .project-item {
-    /*width: 45%;*/
-    /*margin-bottom: 20px;*/
   }
 
   .project-header h4 {
@@ -1725,13 +1483,7 @@ footer p {
     margin: 0px 10px 0px 10px;
   }
 
-  .previousModal {
-    width: 30px;
-    height: 30px;
-    border-radius: 30px;
-  }
-
-  .nextModal{
+  .previousModal, .nextModal {
     width: 30px;
     height: 30px;
     border-radius: 30px;
@@ -1745,7 +1497,8 @@ footer p {
     width: 20%;
   }
 
-  
+  /* !!! START HERE: */
+
   /* SKILLS - Tablet */
 
   #skills {
@@ -1763,12 +1516,7 @@ footer p {
   .panels {
     padding: 40px 11px;
   }
-  
-  /* LIKELY delete panels h3*/
-  .panels h3 {
-    margin-bottom: 40px;
-  }
-
+    
   .skills-header h5 {
     font-size: 1rem;
   }
@@ -2120,11 +1868,6 @@ footer p {
 
   .panels {
     padding: 60px 11px;
-  }
-
-  /* LIKELY delete panels h3 styling*/
-  .panels h3 {
-    margin-bottom: 50px;
   }
 
   .skills-header h5 {

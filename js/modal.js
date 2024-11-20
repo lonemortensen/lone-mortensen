@@ -256,7 +256,6 @@ const createModalWindow = (selectedModalData) => {
 	arrowButtons.classList.add("arrowButtons");
 
 	/* - previous and next arrow:*/
-	/*NOTE: May not need classes arrowPrevious and arrowNext...*/
 	const arrowPrevious = arrowButtons.appendChild(document.createElement("li"));
 	arrowPrevious.classList.add("arrowPrevious", "circle");
 	const arrowNext = arrowButtons.appendChild(document.createElement("li"));
