@@ -17,51 +17,51 @@ The modalData.js module:
 const portfolioProjects = [ 
     { 
         id: "project-1", 
-        image: "img/unplugged-retreat-image-1200.png",
-	    title: "Unplugged Retreat",
-	    description: "A multi-page website for a fictional client coded from a Photoshop design comp. The website is responsive, using Flexbox to automatically adjust to different screen sizes.",
-        firstLink: "https://lonemortensen.github.io/206-unplugged-retreat/",
-	    secondLink: "https://github.com/lonemortensen/206-unplugged-retreat" 
+        image: "img/supervillain-trading-card-screenShot.png",
+	    title: "Supervillain Trading Cards",
+	    description: "The user inputs card data in an HTML form on the front end and the data is stored in an SQL database. The app, built with Flask, uses a REST API and JavaScript for routing and rendering data.",
+        firstLink: "https://replit.com/@lonemortensen/skillcrush-py-cl02-ls10-villain-cards-restAPI-flask-final#main.py",
+	    secondLink: "https://github.com/lonemortensen/villain-trading-cards-api" 
     },
 	{ 
         id: "project-2", 
-	    image: "img/super-sticky-notes-image-1200.png",
-	    title: "Super Sticky Notes",
-        description: "This is an interactive web app that lets users create, edit, delete, and search in sticky notes. Notes are saved to the browser's local storage between sessions. This project was built with React JS.",
-        firstLink: "https://bn2qgl.csb.app/",
-        secondLink: "https://github.com/lonemortensen/super-sticky-notes" 
+	    image: "img/portfolio-filter-image-1200.png",
+	    title: "Portfolio Gallery Filter",
+        description: "Users click on filter buttons to select which projects to view. JavaScript accesses HTML data attributes storing custom project data to create filter buttons and update the UI based on user selections.",
+        firstLink: "https://lonemortensen.github.io/portfolio-filter/",
+        secondLink: "https://github.com/lonemortensen/portfolio-filter?tab=readme-ov-file" 
     },
 	{ 
         id: "project-3", 
-        image: "img/guess-the-word-image-1200.png",
-        title: "Guess the Word",
-        description: "This project was built with JavaScript. The game fetches and displays a random word and the user has 8 attempts to guess the word.",
-        firstLink: "https://lonemortensen.github.io/guess-the-word/",
-        secondLink: "https://github.com/lonemortensen/guess-the-word" 
+        image: "img/super-sticky-notes-image-1200.png",
+        title: "Super Sticky Notes",
+        description: "Using React JS, this app handles dynamic content based on user input, offering real-time create, delete, edit, and search functionalities. Notes are saved to the browser's local storage between sessions.",
+        firstLink: "https://bn2qgl.csb.app/",
+        secondLink: "https://github.com/lonemortensen/super-sticky-notes" 
     }, 
     { 
         id: "project-4", 
-        image: "img/name-tag-generator-image-1200.png",
-        title: "Name Tag Generator",
-        description: "An interactive app built with React JS. Users can create name tags based on their input. Name tags are saved to the browser's local storage between sessions.",
-        firstLink: "https://1f6ixl.csb.app/",
-        secondLink: "https://github.com/lonemortensen/name-tag-generator" 
-    },
-    { 
-        id: "project-5", 
         image: "img/github-repo-gallery-image-1200.png",
         title: "GitHub Repo Gallery",
-        description: "This project uses GitHub's API to pull data from a GitHub portfolio to create a gallery of repos.",
+        description: "The gallery utilizes JavaScript and the GitHub REST API to fetch, display, and enable interaction with public GitHub repos. It pulls user and repo data and features a dynamic search function.",
         firstLink: "https://lonemortensen.github.io/github-repo-gallery/",
         secondLink: "https://github.com/lonemortensen/github-repo-gallery" 
     },
     { 
+        id: "project-5", 
+        image: "img/modal-windows-image-1200.png",
+        title: "More Modal Windows",
+        description: "Two separate modal window components are featured on the same web page. JavaScript ES6 modules allow for modal window functionality to be reused and applied to both. Use mouse or keyboard to navigate.",
+        firstLink: "https://lonemortensen.github.io/modal-window/",
+        secondLink: "https://github.com/lonemortensen/modal-window" 
+    },
+    { 
         id: "project-6", 
-        image: "img/supervillain-trading-card-screenShot.png",
-        title: "Supervillain Trading Cards",
-        description: "This project uses GitHub's API to pull data from a GitHub portfolio to create a gallery of repos.",
-        firstLink: "https://replit.com/@lonemortensen/skillcrush-py-cl02-ls10-villain-cards-restAPI-flask-final#main.py",
-        secondLink: "https://github.com/lonemortensen/villain-trading-cards-api" 
+        image: "img/guess-the-word-image-1200.png",
+        title: "Guess the Word Game",
+        description: "JavaScript and an API call are used to fetch random words from a text file and track game progress. The game validates player input and tracks letters and guesses while displaying messages on the UI.",
+        firstLink: "https://lonemortensen.github.io/guess-the-word/",
+        secondLink: "https://github.com/lonemortensen/guess-the-word" 
     }  
 ];
 
