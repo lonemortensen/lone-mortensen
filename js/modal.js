@@ -172,6 +172,9 @@ const createModalWindow = (selectedModalData) => {
 	
 	// Adds event listener to body element for modal window keyboard navigation:
 	bodyElement.addEventListener("keyup", checkNavigationKey); 
+	// bodyElement.addEventListener("keyup", (event) => {
+	// 	checkNavigationKey(event, currentModalId);
+	// });
 
 	/* Modal backdrop: */  
 	modalBackdrop = document.createElement("div");
@@ -185,7 +188,8 @@ const createModalWindow = (selectedModalData) => {
 	modalWindow.classList.add("modal-window");
 	bodyElement.insertBefore(modalWindow, headerElement);
 	// Gets and stores the html id attribute value of the currently open modal window:
-	const currentModalId = document.getElementById(selectedModalData['id']).id;
+	//const currentModalId = document.getElementById(selectedModalData['id']).id;
+	currentModalId = document.getElementById(selectedModalData['id']).id;
 	console.log(currentModalId); // Logs the value of the id attribute. 
 
 	/* Modal wrapper:*/
@@ -335,6 +339,7 @@ const checkNavigationKey = (event) => {
 };
 
 
+
 /**
  * Requests and passes data for a modal window based on user selection:
  * -- If user selects 'new' modal: The modal id is obtained from the html id attribute via the event object.
@@ -361,6 +366,7 @@ const prepareModalWindow = (event, modalId) => {
 	// Uses click and keyboard events to assign type for 'previous' and 'next' modal.  
 	let modalType = event.currentTarget.dataset.navigation; 
 	let arrowKey = event.key; 
+	console.log(arrowKey);
 		
 	let type = 'new';
 	if (modalType || arrowKey) {
@@ -371,6 +377,7 @@ const prepareModalWindow = (event, modalId) => {
 			type = 'next';
 		}
 	}
+	console.log(type);
 
 	// Requests data for selected modal:
 	let selectedModalData = getModalData(type, selectedModalId);
