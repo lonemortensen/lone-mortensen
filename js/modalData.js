@@ -1,7 +1,7 @@
 /* ====================================================================
-Project:  Portfolio Website Version 3
+Project:  Portfolio Website Version 3.0
 Description:  For documention of personal web development projects. 
-Module: Portfolio projects modal windows. 
+Module: Data for portfolio projects modal windows. 
 
 ===== *** =====
 

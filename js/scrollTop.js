@@ -1,5 +1,5 @@
 /* ====================================================================
-Project:  Portfolio Website Version 3
+Project:  Portfolio Website Version 3.0
 Description:  For documention of personal web development projects. 
 Module: Scroll-to-top button. 
 
@@ -10,7 +10,7 @@ The scrollTop.js module:
 - adds event listener to scroll-to-top button. 
 - scrolls to top of web page when user clicks button.
 - exports:
-    -- event handler that detects scroll and displays button to main.js.
+    -- event handler that displays button to main.js.
 ========================================================================= */
 
 // Scroll-to-top button:

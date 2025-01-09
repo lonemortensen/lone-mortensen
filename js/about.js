@@ -1,5 +1,5 @@
 /* ====================================================================
-Project:  Portfolio Website Version 3
+Project:  Portfolio Website Version 3.0
 Description:  For documention of personal web development projects. 
 Module: About section.
 

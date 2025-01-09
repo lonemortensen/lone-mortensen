@@ -1,5 +1,5 @@
 /* ====================================================================
-Project:  Portfolio Website Version 3
+Project:  Portfolio Website Version 3.0
 Description:  For documention of personal web development projects. 
 Module: Portfolio projects modal windows.  
 
@@ -9,7 +9,8 @@ The modal.js module:
 - processes user's selection of modal, incl.:
 	-- detects and identifies modal selection, 
 	-- finds the matching modal data, and 
-	-- renders selected modal's data and it's html and css to web page.
+	-- creates and renders selected modal's data and its html and css 
+	to web page.
 - imports:
 	-- function that accesses modal window data from modalData.js.
 - exports:

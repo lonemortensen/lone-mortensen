@@ -1,5 +1,5 @@
 /* ====================================================================
-Project:  Portfolio Website Version 3
+Project:  Portfolio Website Version 3.0
 Description:  For documention of personal web development projects. 
 Module: Tabbed panel for Skills section.
 
@@ -12,7 +12,8 @@ The panel.js module:
 	-- finds the matching panel, and 
 	-- renders selected tab-panel set's html and css to web page.
 - exports:
-	-- event handler that displays default tab and panel to main.js.
+	-- event handler that initiates display of default tab and panel 
+    to main.js.
 ========================================================================= */
 
 /* ===== MODEL ===== */
