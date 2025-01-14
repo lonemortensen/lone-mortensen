@@ -1603,7 +1603,6 @@ footer p {
    * Global Layout - Structural Styles - Desktop
   */
 
-
   /* 
    * Global Layout - Special Styles - Desktop
   */
@@ -1652,9 +1651,9 @@ footer p {
     width: 30%;
   }
   
-   /* 
-    * Tablet and desktop navigation 
-   */
+  /* 
+   * Tablet and desktop navigation 
+  */
 
   nav {
     justify-content: flex-end;
