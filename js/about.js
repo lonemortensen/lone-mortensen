@@ -61,18 +61,15 @@ export const animateAboutSection = () => {
     // @param observer - The IntersectionObserver instance allows for interaction with the observer.
     const startAboutAnimation = (entries, observer) => {
         entries.forEach((entry) => {
-            console.log(entry);
             if (entry.isIntersecting) {
                 if (entry.target.id === "slider-1") {
-                    console.log("we're intersecting slide 1"); // Works
                     observer.disconnect();
-                    entry.target.classList.remove("hide-about-content"); // Works 
-                    entry.target.classList.add("about-slide-left"); // Works - "slider 1" slides in. 
+                    entry.target.classList.remove("hide-about-content"); 
+                    entry.target.classList.add("about-slide-left");  
                 } else if (entry.target.id === "slider-2") {
-                    console.log("we're intersecting slide 2"); // Works
                     observer.disconnect();
-                    entry.target.classList.remove("hide-about-content"); // Works 
-                    entry.target.classList.add("about-slide-right"); // Works - "slider 2" slides in.
+                    entry.target.classList.remove("hide-about-content");  
+                    entry.target.classList.add("about-slide-right"); 
                     revealAboutCircle();
                 }
             }

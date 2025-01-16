@@ -72,6 +72,5 @@ const portfolioProjects = [
 */
 export const accessData = () => {
     let data = portfolioProjects;
-    console.log(data); // Works. Logs all objects in one array.
     return data;
 };

@@ -22,7 +22,7 @@ const textStyle = document.querySelector(".text-style");
 
 
 /**
- * Reveals introduction title with typing effect when page has loaded:
+ * Reveals introduction title with typing effect when page has loaded.
 */
 export const revealIntroTitle = () => {
   introductionText.classList.remove("show-introduction-text");
@@ -41,7 +41,7 @@ export const revealIntroTitle = () => {
 
 
 /**
- * Reveals introduction text after title has finished typing: 
+ * Reveals introduction text after title has finished typing. 
 */
 const revealIntroText = () => {
   const showText = () => {
@@ -52,7 +52,7 @@ const revealIntroText = () => {
 
 
 /**
- * Changes styling for text span in introduction text:  
+ * Changes styling for text span in introduction text.  
 */
 const changeTextStyle = () => {
   textStyle.classList.add("change-text-style");
@@ -60,6 +60,6 @@ const changeTextStyle = () => {
 
 
 /**
- *  Detects when introduction text animation is completed:
+ *  Detects when introduction text animation is completed.
 */
 introductionText.addEventListener("animationend", changeTextStyle); 

@@ -14,25 +14,25 @@ The main.js module:
 
 /* -------- IMPORTS -------- */
 
-// Imports for Introduction Title and Text:
+// Imports for introduction title and text:
 import {revealIntroTitle} from "./intro.js";
 
-// Imports for Mobile Navigation:
+// Imports for mobile navigation:
 import {activateMobileNavigation} from "./mobileNavigation.js";
 
-// Imports for Portfolio Modal Windows:
+// Imports for portfolio modal windows:
 import {addModalEventListener, closeModalWindow} from "./modal.js"; 
 
-// Imports for Skills Panel:
+// Imports for skills panel:
 import {handlePageLoad} from "./panel.js";
 
-// Imports for About Sliders:
+// Imports for about sliders:
 import {animateAboutSection} from "./about.js";
 
-// Imports for Scroll to Top functionality:
+// Imports for scroll to top functionality:
 import {handleScroll} from "./scrollTop.js";
 
-// Imports for Copyright Year Update:
+// Imports for copyright year update:
 import {updateCopyrightYear} from "./year.js";
 
 

@@ -18,13 +18,12 @@ The panel.js module:
 
 /* ===== MODEL ===== */
 
-/* Object stores tabs (keys) and their associated panels (values): */ 
+// Object stores tabs (keys) and their associated panels (values):  
 let tabSets = {};
 
-
-/* All tabs:*/
+// All tabs:
 const tabsList = document.getElementsByClassName("tab-link"); 
-/* All panels:*/ 
+// All panels: 
 const panelsList = document.getElementsByClassName("panels"); 
 
 
@@ -36,8 +35,8 @@ const getTabData = () => {
     for (let i = 0; i < tabsList.length; i++) {
         let tab = tabsList[i];
         let tabName = tab.id; 
-        let panelLink = tab.hash; // Gets the anchor part of the href attribute value associated with current tab
-        let panelLinkName = panelLink.replace("#", ""); // Removes # from the href attribute value
+        let panelLink = tab.hash; // Gets the anchor part of the href attribute value associated with current tab.
+        let panelLinkName = panelLink.replace("#", ""); // Removes # from the href attribute value.
         tabSets[tabName] = panelLinkName;  
     };
 };
@@ -106,7 +105,6 @@ const displayDefaultTabSet = (defaultTab, defaultPanel) => {
 const addTabEventListener = () => {
     for (let i = 0; i < tabsList.length; i++) {
       let tab = tabsList[i];
-      console.log(tab); //logs all <a>, i.e. tabs 
       tab.addEventListener("click", handleTabSelection);
     };
   };
@@ -141,9 +139,11 @@ const displaySelectedTabSet = (selectedTab, selectedPanel) => {
 /* ===== CONTROLLER ===== */
 
 /**
- * Listens for page load and calls View to apply styling to hide all panels. 
+ * Handles page load and calls View to apply styling to hide all panels. 
  * Calls Model to access tabSets object in order to get the default tab-panel set.
  * Calls View and passes the default tab and panel to highlight and display.
+ * @arg defaultTabName - The first (default) tab in the tabSets object.
+ * @arg defaultPanel - The panel that is stored as the value of the default (first) tab in the tabSets object.
 */
 export const handlePageLoad = () => {
     hidePanels(panelsList);
@@ -160,19 +160,20 @@ export const handlePageLoad = () => {
 
 
 /**
- * Listens for user click on tab.
+ * Handles user click on tab.
  * Calls Model to access the tabSets object.
  * Gets the name (id attribute value) of the selected tab from the event object.
  * Gets the panel that matches the selected tab from the tabSets object.
  * Calls View to remove styling from the default tab and panel, and passes the selected 
  * tab-panel set for highlight and display. 
  * @param e - The event object is used to access the id attribute value of the selected tab.  
+ * @arg selectedTabName - The tab name that matches the user's selection.
+ * @arg selectedPanel - The panel that matches the user's selection. 
 */
 const handleTabSelection = (e) => {
     e.preventDefault();
     getTabData();
     let selectedTabName = e.target.id;
-    console.log(selectedTabName);
     let selectedPanel = tabSets[selectedTabName];
 
     hidePanels(panelsList); 

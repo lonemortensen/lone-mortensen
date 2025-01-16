@@ -30,11 +30,6 @@ export const activateMobileNavigation = () => {
     mobileNavIcon.addEventListener("click", openMobileNav);
 
     // Closes the mobile nav menu when user clicks on the menu links:
-    // const closeMobileNav = (n) => {
-    //     mobileNavIcon.classList.remove("open");
-    //     mobileNavMenu.classList.add("hide-mobile-nav-menu");
-    // };
-
     const closeMobileNav = () => {
         mobileNavIcon.classList.remove("open");
         mobileNavMenu.classList.add("hide-mobile-nav-menu");
