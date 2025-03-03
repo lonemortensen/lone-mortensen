@@ -413,6 +413,7 @@ footer .content-wrapper {
 
 footer p {
   color: #ffffff;
+  text-align: center;
 }
 
 .circle-footer {
@@ -612,11 +613,15 @@ footer p {
 }
 
 .project-header h4 {
-  height: 80px; /* Height keeps box size consistent. */
-  margin: 10px 0px 0px 0px; 
+  /*height: 80px;*/ /* Height keeps box size consistent. */
+  /*margin: 10px 0px 0px 0px;*/ 
   text-align: left;
   font-size: 1.6rem;
   font-weight: 700;
+  /* Word-break and overflow-wrap control word breakpoints to 
+  prevent overflowing if soft hyphen (&shy;) is missing in html: */
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .project-header-orange {
@@ -1413,7 +1418,7 @@ footer p {
   }
 
   .project-header h4 {
-    height: 85px; /* Height keeps box size consistent. */
+    /*height: 85px;*/ /* Height keeps box size consistent. */
     font-size: 1.8rem;
   }
 
@@ -1734,7 +1739,7 @@ footer p {
   }
 
   .project-header h4 {
-    height: 100px; /* Height keeps box size consistent. */
+    /*height: 100px;*/ /* Height keeps box size consistent. */
     font-size: 1.4rem;
   }
 
