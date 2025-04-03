@@ -730,7 +730,7 @@ represent the distance that the element is moved above its normal position.
 */
 
 /* Note: Project button styling also applied to Modal 'close' button in JavaScript. */
-.project-button-style {
+/* .project-button-style {
   padding: 7px 8px 7px 8px;
   font-family: 'Lexend Tera', sans-serif;
   font-size: 0.7rem;
@@ -740,11 +740,25 @@ represent the distance that the element is moved above its normal position.
   transform: scale(0.9);
   cursor: pointer;
   pointer-events: auto;
+} */
+
+.project-button-style {
+  padding: 7px 8px 7px 8px;
+  font-family: 'Lexend Tera', sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  background-color: #e3e2df;
+  border: none;
+  /* transform: scale(0.9); */
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+  pointer-events: auto;
+  box-shadow: #000 0 2px 4px,#000 0 7px 5px -3px;
 }
 
 .project-button-style:hover {
-  transform: scale(1);
-  transition: 0.3s ease-in-out transform;
+  /* transform: scale(1); */
+  /* transition: 0.3s ease-in-out transform; */
   background-color: #cccbc8;
 }
 
@@ -882,7 +896,8 @@ represent the distance that the element is moved above its normal position.
   height: 25px;
   border-radius: 25px; 
   margin: 0px 10px 0px 5px;
-  background-color: #e3e2df;
+  border: solid 0.5px #e3e2df;
+  /* background-color: #e3e2df; */
 }
 
 .previousModal, .nextModal {
@@ -902,6 +917,11 @@ represent the distance that the element is moved above its normal position.
   font-size: 0.7rem;
 }
 
+.previousModal:active, .nextModal:active {
+  background-color: #e3e2df;
+}
+
+
 .closeButton {
   display: flex;
   justify-content: center;
@@ -911,6 +931,21 @@ represent the distance that the element is moved above its normal position.
   margin: 0;
 }
 
+.closeButton-style {
+  padding: 7px 8px 7px 8px;
+  font-family: 'Lexend Tera', sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  border: solid 0.5px #e3e2df;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.closeButton-style:hover {
+  background-color: #e3e2df;
+}
 
 /* SKILLS */
 
