@@ -282,7 +282,7 @@ const createModalWindow = (selectedModalData) => {
 	const closeModal = closeButton.appendChild(document.createElement("button"));
 	closeModal.setAttribute("type", "button");
 	closeModal.innerText = "Close";
-	closeModal.classList.add("project-button-style");
+	closeModal.classList.add("closeButton-style");
 	closeModal.addEventListener("click", closeModalWindow, {once: true}); 
 
 	modalWrapper.appendChild(modalNavigation);
