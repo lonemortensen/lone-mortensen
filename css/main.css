@@ -766,6 +766,19 @@ represent the distance that the element is moved above its normal position.
  * Modal Windows - Projects 
 */
 
+/* START HERE: 
+Ensure it's possible to scroll modal window all the way on mobile view:
+See doc modal-window-scrollbar. 
+https://stackoverflow.com/questions/57703156/modal-window-not-scrolling-till-bottom
+
+Preventing page scroll when modal is open:
+https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
+
+
+*/ 
+
+
+
 /* JavaScript application of modal styling: */
 .backdrop-blur {
   position: fixed; /* Keeps backdrop in place. */
@@ -800,6 +813,9 @@ represent the distance that the element is moved above its normal position.
   background-color: rgba(255, 255, 255, 1);
   box-shadow: rgb(0 0 0 / 25%) 0px 4px 14px;
   border-radius: 15px;
+  overflow-y: auto; /* Adds vertical scrollbar to modal window to enable scroll to bottom on mobile screens */
+  overflow-x: hidden;
+  max-height: calc(100vh - 80px); /* Max-height prevents modal window from becoming too large on small screens */
 }
 
 .modal-image {
