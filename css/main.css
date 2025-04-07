@@ -766,7 +766,7 @@ represent the distance that the element is moved above its normal position.
  * Modal Windows - Projects 
 */
 
-/* START HERE: 
+/* 
 Ensure it's possible to scroll modal window all the way on mobile view:
 See doc modal-window-scrollbar. 
 https://stackoverflow.com/questions/57703156/modal-window-not-scrolling-till-bottom
@@ -813,8 +813,10 @@ https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
   background-color: rgba(255, 255, 255, 1);
   box-shadow: rgb(0 0 0 / 25%) 0px 4px 14px;
   border-radius: 15px;
-  overflow-y: auto; /* Adds vertical scrollbar to modal window to enable scroll to bottom on mobile screens */
-  overflow-x: hidden;
+  overflow-y: auto; /* Adds vertical scrollbar to modal window to enable scroll to bottom of window on small screens */
+  overflow-x: hidden; /* Prevents horizontal scrollbar */
+  /* scrollbar-gutter: auto; */
+  scrollbar-width: thin;
   max-height: calc(100vh - 80px); /* Max-height prevents modal window from becoming too large on small screens */
 }
 
@@ -873,22 +875,51 @@ https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
   color: #cccbc8;
 }
 
-.modalNavigation {
+/* START HERE: 
+Center navigation in mobile view. Consider keeping it centered in tabl and desk, too!
+See CSS changes to mobile in doc.
+
+*/
+
+/* .modalNavigation {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-flow: row wrap;
   width: 100%;
-  margin: 10px 0px 10px 0px;
+  margin: 10px;
+} */
+
+.modalNavigation {
+  display: flex;
+  /* justify-content: flex-end; */
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+  margin: 10px;
 }
 
-.arrowButtons {
+/* .arrowButtons {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-flow: row wrap;
   width: 50%;
   margin: 0px 15px 0px 0px;
+} */
+
+.arrowButtons {
+  display: flex;
+  /* justify-content: flex-end; */
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  /* width: 50%; */
+  /* width: 40%; */
+  max-width: 50%;
+  /* margin: 0px 15px 0px 0px; */
+  margin-right: 10px;
 }
 
 .arrowPrevious {
@@ -937,14 +968,25 @@ https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
   background-color: #e3e2df;
 }
 
-
-.closeButton {
+/* .closeButton {
   display: flex;
   justify-content: center;
   align-content: center;
   flex-flow: row wrap;
   width: 20%;
   margin: 0;
+} */
+
+.closeButton {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-flow: row wrap;
+  /* width: 20%; */
+  /* width: 40%; */
+  max-width: 50%;
+  /* margin: 0; */
+  margin-left: 10px;
 }
 
 .closeButton-style {
@@ -1605,11 +1647,12 @@ https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
   }
 
   .modalNavigation {
-    margin: 15px 0px 15px 0px;
+    /* margin: 15px 0px 15px 0px; */
+    margin: 15px;
   }
 
   .arrowButtons {
-    margin: 0px 5px 0px 0px;
+    /* margin: 0px 5px 0px 0px; */
   }
 
   .circle {
@@ -1630,7 +1673,7 @@ https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
   }
   
   .closeButton {
-    width: 20%;
+    /* width: 20%; */
   }
 
 
@@ -1910,6 +1953,10 @@ https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
   .modal-window {
     width: 45%;
   }
+
+  .modal-image {
+    margin: 20px;
+  }
  
   .modal-content {
     margin: 20px;
@@ -1933,11 +1980,12 @@ https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
   }
 
   .modalNavigation {
-    margin: 15px 0px 15px 0px;
+    /* margin: 15px 0px 15px 0px; */
+    margin: 20px;
   }
 
   .arrowButtons {
-    margin: 0px 5px 0px 0px;
+    /* margin: 0px 5px 0px 0px; */
   }
 
  
