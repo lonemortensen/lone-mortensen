@@ -239,19 +239,74 @@ const createModalWindow = (selectedModalData) => {
 	modalContent.appendChild(modalLinks);
 
 	/* Modal navigation buttons:*/
+	// const modalNavigation = document.createElement("div");
+	// modalNavigation.classList.add("modalNavigation");
+	
+	/* - arrow buttons:*/
+	// const arrowButtons = modalNavigation.appendChild(document.createElement("ul"));
+	// arrowButtons.classList.add("arrowButtons");
+
+	/* - previous and next arrow:*/
+	// const arrowPrevious = arrowButtons.appendChild(document.createElement("li"));
+	// arrowPrevious.classList.add("arrowPrevious", "circle");
+	// const arrowNext = arrowButtons.appendChild(document.createElement("li"));
+	// arrowNext.classList.add("arrowNext", "circle");
+	
+	// const previousModal = arrowPrevious.appendChild(document.createElement("button"));
+	// previousModal.setAttribute("type", "button");
+	// previousModal.setAttribute("data-navigation", "previous");
+	// previousModal.classList.add("previousModal");
+	// Font Awesome 'previous' arrow icon:
+	// const arrowIconPrevious = previousModal.appendChild(document.createElement("i"));
+	// arrowIconPrevious.classList.add("fa-solid", "fa-chevron-left");
+	// Adds event listener to 'previous' button and passes id attribute value of currently open modal:
+	// previousModal.addEventListener("click", (event) => {
+	// 	prepareModalWindow(event, currentModalId, {once: true});
+	// }); 
+	
+	// const nextModal = arrowNext.appendChild(document.createElement("button"));
+	// nextModal.setAttribute("type", "button");
+	// nextModal.setAttribute("data-navigation", "next");
+	// nextModal.classList.add("nextModal");
+	// Font Awesome 'next' arrow icon:
+	// const arrowIconNext = nextModal.appendChild(document.createElement("i"));
+	// arrowIconNext.classList.add("fa-solid", "fa-chevron-right");
+	// Adds event listener to 'next' button and passes id attribute value of currently open modal:
+	// nextModal.addEventListener("click", (event) => {
+	// 	prepareModalWindow(event, currentModalId, {once: true});
+	// });
+	
+	/* - close button:*/
+	// const closeButton = modalNavigation.appendChild(document.createElement("div"));
+	// closeButton.classList.add("closeButton");
+	// const closeModal = closeButton.appendChild(document.createElement("button"));
+	// closeModal.setAttribute("type", "button");
+	// closeModal.innerText = "Close";
+	// closeModal.classList.add("closeButton-style");
+	// closeModal.addEventListener("click", closeModalWindow, {once: true}); 
+
+	/* !!!!!!! NEW NAV DESIGN: !!!!!!!!!! */
+
+	/* Modal navigation:*/
 	const modalNavigation = document.createElement("div");
 	modalNavigation.classList.add("modalNavigation");
 	
-	/* - arrow buttons:*/
-	const arrowButtons = modalNavigation.appendChild(document.createElement("ul"));
-	arrowButtons.classList.add("arrowButtons");
+	/* - navigation buttons:*/
+	// const arrowButtons = modalNavigation.appendChild(document.createElement("ul"));
+	// arrowButtons.classList.add("arrowButtons");
+	const modalNavButtons = modalNavigation.appendChild(document.createElement("ul"));
+	modalNavButtons.classList.add("navigationButtons");
 
-	/* - previous and next arrow:*/
-	const arrowPrevious = arrowButtons.appendChild(document.createElement("li"));
+	const arrowPrevious = modalNavButtons.appendChild(document.createElement("li"));
 	arrowPrevious.classList.add("arrowPrevious", "circle");
-	const arrowNext = arrowButtons.appendChild(document.createElement("li"));
+	
+	const close = modalNavButtons.appendChild(document.createElement("li"));
+	close.classList.add("closeButton", "closeCircle");
+	
+	const arrowNext = modalNavButtons.appendChild(document.createElement("li"));
 	arrowNext.classList.add("arrowNext", "circle");
 	
+	/* - previous arrow button styling and event listener:*/
 	const previousModal = arrowPrevious.appendChild(document.createElement("button"));
 	previousModal.setAttribute("type", "button");
 	previousModal.setAttribute("data-navigation", "previous");
@@ -264,6 +319,7 @@ const createModalWindow = (selectedModalData) => {
 		prepareModalWindow(event, currentModalId, {once: true});
 	}); 
 	
+	/* - next arrow button styling and event listener:*/
 	const nextModal = arrowNext.appendChild(document.createElement("button"));
 	nextModal.setAttribute("type", "button");
 	nextModal.setAttribute("data-navigation", "next");
@@ -276,13 +332,18 @@ const createModalWindow = (selectedModalData) => {
 		prepareModalWindow(event, currentModalId, {once: true});
 	});
 	
-	/* - close button:*/
-	const closeButton = modalNavigation.appendChild(document.createElement("div"));
-	closeButton.classList.add("closeButton");
-	const closeModal = closeButton.appendChild(document.createElement("button"));
+	/* - close button styling and event listener:*/
+	// const closeButton = modalNavigation.appendChild(document.createElement("div"));
+	// closeButton.classList.add("closeButton");
+	// const closeModal = closeButton.appendChild(document.createElement("button"));
+	const closeModal = close.appendChild(document.createElement("button"));
 	closeModal.setAttribute("type", "button");
-	closeModal.innerText = "Close";
+	// closeModal.innerText = "Close";
+	// closeModal.innerText = "x";
 	closeModal.classList.add("closeButton-style");
+	// Font Awesome 'close' icon:
+	const closeIcon = closeModal.appendChild(document.createElement("i"));
+	closeIcon.classList.add("fa-solid", "fa-xmark");
 	closeModal.addEventListener("click", closeModalWindow, {once: true}); 
 
 	modalWrapper.appendChild(modalNavigation);

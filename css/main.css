@@ -919,9 +919,16 @@ See CSS changes to mobile in doc.
   flex-flow: row wrap;
   /* width: 50%; */
   /* width: 40%; */
-  max-width: 50%;
+  /* max-width: 50%; */
   /* margin: 0px 15px 0px 0px; */
-  margin-right: 10px;
+  /* margin-right: 10px; */
+}
+
+.navigationButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
 .arrowPrevious {
@@ -979,6 +986,15 @@ See CSS changes to mobile in doc.
   margin: 0;
 } */
 
+.closeCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px; 
+  margin: 0px 10px 0px 5px;
+  border: solid 0.5px #e3e2df;
+  /* background-color: #e3e2df; */
+}
+
 .closeButton {
   display: flex;
   justify-content: center;
@@ -986,12 +1002,12 @@ See CSS changes to mobile in doc.
   flex-flow: row wrap;
   /* width: 20%; */
   /* width: 40%; */
-  max-width: 50%;
+  /* max-width: 50%; */
   /* margin: 0; */
-  margin-left: 10px;
+  /* margin-left: 10px; */
 }
 
-.closeButton-style {
+/* .closeButton-style {
   padding: 7px 8px 7px 8px;
   font-family: 'Lexend Tera', sans-serif;
   font-size: 0.7rem;
@@ -1001,10 +1017,29 @@ See CSS changes to mobile in doc.
   transition: background-color 0.3s ease-in-out;
   cursor: pointer;
   pointer-events: auto;
+} */
+
+.closeButton-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px; 
+  border: none;
+  cursor: pointer;
+  pointer-events: auto;
+  background-color: transparent;
+
+  transition: background-color 0.3s ease-in-out;
 }
 
 .closeButton-style:hover {
   background-color: #e3e2df;
+}
+
+.closeButton-style i {
+  font-size: 1rem;
 }
 
 /* SKILLS */
