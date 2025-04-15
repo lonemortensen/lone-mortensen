@@ -298,13 +298,13 @@ const createModalWindow = (selectedModalData) => {
 	modalNavButtons.classList.add("navigationButtons");
 
 	const arrowPrevious = modalNavButtons.appendChild(document.createElement("li"));
-	arrowPrevious.classList.add("arrowPrevious", "circle");
+	arrowPrevious.classList.add("arrowPrevious", "circle-arrow");
 	
 	const close = modalNavButtons.appendChild(document.createElement("li"));
-	close.classList.add("closeButton", "closeCircle");
+	close.classList.add("closeButton", "circle-close");
 	
 	const arrowNext = modalNavButtons.appendChild(document.createElement("li"));
-	arrowNext.classList.add("arrowNext", "circle");
+	arrowNext.classList.add("arrowNext", "circle-arrow");
 	
 	/* - previous arrow button styling and event listener:*/
 	const previousModal = arrowPrevious.appendChild(document.createElement("button"));
