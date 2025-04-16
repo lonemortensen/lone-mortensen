@@ -28,6 +28,12 @@ import {accessData} from "./modalData.js";
 /** 
  * Global variables.
 */
+// bodyElement and headerElement:
+// Selects body and header element for insertion of modal backdrop and modal window.
+// Must be accessible to checkNavigationKey() for keyboard navigation.
+const bodyElement = document.querySelector("body");
+const headerElement = document.querySelector("header"); 
+
 // modalBackdrop and modalWindow: 
 // Holds html mark-up for backdrop and modal window. 
 // Values assigned in createModalWindow().
@@ -39,7 +45,6 @@ let modalWindow;
 // Value assigned in createModalWindow().
 // Must be accessible to checkNavigationKey() for keyboard navigation.
 let currentModalId; 
-
 
 /* ===== MODEL ===== */
 
@@ -143,10 +148,23 @@ export const addModalEventListener = (modalElements) => {
 	}
 };
 
+/**
+ * Prevents or allows scrolling on web page when modal window opens/closes. 
+*/
+const controlPageScroll = () => {
+	const hasPreventScroll = bodyElement.classList.contains("prevent-scroll"); // Returns true or false
+	if (!hasPreventScroll) {
+		bodyElement.classList.add("prevent-scroll");
+	} else {
+		bodyElement.classList.remove("prevent-scroll");
+	}
+};
+
 
 /**
  * Creates and displays a modal window.
  * Adds blurred backdrop to web page.  
+ * Controls web page scrolling. 
  * Adds html mark-up and css styling for modal window UI.
  * Adds event listener to body element for keyboard navigation.
  * Adds event listeners to the modal window arrow and close buttons. 
@@ -157,20 +175,22 @@ export const addModalEventListener = (modalElements) => {
 */
 const createModalWindow = (selectedModalData) => {
 	closeModalWindow();
-
-	// Selects body and header element for insertion of modal backdrop and modal window:
-	const bodyElement = document.querySelector("body");
-	const headerElement = document.querySelector("header"); 
 	
 	// Adds event listener to body element for modal window keyboard navigation:
 	bodyElement.addEventListener("keyup", checkNavigationKey); 
+
+	// Prevents web page from scrolling when modal window is open:
+	bodyElement.classList.add("prevent-scroll");
+	//controlPageScroll();
 
 	/* Modal backdrop: */  
 	modalBackdrop = document.createElement("div");
 	modalBackdrop.classList.add("backdrop-blur");
 	bodyElement.insertBefore(modalBackdrop, headerElement); 
 	modalBackdrop.addEventListener("click", closeModalWindow, {once: true}); 
-
+	// Allows web page to scroll when modal window closes:
+	modalBackdrop.addEventListener("click", controlPageScroll);
+	
 	/* Modal window:*/
 	modalWindow = document.createElement("div");
 	modalWindow.setAttribute("id", selectedModalData['id']); 
@@ -344,7 +364,9 @@ const createModalWindow = (selectedModalData) => {
 	// Font Awesome 'close' icon:
 	const closeIcon = closeModal.appendChild(document.createElement("i"));
 	closeIcon.classList.add("fa-solid", "fa-xmark");
-	closeModal.addEventListener("click", closeModalWindow, {once: true}); 
+	closeModal.addEventListener("click", closeModalWindow, {once: true});
+	// Allows web page to scroll when modal window closes:
+	closeModal.addEventListener("click", controlPageScroll);
 
 	modalWrapper.appendChild(modalNavigation);
 };
@@ -365,12 +387,11 @@ export const closeModalWindow = () => {
 	}
 };
 
-
 /**
  * Checks key values for keyboard navigation in modal windows.
  * -- If user presses arrow keys: Calls prepareModalWindow() and passes id 
  * attribute value of the currently open modal (currentModalId).
- * -- If user presses escape key: Closes the modal window.
+ * -- If user presses escape key: Closes the modal window and allows web page to scroll.
  * @param event - To get the key values for the arrow and escape keys. 
 */
 const checkNavigationKey = (event) => {
@@ -383,9 +404,9 @@ const checkNavigationKey = (event) => {
 		}
 	} else if (event.key == "Escape") {
 		closeModalWindow(); 
+		controlPageScroll();
 	}
 };
-
 
 
 /**

@@ -791,6 +791,10 @@ https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
   background-color: rgba(83, 86, 91, 0.9); /* rgba() sets opacity without inheritance. */
 }
 
+.prevent-scroll {
+  overflow: hidden;
+}
+
 .modal-window {
   position: fixed; /* Positions modal relative to viewport. */
   left: 50%;
@@ -1677,7 +1681,8 @@ See CSS changes to mobile in doc.
   }
 
   .modal-links {
-    margin: 30px 5px 0px 5px;
+    /* margin: 30px 5px 0px 5px; */
+    margin: 30px 0px 0px 5px;
   }
 
   .modalLink-1, .modalLink-2 {
@@ -2008,8 +2013,11 @@ See CSS changes to mobile in doc.
     font-size: 2rem;
   }
  
+  /*NOTE: Is modal-links needed in desktop? Same as tablet? */
+
   .modal-links {
-    margin: 30px 5px 0px 5px;
+    /* margin: 30px 5px 0px 5px; */
+    margin: 30px 0px 0px 5px;
   }
 
   .modalLink-1, .modalLink-2 {
