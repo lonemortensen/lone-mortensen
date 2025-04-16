@@ -24,7 +24,6 @@ The modal.js module:
 */
 import {accessData} from "./modalData.js";
 
-
 /** 
  * Global variables.
 */
@@ -149,7 +148,20 @@ export const addModalEventListener = (modalElements) => {
 };
 
 /**
- * Prevents or allows scrolling on web page when modal window opens/closes. 
+ * Closes open modal window and removes modal backdrop.
+ * Exports function for use in main.js.
+*/
+export const closeModalWindow = () => {    
+	if (modalWindow) {
+		modalWindow.remove(); 
+ 	}
+	if (modalBackdrop) {
+		modalBackdrop.remove(); 
+	}
+};
+
+/**
+ * Prevents/allows scrolling on web page when modal window opens/closes. 
 */
 const controlPageScroll = () => {
 	const hasPreventScroll = bodyElement.classList.contains("prevent-scroll"); // Returns true or false
@@ -160,11 +172,9 @@ const controlPageScroll = () => {
 	}
 };
 
-
 /**
  * Creates and displays a modal window.
  * Adds blurred backdrop to web page.  
- * Controls web page scrolling. 
  * Adds html mark-up and css styling for modal window UI.
  * Adds event listener to body element for keyboard navigation.
  * Adds event listeners to the modal window arrow and close buttons. 
@@ -181,7 +191,6 @@ const createModalWindow = (selectedModalData) => {
 
 	// Prevents web page from scrolling when modal window is open:
 	bodyElement.classList.add("prevent-scroll");
-	//controlPageScroll();
 
 	/* Modal backdrop: */  
 	modalBackdrop = document.createElement("div");
@@ -258,62 +267,11 @@ const createModalWindow = (selectedModalData) => {
 	
 	modalContent.appendChild(modalLinks);
 
-	/* Modal navigation buttons:*/
-	// const modalNavigation = document.createElement("div");
-	// modalNavigation.classList.add("modalNavigation");
-	
-	/* - arrow buttons:*/
-	// const arrowButtons = modalNavigation.appendChild(document.createElement("ul"));
-	// arrowButtons.classList.add("arrowButtons");
-
-	/* - previous and next arrow:*/
-	// const arrowPrevious = arrowButtons.appendChild(document.createElement("li"));
-	// arrowPrevious.classList.add("arrowPrevious", "circle");
-	// const arrowNext = arrowButtons.appendChild(document.createElement("li"));
-	// arrowNext.classList.add("arrowNext", "circle");
-	
-	// const previousModal = arrowPrevious.appendChild(document.createElement("button"));
-	// previousModal.setAttribute("type", "button");
-	// previousModal.setAttribute("data-navigation", "previous");
-	// previousModal.classList.add("previousModal");
-	// Font Awesome 'previous' arrow icon:
-	// const arrowIconPrevious = previousModal.appendChild(document.createElement("i"));
-	// arrowIconPrevious.classList.add("fa-solid", "fa-chevron-left");
-	// Adds event listener to 'previous' button and passes id attribute value of currently open modal:
-	// previousModal.addEventListener("click", (event) => {
-	// 	prepareModalWindow(event, currentModalId, {once: true});
-	// }); 
-	
-	// const nextModal = arrowNext.appendChild(document.createElement("button"));
-	// nextModal.setAttribute("type", "button");
-	// nextModal.setAttribute("data-navigation", "next");
-	// nextModal.classList.add("nextModal");
-	// Font Awesome 'next' arrow icon:
-	// const arrowIconNext = nextModal.appendChild(document.createElement("i"));
-	// arrowIconNext.classList.add("fa-solid", "fa-chevron-right");
-	// Adds event listener to 'next' button and passes id attribute value of currently open modal:
-	// nextModal.addEventListener("click", (event) => {
-	// 	prepareModalWindow(event, currentModalId, {once: true});
-	// });
-	
-	/* - close button:*/
-	// const closeButton = modalNavigation.appendChild(document.createElement("div"));
-	// closeButton.classList.add("closeButton");
-	// const closeModal = closeButton.appendChild(document.createElement("button"));
-	// closeModal.setAttribute("type", "button");
-	// closeModal.innerText = "Close";
-	// closeModal.classList.add("closeButton-style");
-	// closeModal.addEventListener("click", closeModalWindow, {once: true}); 
-
-	/* !!!!!!! NEW NAV DESIGN: !!!!!!!!!! */
-
 	/* Modal navigation:*/
 	const modalNavigation = document.createElement("div");
 	modalNavigation.classList.add("modalNavigation");
 	
 	/* - navigation buttons:*/
-	// const arrowButtons = modalNavigation.appendChild(document.createElement("ul"));
-	// arrowButtons.classList.add("arrowButtons");
 	const modalNavButtons = modalNavigation.appendChild(document.createElement("ul"));
 	modalNavButtons.classList.add("navigationButtons");
 
@@ -326,7 +284,7 @@ const createModalWindow = (selectedModalData) => {
 	const arrowNext = modalNavButtons.appendChild(document.createElement("li"));
 	arrowNext.classList.add("arrowNext", "circle-arrow");
 	
-	/* - previous arrow button styling and event listener:*/
+	/* - previous arrow button:*/
 	const previousModal = arrowPrevious.appendChild(document.createElement("button"));
 	previousModal.setAttribute("type", "button");
 	previousModal.setAttribute("data-navigation", "previous");
@@ -339,7 +297,7 @@ const createModalWindow = (selectedModalData) => {
 		prepareModalWindow(event, currentModalId, {once: true});
 	}); 
 	
-	/* - next arrow button styling and event listener:*/
+	/* - next arrow button:*/
 	const nextModal = arrowNext.appendChild(document.createElement("button"));
 	nextModal.setAttribute("type", "button");
 	nextModal.setAttribute("data-navigation", "next");
@@ -352,14 +310,9 @@ const createModalWindow = (selectedModalData) => {
 		prepareModalWindow(event, currentModalId, {once: true});
 	});
 	
-	/* - close button styling and event listener:*/
-	// const closeButton = modalNavigation.appendChild(document.createElement("div"));
-	// closeButton.classList.add("closeButton");
-	// const closeModal = closeButton.appendChild(document.createElement("button"));
+	/* - close button:*/
 	const closeModal = close.appendChild(document.createElement("button"));
 	closeModal.setAttribute("type", "button");
-	// closeModal.innerText = "Close";
-	// closeModal.innerText = "x";
 	closeModal.classList.add("closeButton-style");
 	// Font Awesome 'close' icon:
 	const closeIcon = closeModal.appendChild(document.createElement("i"));
@@ -373,19 +326,6 @@ const createModalWindow = (selectedModalData) => {
 
 
 /* ===== CONTROLLER ===== */
-
-/**
- * Closes open modal window and removes modal backdrop.
- * Exports function for use in main.js.
-*/
-export const closeModalWindow = () => {    
-	if (modalWindow) {
-		modalWindow.remove(); 
- 	}
-	if (modalBackdrop) {
-		modalBackdrop.remove(); 
-	}
-};
 
 /**
  * Checks key values for keyboard navigation in modal windows.
@@ -407,7 +347,6 @@ const checkNavigationKey = (event) => {
 		controlPageScroll();
 	}
 };
-
 
 /**
  * Requests and passes data for a modal window based on user selection.
