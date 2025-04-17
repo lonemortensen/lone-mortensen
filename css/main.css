@@ -559,58 +559,19 @@ footer p {
   background-color: #e3e2df;  
 }
 
-/*
 .project-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-flow: row wrap;
-  width: 100%;
-  margin: 0px 0px 40px 0px;
-}
-*/
-
-/* NOTE: with row wrap, the cards align in height across the same (one) row (so not at all in mobile and tabl views).
-  The flex-wrap property is responsible. Once content is broken into lines, each line is laid out independently; 
-  flexible lengths and the justify-content and align-self properties only consider the items on a single line at a time.
-  https://www.w3.org/TR/css-flexbox-1/#flex-lines
- 
-  Appears that I may have to control the sizing of the text content of the cards. Can this be done with padding (vs height)?
-  Or maybe use min-height or max-height properties:
-  https://stackoverflow.com/questions/28688248/css-padding-vs-height#:~:text=Use%20padding%20when%20you%20don,increase%20the%20container's%20vertical%20size.
-  Also consider setting min-height: 165px (or similar) on h4 header on each project card to ensure project line aligns across rows. 
- 
-  */
-.project-wrapper {
-  display: flex;
-  /*justify-content: center;*/
-  /*align-items: flex-start;*/
-  /*align-items: stretch;*/ /*Children all have the same height.*/ 
-  /*flex-flow: row wrap;*/
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
   margin: 0px 0px 40px 0px;
 }
 
-/*
 .project-item {
   display: flex;
   justify-content: center;
-  flex-direction: column;
   width: 100%;
-  margin: 0px 0px 20px 0px;
-}
-*/
-
-.project-item {
-  /*flex: 1;*/
-  display: flex;
-  justify-content: center;
-  /*flex-direction: column;*/
-  width: 100%;
-  /*min-height: 510px;*/ /* How to set this with rem?*/
-  min-height: 31.875rem; /*510px*/
+  min-height: 31.875rem; /* Ensures same height on items in the same row on larger screens */
   margin: 0px 0px 20px 0px;
   box-sizing: border-box;
 }
@@ -626,8 +587,9 @@ footer p {
  * Animation - Projects 
 */
 
-/* Animated project background tilt: */
+
 .project-background:hover {
+  /* Animated project background tilt */
   transform: rotateZ(-3deg);
   animation: project-tilt;
   animation-duration: 0.5s;
@@ -647,20 +609,18 @@ footer p {
 .project-header {
   display: flex;
   justify-content: center;
-  align-content: center; /*Positions text in center on cross axis*/
+  align-content: center; /* Positions text in center on cross axis */
   flex-flow: row wrap;
   width: 100%;
-  min-height: 10.3125rem; /* 165px */
+  min-height: 10.3125rem; /* Min height keeps size consistent */
 }
 
 .project-header h4 {
-  /*height: 80px;*/ /* Height keeps box size consistent. */
-  /*margin: 10px 0px 0px 0px;*/ 
   text-align: left;
   font-size: 1.6rem;
   font-weight: 700;
   /* Word-break and overflow-wrap control word breakpoints to 
-  prevent overflowing if soft hyphen (&shy;) is missing in html: */
+  prevent overflowing if soft hyphen (&shy;) is missing in html */
   word-break: break-word;
   overflow-wrap: break-word;
 }
@@ -688,14 +648,12 @@ footer p {
 
 .project-description {
   width: 100%;
-  min-height: 8.75rem; /* 140px */
-  /*height: 100px;*/ /* Height keeps box size consistent.*/
-  /*margin: 20px 0px 0px 0px;*/
+  min-height: 8.75rem; /* Min height keeps size consistent */
   color: #e3e2df; 
 }
 
 .project-skills {
-  min-height: 3.75rem; /* 60px */
+  min-height: 3.75rem; /* Min height keeps size consistent */
   margin: 10px 0px 10px 0px;
 }
 
@@ -704,43 +662,11 @@ footer p {
   color: #e3e2df; 
 }
 
-
 .project-view-button {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  /* margin: 30px 0px 10px 0px; */
 }
-
-
-/*
-Negative values for relatively positioned elements (used on the bottom property below) 
-represent the distance that the element is moved above its normal position.
-*/
-/*
-.project-view-button {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  margin: 30px 0px 10px 0px;
-  position: relative;
-  bottom: -2.5rem; 
-  right: 0rem; 
-}
-*/
-
-/* Note: Project button styling also applied to Modal 'close' button in JavaScript. */
-/* .project-button-style {
-  padding: 7px 8px 7px 8px;
-  font-family: 'Lexend Tera', sans-serif;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  background-color: #e3e2df;
-  border: none;
-  transform: scale(0.9);
-  cursor: pointer;
-  pointer-events: auto;
-} */
 
 .project-button-style {
   padding: 7px 8px 7px 8px;
@@ -749,7 +675,6 @@ represent the distance that the element is moved above its normal position.
   text-transform: uppercase;
   background-color: #e3e2df;
   border: none;
-  /* transform: scale(0.9); */
   transition: background-color 0.3s ease-in-out;
   cursor: pointer;
   pointer-events: auto;
@@ -757,8 +682,6 @@ represent the distance that the element is moved above its normal position.
 }
 
 .project-button-style:hover {
-  /* transform: scale(1); */
-  /* transition: 0.3s ease-in-out transform; */
   background-color: #cccbc8;
 }
 
@@ -766,40 +689,28 @@ represent the distance that the element is moved above its normal position.
  * Modal Windows - Projects 
 */
 
-/* 
-Ensure it's possible to scroll modal window all the way on mobile view:
-See doc modal-window-scrollbar. 
-https://stackoverflow.com/questions/57703156/modal-window-not-scrolling-till-bottom
-
-Preventing page scroll when modal is open:
-https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
-
-
-*/ 
-
-
-
-/* JavaScript application of modal styling: */
 .backdrop-blur {
-  position: fixed; /* Keeps backdrop in place. */
-  z-index: 1; /* Situates backdrop on top. */
+  /* Styling applied by JavaScript to insert backdrop */
+  position: fixed; /* Keeps backdrop in place */
+  z-index: 1; /* Situates backdrop on top */
   left: 0;
   right: 0;
   width: 100%; 
   height: 100%; 
-  overflow: auto; /* Enables scroll. */
-  background-color: rgba(83, 86, 91, 0.9); /* rgba() sets opacity without inheritance. */
+  background-color: rgba(83, 86, 91, 0.9); /* rgba() sets opacity without inheritance */
 }
 
 .prevent-scroll {
+  /* Styling applied by JavaScript to manage page scroll when modal window is open */
   overflow: hidden;
 }
 
 .modal-window {
-  position: fixed; /* Positions modal relative to viewport. */
+  /* Styling applied by JavaScript to insert modal window */
+  position: fixed; /* Positions modal relative to viewport */
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%); /* Positions modal along x- and y-axis. */ 
+  transform: translate(-50%, -50%); /* Positions modal along x- and y-axis */ 
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -808,29 +719,31 @@ https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
 }
 
 .modal-wrapper {
+  /* Styling applied by JavaScript to modal window */
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
   width: 100%;
   padding: 20px;
-  background-color: rgba(227, 226, 223, 1); /* rgba() sets opacity without inheritance. */
+  background-color: rgba(227, 226, 223, 1); /* rgba() sets opacity without inheritance */
   background-color: rgba(255, 255, 255, 1);
   box-shadow: rgb(0 0 0 / 25%) 0px 4px 14px;
   border-radius: 15px;
   overflow-y: auto; /* Adds vertical scrollbar to modal window to enable scroll to bottom of window on small screens */
   overflow-x: hidden; /* Prevents horizontal scrollbar */
-  /* scrollbar-gutter: auto; */
   scrollbar-width: thin;
   max-height: calc(100vh - 80px); /* Max-height prevents modal window from becoming too large on small screens */
 }
 
 .modal-image {
+  /* Styling applied by JavaScript to modal window image */
   margin: 10px;
   width: 100%;
   box-shadow: rgb(0 0 0 / 25%) 0px 4px 14px;
 }
 
 .modal-content {
+  /* Styling applied by JavaScript to position modal window content */
   display: flex;
   justify-content: flex-start;
   flex-flow: column wrap;
@@ -839,6 +752,7 @@ https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
 }
 
 .modal-title {
+  /* Styling applied by JavaScript to modal window title */
   padding-left: 5px; 
   font-size: 1.5rem;
   word-break: normal;
@@ -846,6 +760,7 @@ https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
 }
 
 .modal-description {
+  /* Styling applied by JavaScript to position modal window description */
   display: flex;
   justify-content: flex-start;
   flex-flow: row wrap;
@@ -856,16 +771,18 @@ https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
 }
 
 .modal-description-text {
+  /* Styling applied by JavaScript to modal window description */
   font-size: 1rem;
 }
 
 .modal-links {
-  /* margin: 20px 5px 0px 5px; */
+  /* Styling applied by JavaScript to modal window external links */
   margin: 20px 0px 0px 5px;
 }
 
 .modalLink-1, .modalLink-2 {
-  display: inline-block; /* Allows for both margin styling and elements next to links. */
+  /* Styling applied by JavaScript to modal window external links */
+  display: inline-block; /* Allows for both margin styling and elements next to links */
   margin-bottom: 5px; 
   font-family: 'Lexend Tera', sans-serif;
   font-size: 0.7rem;
@@ -874,7 +791,6 @@ https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
 }
 
 .modalLink-1 i, .modalLink-2 i {
-  /* margin: 0px 0px 0px 10px; */
   margin: 0px 0px 0px 5px;
   font-size: 0.7rem;
 }
@@ -883,62 +799,25 @@ https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
   color: #cccbc8;
 }
 
-/* START HERE: 
-Center navigation in mobile view. Consider keeping it centered in tabl and desk, too!
-See CSS changes to mobile in doc.
-
-*/
-
-/* .modalNavigation {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-flow: row wrap;
-  width: 100%;
-  margin: 10px;
-} */
-
 .modalNavigation {
+  /* Styling applied by JavaScript to position modal window navigation */
   display: flex;
-  /* justify-content: flex-end; */
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
   width: 100%;
   margin: 10px;
-}
-
-/* .arrowButtons {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-flow: row wrap;
-  width: 50%;
-  margin: 0px 15px 0px 0px;
-} */
-
-.arrowButtons {
-  display: flex;
-  /* justify-content: flex-end; */
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  /* width: 50%; */
-  /* width: 40%; */
-  /* max-width: 50%; */
-  /* margin: 0px 15px 0px 0px; */
-  /* margin-right: 10px; */
 }
 
 .navigationButtons {
+  /* Styling applied by JavaScript to position modal window navigation buttons */
   display: flex;
-  /* justify-content: center; */
   justify-content: space-evenly;
   align-items: center;
-  /* flex-flow: row wrap; */
 }
 
 .arrowPrevious {
+  /* Styling applied by JavaScript to position modal window navigation buttons */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -947,6 +826,7 @@ See CSS changes to mobile in doc.
 }
 
 .arrowNext {
+  /* Styling applied by JavaScript to position modal window navigation buttons */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -955,15 +835,15 @@ See CSS changes to mobile in doc.
 }
 
 .circle-arrow {
+  /* Styling applied by JavaScript to modal window navigation buttons */
   width: 25px;
   height: 25px;
   border-radius: 25px; 
-  /* margin: 0px 10px 0px 5px; */
   border: solid 0.5px #e3e2df;
-  /* background-color: #e3e2df; */
 }
 
 .previousModal, .nextModal {
+  /* Styling applied by JavaScript to modal window navigation buttons */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -985,49 +865,24 @@ See CSS changes to mobile in doc.
   background-color: #e3e2df;
 }
 
-/* .closeButton {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-flow: row wrap;
-  width: 20%;
-  margin: 0;
-} */
-
 .circle-close {
+  /* Styling applied by JavaScript to modal window navigation buttons */
   width: 40px;
   height: 40px;
   border-radius: 40px; 
   margin: 0px 10px 0px 10px;
   border: solid 0.5px #e3e2df;
-  /* background-color: #e3e2df; */
 }
 
 .closeButton {
+  /* Styling applied by JavaScript to modal window navigation buttons */
   display: flex;
   justify-content: center;
   align-content: center;
-  /* flex-flow: row wrap; */
-  /* width: 20%; */
-  /* width: 40%; */
-  /* max-width: 50%; */
-  /* margin: 0; */
-  /* margin-left: 10px; */
 }
 
-/* .closeButton-style {
-  padding: 7px 8px 7px 8px;
-  font-family: 'Lexend Tera', sans-serif;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  background-color: #ffffff;
-  border: solid 0.5px #e3e2df;
-  transition: background-color 0.3s ease-in-out;
-  cursor: pointer;
-  pointer-events: auto;
-} */
-
 .closeButton-style {
+  /* Styling applied by JavaScript to modal window navigation buttons */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1050,6 +905,7 @@ See CSS changes to mobile in doc.
   font-size: 1rem;
   line-height: 0;
 }
+
 
 /* SKILLS */
 
@@ -1617,31 +1473,29 @@ See CSS changes to mobile in doc.
   }
 
   .project-wrapper {
-    justify-content: space-around;
+    justify-content: space-around; /* Ensures spacing between items in transition to larger screens */
     margin: 0px 0px 50px 0px;
   }
 
   .project-header {
-    min-height: 6.25rem; /* 100px */
+    min-height: 6.25rem; /* Min height keeps size consistent */
   }
 
   .project-header h4 {
-    /*height: 85px;*/ /* Height keeps box size consistent. */
     font-size: 1.8rem;
   }
 
   .project-item {
-    /*min-height: 410px;*/ /* How to set this with rem?????*/
-    min-height: 25.625rem; /*410px*/ 
+    min-height: 25.625rem; /* Ensures same height on items in the same row on larger screens */
   }
 
   .project-description {
-    min-height: 6.25rem; /* 100px */
+    min-height: 6.25rem; /* Min height keeps size consistent */
     font-size: 1.2rem;
   }
 
   .project-skills {
-    min-height: 2.8125rem; /* 45px */
+    min-height: 2.8125rem; 
     margin: 20px 0px 20px 0px;
   }
 
@@ -1649,7 +1503,6 @@ See CSS changes to mobile in doc.
     font-size: 0.95rem;
   }
 
-  /* Note: Project button styling also applied to Modal 'close' button in JavaScript. */
   .project-button-style {
     padding: 9px 8px 9px 8px;
     font-size: 0.9rem;
@@ -1659,33 +1512,38 @@ See CSS changes to mobile in doc.
    * Modal Windows - Projects - Tablet
   */
 
-  /* JavaScript application of modal styling: */
   .modal-wrapper {
+    /* Styling applied by JavaScript to modal window */
     padding: 30px;
   }
 
   .modal-image {
+    /* Styling applied by JavaScript to modal window image */
     margin: 15px;
   }
 
   .modal-content {
+    /* Styling applied by JavaScript to position modal window content */
     margin: 15px;
   }
 
   .modal-title {
+    /* Styling applied by JavaScript to modal window title */
     font-size: 1.8rem;
   }
 
   .modal-description-text {
+    /* Styling applied by JavaScript to modal window description */
     font-size: 1.2rem;
   }
 
   .modal-links {
-    /* margin: 30px 5px 0px 5px; */
+    /* Styling applied by JavaScript to modal window external links */
     margin: 30px 0px 0px 5px;
   }
 
   .modalLink-1, .modalLink-2 {
+    /* Styling applied by JavaScript to modal window external links */
     font-size: 0.8rem;
   }
 
@@ -1694,22 +1552,19 @@ See CSS changes to mobile in doc.
   }
 
   .modalNavigation {
-    /* margin: 15px 0px 15px 0px; */
+    /* Styling applied by JavaScript to position modal window navigation */
     margin: 15px;
   }
 
-  .arrowButtons {
-    /* margin: 0px 5px 0px 0px; */
-  }
-
   .circle-arrow {
+    /* Styling applied by JavaScript to modal window navigation buttons */
     width: 30px;
     height: 30px;
     border-radius: 30px;
-    /* margin: 0px 10px 0px 10px; */
   }
 
   .previousModal, .nextModal {
+    /* Styling applied by JavaScript to modal window navigation buttons */
     width: 30px;
     height: 30px;
     border-radius: 30px;
@@ -1718,11 +1573,7 @@ See CSS changes to mobile in doc.
   .previousModal i, .nextModal i {
     font-size: 0.9rem;
   }
-  
-  .closeButton {
-    /* width: 20%; */
-  }
-
+ 
 
   /* SKILLS - Tablet */
 
@@ -1960,34 +1811,22 @@ See CSS changes to mobile in doc.
   }
 
   .project-header {
-    min-height: 10.625rem; /* 170px */
+    min-height: 10.625rem; 
   }
 
   .project-header h4 {
-    /*height: 100px;*/ /* Height keeps box size consistent. */
     font-size: 1.7rem;
   }
 
   .project-description {
-    /*height: 180px;*/ /* Height keeps box size consistent. */
-    /*margin: 10px 0px 0px 0px;*/
-    min-height: 10.9375rem; /* 175px */
+    min-height: 10.9375rem; /* Min height keeps size consistent */
   }
 
   .project-skills {
-    min-height: 5rem; /* 80px */
+    min-height: 5rem; /* Min height keeps size consistent */
     margin: 20px 0px 20px 0px;
   }
 
-  .project-skills p {
-    height: 60px;
-  }
-
-  .project-view-button {
-    /* margin: 20px 0px 10px 0px; */
-  }
-
-  /* Note: Project button styling also applied to Modal 'close' button in JavaScript. */
   .project-button-style {
     font-size: 0.8rem;
   } 
@@ -1996,50 +1835,47 @@ See CSS changes to mobile in doc.
    * Modal Windows - Projects - Desktop
   */
 
-  /* JavaScript application of modal styling: */
   .modal-window {
+    /* Styling applied by JavaScript to insert modal window */
     width: 45%;
   }
 
   .modal-image {
+    /* Styling applied by JavaScript to modal window image */
     margin: 20px;
   }
  
   .modal-content {
+    /* Styling applied by JavaScript to position modal window content */
     margin: 20px;
   }
   
   .modal-title {
+    /* Styling applied by JavaScript to modal window title */
     font-size: 2rem;
   }
- 
-  /*NOTE: Is modal-links needed in desktop? Same as tablet? */
 
   .modal-links {
-    /* margin: 30px 5px 0px 5px; */
+    /* Styling applied by JavaScript to modal window external links */
     margin: 30px 0px 0px 5px;
   }
 
   .modalLink-1, .modalLink-2 {
+    /* Styling applied by JavaScript to modal window external links */
     font-size: 0.9rem;
   }
   
   .modalLink-1 i, .modalLink-2 i {
-    /* margin: 0px 0px 0px 15px; */
     margin: 0px 0px 0px 10px;
     font-size: 0.9rem;
   }
 
   .modalNavigation {
-    /* margin: 15px 0px 15px 0px; */
+    /* Styling applied by JavaScript to position modal window navigation */
     margin: 20px;
   }
 
-  .arrowButtons {
-    /* margin: 0px 5px 0px 0px; */
-  }
 
- 
   /* SKILLS - Desktop */
 
   #skills {

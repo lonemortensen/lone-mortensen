@@ -163,7 +163,7 @@ export const closeModalWindow = () => {
 /**
  * Prevents/allows scrolling on web page when modal window opens/closes. 
 */
-const controlPageScroll = () => {
+const managePageScroll = () => {
 	const hasPreventScroll = bodyElement.classList.contains("prevent-scroll"); // Returns true or false
 	if (!hasPreventScroll) {
 		bodyElement.classList.add("prevent-scroll");
@@ -198,7 +198,7 @@ const createModalWindow = (selectedModalData) => {
 	bodyElement.insertBefore(modalBackdrop, headerElement); 
 	modalBackdrop.addEventListener("click", closeModalWindow, {once: true}); 
 	// Allows web page to scroll when modal window closes:
-	modalBackdrop.addEventListener("click", controlPageScroll);
+	modalBackdrop.addEventListener("click", managePageScroll);
 	
 	/* Modal window:*/
 	modalWindow = document.createElement("div");
@@ -319,7 +319,7 @@ const createModalWindow = (selectedModalData) => {
 	closeIcon.classList.add("fa-solid", "fa-xmark");
 	closeModal.addEventListener("click", closeModalWindow, {once: true});
 	// Allows web page to scroll when modal window closes:
-	closeModal.addEventListener("click", controlPageScroll);
+	closeModal.addEventListener("click", managePageScroll);
 
 	modalWrapper.appendChild(modalNavigation);
 };
@@ -344,7 +344,7 @@ const checkNavigationKey = (event) => {
 		}
 	} else if (event.key == "Escape") {
 		closeModalWindow(); 
-		controlPageScroll();
+		managePageScroll();
 	}
 };
 
