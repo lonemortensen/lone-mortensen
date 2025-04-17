@@ -875,7 +875,7 @@ footer p {
 }
 
 .closeButton {
-  /* Styling applied by JavaScript to modal window navigation buttons */
+  /* Styling applied by JavaScript to position modal window navigation buttons */
   display: flex;
   justify-content: center;
   align-content: center;
