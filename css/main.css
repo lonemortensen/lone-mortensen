@@ -312,8 +312,10 @@ nav {
   position: absolute;
   z-index: 1;
   left: 0;
-  top: 150px;
-  height: calc(100vh - 150px);
+  /* top: 150px; */
+  top: 130px;
+  /* height: calc(100vh - 150px); */
+  height: calc(100vh - 130px);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -328,9 +330,20 @@ nav {
   pointer-events: none;
 } 
 
-.mobile-nav-link {
+/* .mobile-nav-link {
   width: 70%;
   margin: 15px 0px 60px 90px;
+  text-align: left;
+} */
+
+.mobile-nav-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  /* align-items: center; */
+  width: 70%;
+  min-height: 5.2rem;
+  margin: 0px 0px 00px 90px;
   text-align: left;
 }
 
