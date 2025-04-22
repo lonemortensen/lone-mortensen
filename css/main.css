@@ -289,16 +289,18 @@ nav {
   transition: 0.6s;  
 }
 
-/* JavaScript toggle open-close for mobile navigation bars and X icon: */
 .open .mobile-bar-1 {
+  /* Styling applied by JavaScript to toggle open/close mobile navigation bars and close icon */
   transform: rotate(-45deg) translate(-6px, 6px);
 }
 
 .open .mobile-bar-2 {
+  /* Styling applied by JavaScript to toggle open/close mobile navigation bars and close icon */
   opacity: 0;
 }
 
 .open .mobile-bar-3 {
+  /* Styling applied by JavaScript to toggle open/close mobile navigation bars and close icon */
   transform: rotate(45deg) translate(-6px, -7px);
 }
 
@@ -312,10 +314,8 @@ nav {
   position: absolute;
   z-index: 1;
   left: 0;
-  /* top: 150px; */
-  top: 130px;
-  /* height: calc(100vh - 150px); */
-  height: calc(100vh - 130px);
+  top: 20%;
+  height: calc(100vh - 20%);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -324,24 +324,16 @@ nav {
   background-color: #8d8752; 
 }
 
-/* JavaScript toggle open-close for mobile navigation bars and X icons: */
 .hide-mobile-nav-menu {
+  /* Styling applied by JavaScript to toggle open/close mobile navigation bars and close icon */
   display: none;
   pointer-events: none;
 } 
 
-/* .mobile-nav-link {
-  width: 70%;
-  margin: 15px 0px 60px 90px;
-  text-align: left;
-} */
-
 .mobile-nav-link {
   display: flex;
-  /* flex-direction: column; */
   flex-wrap: wrap;
   justify-content: center; 
-  /* align-items: center; */
   align-content: center;
   width: 70%;
   min-height: 5.2rem;
@@ -475,11 +467,11 @@ footer p {
 }
 
 /* 
- * Animation - Introduction 
+ * Animation of text and title - Introduction 
 */
 
-/* JavaScript application of animated reveal of introduction title and text: */
 .show-introduction-text {
+  /* Styling applied by JavaScript to animate reveal of introduction title and text */
   display: block;
   width: 100%;
   margin-top: 30px;
@@ -504,6 +496,7 @@ footer p {
 }
 
 .change-text-style {
+  /* Styling applied by JavaScript to animate reveal of introduction title and text */
   animation: introTextStyle ease-in-out 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -520,7 +513,10 @@ footer p {
   }
 }
 
-/* Animated scroll-down pointer: */
+/* 
+ * Animated scroll-down pointer - Introduction 
+*/
+
 .scroll-down-pointer {
   display: flex;
   flex-wrap: wrap;
@@ -556,8 +552,8 @@ footer p {
   transform-origin: top;
 }
 
-/* Note: scale(x,y) changes element width(x) and height(y). translateY(n) moves element along y-axis.*/
 @keyframes drop-dot {
+  /* Note: scale(x,y) changes element width(x) and height(y). translateY(n) moves element along y-axis */
   0% {transform: scale(1, 1) translateY(0);}
   10% {transform: scale(1, 1) translateY(0);}
   30% {transform: scale(1.5, 1) translateY(25px);}
@@ -1471,7 +1467,10 @@ footer p {
     font-size: 1.5rem;  
   }
 
-  /* Animated scroll-down pointer: */
+  /* 
+   * Animated scroll-down pointer - Introduction - Tablet
+  */
+
   .scroll-down-pointer {
     max-width: 640px;
   }
@@ -1789,12 +1788,11 @@ footer p {
   }
 
   #introduction .content-wrapper {
-  align-content: flex-start;
-  height: 36vh;
+    align-content: flex-start;
+    height: 36vh;
   }
 
   .introduction-title {
-    font-size: 4rem;
     font-size: 7rem;
   }
 
@@ -1803,7 +1801,10 @@ footer p {
     font-size: 2.25rem;
   }
 
-  /* Animated scroll-down pointer: */
+  /* 
+   * Animated scroll-down pointer - Introduction - Desktop
+  */
+
   .scroll-down-pointer {
     max-width: 1200px;
   }
