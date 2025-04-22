@@ -338,12 +338,14 @@ nav {
 
 .mobile-nav-link {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
   justify-content: center; 
   /* align-items: center; */
+  align-content: center;
   width: 70%;
   min-height: 5.2rem;
-  margin: 0px 0px 00px 90px;
+  margin: 0px 0px 0px 90px;
   text-align: left;
 }
 
