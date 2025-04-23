@@ -598,7 +598,6 @@ footer p {
  * Animation - Projects 
 */
 
-
 .project-background:hover {
   /* Animated project background tilt */
   transform: rotateZ(-3deg);
