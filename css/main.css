@@ -1055,13 +1055,13 @@ footer p {
   font-size: 0.7rem;
 }
 
-/* JavaScript application of tab highlight styling: */
 .highlight-tab {
+  /* Styling applied by JavaScript to highlight tab */
   background: #f49729;
 }
 
-/* JavaScript application of hide-show panel styling: */
 .hide-panels {
+  /* Styling applied by JavaScript to hide-show panel */
   position: absolute;
   top: -9999px;
   left: -9999px;
