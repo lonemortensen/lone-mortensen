@@ -32,13 +32,6 @@ const aboutCircle = document.querySelector(".about-circle");
  * Runs callback function to initiate animations when targets intersect with the viewport (root).   
 */
 export const animateAboutSection = () => {
-    // Target element: first About slider:
-    // const aboutSliderOne = document.querySelector(".about-slider-1");
-    // Target element: second About slider:
-    // const aboutSliderTwo = document.querySelector(".about-slider-2");
-    // Target element: About circle:
-    // const aboutCircle = document.querySelector(".about-circle");
-
     // Creates intersection observers and sets options for sliders:
     const observerSliderOne = () => {
         // Options object contains settings for the observer:
@@ -116,19 +109,19 @@ const revealAboutCircle = () => {
 */
 const adjustCirclePosition = (parent, child) => {
     // Gets the slider's position and size:
-    const parentSizeAndPosition = parent.getBoundingClientRect();
+    const sliderSizeAndPosition = parent.getBoundingClientRect();
   
     // Gets the circle's height:
-    const childHeight = child.getBoundingClientRect().height;
+    const circleHeight = child.getBoundingClientRect().height;
 
     // Gets the circle's width:
-    const childWidth = child.getBoundingClientRect().width;
+    const circleWidth = child.getBoundingClientRect().width;
   
     // Calculates circle's position from top of slider:
-    let positionTop = parentSizeAndPosition.height - (childHeight / 2);
+    let positionTop = sliderSizeAndPosition.height - (circleHeight / 2);
   
     // Calculates circle's position from left (horizontally) of slider:
-    let positionLeft = (parentSizeAndPosition.width - childWidth) / 2;
+    let positionLeft = (sliderSizeAndPosition.width - circleWidth) / 2;
     
     // Adds styling to move circle into position as screen size changes:
     child.style.top = `${positionTop}px`;
