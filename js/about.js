@@ -5,12 +5,11 @@ Module: About section.
 
 ===== *** =====
 
-// NOTE: Adjust module description since adding circle positioning function!
-
 The about.js module:
 - animates the appearance of sliders and 'yellow dot' in About section.
 - starts animation on intersection with viewport.  
 - applies animation CSS styling.
+- adjusts circle position to stay in place when window resizes.
 - exports:
     -- function that handles monitoring and animation for use in main.js.
 ========================================================================= */
@@ -129,12 +128,44 @@ const adjustCirclePosition = (parent, child) => {
 };
 
 /**
+ * Avoids excessive triggering on resize event. 
+ * Helps ensure function that adjusts circle position is called only when user
+ * stops resizing the window for specified delay.
+ * @param func - The adjustCirclePosition function to debounce.
+ * @param delay - The wait time in ms before the function is called again. 
+ * @return - Function that clears existing delay and sets a new delay. 
+*/
+const debounce = (func, delay) => {
+    let waitTime;
+    // Clears existing delay and sets new one.
+    return (...args) => {
+        clearTimeout(waitTime);
+        waitTime = setTimeout(() => {
+            func.apply(this, args);
+        }, delay);
+    }
+};
+
+/**
+ * Calls the debounce function.
+ * @arg adjustCirclePosition - The function that adjusts the circle position when window resizes.
+ * @arg 500 - The wait time in ms before the function is called again.  
+*/
+const handleResize = () => {
+    debounce(adjustCirclePosition, 500);
+};
+
+/**
  * Detects when window has been resized.
  * Calls event handler to adjust position of circle.
+ * Calls event handler to implement debouncing.  
 */
 window.addEventListener("resize", () => {
     adjustCirclePosition(aboutSliderOne, aboutCircle);
+    handleResize();
 });
+
+
 
 /*
  * NOTE: Can I m ove this inside animateAboutSection to be called? 
@@ -144,4 +175,9 @@ window.addEventListener("resize", () => {
 // window.addEventListener("load", () => {
 //     adjustElementPosition(aboutSliderOne, aboutCircle);
 // });
-  
+
+
+/*
+
+*/
+
