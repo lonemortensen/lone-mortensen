@@ -95,7 +95,8 @@ const revealAboutCircle = () => {
         aboutCircle.classList.remove("hide-about-content");
         aboutCircle.classList.add("about-drop-top");
     };
-    setTimeout(showCircle, 2500);
+    // setTimeout(showCircle, 2500);
+    setTimeout(showCircle, 2300);
 };
 
 /**
@@ -127,57 +128,46 @@ const adjustCirclePosition = (parent, child) => {
     child.style.left = `${positionLeft}px`;  
 };
 
+// START HERE: 
+// Revise notes to ensure proper understanding of logic. 
+// Consider renaming of functions, variables, etc.
+// Figure out how to tell if debouncing is working?
+// NOTE: the debouncing creates a delay in the visual appearance of repositioning the circle. Can this be resolved - or give up on debouncing? 
+
 /**
- * Avoids excessive triggering on resize event. 
- * Helps ensure function that adjusts circle position is called only when user
- * stops resizing the window for specified delay.
- * @param func - The adjustCirclePosition function to debounce.
+ * Avoids excessive firing on resize event. 
+ * Ensures circle positioning function runs only once after the specified wait 
+ * time has passed since the last time user resized the window. 
+ * Sets the wait time. 
+ * @param func - The adjustCirclePosition function that needs delaying.
  * @param delay - The wait time in ms before the function is called again. 
  * @return - Function that clears existing delay and sets a new delay. 
 */
 const debounce = (func, delay) => {
     let waitTime;
-    // Clears existing delay and sets new one.
+    // Clears existing delay and sets new one if resize event fires before timer resets.
     return (...args) => {
         clearTimeout(waitTime);
         waitTime = setTimeout(() => {
-            func.apply(this, args);
+            func.apply(this, args); // Calls circle positioning function after delay 
         }, delay);
     }
 };
 
 /**
- * Calls the debounce function.
+ * Creates a debounced function to delay the circle positioning function.
+ * Calls function to adjust position of circle.
  * @arg adjustCirclePosition - The function that adjusts the circle position when window resizes.
- * @arg 500 - The wait time in ms before the function is called again.  
+ * @arg 200 - The wait time in ms before the function is called again.  
 */
-const handleResize = () => {
-    debounce(adjustCirclePosition, 500);
-};
+const handleWindowResize = debounce(() => {
+    adjustCirclePosition(aboutSliderOne, aboutCircle);
+}, 200);
 
 /**
- * Detects when window has been resized.
- * Calls event handler to adjust position of circle.
+ * Detects every time the window is resized.
  * Calls event handler to implement debouncing.  
 */
-window.addEventListener("resize", () => {
-    adjustCirclePosition(aboutSliderOne, aboutCircle);
-    handleResize();
-});
+window.addEventListener("resize", handleWindowResize);
 
-
-
-/*
- * NOTE: Can I m ove this inside animateAboutSection to be called? 
- * Detects when window loads.
- * Calls event handler to initialize page.
-*/
-// window.addEventListener("load", () => {
-//     adjustElementPosition(aboutSliderOne, aboutCircle);
-// });
-
-
-/*
-
-*/
 
