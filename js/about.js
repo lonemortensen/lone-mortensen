@@ -29,6 +29,7 @@ const aboutCircle = document.querySelector(".about-circle");
  * Initiates animation. 
  * Uses the Intersection Observer API to watch for intersection changes for 'slider' html target elements. 
  * Runs callback function to initiate animations when targets intersect with the viewport (root).   
+ * Initiates circle position on page.
 */
 export const animateAboutSection = () => {
     // Creates intersection observers and sets options for sliders:
@@ -45,7 +46,7 @@ export const animateAboutSection = () => {
         observer.observe(aboutSliderOne);
     };
 
-    // Creates intersection observers and sets options for sliders:
+    // Creates intersection observers and sets options for sliders.
     const observerSliderTwo = () => {
         // Options object contains settings for the observer:
         const options = {
@@ -61,7 +62,6 @@ export const animateAboutSection = () => {
 
     // Callback function handles animation on intersection for both sliders.
     // Initiates circle animation. 
-    // Initiates circle position on page.
     // @param entries - Array of IntersectionObserverEntry objects to determine visibility and intersection status of targets.
     // @param observer - The IntersectionObserver instance allows for interaction with the observer.
     const startAboutAnimation = (entries, observer) => {
@@ -83,7 +83,10 @@ export const animateAboutSection = () => {
 
     observerSliderOne();
     observerSliderTwo();
-    // Initiates circle position on page:
+
+    // Initiates circle position on page.
+    // @arg aboutSliderOne - The first About slider.
+    // @arg aboutCircle - The About circle.
     adjustCirclePosition(aboutSliderOne, aboutCircle);
 };
 
@@ -95,8 +98,7 @@ const revealAboutCircle = () => {
         aboutCircle.classList.remove("hide-about-content");
         aboutCircle.classList.add("about-drop-top");
     };
-    // setTimeout(showCircle, 2500);
-    setTimeout(showCircle, 2300);
+    setTimeout(showCircle, 2500);
 };
 
 /**
@@ -128,46 +130,13 @@ const adjustCirclePosition = (parent, child) => {
     child.style.left = `${positionLeft}px`;  
 };
 
-// START HERE: 
-// Revise notes to ensure proper understanding of logic. 
-// Consider renaming of functions, variables, etc.
-// Figure out how to tell if debouncing is working?
-// NOTE: the debouncing creates a delay in the visual appearance of repositioning the circle. Can this be resolved - or give up on debouncing? 
-
 /**
- * Avoids excessive firing on resize event. 
- * Ensures circle positioning function runs only once after the specified wait 
- * time has passed since the last time user resized the window. 
- * Sets the wait time. 
- * @param func - The adjustCirclePosition function that needs delaying.
- * @param delay - The wait time in ms before the function is called again. 
- * @return - Function that clears existing delay and sets a new delay. 
+ * Detects when user resizes the screen.
+ * Calls event handler to adjust the circle's position.  
+ * @arg aboutSliderOne - The first About slider.
+ * @arg aboutCircle - The About circle.
 */
-const debounce = (func, delay) => {
-    let waitTime;
-    // Clears existing delay and sets new one if resize event fires before timer resets.
-    return (...args) => {
-        clearTimeout(waitTime);
-        waitTime = setTimeout(() => {
-            func.apply(this, args); // Calls circle positioning function after delay 
-        }, delay);
-    }
-};
-
-/**
- * Creates a debounced function to delay the circle positioning function.
- * Calls function to adjust position of circle.
- * @arg adjustCirclePosition - The function that adjusts the circle position when window resizes.
- * @arg 200 - The wait time in ms before the function is called again.  
-*/
-const handleWindowResize = debounce(() => {
+window.addEventListener("resize", () => {
     adjustCirclePosition(aboutSliderOne, aboutCircle);
-}, 200);
-
-/**
- * Detects every time the window is resized.
- * Calls event handler to implement debouncing.  
-*/
-window.addEventListener("resize", handleWindowResize);
-
+});
 
