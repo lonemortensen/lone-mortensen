@@ -1216,7 +1216,7 @@ footer p {
 .connect-icons {
   display: flex;
   justify-content: space-around;
-  width: 30%;
+  width: 45%;
 }
 
 .connect-icons li {
@@ -1229,6 +1229,7 @@ footer p {
 
 .connect-icons a {
   transform: scale(0.9);
+  padding: 0px 10px 0px 10px; /* Horizontal padding prevents icons from being cut off on hover in Safari */
 }
 
 .connect-icons a:hover {
@@ -1652,6 +1653,10 @@ footer p {
 
   #contact {
     padding: 80px 0px 80px 0px;
+  }
+
+  .connect-icons {
+    width: 30%;
   }
 
   .connect-icons i {
