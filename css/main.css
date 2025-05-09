@@ -392,8 +392,8 @@ footer {
   transform: scale(1);
 }
 
-/* JavaScript hide-show scroll button: */
 .hide-scroll-top-button {
+  /* Styling applied by JavaScript to hide-show scroll button */
   display: none;
   pointer-events: none;
 }
