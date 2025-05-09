@@ -431,22 +431,9 @@ footer p {
   background: #E9B14C;
 }
 
-/*START HERE: 
-Find a way to insert line break after by: https://css-tricks.com/injecting-line-break/
-Ensure text stays centered!
-Remember to remove classes from HTML if not used.
-*/
-
-.copyright-by p {
-  text-align: center;
-}
-
 .copyright-linebreak {
-  display: table;
+  display: block; 
 }
-
-/* END linebreak experiment*/
-
 
 .footer-built-with {
   margin-top: 10px;
@@ -1467,6 +1454,10 @@ Remember to remove classes from HTML if not used.
     bottom: 1.5rem;
     right: 1.5rem; 
   }
+
+  .copyright-linebreak {
+  display: unset; 
+}
 
 
   /* INTRODUCTION - Tablet */
