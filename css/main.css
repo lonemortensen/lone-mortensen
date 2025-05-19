@@ -1449,11 +1449,11 @@ footer p {
     background-size: 0% 0.09rem;
     /* background-size: 100% 0.1em; */
     /* background-position: left bottom; Placed at bottom-left corner of element. Set relative to padding-box (default value) */
-    background-position: center; /* ADD comment*/
+    background-position: center; /* Placed at center of element. Set relative to padding-box (default value) */
     background-repeat: no-repeat; 
     /* transform-origin: center;
     transform: scaleX(0); */
-    transition: background-size 0.3s ease-in-out;
+    transition: background-size 300ms ease-in-out;
     /* transition: background-size 0.3s; */
 
 
