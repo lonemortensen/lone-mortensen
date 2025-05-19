@@ -97,9 +97,7 @@ textarea {
 /*
  * Google fonts used on this website: 
  * Headings: 'Lexend Tera', sans-serif
- * Headings, bold 700: 'Lexend Tera', sans-serif
  * Paragraph text: 'Lekton', sans-serif
- * Paragraph text, bold 700: 'Lekton', sans-serif
 */
 
 html {
@@ -1425,7 +1423,7 @@ footer p {
     width: 85%;
   }
   
-  .nav-link a {
+  /* .nav-link a {
     font-size: 0.65rem;
     font-family: 'Lexend Tera', sans-serif;
     text-transform: uppercase;
@@ -1437,10 +1435,42 @@ footer p {
     background-position-x: 50%;
     background-repeat: no-repeat;
     transition: background-size 0.3s ease-in-out;
-  }
+  } */
+  
+  .nav-link a {
+    font-size: 0.65rem;
+    font-family: 'Lexend Tera', sans-serif;
+    text-transform: uppercase;
+    color: #152A3E;
+    /* padding-bottom: 5px;  */
+    padding-bottom: 20px; 
+    background-image: linear-gradient(#e0218a, #e0218a);
     
-  a:hover {
+    background-size: 0% 0.09rem;
+    /* background-size: 100% 0.1em; */
+    /* background-position: left bottom; Placed at bottom-left corner of element. Set relative to padding-box (default value) */
+    background-position: center; /* ADD comment*/
+    background-repeat: no-repeat; 
+    /* transform-origin: center;
+    transform: scaleX(0); */
+    transition: background-size 0.3s ease-in-out;
+    /* transition: background-size 0.3s; */
+
+
+    /* background-position-y: 100%;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease-in-out; */
+  }
+
+  /* a:hover {
     background-size: 100% 0.1em;
+  } */
+
+  a:hover {
+    /* transform-origin: center; */
+    background-size: 100% 0.09rem; /*makes the line show */
+    /* transform: scaleX(1); */
   }
 
 
