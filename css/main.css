@@ -1449,13 +1449,13 @@ footer p {
     background-size: 0% 0.09rem;
     /* background-size: 100% 0.1em; */
     /* background-position: left bottom; Placed at bottom-left corner of element. Set relative to padding-box (default value) */
-    background-position: center; /* Placed at center of element. Set relative to padding-box (default value) */
+    background-position: center; /* Places background-image at center of element. Set relative to padding-box (default) */
     background-repeat: no-repeat; 
     /* transform-origin: center;
     transform: scaleX(0); */
     transition: background-size 300ms ease-in-out;
     /* transition: background-size 0.3s; */
-
+    /* border: 2px solid green; */
 
     /* background-position-y: 100%;
     background-position-x: 50%;
