@@ -1422,55 +1422,22 @@ footer p {
     justify-content: space-between;
     width: 85%;
   }
-  
-  /* .nav-link a {
-    font-size: 0.65rem;
-    font-family: 'Lexend Tera', sans-serif;
-    text-transform: uppercase;
-    color: #152A3E;
-    padding-bottom: 5px; 
-    background-image: linear-gradient(#e0218a, #e0218a);
-    background-size: 0% 0.1em;
-    background-position-y: 100%;
-    background-position-x: 50%;
-    background-repeat: no-repeat;
-    transition: background-size 0.3s ease-in-out;
-  } */
-  
+   
   .nav-link a {
     font-size: 0.65rem;
     font-family: 'Lexend Tera', sans-serif;
     text-transform: uppercase;
     color: #152A3E;
-    /* padding-bottom: 5px;  */
     padding-bottom: 20px; 
     background-image: linear-gradient(#e0218a, #e0218a);
-    
-    background-size: 0% 0.09rem;
-    /* background-size: 100% 0.1em; */
-    /* background-position: left bottom; Placed at bottom-left corner of element. Set relative to padding-box (default value) */
+    background-size: 0% 0.09em;
     background-position: center; /* Places background-image at center of element. Set relative to padding-box (default) */
     background-repeat: no-repeat; 
-    /* transform-origin: center;
-    transform: scaleX(0); */
     transition: background-size 300ms ease-in-out;
-    /* transition: background-size 0.3s; */
-    /* border: 2px solid green; */
-
-    /* background-position-y: 100%;
-    background-position-x: 50%;
-    background-repeat: no-repeat;
-    transition: background-size 0.3s ease-in-out; */
   }
 
-  /* a:hover {
-    background-size: 100% 0.1em;
-  } */
-
   a:hover {
-    /* transform-origin: center; */
-    background-size: 100% 0.09rem; /*makes the line show */
-    /* transform: scaleX(1); */
+    background-size: 100% 0.09em; 
   }
 
 
