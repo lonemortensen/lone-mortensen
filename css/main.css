@@ -488,13 +488,12 @@ footer p {
 }
 
 .text-style {
-  padding-bottom: 5px;
-  /* padding-bottom: 25px; */
-  background-image: linear-gradient(#FFFFFF, #FFFFFF);
+  padding-bottom: 5px; /* Line appears closer to bottom */ 
+  background-image: linear-gradient(#FFFFFF, #FFFFFF); /* Creates a solid line */
   background-size: 100% 0.7em;
   background-position-y: 100%;
   background-position-x: 50%;
-  /* background-position: center; */
+  /* background-position: 50% 100%; */ /* First value defines position on X. Second value defines position on Y */
   background-repeat: no-repeat;
 }
 
@@ -961,14 +960,15 @@ footer p {
 }
 
 .tab a {
-  padding: 27px 11px;
+  padding: 27px 11px; /* Line appears underneath the text closer to bottom */ 
   font-family: 'Lexend Tera', sans-serif;
   font-size: 0.7rem;
   color: #152A3E;
-  background-image: linear-gradient(#f49729, #f49729);
+  background-image: linear-gradient(#f49729, #f49729); /* Solid line functions as link underline */
   background-size: 0% 0.25em;
   background-position-y: 100%;
   background-position-x: 50%;
+  /* background-position: 50% 100%;  */ /* First value defines position on X. Second value defines position on Y */
   background-repeat: no-repeat;
   transition: background-size 0.3s ease-in-out;
 }  
