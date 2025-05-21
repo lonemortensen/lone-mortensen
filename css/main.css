@@ -339,35 +339,15 @@ nav {
   text-align: left;
 }
 
-/* .mobile-nav-link a {
-  font-family: 'Lexend Tera', sans-serif;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  color: #e3e2df;
-  padding-bottom: 15px;   
-  background-image: linear-gradient(#f49729, #f49729);
-  background-size: 100% 0.1em;
-  background-position-y: 100%;
-  background-position-x: 50%;
-  background-repeat: no-repeat;
-  transition: background-size 0.3s ease-in-out;
-  display: block;
-  width: 100%;
-}
-
-.mobile-nav-link a:hover {
-  background-size: 0% 0.1em;
-} */
-
 .mobile-nav-link a {
   font-family: 'Lexend Tera', sans-serif;
   font-size: 0.75rem;
   text-transform: uppercase;
   color: #e3e2df;
-  padding-bottom: 45px;   
-  background-image: linear-gradient(#f49729, #f49729);
+  padding-bottom: 35px; /* Line appears underneath the text closer to bottom */  
+  background-image: linear-gradient(#f49729, #f49729); /* Solid line functions as link underline */
   background-size: 100% 0.09em;
-  background-position: center; /* Places background-image at center of element. Set relative to padding-box (default) */
+  background-position: center; /* Centers line relative to (default) padding-box */
   background-repeat: no-repeat;
   transition: background-size 0.3s ease-in-out;
   display: block;
@@ -377,25 +357,6 @@ nav {
 .mobile-nav-link a:hover {
   background-size: 0% 0.09em;
 }
-
-/* 
-.nav-link a {
-    font-size: 0.65rem;
-    font-family: 'Lexend Tera', sans-serif;
-    text-transform: uppercase;
-    color: #152A3E;
-    padding-bottom: 20px; 
-    background-image: linear-gradient(#e0218a, #e0218a);
-    background-size: 0% 0.09em;
-    background-position: center; /* Places background-image at center of element. Set relative to padding-box (default) 
-    background-repeat: no-repeat; 
-    transition: background-size 300ms ease-in-out;
-  }
-
-  a:hover {
-    background-size: 100% 0.09em; 
-  } */
-
 
 
 /* FOOTER */
@@ -1466,10 +1427,10 @@ footer p {
     font-family: 'Lexend Tera', sans-serif;
     text-transform: uppercase;
     color: #152A3E;
-    padding-bottom: 20px; 
-    background-image: linear-gradient(#e0218a, #e0218a);
+    padding-bottom: 20px; /* Line appears underneath the text closer to bottom */ 
+    background-image: linear-gradient(#e0218a, #e0218a); /* Solid line functions as link underline */
     background-size: 0% 0.09em;
-    background-position: center; /* Places background-image at center of element. Set relative to padding-box (default) */
+    background-position: center; /* Centers line relative to (default) padding-box */
     background-repeat: no-repeat; 
     transition: background-size 300ms ease-in-out;
   }
