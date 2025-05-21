@@ -489,10 +489,12 @@ footer p {
 
 .text-style {
   padding-bottom: 5px;
+  /* padding-bottom: 25px; */
   background-image: linear-gradient(#FFFFFF, #FFFFFF);
   background-size: 100% 0.7em;
   background-position-y: 100%;
   background-position-x: 50%;
+  /* background-position: center; */
   background-repeat: no-repeat;
 }
 
