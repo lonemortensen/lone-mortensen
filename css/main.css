@@ -491,9 +491,7 @@ footer p {
   padding-bottom: 5px; /* Line appears closer to bottom */ 
   background-image: linear-gradient(#FFFFFF, #FFFFFF); /* Creates a solid line */
   background-size: 100% 0.7em;
-  background-position-y: 100%;
-  background-position-x: 50%;
-  /* background-position: 50% 100%; */ /* First value defines position on X. Second value defines position on Y */
+  background-position: 50% 100%; /*First value defines position on X. Second value defines position on Y*/
   background-repeat: no-repeat;
 }
 
