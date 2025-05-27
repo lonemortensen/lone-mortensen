@@ -964,8 +964,7 @@ footer p {
   color: #152A3E;
   background-image: linear-gradient(#f49729, #f49729); /* Solid line functions as link underline */
   background-size: 0% 0.25em;
-  background-position-y: 100%;
-  background-position-x: 50%;
+  background-position: 50% 100%; /*First value defines position on X. Second value defines position on Y */
   background-repeat: no-repeat;
   transition: background-size 0.3s ease-in-out;
 }  
