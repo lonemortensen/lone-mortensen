@@ -271,7 +271,7 @@ nav {
 }
 
 #mobile-nav-icon {
-  margin: auto 0;
+  /* margin: auto 0; */ /* Used with display: block. Here, positioning is done by flex on its parent*/
   display: flex;
   justify-content: flex-end;
   text-align: center;
@@ -282,9 +282,11 @@ nav {
 .mobile-bars {
   width: 25px; 
   height: 3px;
-  margin: 6px 0;
-  background-color: black;
-  transition: 0.6s;  
+  /* margin: 6px 0; */
+  margin: 6px 0px 6px 0px;
+  /* background-color: black; */
+  background-color: #000000;
+  transition: 0.6s; /* Sets pace of transformation of mobile navigation bars and close icon */ 
 }
 
 .open .mobile-bar-1 {
