@@ -22,7 +22,7 @@ export const activateMobileNavigation = () => {
 
     // Toggles the mobile nav menu and the close menu button:
     const openMobileNav = () => {
-        mobileNavIcon.classList.toggle("open");
+        mobileNavIcon.classList.toggle("open-menu");
         mobileNavMenu.classList.toggle("hide-mobile-nav-menu");
     };
 
@@ -31,7 +31,7 @@ export const activateMobileNavigation = () => {
 
     // Closes the mobile nav menu when user clicks on the menu links:
     const closeMobileNav = () => {
-        mobileNavIcon.classList.remove("open");
+        mobileNavIcon.classList.remove("open-menu");
         mobileNavMenu.classList.add("hide-mobile-nav-menu");
     };
 

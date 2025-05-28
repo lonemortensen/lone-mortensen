@@ -271,7 +271,6 @@ nav {
 }
 
 #mobile-nav-icon {
-  /* margin: auto 0; */ /* Used with display: block. Here, positioning is done by flex on its parent*/
   display: flex;
   justify-content: flex-end;
   text-align: center;
@@ -282,24 +281,22 @@ nav {
 .mobile-bars {
   width: 25px; 
   height: 3px;
-  /* margin: 6px 0; */
   margin: 6px 0px 6px 0px;
-  /* background-color: black; */
   background-color: #000000;
   transition: 0.6s; /* Sets pace of transformation of mobile navigation bars and close icon */ 
 }
 
-.open .mobile-bar-1 {
+.open-menu .mobile-bar-1 {
   /* Styling applied by JavaScript to toggle open/close mobile navigation bars and close icon */
   transform: rotate(-45deg) translate(-6px, 6px);
 }
 
-.open .mobile-bar-2 {
+.open-menu .mobile-bar-2 {
   /* Styling applied by JavaScript to toggle open/close mobile navigation bars and close icon */
   opacity: 0;
 }
 
-.open .mobile-bar-3 {
+.open-menu .mobile-bar-3 {
   /* Styling applied by JavaScript to toggle open/close mobile navigation bars and close icon */
   transform: rotate(45deg) translate(-6px, -7px);
 }
