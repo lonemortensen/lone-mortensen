@@ -30,7 +30,8 @@ import {handlePageLoad} from "./panel.js";
 import {animateAboutSection} from "./about.js";
 
 // Imports for scroll to top functionality:
-import {handleScroll} from "./scrollTop.js";
+// import {handleScroll} from "./scrollTop.js";
+import {displayScrollButton} from "./scrollTop.js";
 
 // Imports for copyright year update:
 import {updateCopyrightYear} from "./year.js";
@@ -96,8 +97,8 @@ animateAboutSection();
  * Detects when user scrolls on page.
  * Calls event handler in scrollTop.js to show or hide scroll-to-top button. 
 */
-document.addEventListener("scroll", handleScroll);
-
+// document.addEventListener("scroll", handleScroll);
+document.addEventListener("scroll", displayScrollButton);
 
 /* -------- UPDATE COPYRIGHT YEAR -------- */ 
 

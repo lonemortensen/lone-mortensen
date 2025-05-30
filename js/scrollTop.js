@@ -22,11 +22,27 @@ const rootElement = document.documentElement;
 /**
  * Shows or hides the scroll-to-top button. 
 */
-export const handleScroll = () => {
-    //Calculates max pixels that can be scrolled vertically:
+// export const handleScroll = () => {
+//     //Calculates max pixels that can be scrolled vertically:
+//     const totalScrollLength = rootElement.scrollHeight - rootElement.clientHeight;
+//     //Shows button based on number of pixels user has scrolled vertically:
+//     if ((rootElement.scrollTop / totalScrollLength) > 0.30 ) {
+//         scrollToTopButton.classList.remove("hide-scroll-top-button");
+//     } else {
+//         scrollToTopButton.classList.add("hide-scroll-top-button");
+//     }
+// }; 
+
+// NOTE: Remove commented out code in scroll related code in main.js. 
+export const displayScrollButton = () => {
+    // Pixels user has scrolled:
+    const scrolledPixels = window.scrollY;
+    // Calculates max pixels that can be scrolled vertically:
     const totalScrollLength = rootElement.scrollHeight - rootElement.clientHeight;
-    //Shows button based on number of pixels user has scrolled vertically:
-    if ((rootElement.scrollTop / totalScrollLength) > 0.30 ) {
+    // Calculates user's current position as a percentage:
+    const scrolledPercent = (scrolledPixels / totalScrollLength) * 100;
+    //Shows button based on percentage user has scrolled vertically:
+    if (scrolledPercent > 25 ) {
         scrollToTopButton.classList.remove("hide-scroll-top-button");
     } else {
         scrollToTopButton.classList.add("hide-scroll-top-button");
