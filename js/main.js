@@ -31,7 +31,8 @@ import {animateAboutSection} from "./about.js";
 
 // Imports for scroll to top functionality:
 // import {handleScroll} from "./scrollTop.js";
-import {displayScrollButton} from "./scrollTop.js";
+// import {displayScrollButton} from "./scrollTop.js";
+import {limitFunctionCalls, displayScrollButton} from "./scrollTop.js";
 
 // Imports for copyright year update:
 import {updateCopyrightYear} from "./year.js";
@@ -98,7 +99,10 @@ animateAboutSection();
  * Calls event handler in scrollTop.js to show or hide scroll-to-top button. 
 */
 // document.addEventListener("scroll", handleScroll);
-document.addEventListener("scroll", displayScrollButton);
+// document.addEventListener("scroll", displayScrollButton);
+document.addEventListener("scroll", () => {
+  limitFunctionCalls(displayScrollButton, 200);
+});
 
 /* -------- UPDATE COPYRIGHT YEAR -------- */ 
 
