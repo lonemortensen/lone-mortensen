@@ -30,9 +30,8 @@ import {handlePageLoad} from "./panel.js";
 import {animateAboutSection} from "./about.js";
 
 // Imports for scroll to top functionality:
-// import {handleScroll} from "./scrollTop.js";
-// import {displayScrollButton} from "./scrollTop.js";
-import {limitFunctionCalls, displayScrollButton} from "./scrollTop.js";
+import {displayScrollButton} from "./scrollTop.js";
+import {limitFunctionCalls} from "./utils/rateControl.js";
 
 // Imports for copyright year update:
 import {updateCopyrightYear} from "./year.js";
@@ -92,14 +91,15 @@ window.addEventListener("load", handlePageLoad);
 animateAboutSection();
 
 
-/* -------- SCROLL BUTTON -------- */
+/* -------- SCROLL-TO-TOP BUTTON -------- */
 
 /**
  * Detects when user scrolls on page.
- * Calls event handler in scrollTop.js to show or hide scroll-to-top button. 
+ * Calls throttle function in rateControl.js to control the 
+ * frequency of the execution of event handler in scrollTop.js.
+ * @arg displayScrollButton - The function that shows or hides the scroll-to-top button.
+ * @arg 200 - The wait time in milliseconds before the function is called again.
 */
-// document.addEventListener("scroll", handleScroll);
-// document.addEventListener("scroll", displayScrollButton);
 document.addEventListener("scroll", () => {
   limitFunctionCalls(displayScrollButton, 200);
 });

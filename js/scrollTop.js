@@ -6,12 +6,11 @@ Module: Scroll-to-top button.
 ===== *** =====
 
 The scrollTop.js module:
-- detects user scroll on page and displays or hides scroll-to-top button. 
-- throttles the function that displays or hides scroll-to-top button. 
-- adds event listener to scroll-to-top button and scrolls to top of web page.
+- displays or hides scroll-to-top button when user scrolls on page. 
+- adds event listener to scroll-to-top button. 
+- scrolls to top of web page when user clicks scroll-to-top button.
 - exports:
-    -- throttler for scroll event to main.js.
-    -- event handler that displays button to main.js.
+    -- event handler that displays scroll-to-top button to main.js.
 ========================================================================= */
 
 // Scroll-to-top button:
@@ -19,31 +18,12 @@ const scrollToTopButton = document.querySelector(".scroll-top-button");
 // Root element of the document (for offset values):
 const rootElement = document.documentElement;
 
-// NOTE: Remove commented out code in scroll related code in main.js and update function comments.
-
 /**
- * Throttle function for scroll event.
- * Limits the frequency with which the displayScrollButton function is 
- * called in a given timeframe when the user scrolls. 
- * @param callFunction - The function that shows or hides the scroll-to-top button.
- * @param delay - The wait time in milliseconds before the function is called again. 
-*/
-export const limitFunctionCalls = (callFunction, delay) => {
-    let lastCall = 0;
-    let currentTime = Date.now();
-    console.log(currentTime);
-    
-    if (currentTime - lastCall >= delay) {
-        callFunction();
-        lastCall = currentTime;
-    }
-};
-
-/**
- * Shows or hides the scroll-to-top button based on far 
+ * Shows or hides the scroll-to-top button based on how far 
  * the user has scrolled vertically.
 */
 export const displayScrollButton = () => {
+    console.log("Function call");
     // Pixels user has scrolled vertically:
     const pixelsScrolled = window.scrollY;
     console.log(pixelsScrolled);
