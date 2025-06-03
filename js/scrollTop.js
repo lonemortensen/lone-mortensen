@@ -19,26 +19,10 @@ const scrollToTopButton = document.querySelector(".scroll-top-button");
 // Root element of the document (for offset values):
 const rootElement = document.documentElement;
 
-
-/**
- * Shows or hides the scroll-to-top button. 
-*/
-// export const handleScroll = () => {
-//     //Calculates max pixels that can be scrolled vertically:
-//     const totalScrollLength = rootElement.scrollHeight - rootElement.clientHeight;
-//     //Shows button based on number of pixels user has scrolled vertically:
-//     if ((rootElement.scrollTop / totalScrollLength) > 0.30 ) {
-//         scrollToTopButton.classList.remove("hide-scroll-top-button");
-//     } else {
-//         scrollToTopButton.classList.add("hide-scroll-top-button");
-//     }
-// }; 
-
 // NOTE: Remove commented out code in scroll related code in main.js and update function comments.
 
-
 /**
- * Throttler for scroll event.
+ * Throttle function for scroll event.
  * Limits the frequency with which the displayScrollButton function is 
  * called in a given timeframe when the user scrolls. 
  * @param callFunction - The function that shows or hides the scroll-to-top button.
