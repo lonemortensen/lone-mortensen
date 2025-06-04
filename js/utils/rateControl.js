@@ -15,33 +15,18 @@ The rateControl.js module:
 /**
  * Throttle function.
  * Limits the frequency with which the callback function is 
- * executed in a given timeframe. 
+ * executed within a given time interval. 
  * @param callFunction - The callback function. 
  * @param delay - The wait time in milliseconds before the callback is executed again. 
 */
-// export const limitFunctionCalls = (callFunction, delay) => {
-//     let lastCall = 0;
-//     let currentTime = Date.now();
-//     console.log(currentTime);
-    
-//     if (currentTime - lastCall >= delay) {
-//         callFunction();
-//         lastCall = currentTime;
-//     }
-// };
-
-// NOTE: Start here. Throttle function needs rewriting!
-
-let lastCall = 0;
-console.log(lastCall);
-
 export const limitFunctionCalls = (callFunction, delay) => {
-    // let lastCall = 0;
-    let currentTime = Date.now();
+    let lastCall = 0; 
     
-    
-    if (currentTime - lastCall >= delay) {
-        callFunction();
-        lastCall = currentTime;
-    }
+    return function (...args) {
+        const currentTime = Date.now();
+        if (currentTime - lastCall >= delay) {
+            callFunction.apply(this, args);
+            lastCall = currentTime;
+        }
+    };
 };

@@ -100,9 +100,8 @@ animateAboutSection();
  * @arg displayScrollButton - The function that shows or hides the scroll-to-top button.
  * @arg 200 - The wait time in milliseconds before the function is called again.
 */
-document.addEventListener("scroll", () => {
-  limitFunctionCalls(displayScrollButton, 200);
-});
+document.addEventListener("scroll", limitFunctionCalls(displayScrollButton, 200));
+
 
 /* -------- UPDATE COPYRIGHT YEAR -------- */ 
 
