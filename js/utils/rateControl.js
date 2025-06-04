@@ -20,7 +20,7 @@ The rateControl.js module:
  * @param delay - The wait time in milliseconds before the callback is executed again. 
 */
 export const limitFunctionCalls = (callFunction, delay) => {
-    let lastCall = 0; 
+    let lastCall = 0; // Keeps track of timing
     
     return function (...args) {
         const currentTime = Date.now();
