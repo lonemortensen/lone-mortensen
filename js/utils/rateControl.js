@@ -8,8 +8,8 @@ Module: Rate control utility functions.
 The rateControl.js module:
 - contains reuseable functions for throttling, debouncing. Incl.:  
     -- throttle function. 
-- exports:
-    -- throttle function to main.js for use with scroll event.
+    -- debounce (fallback)) function.
+- uses: scroll, resize, mouse events, etc.
 ========================================================================= */
 
 /**
@@ -20,8 +20,8 @@ The rateControl.js module:
  * @param delay - The wait time in milliseconds before the callback is executed again. 
 */
 export const limitFunctionCalls = (callFunction, delay) => {
-    let lastCall = 0; // Keeps track of timing
-    
+    let lastCall = 0; // Tracks and preserves timing in-between calls 
+
     return function (...args) {
         const currentTime = Date.now();
         if (currentTime - lastCall >= delay) {
@@ -32,16 +32,23 @@ export const limitFunctionCalls = (callFunction, delay) => {
 };
 
 /**
- * Throttle fallback function. NOTE: How to make this generic and not limited to scroll events? 
- * Ensures throttled function runs one more time after scrolling ends to capture
- * the final scroll position if it's missed by the throttled function.   
- * Useful for XXXX 
- * @param throttledFunction - The function that is being throttled.
- * @param delay - The wait time in milliseconds before the throttled function is executed again. 
+ * Debounce (fallback) function. 
+ * Postpones execution of original callback function and ensures callback runs 
+ * once after the event ends. 
+ * If used with throttled function: in case an event is missed, the fallback ensures 
+ * the throttled function runs one more time after the event ends.   
+ * @param callFunction - The callback function. 
+ * @param delay - The wait time in milliseconds before the callback is executed again. 
+ * @return - New debounced version of callback function that controls when the original callback runs. 
 */
-export const fallbackFunction = (throttledFunction, delay) => {
-    let scrollTimeout;
+export const debounceFunction = (callFunction, delay) => {
+    let timeoutDuration; // Sets and preserves wait time in-between calls
     
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(throttledFunction, delay);
+    return(...args) => {
+        console.log("Fallback runs at scroll end"); // Delay works; runs auto after set timeout/delay
+        clearTimeout(timeoutDuration);
+        timeoutDuration = setTimeout(() => {
+            callFunction.apply(this, args); // Calls original callback function after delay
+        }, delay);
+    };
 };

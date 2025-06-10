@@ -31,7 +31,7 @@ import {animateAboutSection} from "./about.js";
 
 // Imports for scroll to top functionality:
 import {displayScrollButton} from "./scrollTop.js";
-import {limitFunctionCalls, fallbackFunction} from "./utils/rateControl.js";
+import {limitFunctionCalls, debounceFunction} from "./utils/rateControl.js";
 
 // Imports for copyright year update:
 import {updateCopyrightYear} from "./year.js";
@@ -97,13 +97,22 @@ animateAboutSection();
  * Detects when user scrolls on page.
  * Calls throttle function in rateControl.js to control the 
  * frequency of the execution of event handler in scrollTop.js.
- * @arg displayScrollButton - The callback function. Event handler that shows/hides the scroll-to-top button.
+ * @arg displayScrollButton - The callback function. Event handler shows/hides the scroll-to-top button.
  * @arg 100 - The wait time in milliseconds before the function is called again.
 */
 //document.addEventListener("scroll", limitFunctionCalls(displayScrollButton, 100));
+// Wrapped functions - throttled and debounced: 
+const throttledScrollButton = limitFunctionCalls(displayScrollButton, 100);
+const fallbackEndOfScroll = debounceFunction(displayScrollButton, 2000);
+
 document.addEventListener("scroll", () => {
-  limitFunctionCalls(displayScrollButton, 100);
-  fallbackFunction(displayScrollButton, 150);
+  throttledScrollButton();
+  fallbackEndOfScroll();
+
+
+
+  // limitFunctionCalls(displayScrollButton, 100);
+  // fallbackFunction(displayScrollButton, 150);
 
   // let scrollTimeout;
   // clearTimeout(scrollTimeout);
