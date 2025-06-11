@@ -10,8 +10,7 @@ The scrollTop.js module:
 - adds event listener to scroll-to-top button. 
 - scrolls to top of web page when user clicks scroll-to-top button.
 - exports:
-    -- event handler that displays scroll-to-top button to main.js for use 
-    with throttle function.
+    -- event handler that displays scroll-to-top button to main.js.
 ========================================================================= */
 
 // Scroll-to-top button:
@@ -22,6 +21,10 @@ const rootElement = document.documentElement;
 /**
  * Shows or hides the scroll-to-top button based on how far 
  * the user has scrolled vertically.
+ * Function is called by a throttled function to limit the 
+ * frequency of execution. To ensure button disappears when user 
+ * scrolls to top, a fallback (debounced) function ensures 
+ * execution one more time after scroll-end in case the event is missed. 
 */
 export const displayScrollButton = () => {
     // Pixels user has scrolled vertically:

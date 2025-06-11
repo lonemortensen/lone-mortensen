@@ -6,16 +6,16 @@ Module: Rate control utility functions.
 ===== *** =====
 
 The rateControl.js module:
-- contains reuseable functions for throttling, debouncing. Incl.:  
-    -- throttle function. 
-    -- debounce (fallback)) function.
+- contains reuseable functions for:  
+    -- throttling 
+    -- debouncing
 - uses: scroll, resize, mouse events, etc.
 ========================================================================= */
 
 /**
  * Throttle function.
  * Limits the frequency with which the callback function is 
- * executed within a given time interval. 
+ * executed within a given time interval when an event fires repeatedly. 
  * @param callFunction - The callback function. 
  * @param delay - The wait time in milliseconds before the callback is executed again. 
 */
@@ -32,11 +32,11 @@ export const limitFunctionCalls = (callFunction, delay) => {
 };
 
 /**
- * Debounce (fallback) function. 
- * Postpones execution of original callback function and ensures callback runs 
- * once after the event ends. 
- * If used with throttled function: in case an event is missed, the fallback ensures 
- * the throttled function runs one more time after the event ends.   
+ * Debounce function. 
+ * Delays execution of the callback function for a set period of time when 
+ * the event fires repeatedly. Then runs the callback once after the specified wait 
+ * time has passed since the last event fired.
+ * Resets the timer if the event fires again before the wait time has passed.  
  * @param callFunction - The callback function. 
  * @param delay - The wait time in milliseconds before the callback is executed again. 
  * @return - New debounced version of callback function that controls when the original callback runs. 
@@ -47,7 +47,7 @@ export const debounceFunction = (callFunction, delay) => {
     return(...args) => {
         console.log("Fallback runs at scroll end"); // Delay works; runs auto after set timeout/delay
         clearTimeout(timeoutDuration);
-        timeoutDuration = setTimeout(() => {
+        timeoutDuration = setTimeout(() => { 
             callFunction.apply(this, args); // Calls original callback function after delay
         }, delay);
     };
