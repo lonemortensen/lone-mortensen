@@ -98,16 +98,17 @@ animateAboutSection();
  * Calls throttle and debounce functions in rateControl.js to control  
  * execution of event handler in scrollTop.js.
  * @arg displayScrollButton - The callback function. Event handler shows/hides the scroll-to-top button.
- * @arg 100 and 2000 - The wait time in milliseconds before the function is called again.
+ * @arg 100 and 300 - The wait time in milliseconds before the function is called again.
 */
 // Wrapped functions - throttled and debounced: 
 const throttledScrollButton = limitFunctionCalls(displayScrollButton, 100);
-const fallbackEndOfScroll = debounceFunction(displayScrollButton, 2000); // NOTE: COnsider reducing delay to 1000 or even 300-500 ms
+const fallbackEndOfScroll = debounceFunction(displayScrollButton, 300); 
 
 document.addEventListener("scroll", () => {
   throttledScrollButton(); // Runs during scroll
-  fallbackEndOfScroll(); // Runs once after scroll stops
+  fallbackEndOfScroll(); // Runs after scroll stops
 });
+
 
 /* -------- UPDATE COPYRIGHT YEAR -------- */ 
 

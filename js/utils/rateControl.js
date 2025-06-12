@@ -18,6 +18,7 @@ The rateControl.js module:
  * executed within a given time interval when an event fires repeatedly. 
  * @param callFunction - The callback function. 
  * @param delay - The wait time in milliseconds before the callback is executed again. 
+ * @return - New wrapped version of callback function that controls when the original callback runs based on timing.
 */
 export const limitFunctionCalls = (callFunction, delay) => {
     let lastCall = 0; // Tracks and preserves timing in-between calls 
@@ -39,13 +40,12 @@ export const limitFunctionCalls = (callFunction, delay) => {
  * Resets the timer if the event fires again before the wait time has passed.  
  * @param callFunction - The callback function. 
  * @param delay - The wait time in milliseconds before the callback is executed again. 
- * @return - New debounced version of callback function that controls when the original callback runs. 
+ * @return - New wrapped version of callback function that controls when the original callback runs based on timing. 
 */
 export const debounceFunction = (callFunction, delay) => {
     let timeoutDuration; // Sets and preserves wait time in-between calls
     
     return(...args) => {
-        console.log("Fallback runs at scroll end"); // Delay works; runs auto after set timeout/delay
         clearTimeout(timeoutDuration);
         timeoutDuration = setTimeout(() => { 
             callFunction.apply(this, args); // Calls original callback function after delay
