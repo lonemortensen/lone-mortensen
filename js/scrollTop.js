@@ -39,7 +39,6 @@ export const displayScrollButton = () => {
     } else {
         scrollToTopButton.classList.add("hide-scroll-top-button");
     }
-    console.log(`Scrolled to: ${percentScrolled.toFixed(1)}%`);
 }; 
 
 /**
