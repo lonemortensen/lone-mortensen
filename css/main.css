@@ -456,8 +456,9 @@ footer p {
 
 .introduction-title {
   width: 100%;
-  color: #152A3E;
   font-family: 'Lekton', sans-serif;
+  font-size: 2.5rem;
+  color: #152A3E;
 }
 
 .introduction-text {
@@ -1461,7 +1462,7 @@ footer p {
   }
 
   .introduction-title {
-    font-size: 2.5rem;
+    font-size: 4rem;
   }
 
   .introduction-text {
