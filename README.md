@@ -8,19 +8,19 @@ A responsive website, it seamlessly adapts to different screen sizes and functio
 
 The website uses CSS and JavaScript to create animations for behavior and interest.  
 
-![My Personal Website](img/portfolio-site-screenShot-readme.png)
+![My Personal Website](img/portfolio-site-screenShot-shadow-readme.png)
 
 ## Project Background
 My goal for the project portfolio site was to design and develop a website that is:
 
 **Custom coded:**
-The site is a static website built with just HTML, CSS, and vanilla JavaScript. 
 
-It doesn’t make use of third-party website templates, frameworks, libraries, plug-ins or similar.
+The site is a static website built with HTML, CSS, and vanilla JavaScript. - It doesn’t make use of third-party website templates, frameworks, libraries, plug-ins or similar.
 
 Taking a pared-down approach and writing the code from scratch was an opportunity to experiment with different designs and techniques. It helped me get a better understanding of the fundamental building blocks of front end development. 
 
 **- and modular:** 
+
 The website’s script consists of ES6 modules. This keeps the JavaScript for each of the site’s sections and/or components separate, allowing for reusability and easier troubleshooting. 
 
 For instance, the JavaScript code for the modal windows in the Projects section and the tabbed panel in the Skills section can easily be reused across the site to display different content if more pages are added to the website in the future.  
