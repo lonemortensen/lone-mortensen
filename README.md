@@ -15,9 +15,9 @@ My goal for the project portfolio site was to design and develop a website that 
 
 **Custom coded:**
 
-The site is a static website built with HTML, CSS, and vanilla JavaScript. - It doesn’t make use of third-party website templates, frameworks, libraries, plug-ins or similar.
+The site is a static website built with HTML, CSS, and vanilla JavaScript. It doesn’t make use of third-party website templates, frameworks, libraries, plug-ins or similar.
 
-Taking a pared-down approach and writing the code from scratch was an opportunity to experiment with different designs and techniques. It helped me get a better understanding of the fundamental building blocks of front end development. 
+Taking a pared-down approach and writing the code from scratch was an opportunity to experiment with different designs and techniques. It helped me get a better understanding of the fundamental building blocks of front-end development. 
 
 **- and modular:** 
 
@@ -33,7 +33,7 @@ CSS Flexbox and media queries ensure the website’s layout and functionality ad
 
 To further support the responsive layout, the getBoundingClientRect() method is used with the resize event to ensure the big yellow dot in the About section stays centered when the user resizes the screen. 
 
-A modal window component, made up of two separate JavaScript modules, for portfolio projects appears on top of the webpage and dynamically renders the selected modal's html and data to the page via the DOM.
+A modal window component, made up of two separate JavaScript modules, for portfolio projects appears on top of the webpage and dynamically renders the selected modal's HTML and data to the page via the DOM.
 
 Animations add behavior and interest to the website — 
 
