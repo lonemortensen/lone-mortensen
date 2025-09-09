@@ -16,8 +16,6 @@ The panel.js module:
     to main.js.
 ========================================================================= */
 
-/* ===== MODEL ===== */
-
 /**
  * Global variables. 
 */
@@ -29,6 +27,7 @@ const tabsList = document.getElementsByClassName("tab-link");
 // All panels: 
 const panelsList = document.getElementsByClassName("panels"); 
 
+/* ===== MODEL ===== */
 
 /**
  * Loops through the tabs list and stores each tab as a property key and each 
