@@ -1229,7 +1229,7 @@ footer p {
 
 .connect-icons a {
   transform: scale(0.9);
-  padding: 0px 10px 0px 10px; /* Horizontal padding prevents icons from being cut off on hover in Safari */
+  padding: 0px 10px 0px 10px; /* Padding prevents icons from being cut off on hover in Safari */
 }
 
 .connect-icons a:hover {
