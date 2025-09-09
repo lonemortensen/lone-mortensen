@@ -10,7 +10,7 @@ The panel.js module:
 - processes user's selection of tab, incl.:
 	-- detects and identifies tab selection, 
 	-- finds the matching panel, and 
-	-- renders selected tab-panel set's html and css to web page.
+	-- applies styling to and displays selected tab-panel set to web page.
 - exports:
 	-- event handler that initiates display of default tab and panel 
     to main.js.
