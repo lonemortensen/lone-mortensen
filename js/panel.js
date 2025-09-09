@@ -27,6 +27,7 @@ const tabsList = document.getElementsByClassName("tab-link");
 // All panels: 
 const panelsList = document.getElementsByClassName("panels"); 
 
+
 /* ===== MODEL ===== */
 
 /**
