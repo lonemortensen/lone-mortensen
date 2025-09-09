@@ -13,6 +13,9 @@ The intro.js module:
   -- event handler that reveals introduction title to main.js.
 ========================================================================= */
 
+/**
+ * Global variables. 
+*/
 // Introduction title:
 const introductionTitle = document.querySelector(".reveal-introduction-title");
 // Introduction text:

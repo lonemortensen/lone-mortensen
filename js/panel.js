@@ -18,6 +18,9 @@ The panel.js module:
 
 /* ===== MODEL ===== */
 
+/**
+ * Global variables. 
+*/
 // Object stores tabs (keys) and their associated panels (values):  
 let tabSets = {};
 

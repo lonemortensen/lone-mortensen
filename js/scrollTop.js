@@ -13,6 +13,9 @@ The scrollTop.js module:
     -- event handler that displays scroll-to-top button to main.js.
 ========================================================================= */
 
+/**
+ * Global variables. 
+*/
 // Scroll-to-top button:
 const scrollToTopButton = document.querySelector(".scroll-top-button");
 // Root element of the document (for offset values):
