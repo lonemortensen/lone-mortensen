@@ -1,5 +1,5 @@
 # lonemortensen.com
-This is my personal website. A single-page responsive portfolio site. Built with HTML5, CSS3, Flexbox, and JavaScript.
+My personal website is a single-page, responsive portfolio site. Built with HTML5, CSS3, Flexbox, and JavaScript.
 
 ## About
 This single-page portfolio website utilizes space-saving components such as modal windows and a tabbed panel. These features encourage users to engage with the site in order to access information about web projects and developer skills — all while keeping things compact.
