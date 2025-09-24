@@ -684,6 +684,7 @@ footer p {
   font-family: 'Lexend Tera', sans-serif;
   font-size: 0.7rem;
   text-transform: uppercase;
+  color: #313131; /* Overrides button font color in Safari's default style sheet */
   background-color: #e3e2df;
   border: none;
   transition: background-color 0.3s ease-in-out;
@@ -870,6 +871,7 @@ footer p {
 .previousModal i, .nextModal i {
   font-size: 0.7rem;
   line-height: 0;
+  color: #313131; /* Overrides button font color in Safari's default style sheet */
 }
 
 .previousModal:active, .nextModal:active {
@@ -915,6 +917,7 @@ footer p {
 .closeButton-style i {
   font-size: 1rem;
   line-height: 0;
+  color: #313131; /* Overrides button font color in Safari's default style sheet */
 }
 
 
