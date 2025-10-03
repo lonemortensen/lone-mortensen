@@ -353,8 +353,11 @@ nav {
   width: 100%;
 }
 
-.mobile-nav-link a:hover {
-  background-size: 0% 0.09em;
+@media (hover: hover) {
+  /* Styling applied to devices that support hovering */
+  .mobile-nav-link a:hover {
+    background-size: 0% 0.09em;
+  }
 }
 
 
@@ -385,8 +388,11 @@ footer {
   pointer-events: auto;
 }
 
-.scroll-top-button:hover {
-  transform: scale(1);
+@media (hover: hover) {
+  /* Styling applied to devices that support hovering */
+  .scroll-top-button:hover {
+    transform: scale(1);
+  }
 }
 
 .hide-scroll-top-button {
@@ -693,8 +699,15 @@ footer p {
   box-shadow: #000 0 2px 4px,#000 0 7px 5px -3px;
 }
 
-.project-button-style:hover {
+.project-button-style:active {
   background-color: #cccbc8;
+}
+
+@media (hover: hover) {
+  /* Styling applied to devices that support hovering */
+  .project-button-style:hover {
+    background-color: #cccbc8;
+  }
 }
 
 /* 
@@ -806,9 +819,16 @@ footer p {
   margin: 0px 0px 0px 5px;
   font-size: 0.7rem;
 }
-    
-.modalLink-1:hover, .modalLink-2:hover {
+
+.modalLink-1:active, .modalLink-2:active {
   color: #cccbc8;
+}
+
+@media (hover: hover) {
+  /* Styling applied to devices that support hovering */
+  .modalLink-1:hover, .modalLink-2:hover {
+    color: #cccbc8;
+  }
 }
 
 .modalNavigation {
@@ -973,8 +993,11 @@ footer p {
   transition: background-size 0.3s ease-in-out;
 }  
 
-.tab a:hover {
-  background-size: 100% 0.25em;
+@media (hover: hover) {
+  /* Styling applied to devices that support hovering */
+  .tab a:hover {
+    background-size: 100% 0.25em;
+  }
 }
 
 .panels-list {
@@ -1049,8 +1072,15 @@ footer p {
   transition: color 0.3s ease-in-out;
 }
 
-.skills-links a:hover {
+.skills-links a:active {
   color: #cccbc8;
+}
+
+@media (hover: hover) {
+  /* Styling applied to devices that support hovering */
+  .skills-links a:hover {
+    color: #cccbc8;
+  }
 }
 
 .skills-links i {
@@ -1235,9 +1265,12 @@ footer p {
   padding: 0px 10px 0px 10px; /* Padding prevents icons from being cut off on hover in Safari */
 }
 
-.connect-icons a:hover {
-  transform: scale(1);
-  transition: 0.3s ease-in-out transform;
+@media (hover: hover) {
+  /* Styling applied to devices that support hovering */
+  .connect-icons a:hover {
+    transform: scale(1);
+    transition: 0.3s ease-in-out transform;
+  }
 }
 
 .connect-icons i {
@@ -1437,8 +1470,11 @@ footer p {
     transition: background-size 300ms ease-in-out;
   }
 
-  .nav-link a:hover {
-    background-size: 100% 0.09em; 
+  @media (hover: hover) {
+    /* Styling applied to devices that support hovering */
+    .nav-link a:hover {
+      background-size: 100% 0.09em; 
+    }
   }
 
 
