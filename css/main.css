@@ -605,21 +605,24 @@ footer p {
  * Animation - Projects 
 */
 
-.project-background:hover {
-  /* Animated project background tilt */
-  transform: rotateZ(-3deg);
-  animation: project-tilt;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: 1;
-}
-
-@keyframes project-tilt {
-  0% {
-    transform: rotateZ(0);
-  }
-  100% {
+@media (hover: hover) {
+  /* Styling applied to devices that support hovering */
+  .project-background:hover {
+    /* Animated project background tilt */
     transform: rotateZ(-3deg);
+    animation: project-tilt;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes project-tilt {
+    0% {
+      transform: rotateZ(0);
+    }
+    100% {
+      transform: rotateZ(-3deg);
+    }
   }
 }
 
