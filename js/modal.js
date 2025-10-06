@@ -27,6 +27,10 @@ import {accessData} from "./modalData.js";
 /** 
  * Global variables.
 */
+// htmlElement:
+// Selects root element.
+const htmlElement = document.documentElement; 
+
 // bodyElement and headerElement:
 // Selects body and header element for insertion of modal backdrop and modal window.
 // Must be accessible to checkNavigationKey() for keyboard navigation.
@@ -162,12 +166,15 @@ export const closeModalWindow = () => {
 
 /**
  * Prevents/allows scrolling on web page when modal window opens/closes. 
+ * Applied to both root and body element to manage scrolling on touch devices. 
 */
 const managePageScroll = () => {
-	const hasPreventScroll = bodyElement.classList.contains("prevent-scroll"); // Returns true or false
+	const hasPreventScroll = htmlElement.classList.contains("prevent-scroll") || bodyElement.classList.contains("prevent-scroll"); // Returns true or false
 	if (!hasPreventScroll) {
+		htmlElement.classList.add("prevent-scroll");
 		bodyElement.classList.add("prevent-scroll");
 	} else {
+		htmlElement.classList.remove("prevent-scroll");
 		bodyElement.classList.remove("prevent-scroll");
 	}
 };
@@ -190,6 +197,7 @@ const createModalWindow = (selectedModalData) => {
 	bodyElement.addEventListener("keyup", checkNavigationKey); 
 
 	// Prevents web page from scrolling when modal window is open:
+	htmlElement.classList.add("prevent-scroll");
 	bodyElement.classList.add("prevent-scroll");
 
 	/* Modal backdrop: */  
