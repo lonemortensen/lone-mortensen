@@ -321,6 +321,24 @@ nav {
   background-color: #8d8752; 
 }
 
+@media (orientation: landscape) {
+  /* Styling applied if mobile device is in landscape orientation */
+  .mobile-nav {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 50%; /* Changes in landscape orientation */
+    height: calc(100vh - 20%);
+    width: 100%;
+    padding: 90px 0px 90px 0px; /* Changes in landscape orientation */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #8d8752; 
+  }
+}
+
 .hide-mobile-nav-menu {
   /* Styling applied by JavaScript to toggle open/close mobile navigation bars and close icon */
   display: none;
@@ -336,6 +354,20 @@ nav {
   min-height: 5.2rem;
   margin: 0px 0px 0px 90px;
   text-align: left;
+}
+
+@media (orientation: landscape) {
+   /* Styling applied if mobile device is in landscape orientation */
+  .mobile-nav-link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-content: center;
+  width: 70%;
+  min-height: 5.2rem;
+  margin: 0px 0px 0px 150px; /* Changes in landscape orientation */
+  text-align: left;
+  }
 }
 
 .mobile-nav-link a {
