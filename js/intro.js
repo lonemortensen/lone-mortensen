@@ -65,8 +65,40 @@ const changeTextStyle = () => {
   textStyle.classList.add("change-text-style");
 };
 
+/**
+ * Starts the circle pointer animation. 
+*/
+const circlePointer = document.querySelector(".circle-pointer-animation"); // MOVE TO GLOBAL
+
+const startCirclePointerAnimation = () => {
+  const currentPlayState = getComputedStyle(circlePointer).animationPlayState;
+
+  if (currentPlayState === "running") {
+    circlePointer.style.animationPlayState = "paused";
+  } else {
+    console.log("accessed animation"); // Logs OK
+    circlePointer.style.animationPlayState = "running";
+  }
+};
+
+
+// circlePointer.style.animationPlayState = "paused";
+
+// const startCirclePointerAnimation = () => {
+//   if (circlePointer.style.animationPlayState === "paused") {
+//     console.log("accessed animation");
+//     circlePointer.style.animationPlayState = "running";
+//   }
+// };
+
 
 /**
  *  Detects when introduction text animation is completed.
 */
 introductionText.addEventListener("animationend", changeTextStyle); 
+
+
+/**
+ * Detects when page has loaded and calls function to start circle pointer animation. 
+*/
+window.addEventListener("load", startCirclePointerAnimation);
