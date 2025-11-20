@@ -68,7 +68,9 @@ const changeTextStyle = () => {
 /**
  * Starts the circle pointer animation. 
 */
-const circlePointer = document.querySelector(".circle-pointer-animation"); // MOVE TO GLOBAL
+const circlePointer = document.querySelector(".circle-pointer"); // MOVE TO GLOBAL
+
+circlePointer.classList.add("circle-pointer-animation");
 
 const startCirclePointerAnimation = () => {
   const currentPlayState = getComputedStyle(circlePointer).animationPlayState;
@@ -101,4 +103,5 @@ introductionText.addEventListener("animationend", changeTextStyle);
 /**
  * Detects when page has loaded and calls function to start circle pointer animation. 
 */
-window.addEventListener("load", startCirclePointerAnimation);
+// window.addEventListener("load", startCirclePointerAnimation);
+window.addEventListener("DOMContentLoaded", startCirclePointerAnimation);
