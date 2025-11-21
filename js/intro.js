@@ -9,6 +9,7 @@ The intro.js module:
 - reveals introduction title with animation.
 - reveals introduction text with animation.
 - adds styling to introduction text with animation.
+- adds styling to and starts circle animation.
 - exports:
   -- event handler that reveals introduction title to main.js.
 ========================================================================= */
@@ -22,7 +23,8 @@ const introductionTitle = document.querySelector(".reveal-introduction-title");
 const introductionText = document.querySelector(".reveal-introduction-text");
 // Span that changes text styling in introduction text:
 const textStyle = document.querySelector(".text-style");
-
+// Circle for scroll down pointer:
+const circlePointer = document.querySelector(".circle-pointer"); 
 
 /**
  * Reveals introduction title with typing effect when page has loaded.
@@ -46,7 +48,6 @@ export const revealIntroTitle = () => {
   typingEffect();
 };
 
-
 /**
  * Reveals introduction text after title has finished typing. 
 */
@@ -56,7 +57,6 @@ const revealIntroText = () => {
   };
   setTimeout(showText, 1000);
 };
-
 
 /**
  * Changes styling for text span in introduction text.  
@@ -68,8 +68,6 @@ const changeTextStyle = () => {
 /**
  * Starts the circle pointer animation. 
 */
-const circlePointer = document.querySelector(".circle-pointer"); // MOVE TO GLOBAL
-
 circlePointer.classList.add("circle-pointer-animation");
 
 const startCirclePointerAnimation = () => {
@@ -78,30 +76,16 @@ const startCirclePointerAnimation = () => {
   if (currentPlayState === "running") {
     circlePointer.style.animationPlayState = "paused";
   } else {
-    console.log("accessed animation"); // Logs OK
     circlePointer.style.animationPlayState = "running";
   }
 };
-
-
-// circlePointer.style.animationPlayState = "paused";
-
-// const startCirclePointerAnimation = () => {
-//   if (circlePointer.style.animationPlayState === "paused") {
-//     console.log("accessed animation");
-//     circlePointer.style.animationPlayState = "running";
-//   }
-// };
-
 
 /**
  *  Detects when introduction text animation is completed.
 */
 introductionText.addEventListener("animationend", changeTextStyle); 
 
-
 /**
  * Detects when page has loaded and calls function to start circle pointer animation. 
 */
-// window.addEventListener("load", startCirclePointerAnimation);
-window.addEventListener("DOMContentLoaded", startCirclePointerAnimation);
+window.addEventListener("load", startCirclePointerAnimation);
