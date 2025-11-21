@@ -563,60 +563,39 @@ footer p {
   align-content: flex-end;
   width: 80%;
   padding-top: 80px;
+  justify-content: space-between;
+}
+
+.scroll-down-text-wrapper {
+  display: flex;
+  align-self: center;
+  min-height: 5.5rem;
 }
 
 .scroll-down-text {
   writing-mode: vertical-lr;
   text-transform: uppercase;
   font-family: 'Lexend Tera', sans-serif;
-  font-size: 0.5rem;
+  font-size: 0.55rem;
   font-weight: 700;
   letter-spacing: 0.3rem;
-  margin: 50px 5px 0px 13px;
 }
-
-/* .circle-pointer-wrapper {
-  margin: 10px 5px 5px 2px;
-  display: block;
-} */
-
-.circle-pointer-wrapper {
-  margin: 10px 5px 5px 2px;
-   /* The transform property fixes the problem with Safari defering the application of 
-  margins on initial load. The fix forces Safari to lay out the wrapper correctly before 
-  the animation of the child begins: */
-  transform: translateZ(0);
-}
-
-/* .circle-pointer {
-  width: 15px;
-  height: 15px;
-  border-radius: 15px;
-  margin: 10px 15px 13px 10px;
-  background: #E9B14C;
-  animation: drop-dot 2s ease;
-  animation-iteration-count: infinite;
-  animation-delay: 5s; 
-  transform-origin: top;  */
-  /*NEW:*/
-  /* animation-play-state: paused; 
-}  */
 
 .circle-pointer {
   width: 15px;
   height: 15px;
   border-radius: 15px;
-  margin: 0px 15px 13px 10px;
   background: #E9B14C; 
+  will-change: transform;
 } 
 
 .circle-pointer-animation {
-  /* Animation is started by JavaScript when the page is fully loaded */
+  /* Styling applied by JavaScript to animate circle */
   animation: drop-dot 2s ease;
   animation-iteration-count: infinite;
   animation-delay: 5s; 
   transform-origin: top;
-  /*NEW:*/
+  /* Animation is started by JavaScript when the page is fully loaded */
   animation-play-state: paused;  
 }  
 
@@ -1582,7 +1561,7 @@ footer p {
   }
 
   .scroll-down-text {
-    font-size: 0.45rem;
+    font-size: 0.55rem;
   }
 
  
@@ -1912,7 +1891,6 @@ footer p {
   }
 
   .scroll-down-text {
-    margin: 50px 5px 0px 12px;
     font-size: 0.55rem;
   }
  
