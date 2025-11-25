@@ -359,14 +359,14 @@ nav {
 @media (orientation: landscape) {
    /* Styling applied if mobile device is in landscape orientation */
   .mobile-nav-link {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; 
-  align-content: center;
-  width: 70%;
-  min-height: 5.2rem;
-  margin: 0px 0px 0px 150px; /* Changes in landscape orientation */
-  text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-content: center;
+    width: 70%;
+    min-height: 5.2rem;
+    margin: 0px 0px 0px 150px; /* Changes in landscape orientation */
+    text-align: left;
   }
 }
 
