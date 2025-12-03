@@ -49,6 +49,7 @@ let modalWindow;
 // Must be accessible to checkNavigationKey() for keyboard navigation.
 let currentModalId; 
 
+
 /* ===== MODEL ===== */
 
 /**
